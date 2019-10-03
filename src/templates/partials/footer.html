@@ -4,16 +4,6 @@
 -->
 <footer class="footer">
   <div class="footer__container">
-    <div class="footer__contact">
-        {% module_block module "footer_contact_information" path="@hubspot/rich_text" label="Contact information" %}
-          {% module_attribute "html"%}
-            <div style="text-align: center">
-              <p>36 Rue Geoffroy-Saint-Hilaire, 75005 Paris</p>
-              <p>800-4321-5182</p>
-            </div>
-          {% end_module_attribute %}
-        {% end_module_block %}
-    </div>
     {% module_block module "footer_social" path="../../modules/Social follow" label="Social follow" %}
       {% module_attribute "social_link" is_json=True %}
         [
