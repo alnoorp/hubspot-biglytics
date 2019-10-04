@@ -1,1 +1,6 @@
-{"name":"name_placeholder","label":"Name Placeholder","preview_path":"./templates/name-placeholder.html","image_url":"https://cdn2.hubspotqa.com/hubfs/99265373/ThumbnailFoundation3.png"}
+{ 
+    "name":"sass_theme",
+    "label":"Sass Theme",
+    "preview_path":"./templates/homepage.html",
+    "image_url":"https://cdn2.hubspotqa.net/hubfs/101400067/Sass%20Theme/ThumbnailSass.png"
+ }

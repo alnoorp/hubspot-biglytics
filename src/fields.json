@@ -1,6 +1,40 @@
 [
     {
        "type":"group",
+       "name":"theme_colors",
+       "label":"Colors",
+       "children":[
+         {
+            "type":"color",
+            "name":"primary_color",
+            "label":"Primary color",
+            "default":{
+               "color":"#34b5e5",
+               "opacity":100
+            }
+         },
+         {
+            "type":"color",
+            "name":"accent_color",
+            "label":"Accent color",
+            "default":{
+               "color":"#c168c2",
+               "opacity":100
+            }
+         },
+         {
+            "type":"color",
+            "name":"link_color",
+            "label":"Link color",
+            "default":{
+               "color":"#c168c2",
+               "opacity":100
+            }
+         }
+       ]
+    },
+    {
+       "type":"group",
        "name":"typography",
        "label":"Typography",
        "children":[
@@ -15,45 +49,148 @@
                 }
              },
              "default":{
-                "color":"#FFFFFF",
-                "font":"Lato",
+                "color":"#1e2b33",
+                "font":"Work Sans",
                 "font_set":"GOOGLE",
                 "size":{
                    "units":"px",
-                   "value":22
+                   "value":14
                 }
              }
           },
           {
-             "type":"font",
-             "name":"hx",
-             "label":"Headings",
-             "visibility":{
-                "hidden_subfields":{
-                   "size":true,
-                   "styles":true
-                }
-             },
-             "load_external_fonts":true,
-             "default":{
-                "color":"#FFFFFF",
-                "font":"Merriweather",
-                "font_set":"GOOGLE"
-             }
+            "type":"font",
+            "name":"heading_one",
+            "label":"Heading 1",
+            "visibility":{
+               "hidden_subfields":{
+                  "styles":true
+               }
+            },
+            "load_external_fonts":true,
+            "default":{
+               "color":"#1e2b33",
+               "font":"Work Sans",
+               "font_set":"GOOGLE",
+               "size":{
+                  "units":"px",
+                  "value":40
+               }
+            }
+          },
+          {
+            "type":"font",
+            "name":"heading_two",
+            "label":"Heading 2",
+            "visibility":{
+               "hidden_subfields":{
+                  "styles":true
+               }
+            },
+            "load_external_fonts":true,
+            "default":{
+               "color":"#1e2b33",
+               "font":"Work Sans",
+               "font_set":"GOOGLE",
+               "size":{
+                  "units":"px",
+                  "value":30
+               }
+            }
+          },
+          {
+            "type":"font",
+            "name":"heading_three",
+            "label":"Heading 3",
+            "visibility":{
+               "hidden_subfields":{
+                  "styles":true
+               }
+            },
+            "load_external_fonts":true,
+            "default":{
+               "color":"#1e2b33",
+               "font":"Work Sans",
+               "font_set":"GOOGLE",
+               "size":{
+                  "units":"px",
+                  "value":24
+               }
+            }
+          },
+          {
+            "type":"font",
+            "name":"heading_four",
+            "label":"Heading 4",
+            "visibility":{
+               "hidden_subfields":{
+                  "styles":true
+               }
+            },
+            "load_external_fonts":true,
+            "default":{
+               "color":"#1e2b33",
+               "font":"Work Sans",
+               "font_set":"GOOGLE",
+               "size":{
+                  "units":"px",
+                  "value":20
+               }
+            }
+          },
+          {
+            "type":"font",
+            "name":"heading_five",
+            "label":"Heading 5",
+            "visibility":{
+               "hidden_subfields":{
+                  "styles":true
+               }
+            },
+            "load_external_fonts":true,
+            "default":{
+               "color":"#34b5e5",
+               "font":"Work Sans",
+               "font_set":"GOOGLE",
+               "size":{
+                  "units":"px",
+                  "value":18
+               }
+            }
+          },
+          {
+            "type":"font",
+            "name":"heading_six",
+            "label":"Heading 6",
+            "visibility":{
+               "hidden_subfields":{
+                  "styles":true
+               }
+            },
+            "load_external_fonts":true,
+            "default":{
+               "color":"#1e2b33",
+               "font":"Work Sans",
+               "font_set":"GOOGLE",
+               "size":{
+                  "units":"px",
+                  "value":15
+               }
+            }
           }
        ]
     },
     {
        "type":"group",
-       "name":"forms_and_btns",
-       "label":"Forms and buttons",
+       "name":"buttons",
+       "label":"Buttons",
        "children":[
           {
              "type":"color",
              "name":"button_bg_color",
              "label":"Button background color",
              "default":{
-                "color":"#09afb4",
+                "color":"#c168c2",
                 "opacity":100
              }
           },
@@ -71,19 +208,35 @@
              "name":"button_border_radius",
              "label":"Button corner radius",
              "display":"slider",
-             "default":5,
+             "default":4,
              "min":0,
              "max":100
           }
        ]
     },
     {
-       "type":"color",
-       "name":"section_bg_color",
-       "label":"Section starting background color",
-       "default":{
-          "color":"#0d252b",
-          "opacity":100
-       }
-    }
+      "type":"group",
+      "name":"spacing",
+      "label":"Spacing",
+      "children":[
+         {
+            "type":"number",
+            "name":"vertical_spacing",
+            "label":"Vertical spacing",
+            "display":"slider",
+            "default":80,
+            "min":0,
+            "max":500
+         },
+         {
+            "type":"number",
+            "name":"max_width",
+            "label":"Page width (max)",
+            "display":"slider",
+            "default":1340,
+            "min":900,
+            "max":2500
+         }
+      ]
+   }
  ]
