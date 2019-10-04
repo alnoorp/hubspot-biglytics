@@ -150,8 +150,8 @@ blockquote {
 
 /* Horizontal Rules */
 hr {
-  color: #d0d0d0;
-  background-color: #d0d0d0;
+  color: {{ border_color}};
+  background-color: {{ border_color}};
   height: 1px;
   border: none;
 }
