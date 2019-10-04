@@ -27,14 +27,14 @@
 {% set form_input_color = '#1e2b33' %}
 {% set form_description_color = '#1e2b33' %}
 {% set form_placeholder_color = '#1e2b33' %}
-{% set form_error_label_color = '#c168c2' %}
-{% set form_error_border_color = '#c168c2' %}
-{% set form_error_focus_border_color = '#c168c2' %}
+{% set form_error_label_color = '#f2545b' %}
+{% set form_error_border_color = '#f2545b' %}
+{% set form_error_focus_border_color = '#f2545b' %}
 
 {% set dnd_accent_bg_color = '#34b5e5' %}
 {% set dnd_section_max_width = '1200px' %}
 
-{% set page_max_width = '1200px' %}
+{% set page_max_width = '1228px' %}
 {% set page_accent_bg_color = '#34b5e5' %}
 {% set page_logo_max_width = '200px' %}
 
