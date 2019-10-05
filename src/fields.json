@@ -1,7 +1,7 @@
 [
     {
        "type":"group",
-       "name":"theme_colors",
+       "name":"colors",
        "label":"Colors",
        "children":[
          {
@@ -28,6 +28,15 @@
             "label":"Link color",
             "default":{
                "color":"#c168c2",
+               "opacity":100
+            }
+         },
+         {
+            "type":"color",
+            "name":"link_hover_color",
+            "label":"Link hover color",
+            "default":{
+               "color":"#e77de8",
                "opacity":100
             }
          }

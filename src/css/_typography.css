@@ -1,18 +1,17 @@
 html {
-  font-size: {{ base_font_size }};
+  font-size: {{ get_theme_style_setting('typography.body_font.size.value', 'typography.body_font.size.units') }};
 }
 
 body {
-  font-family: {{ body_font_family }};
-  font-size: {{ body_font_size }};
-  color: {{ body_color }};
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  font-family: {{ get_theme_style_setting('typography.body_font.font') }};
+  font-size: 1rem;
   line-height: 1.75;
 }
 
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  font-family: {{ body_font_family }};
   font-weight: 400; 
   letter-spacing: 0.02em; 
   line-height: 2; 
@@ -20,13 +19,13 @@ p {
 
 /* Anchor Links */
 a {
-  color: {{ link_color }};
+  color: {{ get_theme_style_setting('colors.link_color.color') }};
   cursor: pointer; 
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: {{ link_hover_color }};
+  color: {{ get_theme_style_setting('colors.link_hover_color.color') }};
   text-decoration: underline;
 }
 
@@ -39,51 +38,59 @@ h5,
 h6 {
   margin-top: 0;
   margin-bottom: 1em;
-  font-weight: {{ headings_font_weight }};
-  font-family: {{ headings_font_family }};
-  color: {{ headings_color }};
+  font-weight: 600;
   word-break: break-word;
 }
 
 h1 {
-  font-size: {{ h1_font_size }};
+  color: {{ get_theme_style_setting('typography.heading_one.color') }};
+  font-family: {{ get_theme_style_setting('typography.heading_one.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_one.size.value', 'typography.heading_one.size.units') }};
   letter-spacing: 0.2em;
   line-height: 1.1; 
   text-transform: uppercase; 
 }
 
 h2 {
-  font-size: {{ h2_font_size }};
+  color: {{ get_theme_style_setting('typography.heading_two.color') }};
+  font-family: {{ get_theme_style_setting('typography.heading_two.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_two.size.value', 'typography.heading_two.size.units') }};
   letter-spacing: 0.2em;
   line-height: 1.2; 
   text-transform: uppercase; 
 }
 
 h3 {
-  font-size: {{ h3_font_size }};
+  color: {{ get_theme_style_setting('typography.heading_three.color') }};
+  font-family: font-family: {{ get_theme_style_setting('typography.heading_three.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_three.size.value', 'typography.heading_three.size.units') }};
   letter-spacing: 0.05em; 
   line-height: 1.16; 
 }
 
 h4 {
-  font-family: {{ secondary_font_family }};
+  color: {{ get_theme_style_setting('typography.heading_four.color') }};
+  font-family: {{ get_theme_style_setting('typography.heading_four.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_four.size.value', 'typography.heading_four.size.units') }};
   font-weight: normal;
-  font-size: {{ h4_font_size }};
   letter-spacing: 0.2em;
   line-height: 1.3; 
   text-transform: uppercase; 
 }
 
 h5 {
-  color: #34b5e5;
-  font-size: {{ h5_font_size }};
+  color: {{ get_theme_style_setting('typography.heading_five.color') }};
+  font-family: {{ get_theme_style_setting('typography.heading_five.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_five.size.value', 'typography.heading_five.size.units') }};
   letter-spacing: 0.2em;
   line-height: 1.22;
   text-transform: uppercase; 
 }
 
 h6 {
-  font-size: {{ h6_font_size }};
+  color: {{ get_theme_style_setting('typography.heading_six.color') }};
+  font-family: {{ get_theme_style_setting('typography.heading_six.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_six.size.value', 'typography.heading_six.size.units') }};
   line-height: 1.2;
 }
 
@@ -111,13 +118,13 @@ ol {
 }
 
 ul li:before {
-  content: "\f058"; /* FontAwesome Unicode */
+  content: "\f058";
   font-family: FontAwesome;
   display: inline-block;
-  font-size: 1.429rem; 
+  font-size: 1.43rem; 
   line-height: 2; 
-  padding-right: 0.7143rem; 
-  color: #1287b3;
+  padding-right: 0.71rem; 
+  color: {{ get_theme_style_setting('colors.primary_color.color') }};
   letter-spacing: 0;
   vertical-align: middle;
 }
@@ -135,23 +142,23 @@ ul ol,
 ol ol {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 2.857rem; 
+  padding-left: 2.86rem; 
 }
 
 blockquote {
-  padding: 1.429rem 2.857rem; 
-  font-size: 1.429rem; 
-  line-height: 2.143rem; 
+  padding: 1.43rem 2.86rem; 
+  font-size: 1.43rem; 
+  line-height: 2.14rem; 
   margin: 0;
-  border-left: 4px solid #34b5e5;
+  border-left: 4px solid {{ get_theme_style_setting('colors.primary_color.color') }};
   font-weight: 400;
   letter-spacing: 0;
 }
 
 /* Horizontal Rules */
 hr {
-  color: {{ border_color}};
-  background-color: {{ border_color}};
+  color: #d0d0d0;
+  background-color: #d0d0d0;
   height: 1px;
   border: none;
 }
@@ -174,7 +181,7 @@ sub {
 
 :focus {
   outline: auto;
-  outline-color: #c168c2;
+  outline-color: {{ get_theme_style_setting('colors.accent_color.color') }};
 }
 
 .disable-focus-styles :focus {
@@ -182,13 +189,13 @@ sub {
 }
 
 @media (max-width: 767px) {
-  html {
-    font-size: {{ base_font_scale * 0.75 ~ 'px' }}
+  body {
+    font-size: 0.75rem; 
   }
 }
 
 @media (max-width: 480px) {
-  html {
-    font-size: {{ base_font_scale * 0.60 ~ 'px'}}
+  body {
+    font-size: 0.6rem; 
   }
 }
