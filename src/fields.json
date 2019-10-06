@@ -204,6 +204,15 @@
              }
           },
           {
+            "type":"color",
+            "name":"button_bg_hover_color",
+            "label":"Button background hover color",
+            "default":{
+               "color":"#e77de8",
+               "opacity":100
+            }
+          },
+          {
              "type":"color",
              "name":"button_text_color",
              "label":"Button text color",
