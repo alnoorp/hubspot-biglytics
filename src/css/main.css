@@ -1,20 +1,10 @@
 {# Configuration variables #}
 
 {% set form_max_width = "500px" %}
-{% set form_button_color = '#c168c2' %}
-{% set form_button_text_color = '#fff' %}
-{% set form_button_color_hover = '#e77de8' %}
-{% set form_button_color_active = '#e77de8' %}
 {% set form_label_color = '#1e2b33' %}
 {% set form_input_color = '#1e2b33' %}
 {% set form_description_color = '#1e2b33' %}
 {% set form_placeholder_color = '#1e2b33' %}
-{% set form_error_label_color = '#ef6b51' %}
-{% set form_error_border_color = '#ef6b51' %}
-{% set form_error_focus_border_color = '#ef6b51' %}
-
-{% set border_color = '#d0d0d0' %}
-{% set border_radius = '4px' %}
 
 {% set dnd_accent_bg_color = '#34b5e5' %}
 {% set dnd_section_max_width = '1200px' %}
