@@ -1,17 +1,9 @@
 {# Configuration variables #}
 
-{% set form_max_width = "500px" %}
 {% set form_label_color = '#1e2b33' %}
 {% set form_input_color = '#1e2b33' %}
 {% set form_description_color = '#1e2b33' %}
 {% set form_placeholder_color = '#1e2b33' %}
-
-{% set dnd_accent_bg_color = '#34b5e5' %}
-{% set dnd_section_max_width = '1200px' %}
-
-{% set page_max_width = '1340px' %}
-{% set page_accent_bg_color = '#34b5e5' %}
-{% set page_logo_max_width = '200px' %}
 
 {% set blog_default_featured_image = 'https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png' %}
 
