@@ -3,15 +3,12 @@
 }
 
 .navigation-primary a {
-  font-family: Lato;
-  font-size: 22px;
-  font-weight: 300;
-  color: #494A52;
-  line-height: 40px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 0.1em; 
 }
 
 .navigation-primary a.active-item {
-  font-weight: 600;
   position: relative;
 }
 
@@ -22,7 +19,7 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #494A52;
+  background-color: #fff;
 }
 
 .navigation-primary .submenu {
@@ -36,10 +33,6 @@
   text-decoration: none;
 }
 
-.triangle {
-  display: none;
-}
-
 .submenu-toggle {
   display: none;
 }
@@ -49,98 +42,48 @@
 }
 
 .submenu.level-1 > li {
-  display: inline;
-  padding: 22px;
+  display: inline-block;
+  margin-right: 30px; 
+  position: relative; 
   text-transform: uppercase;
 }
 
-.submenu.level-1 > li.has-submenu {
-  position: relative;
-}
-
-.submenu.level-1 > .has-submenu > .menu-arrow {
-  display: block;
-  position: absolute;
-  top: 35px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  margin-left: 1px;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-top: 7px solid black;
+.submenu.level-1 > li:last-child {
+  margin-right: 0px; 
 }
 
 .submenu.level-2 {
-  position: absolute;
-  top: 75px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 270px;
-  visibility: hidden;
-  opacity: 0;
-  text-transform: none;
-  font-weight: 500;
-  border: 1.79px solid #D1D6DC;
-  border-radius: 6px;
-  box-shadow: 0 2px 9px 0 rgba(0,0,0,0.2);
+  border: 1px solid #d0d0d0; 
+  border-radius: 4px; 
+  left: 0; 
+  opacity: 0; 
+  position: absolute; 
+  top: 100%; 
   transition: visibility 0s, opacity 0.3s;
-}
-
-.triangle-container.level-2 {
-  display: block;
-  position: absolute;
-  top: -25px;
-  left: 105px;
-  height: 25px;
-  width: 60px;
-  overflow: hidden;
-}
-
-.triangle.level-2 {
-  display: block;
-  width: 30px;
-  height: 30px;
-  margin-left: 20px;
-  margin-top: 12px;
-  background-color: white;
-  transform: rotate(45deg);
-  border: 1.79px solid #D1D6DC;
-  border-radius: 6px;
-  box-shadow: 0 2px 9px 0 rgba(0,0,0,0.2);
-  transition: background-color 0.3s;
-}
-
-.triangle-container.level-2.hover .triangle {
-  background-color: #EBEFF3;
-  transition: background-color 0.3s;
+  visibility: hidden; 
+  width: 220px; 
+  z-index: 2; 
 }
 
 .submenu.level-2 > li {
   padding: 0;
-  border-bottom: 1px solid #D1D6DC;
+  border-bottom: 1px solid #d0d0d0;
 }
 
 .submenu.level-2 .menu-item .menu-link {
   display: block;
-  padding: 10px 0px 10px 30px;
-  background-color: #ffffff;
+  padding: 10px;
   transition: background-color 0.3s;
-}
-
-.submenu.level-2 > li:nth-child(2) {
-  border-radius: 6px 6px 0 0;
 }
 
 .submenu.level-2 > li:last-child,
 .submenu.level-2 > li:last-child .submenu {
   border-bottom: none;
-  border-radius: 0 0 6px 6px;
+  border-radius: 0 0 4px 4px;
 }
 
 .submenu.level-2 .menu-item .menu-link:hover,
 .submenu.level-2 .menu-item .menu-link:focus {
-  background-color: #EBEFF3;
   cursor: pointer;
   transition: background-color 0.3s;
 }

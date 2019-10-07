@@ -14,7 +14,7 @@ h3.form-title {
   border-top-right-radius: 4px;
   color: #fff; 
   margin: 0; 
-  max-width: {{ form_max_width }};
+  max-width: 500px;
   padding: 2.88rem 2.63rem 2.44rem;
   text-transform: uppercase;  
 }
