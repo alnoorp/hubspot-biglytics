@@ -1,28 +1,25 @@
 table {
   margin-bottom: 1rem;
-  border: 1px solid #dee2e6;
+  border: 1px solid #d0d0d0;
 }
 
 th,
 td {
   padding: 0.75rem;
   vertical-align: top;
-  border: 1px solid #dee2e6;
+  border: 1px solid #d0d0d0;
 }
 
 thead th,
 thead td {
   color: #fff;
-  background-color: #343a40;
-  border-color: #454d55;
-  border-bottom-width: 2px;
+  background-color: {{ get_theme_style_setting('colors.primary_color.color') }};
 }
 
 thead th {
   vertical-align: bottom;
-  border-bottom: 2px solid #dee2e6;
 }
 
 tbody + tbody {
-  border-top: 2px solid #dee2e6;
+  border-top: 2px solid #d0d0d0;
 }
