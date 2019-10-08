@@ -1,3 +1,6 @@
+.statistic {
+  text-align: center; 
+}
 .statistic-circle *, 
 .statistic-circle *:before, 
 .statistic-circle *:after {

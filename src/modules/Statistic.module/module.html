@@ -1,0 +1,13 @@
+{% set circleDegrees = module.statistic_percentage * 0.01 * 360 %}
+{% set rotate = circleDegrees|round %}
+
+<div class="statistic">
+  <div class="statistic-circle">
+    <span>{{ module.statistic_number }}</span>
+    <div class="slice {% if module.statistic_percentage > 50 %}large{% endif %}">
+      <div class="bar" style="-webkit-transform: rotate({{ rotate }}deg); -moz-transform: rotate({{ rotate }}deg); -ms-transform: rotate({{ rotate }}deg); -o-transform: rotate({{ rotate }}deg); transform: rotate({{ rotate }}deg);"></div>
+      <div class="fill"></div>
+    </div>
+  </div>
+  <div class="description">{{ module.statistic_description }}</div>
+</div>

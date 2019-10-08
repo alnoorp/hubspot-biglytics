@@ -145,6 +145,11 @@ ol ol {
   padding-left: 2.86rem; 
 }
 
+/* Disables list stlyes on HubSpot toolbar */ 
+.hs-dropdown ul li:before {
+  content: none; 
+}
+
 blockquote {
   padding: 1.43rem 2.86rem; 
   font-size: 1.43rem; 
