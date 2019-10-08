@@ -1,0 +1,47 @@
+[ {
+  "id" : "8ce6650d-de42-d80f-402a-3c5126a1703a",
+  "name" : "logo",
+  "label" : "Logo",
+  "required" : true,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 6,
+    "sorting_label_field" : null,
+    "default" : 5
+  },
+  "responsive" : true,
+  "resizable" : true,
+  "type" : "image",
+  "default" : [ {
+    "src" : "https://design-assets.hubspot.com/hubfs/KB/kb_logo.png",
+    "alt" : "kb_logo",
+    "width" : 145,
+    "height" : 43,
+    "size_type" : "exact"
+  }, {
+    "src" : "https://design-assets.hubspot.com/hubfs/KB/kb_logo.png",
+    "alt" : "kb_logo",
+    "width" : 145,
+    "height" : 43,
+    "size_type" : "exact"
+  }, {
+    "src" : "https://design-assets.hubspot.com/hubfs/KB/kb_logo.png",
+    "alt" : "kb_logo",
+    "width" : 145,
+    "height" : 43,
+    "size_type" : "exact"
+  }, {
+    "src" : "https://design-assets.hubspot.com/hubfs/KB/kb_logo.png",
+    "alt" : "kb_logo",
+    "width" : 145,
+    "height" : 43,
+    "size_type" : "exact"
+  }, {
+    "src" : "https://design-assets.hubspot.com/hubfs/KB/kb_logo.png",
+    "alt" : "kb_logo",
+    "width" : 145,
+    "height" : 43,
+    "size_type" : "exact"
+  } ]
+} ]
