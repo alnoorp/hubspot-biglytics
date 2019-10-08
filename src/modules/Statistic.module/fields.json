@@ -1,0 +1,32 @@
+[ {
+  "id" : "cc0d4f5e-740f-040f-0d99-3db19164dd8b",
+  "name" : "statistic_number",
+  "label" : "Statistic Number",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "10k"
+}, {
+  "id" : "c3e0e1eb-ce82-efd5-321e-eadde650bac0",
+  "name" : "statistic_percentage",
+  "label" : "Statistic Percentage",
+  "required" : true,
+  "locked" : false,
+  "display" : "text",
+  "min" : 0,
+  "max" : 100,
+  "step" : 1,
+  "type" : "number",
+  "default" : 50
+}, {
+  "id" : "56b197d9-3cd6-129a-e353-c419fb4eb39d",
+  "name" : "statistic_description",
+  "label" : "Statistic Description",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Customer satisfaction rating</p>"
+} ]

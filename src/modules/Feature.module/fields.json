@@ -1,0 +1,32 @@
+[ {
+  "id" : "39fccacb-d308-25c4-007d-ca8d86bc769f",
+  "name" : "feature_icon",
+  "label" : "Feature Icon",
+  "required" : true,
+  "locked" : false,
+  "type" : "icon",
+  "default" : {
+    "name" : "clock",
+    "unicode" : "f017",
+    "type" : "REGULAR"
+  }
+}, {
+  "id" : "cc0d4f5e-740f-040f-0d99-3db19164dd8b",
+  "name" : "feature_title",
+  "label" : "Feature Title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Quick and Simple"
+}, {
+  "id" : "56b197d9-3cd6-129a-e353-c419fb4eb39d",
+  "name" : "feature_description",
+  "label" : "Feature Description",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+} ]
