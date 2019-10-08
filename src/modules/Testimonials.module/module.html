@@ -1,0 +1,30 @@
+<section class="testimonials">
+    {% if  module.testimonial_icon.name %}
+      <span class="icon">
+        {% icon
+          name="{{ module.testimonial_icon.name }}"
+          style="{{ module.testimonial_icon.type }}"
+          unicode="{{ module.testimonial_icon.unicode }}"
+        %}
+      </span>
+    {% endif %}
+    {% if module.testimonial_title %}
+        <h1>{{ module.testimonial_title }}</h1>
+    {% endif %}
+    <div class="testimonial-slider">
+      {% for testimonial in module.testimonial_slider %}
+          <div class="wrapper span{{ 12 / module.testimonial_slider|length|round }}">
+            <div class="container">
+              <h3 class="title">{{ testimonial.testimonial_title }}</h3>
+              <div class="description">
+                {{ testimonial.testimonial_description }}
+              </div>
+              <div class="avatar" style="background-image: url('{{ testimonial.testimonial_headshot.src }}')"></div>
+              <div class="name">
+                {{ testimonial.testimonial_name }}
+              </div>
+            </div>
+          </div>    
+      {% endfor %}
+	  </div>
+</section>

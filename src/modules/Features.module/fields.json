@@ -1,0 +1,90 @@
+[ {
+  "id" : "ad34d506-c9fd-0d80-e982-f7148e33fbea",
+  "name" : "features_title",
+  "label" : "Features Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Headlines and Mission Statements For Days."
+}, {
+  "id" : "014e801e-9529-a6f6-2f56-5e7160dd0024",
+  "name" : "features",
+  "label" : "Features",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 4,
+    "sorting_label_field" : "cc0d4f5e-740f-040f-0d99-3db19164dd8b",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "39fccacb-d308-25c4-007d-ca8d86bc769f",
+    "name" : "feature_icon",
+    "label" : "Feature Icon",
+    "required" : true,
+    "locked" : false,
+    "type" : "icon",
+    "default" : {
+      "name" : "clock",
+      "unicode" : "f017",
+      "type" : "REGULAR"
+    }
+  }, {
+    "id" : "cc0d4f5e-740f-040f-0d99-3db19164dd8b",
+    "name" : "feature_title",
+    "label" : "Feature Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Quick and Simple"
+  }, {
+    "id" : "56b197d9-3cd6-129a-e353-c419fb4eb39d",
+    "name" : "feature_description",
+    "label" : "Feature Description",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+  } ],
+  "type" : "group",
+  "default" : [ {
+    "resource_title" : "Quick and Simple",
+    "resource_description" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.",
+    "icon" : {
+      "name" : "clock",
+      "unicode" : "f017",
+      "type" : "REGULAR"
+    }
+  }, {
+    "resource_title" : "Quick and Simple",
+    "resource_description" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.",
+    "icon" : {
+      "name" : "clock",
+      "unicode" : "f017",
+      "type" : "REGULAR"
+    }
+  }, {
+    "resource_title" : "Quick and Simple",
+    "resource_description" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.",
+    "icon" : {
+      "name" : "clock",
+      "unicode" : "f017",
+      "type" : "REGULAR"
+    }
+  } ]
+}, {
+  "id" : "94cfacb0-4e6c-6b69-531b-cb866c6ce9b8",
+  "name" : "features_cta",
+  "label" : "Features CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta",
+  "default" : null
+} ]

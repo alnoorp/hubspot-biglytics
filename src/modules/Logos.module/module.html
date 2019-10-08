@@ -1,0 +1,13 @@
+<section class="logos">
+  {% for image in module.logo %}
+  	{% if image.src %}
+      {% set sizeAttrs = 'width="{{ image.width }}" height="{{ image.height }}"' %}
+      {% if image.size_type == 'auto' %}
+          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+      {% elif image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ image.max_width }}px; max-height: {{ image.max_height }}px"' %}
+      {% endif %}
+      <img class="span{{ 12 / module.logo|length|round }}" src="{{ image.src }}" alt="{{ image.alt }}" {{ sizeAttrs }}>
+    {% endif %}
+  {% endfor %}
+</section>

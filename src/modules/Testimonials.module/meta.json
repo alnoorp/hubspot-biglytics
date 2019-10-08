@@ -1,0 +1,22 @@
+{
+  "content_tags" : [ ],
+  "css_assets" : [ {
+    "url" : "https://design-assets.hubspot.com/hubfs/Assets/Slick/slick.min.css",
+    "name" : "slick.min.css",
+    "autoload" : true
+  } ],
+  "external_js" : [ ],
+  "extra_classes" : "",
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "js_assets" : [ {
+    "url" : "https://design-assets.hubspot.com/hubfs/Assets/Slick/slick.min.js",
+    "name" : "slick.min.js",
+    "autoload" : true
+  } ],
+  "other_assets" : [ ],
+  "placement_rules" : [ ],
+  "smart_type" : "NOT_SMART",
+  "module_id" : 9591884,
+  "is_available_for_new_content" : true
+}

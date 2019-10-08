@@ -1,0 +1,106 @@
+[ {
+  "id" : "523388cd-27e3-7190-1ee6-26f9c0f84069",
+  "name" : "testimonial_icon",
+  "label" : "Testimonial Icon",
+  "required" : false,
+  "locked" : false,
+  "type" : "icon",
+  "default" : {
+    "name" : "quote-left",
+    "unicode" : "f10d",
+    "type" : "SOLID"
+  }
+}, {
+  "id" : "c791c63d-a132-fae9-5b18-1928fc9256cb",
+  "name" : "testimonial_title",
+  "label" : "Testimonial Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Perfect HubTheme Saves Time"
+}, {
+  "id" : "cc77d5b0-f14e-11e1-275c-ce4a804db007",
+  "name" : "testimonial_slider",
+  "label" : "Testimonial Slider",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : 3,
+    "sorting_label_field" : "073c4d2a-49b2-b577-7267-d54a069d7d6f",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "073c4d2a-49b2-b577-7267-d54a069d7d6f",
+    "name" : "testimonial_title",
+    "label" : "Testimonial Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Wow, this is amazing!"
+  }, {
+    "id" : "5dd0215f-ed06-3dc8-d64c-b6618981fed5",
+    "name" : "testimonial_description",
+    "label" : "Testimonial Description",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor”&nbsp;"
+  }, {
+    "id" : "958a87dc-0e6f-48a2-ce25-92d640e7bf91",
+    "name" : "testimonial_headshot",
+    "label" : "Testimonial Headshot",
+    "required" : true,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "type" : "image",
+    "default" : {
+      "src" : "http://design-assets.hubspot.com/hubfs/alan.png",
+      "alt" : "alan"
+    }
+  }, {
+    "id" : "ecef97f8-b750-aa80-6647-0b1b6ce40996",
+    "name" : "testimonial_name",
+    "label" : "Testimonial Name",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Alan Dixon"
+  } ],
+  "type" : "group",
+  "default" : [ {
+    "testimonial_title" : "Wow, this is amazing!",
+    "testimonial_description" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor”&nbsp;",
+    "headshot" : {
+      "src" : "http://design-assets.hubspot.com/hubfs/alan.png",
+      "alt" : "alan"
+    },
+    "author" : "Alan Dixon"
+  }, {
+    "testimonial_title" : "Wow, this is amazing!",
+    "testimonial_description" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor”&nbsp;",
+    "headshot" : {
+      "src" : "http://design-assets.hubspot.com/hubfs/alan.png",
+      "alt" : "alan"
+    },
+    "author" : "Alan Dixon"
+  }, {
+    "testimonial_title" : "Wow, this is amazing!",
+    "testimonial_description" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor”&nbsp;",
+    "headshot" : {
+      "src" : "http://design-assets.hubspot.com/hubfs/alan.png",
+      "alt" : "alan"
+    },
+    "author" : "Alan Dixon"
+  } ]
+} ]
