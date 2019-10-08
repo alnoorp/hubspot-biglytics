@@ -1,12 +1,39 @@
 .footer {
-  background-color: {{ dnd_accent_bg_color }};
-  text-align: center;
+  background-color: #1E2B33;
 }
-.footer__container {
-  padding: 1rem;
+
+.footer-container {
+  max-width: {{ get_theme_style_setting('spacing.max_width', 'px') }};
+  margin: 0 auto;
+  padding: 40px 40px 0px 40px; 
 }
-.footer__copyright {
-  font-family: {{ secondary_font_family }};
-  font-size: .7rem;
-  margin: .5rem 0;
+
+.footer-top-section {
+  padding-bottom: 80px; 
+}
+
+.footer-bottom-section {
+  border-top: 1px solid #fff; 
+  padding: 20px 0px; 
+}
+
+.footer,
+.footer h6, 
+.footer a {
+  color: #fff; 
+}
+
+.footer h6 {
+  text-transform: uppercase; 
+}
+
+.footer-navigation ul li:before {
+  content: none; 
+}
+
+@media (max-width: 767px) {
+  .footer .footer-navigation {
+    float: left; 
+    width: 50%; 
+  }
 }

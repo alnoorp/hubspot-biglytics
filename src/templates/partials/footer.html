@@ -3,21 +3,68 @@
   label: Page footer
 -->
 <footer class="footer">
-  <div class="footer__container">
-    {% module_block module "footer_social" path="../../modules/Social follow" label="Social follow" %}
-      {% module_attribute "social_link" is_json=True %}
-        [
-          {"social_account": "facebook-f"},
-          {"social_account": "linkedin-in"},
-          {"social_account": "twitter"},
-          {"social_account": "instagram"}
-        ]
-      {% end_module_attribute %}
-    {% end_module_block %}
-    <div class="footer__copyright">
-      {% module_block module "footer_copyright_text" path="@hubspot/text" label="Copyright" %}
-        {% module_attribute "value" %}© {{ year }} All rights reserved.{% end_module_attribute %}
-      {% end_module_block %}
+    <div class="footer-container">
+      <div class="footer-top-section">
+        <div class="row-fluid span12">
+            <div class="column span4">
+              <div class="footer-logo">
+                  {% module "site_logo" path="@hubspot/logo", label="Logo" %}
+              </div>
+              <div class="follow-me">
+                {% module_block module "footer_social" path="../../modules/Social follow" label="Social Follow" %}
+                  {% module_attribute "social_link" is_json=True %}
+                    [
+                      {"social_account": "facebook-f"},
+                      {"social_account": "linkedin-in"},
+                      {"social_account": "twitter"},
+                      {"social_account": "instagram"}
+                    ]
+                  {% end_module_attribute %}
+                {% end_module_block %}
+              </div>
+            </div>
+            <div class="footer-navigation column span2">
+              {% module "menu_header_one" path="@hubspot/header" header_tag='h6', overrideable=True, value='Menu Title', label='Menu Title Column 1' %}
+              {% module_block module "footer_menu_one" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 1'  %}
+                {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% end_module_block %}
+            </div>
+            <div class="footer-navigation column span2">
+              {% module "menu_header_two" path="@hubspot/header", header_tag='h6', overrideable=True, value='Menu Title', label='Menu Title Column 2' %}
+              {% module_block module "footer_menu_two" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 1'  %}
+                {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% end_module_block %}
+            </div>
+            <div class="footer-navigation column span2">
+              {% module "menu_header_three" path="@hubspot/header", header_tag='h6', overrideable=True, value='Menu Title', label='Menu Title Column 3' %}
+              {% module_block module "footer_menu_three" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 1'  %}
+                {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% end_module_block %}
+            </div>
+            <div class="footer-navigation column span2">
+              {% module "menu_header_four" path="@hubspot/header", header_tag='h6', overrideable=True, value='Menu Title', label='Menu Title Column 4' %}
+              {% module_block module "footer_menu_four" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 1'  %}
+                {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% end_module_block %}
+            </div>
+        </div>
+      </div>
+      <div class="footer-bottom-section">
+        <div class="row-fluid span12">
+          <div class="column span3">
+            {% module_block module "footer_copyright" path="@hubspot/text" label="Copyright" %}
+              {% module_attribute "value" %}Copyright © {{ year }}, {{ site_settings.company_name }}{% end_module_attribute %}
+            {% end_module_block %}
+          </div>
+          <div class="column span9">
+            {% module_block module "footer_legal_information" path="@hubspot/rich_text" label="Legal Information" %}
+              {% module_attribute "html" %}
+                <a href="#">Privacy Policy</a> &nbsp;| &nbsp;<a href="#">Terms of Use</a>
+              {% end_module_attribute %}
+            {% end_module_block %}
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
+  
