@@ -41,7 +41,20 @@
 
 @media screen and (max-width: 767px) {
   .header-container {
-    padding: 20px 0;
+    padding: 20px;
+  }
+
+  .header .header-menu {
+    min-height: 0px; 
+  }
+
+  .header-navigation {
+    display: none;
+    width: 100%;
+  }
+
+  #nav-toggle:checked ~ .header-navigation {
+    display: block;
   }
 
   .header-navigation-toggle {
@@ -62,5 +75,9 @@
     background-position: center;
     height: 22px;
     width: 20px;
+  }
+
+  .header .cta {
+    display: none; 
   }
 }
