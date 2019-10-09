@@ -1,21 +1,28 @@
-.social-links__icon {
-  display: inline-block;
-  position: relative;
-  background-color: #000;
-  border-radius: 50%;
-  width: 40px;
+.social-links {
+  border: 2px solid #000; 
+  border-radius: 4px; 
+  display: inline-block; 
+}
+.social-links-icon {
+  border-right: 2px solid #000; 
+  float: left; 
   height: 40px;
-  margin: 0 5px;
+  padding: 10px; 
+  text-align: center;
+  width: 42px;
 }
-.social-links__icon:hover {
-  background-color: {{ body_color }};
+.social-links-icon:last-child {
+  width: 40px; 
+  border-right: 0px; 
 }
-.social-links__icon svg {
-  fill: #fff;
+.social-links-icon svg {
+  fill: #000;
   height: 15px;
   width: auto;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+}
+.social-links-icon:hover {
+  background-color: #000; 
+}
+.social-links-icon:hover svg {
+  fill: #fff; 
 }

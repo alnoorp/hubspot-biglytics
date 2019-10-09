@@ -192,15 +192,3 @@ sub {
 .disable-focus-styles :focus {
   outline: none;
 }
-
-@media (max-width: 767px) {
-  body {
-    font-size: 0.75rem; 
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 0.6rem; 
-  }
-}
