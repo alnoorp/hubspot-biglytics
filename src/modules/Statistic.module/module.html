@@ -3,7 +3,9 @@
 
 <div class="statistic">
   <div class="statistic-circle">
-    <span>{{ module.statistic_number }}</span>
+    <div class="statistic-info">
+      {{ module.statistic_number }}{% if module.statistic_unit %}<span class="unit">{{ module.statistic_unit }}</span>{% endif %}
+    </div>
     <div class="slice {% if module.statistic_percentage > 50 %}large{% endif %}">
       <div class="bar" style="-webkit-transform: rotate({{ rotate }}deg); -moz-transform: rotate({{ rotate }}deg); -ms-transform: rotate({{ rotate }}deg); -o-transform: rotate({{ rotate }}deg); transform: rotate({{ rotate }}deg);"></div>
       <div class="fill"></div>

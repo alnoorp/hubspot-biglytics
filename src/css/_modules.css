@@ -21,3 +21,10 @@
     border-radius: 50%;
 }
 
+/* Statistic Module */ 
+
+.statistic .statistic-circle .bar,
+.statistic .statistic-circle .large .fill,
+.statistic .statistic-circle .fill {
+    border-color: {{ get_theme_style_setting('colors.primary_color.color') }}; 
+}

@@ -132,7 +132,14 @@
     {# Statistics Section #}
       {% dnd_section %}
         {% dnd_column %}
-          {% dnd_row %}
+          {% dnd_row 
+            padding={
+              'top': 0,
+              'bottom': 40,
+              'left': 0,
+              'right': 0
+            }
+          %}
             {% dnd_module path='@hubspot/rich_text',
               flexbox_positioning='MIDDLE_CENTER'  
             %}
