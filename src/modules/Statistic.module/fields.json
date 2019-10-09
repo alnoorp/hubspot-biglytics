@@ -8,8 +8,19 @@
   "allow_new_line" : false,
   "show_emoji_picker" : false,
   "type" : "text",
-  "default" : "10k"
+  "default" : "10"
 }, {
+  "id" : "",
+  "name" : "statistic_unit",
+  "label" : "Statistic Unit",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "k"
+},{
   "id" : "c3e0e1eb-ce82-efd5-321e-eadde650bac0",
   "name" : "statistic_percentage",
   "label" : "Statistic Percentage",
