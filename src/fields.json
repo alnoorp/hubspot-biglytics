@@ -242,7 +242,7 @@
             "name":"vertical_spacing",
             "label":"Vertical spacing",
             "display":"slider",
-            "default":80,
+            "default":60,
             "min":0,
             "max":500
          },
