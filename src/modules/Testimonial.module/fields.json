@@ -27,7 +27,7 @@
   "resizable" : true,
   "type" : "image",
   "default" : {
-    "src" : "http://design-assets.hubspot.com/hubfs/alan.png",
+    "src" : "",
     "alt" : "alan"
   }
 }, {

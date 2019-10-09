@@ -12,6 +12,26 @@
   padding-bottom: 80px; 
 }
 
+.footer-logo {
+  margin-bottom: 60px; 
+}
+
+.footer .follow-me .social-links {
+  border-color: #fff; 
+}
+.footer .follow-me .social-links-icon {
+  border-right-color: #fff; 
+}
+.footer .follow-me .social-links-icon svg {
+  fill: #fff;
+}
+.footer .follow-me .social-links-icon:hover {
+  background-color: #fff; 
+}
+.footer .follow-me .social-links-icon:hover svg {
+  fill: #1E2B33; 
+}
+
 .footer-bottom-section {
   border-top: 1px solid #fff; 
   padding: 20px 0px; 
@@ -32,6 +52,17 @@
 }
 
 @media (max-width: 767px) {
+  .footer-top-section,
+  .footer-bottom-section {
+    text-align: center; 
+  }
+  .footer-top-section {
+    padding-bottom: 40px; 
+  }
+  .footer .footer-logo, 
+  .footer .follow-me {
+    margin-bottom: 40px; 
+  }
   .footer .footer-navigation {
     float: left; 
     width: 50%; 

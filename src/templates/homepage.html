@@ -185,12 +185,6 @@
 
     {# Testimonial Section #}
     {% dnd_section
-      padding={
-        'top': 120,
-        'bottom': 300,
-        'left': 20,
-        'right': 20
-      },
       background_image={
         'backgroundPosition': 'MIDDLE_CENTER',
         'backgroundSize': 'cover',
@@ -198,12 +192,22 @@
       } 
     %}
       {% dnd_column %}
-        {% dnd_row %}
-          {% dnd_module path='@hubspot/header', flexbox_positioning='MIDDLE_CENTER'  %}
-          {% module_attribute "label" %}Header{% end_module_attribute %}
-          {% module_attribute "header_tag"%}h2{% end_module_attribute %}
-          {% module_attribute "value"%}Headlines and Mission Statements for Days{% end_module_attribute %}
-        {% end_dnd_module %}
+        {% dnd_row
+          padding={
+            'top': 60,
+            'bottom': 40,
+            'left': 0,
+            'right': 0
+          }
+         %}
+          {% dnd_module path='@hubspot/rich_text', flexbox_positioning="TOP_CENTER" %}
+            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% module_attribute "html" %}
+              <div style="text-align: center;">
+                <h2 style="color: #ffffff;">What People Are Saying ...</h2>
+              </div>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module 
@@ -213,6 +217,12 @@
             flexbox_positioning='MIDDLE_CENTER' 
           %}
             {% module_attribute "label"%}Testimonial{% end_module_attribute %}
+            {% module_attribute "testimonial_headshot" is_json=True %}
+              {
+                "src": get_asset_url("../images/alan.png"),
+                "alt": "Alan Dixon"
+              }
+            {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
             path='../modules/Testimonial',
@@ -221,6 +231,12 @@
             flexbox_positioning='MIDDLE_CENTER' 
           %}
             {% module_attribute "label"%}Testimonial{% end_module_attribute %}
+            {% module_attribute "testimonial_headshot" is_json=True %}
+              {
+                "src": get_asset_url("../images/alan.png"),
+                "alt": "Alan Dixon"
+              }
+            {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
             path='../modules/Testimonial',
@@ -229,6 +245,12 @@
             flexbox_positioning='MIDDLE_CENTER' 
           %}
             {% module_attribute "label"%}Testimonial{% end_module_attribute %}
+            {% module_attribute "testimonial_headshot" is_json=True %}
+              {
+                "src": get_asset_url("../images/alan.png"),
+                "alt": "Alan Dixon"
+              }
+            {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
@@ -239,14 +261,15 @@
       {% dnd_module 
         path='@hubspot/linked_image',
         offset=0,
-        width=2
+        width=2,
+        flexbox_positioning='MIDDLE_CENTER'
       %}
       {% module_attribute "label" %}Image{% end_module_attribute %}
       {% module_attribute "img" is_json=True %}
         {
-          "src": "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png",
-          "width": "550",
-          "alt": "Sample Image",
+          "src": get_asset_url("../images/sample-logo.png"),
+          "width": "151",
+          "alt": "Sample logo",
           "size_type": "auto"
         }
       {% end_module_attribute %}
@@ -254,14 +277,15 @@
       {% dnd_module 
         path='@hubspot/linked_image',
         offset=2,
-        width=2
+        width=2,
+        flexbox_positioning='MIDDLE_CENTER'
       %}
       {% module_attribute "label" %}Image{% end_module_attribute %}
       {% module_attribute "img" is_json=True %}
         {
-          "src": "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png",
-          "width": "550",
-          "alt": "Sample Image",
+          "src": get_asset_url("../images/sample-logo.png"),
+          "width": "151",
+          "alt": "Sample logo",
           "size_type": "auto"
         }
       {% end_module_attribute %}
@@ -269,14 +293,15 @@
       {% dnd_module 
         path='@hubspot/linked_image',
         offset=4,
-        width=2
+        width=2,
+        flexbox_positioning='MIDDLE_CENTER'
       %}
       {% module_attribute "label" %}Image{% end_module_attribute %}
       {% module_attribute "img" is_json=True %}
         {
-          "src": "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png",
-          "width": "550",
-          "alt": "Sample Image",
+          "src": get_asset_url("../images/sample-logo.png"),
+          "width": "151",
+          "alt": "Sample logo",
           "size_type": "auto"
         }
       {% end_module_attribute %}
@@ -284,14 +309,15 @@
       {% dnd_module 
         path='@hubspot/linked_image',
         offset=6,
-        width=2
+        width=2,
+        flexbox_positioning='MIDDLE_CENTER'
       %}
       {% module_attribute "label" %}Image{% end_module_attribute %}
       {% module_attribute "img" is_json=True %}
         {
-          "src": "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png",
-          "width": "550",
-          "alt": "Sample Image",
+          "src": get_asset_url("../images/sample-logo.png"),
+          "width": "151",
+          "alt": "Sample logo",
           "size_type": "auto"
         }
       {% end_module_attribute %}
@@ -299,14 +325,15 @@
       {% dnd_module 
         path='@hubspot/linked_image',
         offset=8,
-        width=2
+        width=2,
+        flexbox_positioning='MIDDLE_CENTER'
       %}
       {% module_attribute "label" %}Image{% end_module_attribute %}
       {% module_attribute "img" is_json=True %}
         {
-          "src": "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png",
-          "width": "550",
-          "alt": "Sample Image",
+          "src": get_asset_url("../images/sample-logo.png"),
+          "width": "151",
+          "alt": "Sample logo",
           "size_type": "auto"
         }
       {% end_module_attribute %}
@@ -314,14 +341,15 @@
       {% dnd_module 
         path='@hubspot/linked_image',
         offset=10,
-        width=2
+        width=2,
+        flexbox_positioning='MIDDLE_CENTER'
       %}
       {% module_attribute "label" %}Image{% end_module_attribute %}
       {% module_attribute "img" is_json=True %}
         {
-          "src": "https://cdn2.hubspot.net/hubfs/6326501/boilerplate/grayscale-mountain.png",
-          "width": "550",
-          "alt": "Sample Image",
+          "src": get_asset_url("../images/sample-logo.png"),
+          "width": "151",
+          "alt": "Sample logo",
           "size_type": "auto"
         }
       {% end_module_attribute %}
@@ -342,17 +370,17 @@
           {% dnd_module path='@hubspot/rich_text', flexbox_positioning="TOP_CENTER" %}
           {% module_attribute "label" %}Rich text{% end_module_attribute %}
           {% module_attribute "html" %}
-            <div style="text-align: center">
-              <h2>Easy and Simple to Use for All Levels.</h2>
-              <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+            <div style="text-align: center;">
+              <h2 style="color: #ffffff;">Easy and Simple to Use for All Levels.</h2>
+              <p style="color: #ffffff;">Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
             </div>
           {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module path='../modules/Customizable button', flexbox_positioning='MIDDLE_CENTER' %}
-            {% module_attribute "label"%}Button{% end_module_attribute %}
-            {% module_attribute "link"%}#{% end_module_attribute %}
+            {% module_attribute "label" %}Button{% end_module_attribute %}
+            {% module_attribute "link" %}#{% end_module_attribute %}
             {% module_attribute "button_text" %}Free Trial{% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
