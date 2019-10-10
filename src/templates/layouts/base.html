@@ -18,12 +18,16 @@
   </head>
   <body>
     <div class="body-wrapper {{ builtin_body_classes }}">
-      {% global_partial path="../partials/header.html" %}
+      {% block header %}
+        {% global_partial path="../partials/header.html" %}
+      {% endblock header %}
 
       {% block body %}
       {% endblock body %}
 
-      {% global_partial path="../partials/footer.html" %}
+      {% block footer %}
+        {% global_partial path="../partials/footer.html" %}
+      {% endblock footer %}
     </div>
     {{ standard_footer_includes }}
   </body>
