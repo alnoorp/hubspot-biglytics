@@ -1,0 +1,20 @@
+.feature {
+    text-align: center; 
+}
+
+.feature .icon > span {
+    background-color: #fff; 
+    border-radius: 100%; 
+    border: 1px solid #000; 
+    display: block; 
+    height: 100px; 
+    margin: 0px auto 20px; 
+    width: 100px; 
+}
+
+.feature .icon svg {
+    fill: #000; 
+    height: 100px;
+    padding: 20px; 
+    width: 100px; 
+}

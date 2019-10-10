@@ -48,21 +48,44 @@
     {# Three Column Feature Section #}
       {% dnd_section %}
         {% dnd_column %}
-          {% dnd_row %}
+          {% dnd_row
+            padding={
+              'top': 0,
+              'bottom': 40,
+              'left': 0,
+              'right': 0
+            }
+          %}
             {% dnd_module path='@hubspot/header', flexbox_positioning='MIDDLE_CENTER'  %}
               {% module_attribute "label" %}Header{% end_module_attribute %}
               {% module_attribute "header_tag"%}h2{% end_module_attribute %}
               {% module_attribute "value"%}Headlines and Mission Statements for Days{% end_module_attribute %}
             {% end_dnd_module %}
           {% end_dnd_row %}
-          {% dnd_row %}
+          {% dnd_row 
+            padding={
+              'top': 0,
+              'bottom': 40,
+              'left': 0,
+              'right': 0
+            }
+          %}
             {% dnd_module 
               path='../modules/Feature',
               offset=0,
               width=4,
               flexbox_positioning='MIDDLE_CENTER' 
             %}
-              {% module_attribute "label"%}Feature{% end_module_attribute %}
+              {% module_attribute "label" %}Feature{% end_module_attribute %}
+              {% module_attribute "feature_icon" is_json= True %}
+                {
+                  "name": "clock",
+                  "type": "REGULAR",
+                  "unicode": "f017"
+                }
+              {% end_module_attribute %}
+              {% module_attribute "feature_title" %}Quick and Simple{% end_module_attribute %}
+              {% module_attribute "feature_description" %}Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.{% end_module_attribute %}
             {% end_dnd_module %}
             {% dnd_module
               path='../modules/Feature' ,
@@ -70,7 +93,16 @@
               width=4,
               flexbox_positioning='MIDDLE_CENTER' 
             %}
-              {% module_attribute "label"%}Feature{% end_module_attribute %}
+              {% module_attribute "label" %}Feature{% end_module_attribute %}
+              {% module_attribute "feature_icon" is_json= True %}
+                {
+                  "name": "cloud",
+                  "type": "SOLID",
+                  "unicode": "foc2"
+                }
+              {% end_module_attribute %}
+              {% module_attribute "feature_title" %}Library of Assets{% end_module_attribute %}
+              {% module_attribute "feature_description" %}Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.{% end_module_attribute %}
             {% end_dnd_module %}
             {% dnd_module 
               path='../modules/Feature',
@@ -78,7 +110,16 @@
               width=4,
               flexbox_positioning='MIDDLE_CENTER' 
             %}
-              {% module_attribute "label"%}Feature{% end_module_attribute %}
+              {% module_attribute "label" %}Feature{% end_module_attribute %}
+              {% module_attribute "feature_icon" is_json= True %}
+                {
+                  "name": "mobile-alt",
+                  "type": "SOLID",
+                  "unicode": "f3cd"
+                }
+              {% end_module_attribute %}
+              {% module_attribute "feature_title" %}Responsive Design{% end_module_attribute %}
+              {% module_attribute "feature_description" %}Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.{% end_module_attribute %}
             {% end_dnd_module %}
           {% end_dnd_row %}
           {% dnd_row %}
@@ -144,7 +185,7 @@
             %}
               {% module_attribute "label" %}Button{% end_module_attribute %}
               {% module_attribute "link" %}#{% end_module_attribute %}
-              {% module_attribute "button_text" %}View Features{% end_module_attribute %}
+              {% module_attribute "button_text" %}Free Trial{% end_module_attribute %}
             {% end_dnd_module %}
           {% end_dnd_row %}
         {% end_dnd_column %}
@@ -181,6 +222,10 @@
               flexbox_positioning='MIDDLE_CENTER' 
             %}
               {% module_attribute "label"%}Statistic{% end_module_attribute %}
+              {% module_attribute "statistic_number"%}10{% end_module_attribute %}
+              {% module_attribute "statistic_unit"%}k{% end_module_attribute %}
+              {% module_attribute "statistic_percentage"%}50{% end_module_attribute %}
+              {% module_attribute "statistic_description"%}<p>Awards won for excellence</p>{% end_module_attribute %}
             {% end_dnd_module %}
             {% dnd_module 
               path='../modules/Statistic',
@@ -189,6 +234,10 @@
               flexbox_positioning='MIDDLE_CENTER' 
             %}
               {% module_attribute "label"%}Statistic{% end_module_attribute %}
+              {% module_attribute "statistic_number"%}98{% end_module_attribute %}
+              {% module_attribute "statistic_unit"%}%{% end_module_attribute %}
+              {% module_attribute "statistic_percentage"%}98{% end_module_attribute %}
+              {% module_attribute "statistic_description"%}<p>Customer satisfaction rating</p>{% end_module_attribute %}
             {% end_dnd_module %}
             {% dnd_module 
               path='../modules/Statistic',
@@ -197,6 +246,10 @@
               flexbox_positioning='MIDDLE_CENTER' 
             %}
               {% module_attribute "label"%}Statistic{% end_module_attribute %}
+              {% module_attribute "statistic_number"%}1,211{% end_module_attribute %}
+              {% module_attribute "statistic_unit"%}{% end_module_attribute %}
+              {% module_attribute "statistic_percentage"%}75{% end_module_attribute %}
+              {% module_attribute "statistic_description"%}<p>Custom configurations</p>{% end_module_attribute %}
             {% end_dnd_module %}
             {% dnd_module 
               path='../modules/Statistic',
@@ -205,6 +258,10 @@
               flexbox_positioning='MIDDLE_CENTER' 
             %}
               {% module_attribute "label"%}Statistic{% end_module_attribute %}
+              {% module_attribute "statistic_number"%}36{% end_module_attribute %}
+              {% module_attribute "statistic_unit"%}m{% end_module_attribute %}
+              {% module_attribute "statistic_percentage"%}100{% end_module_attribute %}
+              {% module_attribute "statistic_description"%}<p>Downloads of Perfect in 2018</p>{% end_module_attribute %}
             {% end_dnd_module %}
           {% end_dnd_row %}
         {% end_dnd_column %}

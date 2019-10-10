@@ -179,6 +179,7 @@
     margin-left: auto;
     margin-right: 30px;
     transition: transform 0.4s;
+    filter: grayscale(1) brightness(4);; 
   }
 
   input[type="checkbox"]:checked ~ .submenu {

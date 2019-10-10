@@ -44,6 +44,7 @@ h3.form-title {
   background-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
   border-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
   color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
+  text-decoration: none; 
 }
 
 .hs-form label {
