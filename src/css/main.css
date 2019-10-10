@@ -18,5 +18,6 @@
 {% include './_homepage.css' %}
 {% include './_header.css' %}
 {% include './_footer.css' %}
+{% include './_blog_subscription.css' %}
 {% include './_blog.css' %}
 {% include './_system_pages.css' %}

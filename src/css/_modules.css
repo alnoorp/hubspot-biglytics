@@ -1,3 +1,8 @@
+/* Image Module */ 
+img {
+    max-width: 100%; 
+}
+
 /* Feature Module */ 
 div.feature {
     padding: 0px 20px; 
