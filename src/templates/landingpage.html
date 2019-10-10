@@ -8,10 +8,124 @@
 <main class="body-container-wrapper">
   {% dnd_area "dnd_area" class='body-container body-container-landing-page', label='Main section' %}
 
-    {% dnd_section %}
+    {# Top Section #}
+    {% dnd_section 
+      padding={
+        'top': 40,
+        'bottom': 40,
+        'left': 0,
+        'right': 0
+      },
+      background_image={
+        'backgroundPosition': 'MIDDLE_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': get_asset_url("../images/landing-page-banner.png")
+      }
+    %}
       {% dnd_column %}
         {% dnd_row %}
-         
+          {% dnd_module path='@hubspot/logo', flexbox_positioning='MIDDLE_CENTER'  %}
+            {% module_attribute "label" %}Logo{% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module 
+            path='@hubspot/linked_image',
+            offset=0,
+            width=4
+          %}
+            {% module_attribute "label" %}Image{% end_module_attribute %}
+            {% module_attribute "img" is_json=True %}
+              {
+                "src": get_asset_url("../images/ebook.png"),
+                "alt": "Ebook",
+                "size_type": "auto"
+              }
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% dnd_module 
+            path='@hubspot/rich_text',
+            offset=4,
+            width=4
+          %}
+            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% module_attribute "html" %}
+              <div>
+                <h2>Title of Downloadable Content.</h2>
+                <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+              </div>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% dnd_module 
+            path='@hubspot/form',
+            offset=8,
+            width=4
+          %}
+            {% module_attribute "label" %}Form{% end_module_attribute %}
+            {% module_attribute "title" %}Yes! Send Me the Ebook!{% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# Bottom Section #}
+    {% dnd_section
+      background_color={
+        r: 52,
+        g: 181,
+        b: 229,
+        a: 1.0 
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% module_attribute "html" %}
+              <h2 style="color: #fff;">What's Inside?</h2>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module 
+            path='@hubspot/rich_text',
+            offset=0,
+            width=4
+          %}
+            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% module_attribute "html" %}
+              <ul class="alternative-list" style="color: #fff;">
+                <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+              </ul>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% dnd_module 
+            path='@hubspot/rich_text',
+            offset=4,
+            width=4
+          %}
+            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% module_attribute "html" %}
+              <ul class="alternative-list" style="color: #fff;">
+                <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+              </ul>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% dnd_module 
+            path='@hubspot/rich_text',
+            offset=8,
+            width=4
+          %}
+            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% module_attribute "html" %}
+              <ul class="alternative-list" style="color: #fff;">
+                <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+              </ul>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
