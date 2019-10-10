@@ -149,8 +149,9 @@ ol ol {
   padding-left: 2.86rem; 
 }
 
-/* Disables list stlyes on HubSpot toolbar */ 
-.hs-dropdown ul li:before {
+/* Prevents CSS Conflicts With HubSpot Editors */ 
+.hs-dropdown ul li:before,
+.hs-inline-edit ul li:before {
   content: none; 
 }
 
