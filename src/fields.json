@@ -15,10 +15,19 @@
          },
          {
             "type":"color",
-            "name":"accent_color",
-            "label":"Accent color",
+            "name":"secondary_color",
+            "label":"Secondary color",
             "default":{
                "color":"#c168c2",
+               "opacity":100
+            }
+         },
+         {
+            "type":"color",
+            "name":"tertiary_color",
+            "label":"Tertiary color",
+            "default":{
+               "color":"#1E2B33",
                "opacity":100
             }
          },

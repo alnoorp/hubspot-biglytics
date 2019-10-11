@@ -9,7 +9,7 @@ form {
 }
 
 h3.form-title {
-  background-color: {{ get_theme_style_setting('colors.accent_color.color') }};
+  background-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   color: #fff; 
@@ -82,7 +82,7 @@ form input:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
-  border-color: {{ get_theme_style_setting('colors.accent_color.color') }};
+  border-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
   border-width: 1px;
 }
 
@@ -139,7 +139,7 @@ form ul li::before {
 }
 
 .hs-date_picker.in-focus .input .hs-dateinput:before {
-  color: {{ get_theme_style_setting('colors.accent_color.color') }};
+  color: {{ get_theme_style_setting('colors.secondary_color.color') }};
 }
 
 .hs-date_picker .input .hs-dateinput .fn-date-picker .is-today .pika-button {
@@ -151,7 +151,7 @@ form ul li::before {
 }
 
 .hs-date_picker .input .hs-dateinput .pika-button:hover {
-  background-color: {{ get_theme_style_setting('colors.accent_color.color') }};
+  background-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
 }
 
 .hs-input:-moz-placeholder {
