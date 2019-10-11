@@ -191,7 +191,7 @@ sub {
 
 :focus {
   outline: auto;
-  outline-color: {{ get_theme_style_setting('colors.accent_color.color') }};
+  outline-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
 }
 
 .disable-focus-styles :focus {

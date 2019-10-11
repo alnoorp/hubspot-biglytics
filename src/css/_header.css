@@ -32,7 +32,7 @@
 
 .submenu.level-2 .menu-item .menu-link:hover,
 .submenu.level-2 .menu-item .menu-link:focus {
-  background-color: {{ get_theme_style_setting('colors.accent_color.color') }};
+  background-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
 }
 
 .cta {
