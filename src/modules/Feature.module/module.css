@@ -13,6 +13,7 @@
 }
 
 .feature .icon svg {
+    box-sizing: border-box; 
     fill: #000; 
     height: 100px;
     padding: 20px; 
