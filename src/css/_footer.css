@@ -37,13 +37,18 @@
   padding: 20px 0px; 
 }
 
-.footer,
-.footer h6, 
+.footer, 
 .footer a {
   color: #fff; 
 }
 
-.footer h6 {
+.footer h4 {
+  color: #fff; 
+  font-family: {{ get_theme_style_setting('typography.heading_six.font') }};
+  font-size: {{ get_theme_style_setting('typography.heading_six.size.value', 'typography.heading_six.size.units') }};
+  font-weight: 600; 
+  letter-spacing: normal; 
+  line-height: 1.125rem;
   text-transform: uppercase; 
 }
 
