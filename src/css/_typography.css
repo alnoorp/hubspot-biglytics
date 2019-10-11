@@ -130,7 +130,7 @@ ul li:before {
 }
 
 ul.alternative-list li:before {
-  color: #1287B3; 
+  color: #fff; 
 }
 
 ul li,
@@ -151,7 +151,7 @@ ol ol {
 
 /* Prevents CSS Conflicts With HubSpot Editors */ 
 .hs-dropdown ul li:before,
-.hs-inline-edit ul li:before {
+.hs-private ul li:before {
   content: none; 
 }
 

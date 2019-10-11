@@ -254,7 +254,7 @@
             "default":80,
             "min":0,
             "max":500
-         },
+         }, 
          {
             "type":"number",
             "name":"max_width",

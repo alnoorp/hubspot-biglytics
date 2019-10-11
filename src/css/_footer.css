@@ -19,17 +19,21 @@
 .footer .follow-me .social-links {
   border-color: #fff; 
 }
+
 .footer .follow-me .social-links-icon {
   border-right-color: #fff; 
 }
+
 .footer .follow-me .social-links-icon svg {
   fill: #fff;
 }
+
 .footer .follow-me .social-links-icon:hover {
   background-color: #fff; 
 }
+
 .footer .follow-me .social-links-icon:hover svg {
-  fill: #1E2B33; 
+  fill: {{ get_theme_style_setting('colors.tertiary_color.color') }}; 
 }
 
 .footer-bottom-section {
@@ -38,12 +42,12 @@
 }
 
 .footer, 
+.footer h4,
 .footer a {
   color: #fff; 
 }
 
 .footer h4 {
-  color: #fff; 
   font-family: {{ get_theme_style_setting('typography.heading_six.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_six.size.value', 'typography.heading_six.size.units') }};
   font-weight: 600; 
