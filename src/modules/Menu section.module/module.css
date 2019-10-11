@@ -33,6 +33,11 @@
   text-decoration: none;
 }
 
+.hs-menu-item:hover a,
+.hs-menu-item:focus a {
+  text-decoration: none;
+} 
+
 .submenu-toggle {
   display: none;
 }
@@ -144,7 +149,7 @@
   .submenu.level-1 > li {
     display: block;
     width: 100%;
-    border-top: 2px solid #d0d0d0;
+    border-top: 1px solid #d0d0d0;
     padding: 0;
   }
 
@@ -203,7 +208,7 @@
 
   .submenu.level-2 .menu-item {
     padding: 0;
-    border-top: 2px solid #d0d0d0;
+    border-top: 1px solid #d0d0d0;
     border-bottom: none;
   }
 
