@@ -1,0 +1,13 @@
+.testimonial .avatar, 
+.testimonial .name {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 0;
+}
+
+.testimonial .avatar {
+    height: 45px;
+    width: 45px;
+    background-size: cover;
+    border-radius: 50%;
+}
