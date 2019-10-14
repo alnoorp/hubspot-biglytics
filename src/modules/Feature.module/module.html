@@ -1,4 +1,4 @@
-<div class="feature">
+<div class="feature" id="{{ name }}">
   <span class="icon">	
     {% icon
       name="{{ module.feature_icon.name }}"
@@ -9,3 +9,15 @@
   <h3 class="title">{{ module.feature_title }}</h3>
   <div clas="description">{{ module.feature_description }}</div>
 </div>
+
+{% require_css %}
+<style>
+  #hs_cos_wrapper_{{name}} .feature .icon > span {
+    background-color: {{ module.icon_bg_color.color }}; 
+    border-color: {{ module.icon_border_color.color }}; 
+  }
+  #hs_cos_wrapper_{{name}} .feature .icon svg {
+    fill: {{ module.icon_color.color }}; 
+  }
+</style>
+{% end_require_css %}

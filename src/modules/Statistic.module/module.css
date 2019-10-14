@@ -9,7 +9,6 @@
   box-sizing: content-box;
 }
 .statistic-circle {
-  background-color: #d0d0d0;
   border-radius: 50%;
   float: none;
   font-size: 150px;
@@ -19,7 +18,6 @@
   width: 1em;
 }
 .statistic-circle > .statistic-info {
-  color: #000;
   display: block;
   font-size: 0.3em;
   left: 0;
@@ -47,16 +45,13 @@
 .statistic-circle .bar,
 .statistic-circle .large .fill {
   border-radius: 50%;
-  border: 0.08em solid #000;
+  border-width: 0.08em;
+  border-style: solid;
   border-radius: 50%;
   clip: rect(0em, 0.5em, 1em, 0em);
   height: 0.84em;
   position: absolute;
   width: 0.84em;
-}
-.statistic-circle .bar, 
-.statistic-circle .fill {
-  border-color: #000;
 }
 .statistic-circle .fill {
   -webkit-transform: rotate(180deg);
@@ -66,7 +61,6 @@
   transform: rotate(180deg); 
 }
 .statistic-circle::after {
-  background-color: #fff;
   border-radius: 50%;
   content: " ";
   display: block;
