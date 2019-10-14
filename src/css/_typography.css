@@ -124,7 +124,7 @@ ul li:before {
   font-size: 1.43rem; 
   line-height: 2.5rem; 
   padding-right: 0.71rem; 
-  color: {{ get_theme_style_setting('colors.primary_color.color') }};
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
   letter-spacing: 0;
   vertical-align: middle;
 }
@@ -160,7 +160,9 @@ blockquote {
   font-size: 1.43rem; 
   line-height: 2.14rem; 
   margin: 0;
-  border-left: 4px solid {{ get_theme_style_setting('colors.primary_color.color') }};
+  border-left-width: 4px;
+  border-left-style: solid;
+  border-left-color: {{ get_theme_style_setting('typography.body_font.color') }};
   font-weight: 400;
   letter-spacing: 0;
 }
@@ -191,7 +193,6 @@ sub {
 
 :focus {
   outline: auto;
-  outline-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
 }
 
 .disable-focus-styles :focus {
