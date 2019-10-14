@@ -4,10 +4,9 @@
 }
 
 .feature .icon > span {
-    background-color: #fff; 
-    border-color: #d0d0d0; 
     border-radius: 100%; 
-    border: 1px solid #000; 
+    border-width: 1px;
+    border-style: solid;
     display: block; 
     height: 100px; 
     margin: 0px auto 20px; 
@@ -16,7 +15,6 @@
 
 .feature .icon svg {
     box-sizing: border-box; 
-    fill: #000; 
     height: 100px;
     padding: 20px; 
     width: 100px; 

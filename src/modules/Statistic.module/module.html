@@ -1,15 +1,41 @@
 {% set circleDegrees = module.statistic_percentage * 0.01 * 360 %}
 {% set rotate = circleDegrees|round %}
 
-<div class="statistic">
+<div class="statistic" id="{{ name }}">
   <div class="statistic-circle">
     <div class="statistic-info">
       {{ module.statistic_number }}{% if module.statistic_unit %}<span class="unit">{{ module.statistic_unit }}</span>{% endif %}
     </div>
     <div class="slice {% if module.statistic_percentage > 50 %}large{% endif %}">
-      <div class="bar" style="-webkit-transform: rotate({{ rotate }}deg); -moz-transform: rotate({{ rotate }}deg); -ms-transform: rotate({{ rotate }}deg); -o-transform: rotate({{ rotate }}deg); transform: rotate({{ rotate }}deg);"></div>
-      <div class="fill"></div>
+      <div class="bar" style="-webkit-transform: rotate({{ rotate }}deg); -moz-transform: rotate({{ rotate }}deg); -ms-transform: rotate({{ rotate }}deg); -o-transform: rotate({{ rotate }}deg); transform: rotate({{ rotate }}deg); border-color: {{ module.statistic_fill_color.color }};"></div>
+      <div class="fill" style="border-color: {{ module.statistic_fill_color.color }};"></div>
     </div>
   </div>
   <div class="description">{{ module.statistic_description }}</div>
 </div>
+
+{% require_css %}
+<style>
+  #hs_cos_wrapper_{{name}} .statistic-circle {
+    background-color: {{ module.statistic_bar_color.color }};
+  }
+  #hs_cos_wrapper_{{name}} .statistic-circle .bar,
+  #hs_cos_wrapper_{{name}} .statistic-circle .fill,
+  #hs_cos_wrapper_{{name}} .statistic-circle .large .fill {
+    border-color: {{ module.statistic_fill_color.color }};
+  }
+  #hs_cos_wrapper_{{name}} .statistic-circle .bar {
+    -webkit-transform: rotate({{ rotate }}deg); 
+    -moz-transform: rotate({{ rotate }}deg); 
+    -ms-transform: rotate({{ rotate }}deg); 
+    -o-transform: rotate({{ rotate }}deg); 
+    transform: rotate({{ rotate }}deg);
+  }
+  #hs_cos_wrapper_{{name}} .statistic-info {
+    color: {{ module.statistic_text_color.color }};
+  }
+  #hs_cos_wrapper_{{name}} .statistic-circle::after {
+    background-color: {{ module.statistic_bg_color.color }};
+  }
+</style>
+{% end_require_css %}
