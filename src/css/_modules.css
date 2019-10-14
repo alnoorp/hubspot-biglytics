@@ -2,33 +2,3 @@
 img {
     max-width: 100%; 
 }
-
-/* Feature Module */ 
-div.feature {
-    padding: 0px 20px; 
-}
-
-div.feature .icon > span {
-    border-color: #d0d0d0; 
-}
-
-div.feature .icon svg {
-    fill: {{ get_theme_style_setting('colors.primary_color.color') }};
-}
-
-/* Statistic Module */ 
-
-.statistic .statistic-circle .bar,
-.statistic .statistic-circle .large .fill,
-.statistic .statistic-circle .fill {
-    border-color: {{ get_theme_style_setting('colors.primary_color.color') }}; 
-}
-
-/* Testimonial Module */ 
-
-.testimonial {
-    background-color: #fff; 
-    padding: 45px 40px 20px; 
-    text-align: center; 
-    margin-top: 20px; 
-}

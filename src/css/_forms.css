@@ -1,6 +1,8 @@
 form {
-  background-color: #f1f1f1; 
-  border: 1px solid #d0d0d0;
+  background-color: {{ get_theme_style_setting('forms.form_bg_color.color') }};
+  border-width: 1px;
+  border-style: solid;
+  border-color: {{ get_theme_style_setting('forms.form_border_color.color') }}; 
   border-botton-left-radius: 4px;
   border-bottom-right-radius: 4px;
   font-family: {{ get_theme_style_setting('typography.body_font.font') }};
@@ -9,10 +11,10 @@ form {
 }
 
 h3.form-title {
-  background-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
+  background-color: {{ get_theme_style_setting('forms.form_header_bg_color.color') }}; 
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  color: #fff; 
+  color: {{ get_theme_style_setting('forms.form_header_text_color.color') }}; 
   margin: 0; 
   max-width: 500px;
   padding: 2.88rem 2.63rem 2.44rem;
@@ -49,7 +51,7 @@ h3.form-title {
 
 .hs-form label {
   font-size: 1rem;
-  color: #1e2b33;
+  color: {{ get_theme_style_setting('forms.form_label_color.color') }}; 
   display: block;
   float: none;
   width: auto;
@@ -70,9 +72,11 @@ form .input {
 form input,
 form select,
 form textarea {
-  border: 1px solid #d0d0d0; 
+  border-width: 1px;
+  border-style: solid;
+  border-color: {{ get_theme_style_setting('forms.form_field_border_color.color') }};
   background-color: #fff; 
-  color: #1e2b33;
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
   display: inline-block; 
   padding: 0.75rem; 
   width: 100%; 
@@ -82,7 +86,7 @@ form input:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
-  border-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
+  border-color: {{ get_theme_style_setting('forms.form_field_focus_border_color.color') }};
   border-width: 1px;
 }
 
@@ -138,28 +142,12 @@ form ul li::before {
   transform: translateY(-50%);
 }
 
-.hs-date_picker.in-focus .input .hs-dateinput:before {
-  color: {{ get_theme_style_setting('colors.secondary_color.color') }};
-}
-
-.hs-date_picker .input .hs-dateinput .fn-date-picker .is-today .pika-button {
-  color: {{ get_theme_style_setting('colors.primary_color.color') }};
-}
-
-.hs-date_picker .input .hs-dateinput .fn-date-picker .is-selected .pika-button {
-  background: {{ get_theme_style_setting('colors.primary_color.color') }};
-}
-
-.hs-date_picker .input .hs-dateinput .pika-button:hover {
-  background-color: {{ get_theme_style_setting('colors.secondary_color.color') }};
-}
-
 .hs-input:-moz-placeholder {
-  color: #1e2b33;
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
 }
 
 .hs-input::-webkit-input-placeholder {
-  color: #1e2b33;
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
 }
 
 .hs-input input,
@@ -246,7 +234,7 @@ ul.no-list {
 }
 
 .hs-field-desc {
-  color: #1e2b33;
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
   margin: 0px 0px 6px;
   font-size: 14px;
 }
