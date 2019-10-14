@@ -19,13 +19,13 @@ p {
 
 /* Anchor Links */
 a {
-  color: {{ get_theme_style_setting('colors.link_color.color') }};
+  color: {{ get_theme_style_setting('links.link_color.color') }};
   cursor: pointer; 
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: {{ get_theme_style_setting('colors.link_hover_color.color') }};
+  color: {{ get_theme_style_setting('links.link_hover_color.color') }};
   text-decoration: underline;
 }
 

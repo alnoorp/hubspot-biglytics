@@ -1,25 +1,41 @@
 table {
   margin-bottom: 1rem;
-  border: 1px solid #d0d0d0;
+  border-width: 1px;
+  border-style: solid; 
+  border-color: {{ get_theme_style_setting('tables.table_border_color.color') }};
 }
 
 th,
 td {
   padding: 0.75rem;
   vertical-align: top;
-  border: 1px solid #d0d0d0;
+  border-width: 1px;
+  border-style: solid; 
+  border-color: {{ get_theme_style_setting('tables.table_border_color.color') }};
 }
 
 thead th,
 thead td {
-  color: #fff;
-  background-color: {{ get_theme_style_setting('colors.primary_color.color') }};
+  color: {{ get_theme_style_setting('tables.table_header_text_color.color') }};
+  background-color: {{ get_theme_style_setting('tables.table_header_bg_color.color') }};
 }
 
 thead th {
   vertical-align: bottom;
 }
 
+tbody td {
+  color: {{ get_theme_style_setting('tables.table_body_text_color.color') }};
+  background-color: {{ get_theme_style_setting('tables.table_body_bg_color.color') }};
+}
+
+tfoot td {
+  color: {{ get_theme_style_setting('tables.table_footer_text_color.color') }};
+  background-color: {{ get_theme_style_setting('tables.table_footer_bg_color.color') }};
+}
+
 tbody + tbody {
-  border-top: 2px solid #d0d0d0;
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: {{ get_theme_style_setting('tables.table_border_color.color') }};
 }

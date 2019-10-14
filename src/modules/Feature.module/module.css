@@ -1,9 +1,11 @@
 .feature {
+    padding: 0px 20px; 
     text-align: center; 
 }
 
 .feature .icon > span {
     background-color: #fff; 
+    border-color: #d0d0d0; 
     border-radius: 100%; 
     border: 1px solid #000; 
     display: block; 

@@ -1,5 +1,5 @@
 .footer {
-  background-color: {{ get_theme_style_setting('colors.tertiary_color.color') }};
+  background-color: {{ get_theme_style_setting('footer.footer_bg_color.color') }};
 }
 
 .footer-container {
@@ -17,34 +17,36 @@
 }
 
 .footer .follow-me .social-links {
-  border-color: #fff; 
+  border-color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
 .footer .follow-me .social-links-icon {
-  border-right-color: #fff; 
+  border-right-color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
 .footer .follow-me .social-links-icon svg {
-  fill: #fff;
+  fill: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
 .footer .follow-me .social-links-icon:hover {
-  background-color: #fff; 
+  background-color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
 .footer .follow-me .social-links-icon:hover svg {
-  fill: {{ get_theme_style_setting('colors.tertiary_color.color') }}; 
+  fill: {{ get_theme_style_setting('footer.footer_bg_color.color') }};
 }
 
 .footer-bottom-section {
-  border-top: 1px solid #fff; 
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: {{ get_theme_style_setting('footer.footer_content_color.color') }};
   padding: 20px 0px; 
 }
 
 .footer, 
 .footer h4,
 .footer a {
-  color: #fff; 
+  color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
 .footer h4 {
