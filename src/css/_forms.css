@@ -46,7 +46,8 @@ h3.form-title {
 .cta_button:hover,
 .cta_button:focus,
 .cta_button:active {
-  border-color: {{ get_theme_style_setting('forms.form_field_focus_border_color.color') }};
+  border-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
+  background-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
   color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
   text-decoration: none; 
 }
