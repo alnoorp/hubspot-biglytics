@@ -8,17 +8,19 @@
         <div class="header-logo column span3">
             {% module "header_logo" path="@hubspot/logo", label="Logo" %}
         </div>
-        <div class="header-menu column span7">
+        <div class="header-menu column span6">
             <input type="checkbox" id="nav-toggle">
             <label class="header-navigation-toggle" for="nav-toggle"></label>
             <div class="header-navigation">
               {% module "header_navigation_primary" path="../../modules/Menu section", label="Primary Navigation" %}
             </div>
         </div>
-        <div class="cta column span2">
-            {% module "header_cta" path="@hubspot/cta" label="Call to Action" %}
+        <div class="cta column span3">
+          {% module_block module "header_button" path="../../modules/Customizable button" label="Call to Action" %}
+            {% module_attribute "link" %}#{% end_module_attribute %}
+            {% module_attribute "button_text" %}Free Trial{% end_module_attribute %}
+          {% end_module_block %}
         </div>
     </div>
   </div>
 </header>
-
