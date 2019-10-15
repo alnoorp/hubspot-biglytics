@@ -78,4 +78,7 @@
     float: left; 
     width: 50%; 
   }
+  .footer .footer-navigation:nth-child(2n+2) {
+    clear: left; 
+  }
 }

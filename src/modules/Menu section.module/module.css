@@ -1,5 +1,6 @@
 .navigation-primary {
   display: inline-block;
+  float: right; 
 }
 
 .navigation-primary a {
@@ -38,6 +39,10 @@
 
 .submenu-toggle {
   display: none;
+}
+
+.submenu {
+  float: none; 
 }
 
 .submenu.level-1 {
@@ -119,6 +124,7 @@
 @media (max-width: 767px) {
   .navigation-primary {
     display: block;
+    float: none; 
   }
 
   .navigation-primary .submenu.level-1 > li > a.active-item:after {
