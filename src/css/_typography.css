@@ -191,10 +191,6 @@ sub {
   bottom: -0.25em;
 }
 
-:focus {
-  outline: auto;
-}
-
 .disable-focus-styles :focus {
   outline: none;
 }
