@@ -1,0 +1,105 @@
+.body-container-blog {
+    padding-top: {{ get_theme_style_setting('spacing.vertical_spacing', 'px') }};
+    padding-bottom: {{ get_theme_style_setting('spacing.vertical_spacing', 'px') }};
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.blog-header {
+    text-align: center; 
+}
+
+.blog-header__inner {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3.3rem 0;
+}
+
+.content-wrapper {
+    max-width: {{ get_theme_style_setting('spacing.max_width', 'px') }};
+    margin: 0 auto;
+}
+
+.blog-index {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    padding: 3.3rem 0;
+}
+
+.blog-card {
+    border: 1px solid #d0d0d0; 
+    border-radius: {{ get_theme_style_setting('buttons.button_border_radius', 'px') }};
+    float: left; 
+    margin-bottom: 30px; 
+    width: calc(50% - 30px);
+}
+
+.blog-card__header {
+    padding: 40px 20px; 
+}
+
+.blog-card__header a {
+    color: {{ get_theme_style_setting('typography.body_font.color') }};
+}
+
+.blog-card__header a:hover {
+    text-decoration: none; 
+}
+
+.blog-card__header__title{
+    margin-bottom: 20px; 
+    text-transform: none; 
+}
+
+.blog-card__header__author-image,
+.blog-post__header__author-image {
+    height: 45px;
+    width: 45px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.blog-card__header__author-image,
+.blog-card__header__author-name,
+.blog-post__header__author-image,
+.blog-post__header__author-name {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.blog-card__image {
+    display: block;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 63%;
+  }
+
+.blog-card__content {
+    padding: 20px 20px 40px; 
+}
+
+.blog-card__content__tags svg,
+.blog-post__header__tags svg {
+    -ms-transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    width: 15px;
+    height: auto;
+    margin-right: 10px;
+    fill: #34b5e5; 
+}
+
+.blog-card__content__tag-link,
+.blog-post__header__tag-link {
+    background-color: #34b5e5;
+    border-radius: 4px;
+    color: #fff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.blog-pagination {
+    text-align: center; 
+}
