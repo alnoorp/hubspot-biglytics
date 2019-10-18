@@ -8,6 +8,15 @@
 <main class="body-container-wrapper">
   <div class="body-container body-container-blog-post">
 
+    {% module "blog_post_banner"
+      path="../modules/Blog Post Banner",
+      label="Blog Post Banner",
+      background_image={
+        "src": get_asset_url("../images/blog-banner.png")
+      }
+    %}
+
+
     <div class="content-wrapper">
       <div class="blog-post">
         <div class="blog-post__header">
@@ -30,6 +39,13 @@
       <div class="blog-comments">
         {% module "blog_comments" path="@hubspot/blog_comments", label="Blog Comments" %}
       </div>
+    </div>
+
+    <div class="blog-cta">
+      {% module "blog_cta" path="../modules/Blog CTA", label="Blog CTA" %}
+    </div>
+    <div class="blog-related-posts">
+      {% module "blog_related_posts" path="../modules/Blog Related Posts", label="Blog Related Posts" %}
     </div>
 
   </div>
