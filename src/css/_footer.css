@@ -58,8 +58,8 @@
   text-transform: uppercase; 
 }
 
-.footer-navigation ul li:before {
-  content: none; 
+.footer-navigation ul {
+  list-style: none; 
 }
 
 @media (max-width: 767px) {
