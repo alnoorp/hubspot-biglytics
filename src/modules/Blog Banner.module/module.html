@@ -1,0 +1,14 @@
+<div class="blog-header" style="background-image: url('{{ module.background_image.src }}');">
+  <div class="blog-header__inner">
+    {% if module.blog_title %}
+      <h1 class="blog-header__title">{{ module.blog_title }}</h1>
+    {% else %}
+      <h1 class="blog-header__title">{{ group.public_title }}</h1>
+    {% endif %}
+    {% if module.blog_subtitle %}
+      <h4 class="blog-header__subtitle">{{ module.blog_subtitle }}</h4>
+    {% else %}
+      <h4 class="blog-header__subtitle">{{ group.description }}</h4>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="pricing-table">
+    {# Selector Toggles #}
+    <div class="billing-selectors">
+        <div class="pricing-option left"><input id="monthly" type="radio" name="pricing-select" checked><label for="monthly">{{ module.opt_1.billTitleOne }}</label></div>
+        <div class="pricing-option right"><input id="annual" type="radio" name="pricing-select"><label for="annual">{{ module.opt_2.billTitleTwo }}</label></div>
+    </div>
+
+    {# Begin Block of Pricing Tables #}
+    
+    {% for month in module.opt_1.monthTable %}
+    {# Monthly Block #}    
+    <div class="price-block monthly col-{{ module.opt_1.monthTable | length }}">
+        <div class="pad">
+            <div class="header">
+                <div class="title">{{ month.monthTitle }}</div>
+                <div class="price">${{ month.monthPrice }}</div>
+                <div class="cta">{% cta guid='{{ month.monthCTA }}' %}</div>
+            </div>
+            <div class="description-block">
+                <div class="description">{{ month.monthDescription }}</div>
+            </div>   
+        </div>
+    </div>
+    {% endfor %}
+    
+    {% for year in module.opt_2.yearTable %}
+    {# Yearly Block #}
+    <div class="price-block annual col-{{ module.opt_2.yearTable | length }}">
+        <div class="pad">
+            <div class="header">
+                <div class="title">{{ year.yearTitle }}</div>
+                <div class="price">${{ year.yearPrice }}</div>
+                <div class="cta">{% cta guid='{{ year.yearCTA }}' %}</div>
+            </div>
+            <div class="description-block">
+                <div class="description">{{ year.yearDescription }}</div>
+            </div>
+        </div>
+    </div> 
+    {% endfor %}
+</div>

@@ -1,0 +1,37 @@
+[ {
+  "id" : "f8b5b95e-babc-3c5a-edae-43c6055ee9dd",
+  "name" : "background_image",
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null
+  }
+}, {
+  "id" : "dc8a84c3-f2c1-7542-044a-9ee1f58a5611",
+  "name" : "blog_title",
+  "label" : "Blog Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "PERFECT SAVES TIME."
+}, {
+  "id" : "ee8e43fa-f406-c3bd-196b-9475d9e08d12",
+  "name" : "blog_subtitle",
+  "label" : "Blog Subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+} ]
