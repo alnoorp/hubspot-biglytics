@@ -1,0 +1,14 @@
+{
+  "content_tags" : [ ],
+  "css_assets" : [ ],
+  "external_js" : [ ],
+  "extra_classes" : "",
+  "global" : true,
+  "host_template_types" : [ "BLOG_POST", "BLOG_LISTING" ],
+  "js_assets" : [ ],
+  "other_assets" : [ ],
+  "placement_rules" : [ ],
+  "smart_type" : "NOT_SMART",
+  "module_id" : 9717812,
+  "is_available_for_new_content" : true
+}

@@ -1,0 +1,14 @@
+{% set my_tags = blog_tags('default', 250) %}
+
+<div class="blog-tag-filter">
+  <span class="blog-tag-filter__title">Browse by</span>
+  <div class="blog-tag-filter__dropdown">
+    <select>
+    {% for item in my_tags %}
+      <option value="{{ item.slug }}">{{ item }}</option>
+    {% endfor %}
+    </select>
+  </div>
+</div>
+
+

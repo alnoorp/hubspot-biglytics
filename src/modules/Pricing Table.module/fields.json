@@ -1,0 +1,206 @@
+[ {
+  "id" : "3c137217-b77d-2b37-73c0-b3ae78160183",
+  "name" : "opt_1",
+  "label" : "Pricing Option 1",
+  "help_text" : "Add a Price",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "af55a359-6061-c64b-e71e-1bdefe02c832",
+    "name" : "billTitleOne",
+    "label" : "Billing Option 1 Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Monthly Billing"
+  }, {
+    "id" : "7421eb26-6450-a4a6-72aa-084b6d15de8c",
+    "name" : "monthTable",
+    "label" : "Option 1 Table",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 4,
+      "sorting_label_field" : "b28f947c-6c38-fd70-4e42-3bbcd095e34d",
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "b28f947c-6c38-fd70-4e42-3bbcd095e34d",
+      "name" : "monthTitle",
+      "label" : "Option 1 Title",
+      "help_text" : "Add a Price Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Monthly Price"
+    }, {
+      "id" : "14e136b3-da06-8078-a52a-64d7b587e342",
+      "name" : "monthPrice",
+      "label" : "Option 1 Price",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "type" : "number",
+      "default" : 25
+    }, {
+      "id" : "db6d215d-11a7-0643-860b-216b1bdb3b34",
+      "name" : "monthCTA",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "type" : "cta",
+      "default" : null
+    }, {
+      "id" : "da26f0ca-e69a-56bc-4a45-dd0bbf3d830d",
+      "name" : "monthDescription",
+      "label" : "Month Description",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : [ {
+      "monthTitle" : "Monthly Price",
+      "monthPrice" : 25,
+      "monthDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "monthTitle" : "Monthly Price",
+      "monthPrice" : 25,
+      "monthDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "monthTitle" : "Monthly Price",
+      "monthPrice" : 25,
+      "monthDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "billTitleOne" : "Monthly Billing",
+    "monthTable" : [ {
+      "monthTitle" : "Monthly Price",
+      "monthPrice" : 25,
+      "monthDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "monthTitle" : "Monthly Price",
+      "monthPrice" : 25,
+      "monthDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "monthTitle" : "Monthly Price",
+      "monthPrice" : 25,
+      "monthDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    } ]
+  }
+}, {
+  "id" : "ae638a64-005b-3aa1-78d3-62786cea11be",
+  "name" : "opt_2",
+  "label" : "Pricing Option 2",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "846afb31-82a2-3725-1fd1-53c98840c500",
+    "name" : "billTitleTwo",
+    "label" : "Billing Option 2 Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Annual Billing Save 15%"
+  }, {
+    "id" : "a658be23-9eea-3627-c891-2938c8ee7a2a",
+    "name" : "yearTable",
+    "label" : "Option 2 Table",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : 1,
+      "max" : 4,
+      "sorting_label_field" : "42475967-c507-70a1-2cfe-8222bfcf4fe6",
+      "default" : 3
+    },
+    "children" : [ {
+      "id" : "42475967-c507-70a1-2cfe-8222bfcf4fe6",
+      "name" : "yearTitle",
+      "label" : "Option 2 Title",
+      "help_text" : "Add a Price Title",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Annual Price"
+    }, {
+      "id" : "14e3e7b0-f41e-6e90-965d-13f006eeb6f9",
+      "name" : "yearPrice",
+      "label" : "Option 2 Price",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "step" : 1,
+      "type" : "number",
+      "default" : 25
+    }, {
+      "id" : "c64e5ae8-d994-2ec0-2445-9270b9d60ba3",
+      "name" : "yearCTA",
+      "label" : "CTA",
+      "required" : false,
+      "locked" : false,
+      "type" : "cta",
+      "default" : null
+    }, {
+      "id" : "7c1062e9-f35a-29bf-c2b3-6b53770a3bcd",
+      "name" : "yearDescription",
+      "label" : "Year Description",
+      "required" : false,
+      "locked" : false,
+      "type" : "richtext",
+      "default" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : [ {
+      "yearTitle" : "Annual Price",
+      "yearPrice" : 25,
+      "yearDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "yearTitle" : "Annual Price",
+      "yearPrice" : 25,
+      "yearDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "yearTitle" : "Annual Price",
+      "yearPrice" : 25,
+      "yearDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : {
+    "billTitleTwo" : "Annual Billing Save 15%",
+    "yearTable" : [ {
+      "yearTitle" : "Annual Price",
+      "yearPrice" : 25,
+      "yearDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "yearTitle" : "Annual Price",
+      "yearPrice" : 25,
+      "yearDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    }, {
+      "yearTitle" : "Annual Price",
+      "yearPrice" : 25,
+      "yearDescription" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+    } ]
+  }
+} ]

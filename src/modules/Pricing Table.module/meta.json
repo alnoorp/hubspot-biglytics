@@ -1,0 +1,15 @@
+{
+  "content_tags" : [ ],
+  "css_assets" : [ ],
+  "external_js" : [ ],
+  "extra_classes" : "",
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "icon" : "//icons.iconarchive.com/icons/iconsmind/outline/512/Pricing-icon.png",
+  "js_assets" : [ ],
+  "other_assets" : [ ],
+  "placement_rules" : [ ],
+  "smart_type" : "NOT_SMART",
+  "module_id" : 9688627,
+  "is_available_for_new_content" : true
+}
