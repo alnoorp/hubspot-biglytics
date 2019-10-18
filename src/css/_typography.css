@@ -102,35 +102,12 @@ code {
   vertical-align: bottom;
 }
 
-ul {
-  list-style: none;
-}
-
-ol {
-  list-style-position: inside; 
-}
-
 ul,
 ol {
+  list-style-position: inside; 
   padding-left: 0; 
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
-}
-
-ul li:before {
-  content: "\f058";
-  font-family: FontAwesome;
-  display: inline-block;
-  font-size: 1.43rem; 
-  line-height: 2.5rem; 
-  padding-right: 0.71rem; 
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
-  letter-spacing: 0;
-  vertical-align: middle;
-}
-
-ul.alternative-list li:before {
-  color: #fff; 
 }
 
 ul li,
@@ -147,12 +124,6 @@ ol ol {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 2.86rem; 
-}
-
-/* Prevents CSS Conflicts With HubSpot Editors */ 
-.hs-dropdown ul li:before,
-.hs-private ul li:before {
-  content: none; 
 }
 
 blockquote {
