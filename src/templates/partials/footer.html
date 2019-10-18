@@ -11,16 +11,16 @@
                 {% module "footer_logo" path="@hubspot/logo", label="Logo" %}
             </div>
             <div class="follow-me">
-              {% module_block module "footer_social" path="../../modules/Social follow" label="Social Follow" %}
-                {% module_attribute "social_link" is_json=True %}
-                  [
-                    {"social_account": "facebook-f"},
-                    {"social_account": "linkedin-in"},
-                    {"social_account": "twitter"},
-                    {"social_account": "instagram"}
-                  ]
-                {% end_module_attribute %}
-              {% end_module_block %}
+              {% module "footer_social" 
+                path="../../modules/Social follow",
+                label="Social Follow",
+                social_link=[
+                  {"social_account": "facebook-f"},
+                  {"social_account": "linkedin-in"},
+                  {"social_account": "twitter"},
+                  {"social_account": "instagram"}
+                ]
+              %}
             </div>
           </div>
           <div class="footer-navigation column span2">
@@ -52,9 +52,11 @@
     <div class="footer-bottom-section">
       <div class="row-fluid span12">
         <div class="column span3">
-          {% module_block module "footer_copyright" path="@hubspot/text" label="Copyright" %}
-            {% module_attribute "value" %}Copyright © {{ year }}, {{ site_settings.company_name }}{% end_module_attribute %}
-          {% end_module_block %}
+          {% module "footer_copyright" 
+            path="@hubspot/text",
+            label="Copyright",
+            value="Copyright © {{ year }}, {{ site_settings.company_name }}"
+          %}
         </div>
         <div class="column span9">
           {% module_block module "footer_legal_information" path="@hubspot/rich_text" label="Legal Information" %}

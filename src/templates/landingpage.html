@@ -9,58 +9,58 @@
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class='body-container body-container-landing-page', label='Main section' %}
+  {% dnd_area "dnd_area" class="body-container body-container-landing-page", label="Main section" %}
 
     {# Top Section #}
     {% dnd_section 
       padding={
-        'top': 40,
-        'bottom': 40,
-        'left': 0,
-        'right': 0
+        "top": 40,
+        "bottom": 40,
+        "left": 0,
+        "right": 0
       },
       background_image={
-        'backgroundPosition': 'TOP_CENTER',
-        'backgroundSize': 'cover',
-        'imageUrl': get_asset_url("../images/landing-page-banner.png")
+        "backgroundPosition": "TOP_CENTER",
+        "backgroundSize": "cover",
+        "imageUrl": get_asset_url("../images/landing-page-banner.png")
       }
     %}
       {% dnd_column %}
         {% dnd_row
           padding={
-            'top': 0,
-            'bottom': 80,
-            'left': 0,
-            'right': 0
+            "top": 0,
+            "bottom": 80,
+            "left": 0,
+            "right": 0
           }
         %}
-          {% dnd_module path='@hubspot/logo', flexbox_positioning='MIDDLE_CENTER'  %}
-            {% module_attribute "label" %}Logo{% end_module_attribute %}
+          {% dnd_module path="@hubspot/logo", 
+            flexbox_positioning="MIDDLE_CENTER",
+            label="Logo"  
+          %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module 
-            path='@hubspot/linked_image',
+            path="@hubspot/linked_image",
             offset=0,
             width=4,
-            flexbox_positioning="TOP_CENTER"
+            flexbox_positioning="TOP_CENTER",
+            label="Image",
+            img={
+              "src": get_asset_url("../images/ebook.png"),
+              "alt": "Ebook",
+              "size_type": "auto"
+            }
           %}
-            {% module_attribute "label" %}Image{% end_module_attribute %}
-            {% module_attribute "img" is_json=True %}
-              {
-                "src": get_asset_url("../images/ebook.png"),
-                "alt": "Ebook",
-                "size_type": "auto"
-              }
-            {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
-            path='@hubspot/rich_text',
+            path="@hubspot/rich_text",
             offset=4,
             width=4,
-            flexbox_positioning="MIDDLE_LEFT"
+            flexbox_positioning="MIDDLE_LEFT",
+            label="Rich text"
           %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
             {% module_attribute "html" %}
               <div>
                 <h4>Subheader About Ebook</h4>
@@ -70,13 +70,13 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
-            path='@hubspot/form',
+            path="@hubspot/form",
             offset=8,
             width=4,
-            flexbox_positioning="TOP_CENTER"
+            flexbox_positioning="TOP_CENTER",
+            label="Form",
+            title="Yes! Send Me the Ebook!"
           %}
-            {% module_attribute "label" %}Form{% end_module_attribute %}
-            {% module_attribute "title" %}Yes! Send Me the Ebook!{% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
@@ -93,8 +93,7 @@
     %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path='@hubspot/rich_text' %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
+          {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
             {% module_attribute "html" %}
               <h2 style="color: #fff;">What's Inside?</h2>
             {% end_module_attribute %}
@@ -102,11 +101,11 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module 
-            path='@hubspot/rich_text',
+            path="@hubspot/rich_text",
             offset=0,
-            width=4
+            width=4,
+            label="Rich text"
           %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
             {% module_attribute "html" %}
               <div>
                 <ul class="alternative-list" style="color: #fff;">
@@ -117,11 +116,11 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
-            path='@hubspot/rich_text',
+            path="@hubspot/rich_text",
             offset=4,
-            width=4
+            width=4,
+            label="Rich text"
           %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
             {% module_attribute "html" %}
               <div>
                 <ul class="alternative-list" style="color: #fff;">
@@ -132,11 +131,11 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
-            path='@hubspot/rich_text',
+            path="@hubspot/rich_text",
             offset=8,
-            width=4
+            width=4,
+            label="Rich text"
           %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
             {% module_attribute "html" %}
               <div>
                 <ul class="alternative-list" style="color: #fff;">

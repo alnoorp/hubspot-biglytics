@@ -6,43 +6,41 @@
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class='body-container body-container-about', label='Main section' %}
+  {% dnd_area "dnd_area" class="body-container body-container-about", label="Main section" %}
 
     {# Top Section #}
     {% dnd_section %}
         {% dnd_column %}
             {% dnd_row %}
-                {% dnd_module path='@hubspot/header'  %}
-                    {% module_attribute "label" %}Header{% end_module_attribute %}
-                    {% module_attribute "header_tag"%}h1{% end_module_attribute %}
-                    {% module_attribute "value"%}About Our Company{% end_module_attribute %}
+                {% dnd_module path="@hubspot/header",
+                  label="Header",
+                  header_tag="h1",
+                  value="About Our Company"
+                %}
                 {% end_dnd_module %}
             {% end_dnd_row %}
             {% dnd_row
                 padding={
-                    'top': 0,
-                    'bottom': 40,
-                    'left': 0,
-                    'right': 0
+                    "top": 0,
+                    "bottom": 40,
+                    "left": 0,
+                    "right": 0
                 }
             %}
                 {% dnd_module 
-                    path='@hubspot/linked_image',
-                    flexbox_positioning="TOP_CENTER"
-                %}
-                    {% module_attribute "label" %}Image{% end_module_attribute %}
-                    {% module_attribute "img" is_json=True %}
-                    {
-                        "src": get_asset_url("../images/mountains.png"),
-                        "alt": "Mountains",
-                        "size_type": "auto"
+                    path="@hubspot/linked_image",
+                    flexbox_positioning="TOP_CENTER",
+                    label="Image",
+                    img={
+                      "src": get_asset_url("../images/mountains.png"),
+                      "alt": "Mountains",
+                      "size_type": "auto"
                     }
-                    {% end_module_attribute %}
+                %}
                 {% end_dnd_module %}
             {% end_dnd_row %}
             {% dnd_row %}
-                {% dnd_module path='@hubspot/rich_text' %}
-                    {% module_attribute "label" %}Rich text{% end_module_attribute %}
+                {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
                     {% module_attribute "html" %}
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque est eros, quis tincidunt nulla ultrices a. Nulla auctor lacus vitae quam facilisis efficitur. Duis sit amet feugiat lacus. Ut varius ipsum quis egestas mattis.</p>
@@ -70,15 +68,14 @@
           width=6
         %}
           {% dnd_row %}
-            {% dnd_module path='@hubspot/linked_image' %}
-            {% module_attribute "label" %}Image{% end_module_attribute %}
-            {% module_attribute "img" is_json=True %}
-              {
+            {% dnd_module path="@hubspot/linked_image",
+              label="Image",
+              img={
                 "src": get_asset_url("../images/computer.png"),
                 "alt": "Computer and phone",
                 "size_type": "auto"
-              }
-            {% end_module_attribute %}
+              }    
+            %}
             {% end_dnd_module %}
           {% end_dnd_row %}
         {% end_dnd_column %}
@@ -87,8 +84,7 @@
           width=6
         %}
           {% dnd_row %}
-            {% dnd_module path='@hubspot/rich_text'%}
-              {% module_attribute "label" %}Rich Text{% end_module_attribute %}
+            {% dnd_module path="@hubspot/rich_text", label="Rich Text" %}
               {% module_attribute "html" %}
                 <div>
                   <h2 style="color: #fff;">Full Control</h2>
@@ -104,12 +100,12 @@
           {% end_dnd_row %}
           {% dnd_row %}
             {% dnd_module 
-              path='../modules/Customizable button',
-              flexbox_positioning='MIDDLE_LEFT' 
+              path="../modules/Customizable button",
+              flexbox_positioning="MIDDLE_LEFT",
+              label="Button",
+              link="#",
+              button_text="Free Trial"
             %}
-              {% module_attribute "label" %}Button{% end_module_attribute %}
-              {% module_attribute "link" %}#{% end_module_attribute %}
-              {% module_attribute "button_text" %}Free Trial{% end_module_attribute %}
             {% end_dnd_module %}
           {% end_dnd_row %}
         {% end_dnd_column %}
@@ -120,11 +116,11 @@
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module 
-            path='@hubspot/rich_text',
+            path="@hubspot/rich_text",
+            label="Rich text",
             offset=0,
             width=4
           %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
             {% module_attribute "html" %}
               <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque est eros, quis tincidunt nulla ultrices a. Nulla auctor lacus vitae quam facilisis efficitur. Duis sit amet feugiat lacus. Ut varius ipsum quis egestas mattis.</p>
@@ -133,11 +129,11 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module 
-            path='@hubspot/rich_text',
+            path="@hubspot/rich_text",
+            label="Rich text",
             offset=4,
             width=8
           %}
-            {% module_attribute "label" %}Rich text{% end_module_attribute %}
             {% module_attribute "html" %}
               <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque est eros, quis tincidunt nulla ultrices a. Nulla auctor lacus vitae quam facilisis efficitur. Duis sit amet feugiat lacus. Ut varius ipsum quis egestas mattis. Sed sollicitudin, orci non faucibus porta, lectus nisi tristique enim, nec commodo nisi massa non magna. Etiam condimentum mi et neque luctus vestibulum. Maecenas facilisis efficitur semper.</p>
