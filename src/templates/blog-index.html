@@ -6,12 +6,20 @@
 
 {% block body %}
 <main class="body-container-wrapper">
-  <div class="body-container body-container-blog">
-    <div class="blog-header">
-        <div class="blog-header__inner">
-            <h1 class="blog-header__title">{{ group.public_title }}</h1>
-        </div>
-    </div>
+  <div class="body-container body-container-blog-index">
+
+    {% module "blog_listing_banner"
+      path="../modules/Blog Banner",
+      label="Blog Listing Banner",
+      background_image={
+        'src': get_asset_url('../images/blog-banner.png')
+      }
+    %}
+
+    {% module "blog_tag_filter" path="../modules/Blog Tag Filter", label="Blog Tag Filter" %}
+
+    {% module "blog_search" path="@hubspot/search_input", label="Blog Search" %}
+
     <div class="content-wrapper">
       <div class="blog-index">
         {% for content in contents %}
@@ -50,7 +58,6 @@
 
           <a class="blog-pagination__link blog-pagination__prev-link {{ "blog-pagination__prev-link--disabled" if !last_page_num }}" href="{{ blog_page_link(last_page_num) }}">
             {% icon name="chevron-left" style="SOLID", width="13", no_wrapper=True %}
-            {% icon name="chevron-left" style="SOLID", width="13", no_wrapper=True %}
             Prev
           </a>
           {% for page in page_list %}
@@ -61,7 +68,6 @@
           {% endfor %}
           <a class="blog-pagination__link blog-pagination__next-link {{ "blog-pagination__next-link--disabled" if !next_page_num }}" href="{{ blog_page_link(current_page_num + 1) }}">
             Next
-            {% icon name="chevron-right" style="SOLID", width="13", no_wrapper=True %}
             {% icon name="chevron-right" style="SOLID", width="13", no_wrapper=True %}
           </a>
         </div>
