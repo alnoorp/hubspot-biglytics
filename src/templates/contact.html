@@ -6,7 +6,7 @@
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class='body-container body-container-contact', label='Main section' %}
+  {% dnd_area "dnd_area" class="body-container body-container-contact", label="Main section" %}
 
     {# Event Post Section #}
     {% dnd_section %}
@@ -15,15 +15,15 @@
         width=6
       %}
         {% dnd_row %}
-            {% dnd_module path='@hubspot/header'  %}
-                {% module_attribute "label" %}Header{% end_module_attribute %}
-                {% module_attribute "header_tag"%}h1{% end_module_attribute %}
-                {% module_attribute "value"%}Contact Us{% end_module_attribute %}
+            {% dnd_module path="@hubspot/header",
+              label="Header",
+              header_tag="h1",
+              value="Contact Us"  
+            %}
             {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-            {% dnd_module path='@hubspot/rich_text' %}
-                {% module_attribute "label" %}Rich text{% end_module_attribute %}
+            {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
                 {% module_attribute "html" %}
                 <div>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut scelerisque est eros, quis tincidunt nulla ultrices a. Nulla auctor lacus vitae quam facilisis efficitur. Duis sit amet feugiat lacus. Ut varius ipsum quis egestas mattis.</p>
@@ -40,9 +40,10 @@
         width=6
       %}
         {% dnd_row %}
-          {% dnd_module path='@hubspot/form' %}
-            {% module_attribute "label" %}Form{% end_module_attribute %}
-            {% module_attribute "title" %}Yes! Send Me the Ebook!{% end_module_attribute %}
+          {% dnd_module path="@hubspot/form",
+            label="Form",
+            title="Yes! Send Me the Ebook!" 
+          %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
