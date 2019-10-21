@@ -16,33 +16,50 @@
       }
     %}
 
-    {% module "blog_tag_filter" path="../modules/Blog Tag Filter", label="Blog Tag Filter" %}
-
-    {% module "blog_search" path="@hubspot/search_input", label="Blog Search" %}
+    <div class="blog-navigation">
+      <div class="content-wrapper">
+        <div class="row-fluid span12">
+          <div class="blog-navigation__tag-filter column span6">
+            {% module "blog_tag_filter" path="../modules/Blog Tag Filter", label="Blog Tag Filter" %}
+          </div>
+          <div class="blog-navigation__search column span6">
+            {% module "blog_search" path="@hubspot/search_input", label="Blog Search" %}
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="content-wrapper">
       <div class="blog-index">
         {% for content in contents %}
             <div class="blog-card">
               <div class="blog-card__header">
-                <h2 class="blog-card__header__title"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
+                <h2 class="blog-card__title"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
                 {% if content.blog_author.avatar %}
-                  <div class="blog-card__header__author-image" style="background-image: url('{{ content.blog_author.avatar }}');"></div>
+                  <div class="blog-card__author-image" style="background-image: url('{{ content.blog_author.avatar }}');"></div>
                 {% endif %}
-                <a class="blog-card__header__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+                <div class="blog-card__meta">
+                    <a class="blog-card__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+                    <span class="blog-card__date">{{ content.publish_date_localized }}</span>
+                </div>
               </div>
               {% if content.featured_image %}
                 <a class="blog-card__image" style="background-image: url('{{ content.featured_image }}')"; href="{{ content.absolute_url }}"></a>
               {% endif %}
               <div class="blog-card__content">
-                <div class="blog-card__content__tags">
+                <div class="blog-card__tags">
                     {% icon name="tag" style="SOLID" %}
                     {% for tag in content.tag_list %}
-                      <a class="blog-card__content__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                      <a class="blog-card__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
                     {% endfor %}
                 </div>
                 {{ content.post_list_content|truncatehtml(170) }}
-                <a class="hs-button" href="{{ content.absolute_url }}">Read More</a>
+                <a class="blog-card__button hs-button" href="{{ content.absolute_url }}">Read More</a>
+                <div class="blog-card__comment-count">
+                    {% set comments_number =  content.comment_list|length %}
+                    {% set comments_label = "Comment" if comments_number == 1 else "Comments" %}
+                    {{ comments_number }} {{ comments_label }}
+                </div>
               </div>
             </div>
         {% endfor %}

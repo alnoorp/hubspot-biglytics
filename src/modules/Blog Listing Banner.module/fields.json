@@ -22,6 +22,17 @@
   "type" : "text",
   "default" : "PERFECT SAVES TIME."
 }, {
+  "name" : "blog_title_color",
+  "label" : "Blog Title Color",
+  "sortable" : false,
+  "required" : true,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+     "color" : "#ffffff",
+     "opacity" : 100
+  }
+}, {
   "name" : "blog_subtitle",
   "label" : "Blog Subtitle",
   "required" : false,
@@ -31,4 +42,15 @@
   "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+}, {
+  "name" : "blog_subtitle_color",
+  "label" : "Blog Subtitle Color",
+  "sortable" : false,
+  "required" : true,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+     "color" : "#ffffff",
+     "opacity" : 100
+  }
 } ]
