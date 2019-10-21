@@ -30,6 +30,30 @@
     padding: 3.3rem 0;
 }
 
+.blog-post-header__back-button {
+    background-color: #c168c2;
+    font-size: 20px;
+    padding: 15px 20px;
+    width: 250px;
+    text-align: right;
+}
+
+.blog-post-header__back-button svg {
+    fill: #fff; 
+    margin-right: 10px; 
+}
+
+.blog-post-header__back-button a {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.blog-post-header__back-button a:hover {
+    color: #fff; 
+    text-decoration: none; 
+}
+
 .blog-navigation {
     background-color: #34b5e5;
     padding: 16px 0px; 
@@ -75,21 +99,28 @@
     padding: 40px 20px; 
 }
 
-.blog-card__header a {
+.blog-card__title a,
+.blog-card__author-name,
+.blog-post__author-name {
     color: {{ get_theme_style_setting('typography.body_font.color') }};
 }
 
-.blog-card__header a:hover {
+.blog-card__title a:hover,
+.blog-card__author-name:hover,
+.blog-post__author-name:hover {
+    color: {{ get_theme_style_setting('typography.body_font.color') }};
     text-decoration: none; 
 }
 
-.blog-card__title {
+.blog-card__title,
+.blog-post__title {
     letter-spacing: 0; 
     margin-bottom: 20px; 
     text-transform: none; 
 }
 
-.blog-card__author-image {
+.blog-card__author-image,
+.blog-post__author-image {
     background-size: cover;
     border-radius: 50%;
     height: 45px;
@@ -98,13 +129,17 @@
 }
 
 .blog-card__author-image,
-.blog-card__meta {
+.blog-card__meta,
+.blog-post__author-image,
+.blog-post__meta {
     display: inline-block;
     vertical-align: middle;
 }
 
 .blog-card__author-name, 
-.blog-card__date {
+.blog-card__date,
+.blog-card__author-name,
+.blog-post__date {
     display: block; 
 }
 
@@ -235,6 +270,51 @@
     fill: #d0d0d0; 
 }
 
+.blog-post__tags {
+    margin: 20px 0px 40px;
+}
+
+.blog-related-posts {
+    margin-top: 20px; 
+}
+
 .blog-related-posts__title {
     text-align: center; 
+}
+
+.blog-comments form {
+    max-width: 100%; 
+}
+
+.blog-post__comments {
+    padding-bottom: 80px;
+    text-align: center; 
+}
+
+.blog-comments__listing {
+    display: none; 
+    text-align: left; 
+}
+
+.blog-cta {
+    margin: 80px 0px; 
+    position: relative; 
+}
+
+.blog-cta__image {
+    max-height: calc(100% + 160px); 
+    position: absolute;
+    top: -80px;  
+}
+
+.blog-cta__content {
+    padding: 40px 0px 60px; 
+}
+
+.blog-cta__cta {
+    position: absolute; 
+    max-width: 100%; 
+    right: 0; 
+    top: 50%; 
+    transform: translateY(-50%);
 }

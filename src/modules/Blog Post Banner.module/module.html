@@ -1,5 +1,7 @@
 <div class="blog-post-header" style="background-image: url('{{ module.background_image.src }}');">
-  <div class="blog--post-header__inner">
-    <a href="{{ group.absolute_url }}">{% icon name="chevron-left" style="SOLID", width="13", no_wrapper=True %} Back to Blog</a>
+  <div class="blog-post-header__inner">
+    <div class="blog-post-header__back-button">
+      <a href="{{ group.absolute_url }}">{% icon name="chevron-left" style="SOLID", width="13", no_wrapper=True %} Back to Blog</a>
+    </div>
   </div>
 </div>
