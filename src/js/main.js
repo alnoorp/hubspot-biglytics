@@ -1,10 +1,14 @@
-// Blog Comments Toggle
+(function() {
+  // Blog Comments Toggle
 
-var blogCommentsButton = document.querySelector(".blog-comments__toggle");
+  var blogCommentsButton = document.querySelector('.blog-comments__toggle');
 
-if (blogCommentsButton) {
+  if (blogCommentsButton) {
     blogCommentsButton.addEventListener('click', function() {
-        var blogCommentsSection = document.querySelector(".blog-comments__listing"); 
-        blogCommentsSection.style.display = "block";
+      var blogCommentsSection = document.querySelector(
+        '.blog-comments__listing'
+      );
+      blogCommentsSection.style.display = 'block';
     });
-}
+  }
+})();
