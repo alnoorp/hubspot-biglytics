@@ -1,14 +1,14 @@
-<div class="blog-header" style="background-image: url('{{ module.background_image.src }}');">
-  <div class="blog-header__inner">
+<div class="blog-index-header" style="background-image: url('{{ module.background_image.src }}');">
+  <div class="blog-index-header__inner">
     {% if module.blog_title %}
-      <h1 class="blog-header__title" style="color: {{ module.blog_title_color.color }}">{{ module.blog_title }}</h1>
+      <h1 class="blog-index-header__title" style="color: {{ module.blog_title_color.color }}">{{ module.blog_title }}</h1>
     {% else %}
-      <h1 class="blog-header__title" style="color: {{ module.blog_title_color.color }}">{{ group.public_title }}</h1>
+      <h1 class="blog-index-header__title" style="color: {{ module.blog_title_color.color }}">{{ group.public_title }}</h1>
     {% endif %}
     {% if module.blog_subtitle %}
-      <p class="blog-header__subtitle" style="color: {{ module.blog_subtitle_color.color }}">{{ module.blog_subtitle }}</p>
+      <p class="blog-index-header__subtitle" style="color: {{ module.blog_subtitle_color.color }}">{{ module.blog_subtitle }}</p>
     {% else %}
-      <p class="blog-header__subtitle" style="color: {{ module.blog_subtitle_color.color }}">{{ group.description }}</p>
+      <p class="blog-index-header__subtitle" style="color: {{ module.blog_subtitle_color.color }}">{{ group.description }}</p>
     {% endif %}
   </div>
 </div>
