@@ -36,16 +36,32 @@
           </div>
         <div class="blog-post__body">
           {{ content.post_body }}
+          {% module "blog_post_social_share" path="@hubspot/social_sharing", label="Social Sharing" %}
         </div>
       </div>
-      <div class="blog-comments">
-        {% module "blog_comments" path="@hubspot/blog_comments", label="Blog Comments" %}
+      <div class="blog-post__comments">
+          <a class="blog-comments__toggle hs-button">View Comments</a>
+          <div class="blog-comments__listing">
+              {% module "blog_comments" path="@hubspot/blog_comments", label="Blog Comments" %}
+          </div>
       </div>
     </div>
 
     <div class="blog-cta">
-      {% module "blog_cta" path="../modules/Blog CTA", label="Blog CTA" %}
+      {% module "blog_cta" 
+        path="../modules/Blog CTA", 
+        label="Blog CTA",
+        background_color={
+          "color": "#34b5e5"
+        },
+        image={
+          "src": get_asset_url("../images/phone.png")
+        },
+        content="<h2 style='color: #fff;'>Download Perfect Today!</h2><p style='color: #fff;'>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>",
+        cta_field="782d9df3-4dc5-44dc-81ad-a0efffcf0cb2"
+      %}
     </div>
+
     <div class="blog-related-posts">
       {% module "blog_related_posts" path="../modules/Blog Related Posts", label="Blog Related Posts" %}
     </div>
@@ -53,5 +69,3 @@
   </div>
 </main>
 {% endblock body %}
-
-

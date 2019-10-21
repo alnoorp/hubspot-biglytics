@@ -1,5 +1,4 @@
 [ {
-  "id" : "49029fa1-0291-2cc7-52ac-7b4859ad2c23",
   "name" : "background_color",
   "label" : "Background Color",
   "required" : false,
@@ -10,7 +9,6 @@
     "opacity" : 100
   }
 }, {
-  "id" : "0d42aa7e-c831-34a1-d7ad-6cba834c44de",
   "name" : "image",
   "label" : "Image",
   "required" : false,
@@ -24,7 +22,6 @@
     "alt" : null
   }
 }, {
-  "id" : "7ae6e523-3c5f-63fb-89ff-ee85a85bfde1",
   "name" : "content",
   "label" : "Content",
   "required" : false,
@@ -32,7 +29,6 @@
   "type" : "richtext",
   "default" : null
 }, {
-  "id" : "4fb6ab67-f7c5-340f-7138-a780819860e3",
   "name" : "cta_field",
   "label" : "CTA",
   "required" : false,
