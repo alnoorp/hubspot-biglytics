@@ -47,6 +47,7 @@
     display: flex;
     align-items: center;
     color: white;
+    justify-content: flex-end; 
 }
 
 .blog-post-header__back-button a:hover {
@@ -317,4 +318,33 @@
     right: 0; 
     top: 50%; 
     transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+    .blog-card {
+        width: 100%; 
+    }
+    .blog-post__comments {
+        padding-bottom: 40px; 
+    }
+    .blog-cta {
+        margin: 0px; 
+        padding: 20px 0px; 
+    }
+    .blog-cta__image {
+        display: block; 
+        margin: 0 auto; 
+        max-height: 100%; 
+        position: static; 
+        top: 0; 
+    }
+    .blog-cta__content {
+        padding: 20px 0px; 
+    }
+    .blog-cta__cta {
+        position: static;
+        text-align: center;  
+        top: 0; 
+        transform: none; 
+    }
 }
