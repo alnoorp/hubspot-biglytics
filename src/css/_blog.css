@@ -1,25 +1,30 @@
-.body-container-blog-index .blog-index {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    padding-left: 0px;
-    padding-right: 0px;
-}
-
 .content-wrapper {
     max-width: {{ get_theme_style_setting('spacing.max_width', 'px') }};
     margin: 0px auto;
     padding: 0px 25px; 
 }
 
-.blog-header {
+.blog-index,
+.blog-post {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.blog-index-header,
+.blog-post-header {
     background-position: center center; 
     background-size: cover;
     padding-top: {{ get_theme_style_setting('spacing.vertical_spacing', 'px') }};
     padding-bottom: {{ get_theme_style_setting('spacing.vertical_spacing', 'px') }};
+}
+
+.blog-index-header {
     text-align: center; 
 }
 
-.blog-header__inner {
+.blog-index-header__inner {
     max-width: 600px;
     margin: 0 auto;
     padding: 3.3rem 0;
@@ -50,7 +55,8 @@
     padding: 0px;
 }
 
-.blog-index {
+.blog-index,
+.blog-related-posts__list {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between; 
@@ -77,7 +83,8 @@
     text-decoration: none; 
 }
 
-.blog-card__title{
+.blog-card__title {
+    letter-spacing: 0; 
     margin-bottom: 20px; 
     text-transform: none; 
 }
@@ -137,6 +144,14 @@
     text-decoration: none;
 }
 
+.blog-card__tag-link:hover,
+.blog-card__tag-link:focus,
+.blog-post__tag-link:hover,
+.blog-post__tag-link:focus {
+    color: #fff; 
+    text-decoration: none; 
+}
+
 .blog-card__comment-count,
 .blog-card__button {
     display: inline-block; 
@@ -174,7 +189,7 @@
 .blog-pagination__link:hover,
 .blog-pagination__link:focus {
     text-decoration: none;
-    color: {{ get_theme_style_setting('links.link_color.color') }};
+    color: {{ get_theme_style_setting('links.link_hover_color.color') }};
 }
 
 .blog-pagination__link--active:hover, 
@@ -210,7 +225,16 @@
     margin: 0 5px;
 }
 
+.blog-pagination__link:hover svg, 
+.blog-pagination__link:focus svg {
+    fill: {{ get_theme_style_setting('links.link_hover_color.color') }}; 
+}
+
 .blog-pagination__prev-link--disabled svg, 
 .blog-pagination__next-link--disabled svg {
     fill: #d0d0d0; 
+}
+
+.blog-related-posts__title {
+    text-align: center; 
 }

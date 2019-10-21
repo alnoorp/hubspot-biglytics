@@ -12,26 +12,28 @@
       path="../modules/Blog Post Banner",
       label="Blog Post Banner",
       background_image={
-        "src": get_asset_url("../images/blog-banner.png")
+        "src": get_asset_url("../images/blog-post-banner.png")
       }
     %}
-
 
     <div class="content-wrapper">
       <div class="blog-post">
         <div class="blog-post__header">
-            <div class="blog-post__header__tags">
-              {% icon name="tag" style="SOLID" %}
-              {% for tag in content.tag_list %}
-                <a class="blog-post__header__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
-              {% endfor %}
+            <h2 class="blog-post__title">{{ content.name }}</h2>
+            {% if content.blog_author.avatar %}
+              <div class="blog-post__author-image" style="background-image: url('{{ content.blog_author.avatar }}');"></div>
+            {% endif %}
+            <div class="blog-post__meta">
+                <a class="blog-post__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+                <span class="blog-post__date">{{ content.publish_date_localized }}</span>
             </div>
-          <h1>{{ content.name }}</h1>
-          {% if content.blog_author.avatar %}
-            <div class="blog-post__header__author-image" style="background-image: url('{{ content.blog_author.avatar }}');"></div>
-          {% endif %}
-          <a class="blog-post__header__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
-        </div>
+            <div class="blog-post__tags">
+                {% icon name="tag" style="SOLID" %}
+                {% for tag in content.tag_list %}
+                  <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+          </div>
         <div class="blog-post__body">
           {{ content.post_body }}
         </div>
