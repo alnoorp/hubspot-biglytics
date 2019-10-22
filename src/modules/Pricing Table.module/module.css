@@ -1,21 +1,24 @@
-/*-- Visibility --*/
-.price-block .pad {
-    margin: 0 10px;
+.pricing-block-section {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-between; 
 }
-.price-block.monthly {
+.price-block {
+    margin-bottom: 30px; 
+    width: 30%; 
+}
+.price-block--monthly {
     display: block;
 }
-.price-block.annual {
+.price-block--annual {
     display: none;
 }
-
-/*-- Toggle Style --*/
 .billing-selectors {
     display: table;
     margin: 0 auto;
     margin-bottom: 40px;
 }
-.pricing-option {
+.billing-selectors__pricing-option {
     border: 1px solid #ccc;
     display: table-cell;
     padding: 10px 15px;
@@ -23,11 +26,11 @@
     min-width: 200px;
     text-align: center;
 }
-.pricing-option input[type="radio"] {
+.billing-selectors__pricing-option input[type="radio"] {
     visibility: hidden;
     position: absolute;
 }
-.pricing-option input[type="radio"] + label:before {
+.billing-selectors__pricing-option input[type="radio"] + label:before {
     content: "";
     height: 16px;
     width: 16px;
@@ -37,53 +40,24 @@
     border-radius: 50%;
     vertical-align: sub;
 }
-.pricing-option input[type="radio"]:checked + label:before {
+.billing-selectors__pricing-option input[type="radio"]:checked + label:before {
     background-color: #fff;
     border: 6px solid #000;
     height: 6px;
     width: 6px;
 }
-
-
-
-/*-- Element Width --*/
-.price-block.col-1 {
-    width: 100%;
-}
-.price-block.col-2 {
-    width: 50%;
-}
-.price-block.col-3 {
-    width: 33.33%;
-}
-.price-block.col-4 {
-    width: 25%
-}
-
-/*-- Pricing Block --*/
-.price-block {
-    width: 30%;
-    float: left;
-    margin-bottom: 20px
-}
-.price-block .header {
+.price-block__header {
     background-color: #eee;
     padding: 10px;
     text-align: center;
 }
-.price-block .description-block {
+.price-block__description-block {
     background-color: #fff;
     padding: 20px 40px;
     border: 1px solid #eee
 }
 
-/*-- Media Queries --*/
 @media (max-width: 768px) {
-    .price-block {
-        width: 50% !important;
-    }
-}
-@media (max-width: 414px) {
     .price-block {
         width: 100% !important;
     }

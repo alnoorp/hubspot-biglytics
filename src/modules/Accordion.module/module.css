@@ -4,18 +4,17 @@
 .accordion__item button {
     display: block;
     width: 100%;
-    font-size: 1em;
-    padding: 1em 3em 1em 1em;
+    font-size: 1.1em;
+    font-weight: 600; 
+    padding: 1.5em 3em 1.5em 1em;
     cursor: pointer;
     border: 0 none;
-    border-bottom: 1px solid #ddd;
-    border-radius: 0;
+    border-bottom: 1px solid #d0d0d0;
+    border-radius: 0; 
     background-color: transparent;
     -webkit-appearance: none;
-    color: #444;
     position: relative;
     text-align: left;
-	  font-family: inherit;
 }
 .accordion__item:last-of-type button {
     border-bottom-color: transparent;
@@ -24,14 +23,9 @@
     outline: none;
 }
 .accordion__item button:hover {
-    color: #00b9d6;
     opacity: 0.8;
 }
-.accordion__item[aria-expanded=true] button {   /* [aria-expanded=true] means accordion will be 'open' */
-    color: #00b9d6;
-    border-bottom-color: #00b9d6;
-}
-.accordion__icon {              /* Icon styles */
+.accordion__icon {
     position: absolute;
     height: 1.25em;
     width: 1.25em;
@@ -40,7 +34,6 @@
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%);
-    border: 1px solid #a5a5a5;
     border-radius: 50%;
     -webkit-transition: all 0.2s ease-in;
     -o-transition: all 0.2s ease-in;
@@ -55,9 +48,8 @@
     -webkit-transform: translate(-50%,-50%);
         -ms-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
-    height: 1px;
+    height: 2px;
     width: 0.75em;
-    background-color: #a5a5a5;
 }
 .accordion__icon:after {   
     content: "";
@@ -68,28 +60,12 @@
         -ms-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
     height: 0.75em;
-    width: 1px;
-    background-color: #a5a5a5;
-}
-.accordion__item button:hover .accordion-item-icon {
-    border-color: #00b9d6;
-}
-.accordion__item button:hover .accordion__icon:before,
-.accordion__item button:hover .accordion__icon:after {
-    background-color: #00b9d6;
+    width: 2px;
 }
 .accordion__item[aria-expanded=true] .accordion__icon {
     -webkit-transform: translateY(-50%) rotate(135deg);
         -ms-transform: translateY(-50%) rotate(135deg);
             transform: translateY(-50%) rotate(135deg);
-    border-color: #00b9d6;
-    background-color: #00b9d6;
-}
-.accordion__item[aria-expanded=true] .accordion__icon:before,
-.accordion__item[aria-expanded=true] .accordion__icon:after,
-.accordion__item[aria-expanded=true] button:hover .accordion__icon:before,
-.accordion__item[aria-expanded=true] button:hover .accordion__icon:after {
-    background-color: #fff;   
 }
 .accordion__item main {
     opacity: 0;
