@@ -1,0 +1,15 @@
+<div class="accordion" {% if module.max_1_open %}data-sync="true"{% endif %}>
+  {% for accordion in module.accordion %} {# << Should only one accordion be open at a time? #}
+    <div class="accordion__item" aria-expanded="{% if accordion.open_by_default %}true{% endif %}">
+      <button>
+        {{accordion.accordion_header}}
+        <span class="accordion__icon"></span>
+      </button>
+      <main>
+        <div class="accordion__item-content">
+          {{ accordion.accordion_content }}
+        </div>
+      </main>
+    </div>
+  {% endfor %}
+</div>

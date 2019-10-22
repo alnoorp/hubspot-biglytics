@@ -1,0 +1,43 @@
+[ {
+  "name" : "accordion",
+  "label" : "Accordion",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 1,
+    "max" : null,
+    "default" : 5
+  },
+  "children" : [ {
+    "name" : "accordion_content",
+    "label" : "Accordion Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+  }, {
+    "name" : "expanded",
+    "label" : "Expanded?",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "name" : "accordion_header",
+    "label" : "Accordion Header",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "How do I make an awesome template?"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "accordion_content" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.",
+    "expanded" : false,
+    "accordion_header" : "What does our pricing include?"
+  } ]
+} ]
