@@ -1,5 +1,5 @@
-<div class="accordion" {% if module.max_1_open %}data-sync="true"{% endif %}>
-  {% for accordion in module.accordion %} {# << Should only one accordion be open at a time? #}
+<div class="accordion" id="{{ name }}" {% if module.max_1_open %}data-sync="true"{% endif %}>
+  {% for accordion in module.accordion %}
     <div class="accordion__item" aria-expanded="{% if accordion.open_by_default %}true{% endif %}">
       <button>
         {{accordion.accordion_header}}
@@ -13,3 +13,26 @@
     </div>
   {% endfor %}
 </div>
+
+{% require_css %}
+<style>
+  #hs_cos_wrapper_{{name}} .accordion__item button {
+    color: {{ module.faq_color.color }};
+  }
+  #hs_cos_wrapper_{{name}} .accordion__icon {
+    background-color: {{ module.faq_color.color }}; 
+  }
+  #hs_cos_wrapper_{{name}} .accordion__icon:before,
+  #hs_cos_wrapper_{{name}} .accordion__icon:after {
+    background-color: {{ module.faq_icon_color.color }}; 
+  }
+  #hs_cos_wrapper_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:before,
+  #hs_cos_wrapper_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:after {
+    background-color: {{ module.faq_icon_open_color.color }}; 
+  }
+  #hs_cos_wrapper_{{name}} .accordion__item[aria-expanded=true] .accordion__icon { 
+    background-color: {{ module.faq_open_color.color }}; 
+  }
+</style>
+{% end_require_css %}
+

@@ -40,4 +40,48 @@
     "expanded" : false,
     "accordion_header" : "What does our pricing include?"
   } ]
+}, {
+  "name" : "faq_color",
+  "label" : "FAQ Header Color",
+  "sortable" : false,
+  "required" : true,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+     "color" : "#34b5e5",
+     "opacity" : 100
+  }
+}, {
+  "name" : "faq_icon_color",
+  "label" : "FAQ Icon Color",
+  "sortable" : false,
+  "required" : true,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+     "color" : "#ffffff",
+     "opacity" : 100
+  }
+}, {
+  "name" : "faq_open_color",
+  "label" : "FAQ Header Open Color",
+  "sortable" : false,
+  "required" : true,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+     "color" : "#000000",
+     "opacity" : 100
+  }
+}, {
+  "name" : "faq_icon_open_color",
+  "label" : "FAQ Icon Open Color",
+  "sortable" : false,
+  "required" : true,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+     "color" : "#ffffff",
+     "opacity" : 100
+  }
 } ]

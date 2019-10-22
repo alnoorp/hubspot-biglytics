@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    $('.pricing-option input').click(function(){
-               $('.price-block').hide();
-               $('.' + $(this).attr('id')).show();            
+    $('.billing-selectors input').click(function(){
+        console.log('this worked');
+        $('.price-block').hide();
+        $('.price-block--' + $(this).attr('id')).show();            
     });
 })

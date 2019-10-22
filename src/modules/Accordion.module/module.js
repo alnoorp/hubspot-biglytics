@@ -1,8 +1,3 @@
-/* This script simply changes the data attribute 'selected',
-but doesn't handle any animation. All animation is done in CSS. 
-If the target element's 'data-sync' attribute is true, only
-one accordion can be opened at a time. */
-
 function buildAccordion(el) {
     
     var accordion = el,
@@ -45,5 +40,5 @@ function buildAccordion(el) {
 
 var accordions = document.querySelectorAll('.accordion');
 Array.prototype.forEach.call(accordions, function(el){
-    buildAccordion(el);     /* Find all instances of '.hs-accordion' and initialize for each of them */
+    buildAccordion(el);     /* Find all instances of '.accordion' and initialize for each of them */
 });

@@ -11,7 +11,12 @@
     {# Pricing Section #}
     {% dnd_section %}
       {% dnd_column %}
-        {% dnd_row %}
+        {% dnd_row 
+          margin={
+            "top": 0,
+            "bottom": 40
+          }
+        %}
             {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
                 {% module_attribute "html" %}
                 <div style="text-align: center;">
@@ -47,7 +52,7 @@
             {% dnd_module path="@hubspot/linked_image",
               label="Image",
               img={
-                "src": get_asset_url("../images/computer.png"),
+                "src": get_asset_url("../images/iphones.png"),
                 "alt": "Computer and phone",
                 "size_type": "auto"
               }    
@@ -65,7 +70,10 @@
                 <div>
                   <h2 style="color: #fff;">Full Control</h2>
                   <p style="color: #fff;">Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+                  <p style="color: #fff;">Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
                   <ul style="color: #fff;">
+                    <li>Someting awesome here</li>
+                    <li>Someting awesome here</li>
                     <li>Someting awesome here</li>
                     <li>Someting awesome here</li>
                     <li>Someting awesome here</li>
