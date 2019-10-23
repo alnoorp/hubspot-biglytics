@@ -5,7 +5,18 @@
 }
 .price-block {
     margin-bottom: 30px; 
-    width: 30%; 
+}
+.price-block--1 {
+    width: 100%; 
+}
+.price-block--2 {
+    width: 45%; 
+}
+.price-block--3 {
+    width: 30%;
+}
+.price-block--4 {
+    width: 20%; 
 }
 .price-block--monthly {
     display: block;
@@ -19,13 +30,25 @@
     margin-bottom: 40px;
 }
 .billing-selectors__pricing-option {
-    border: 1px solid #ccc;
+    border: 1px solid #d0d0d0;
     display: table-cell;
     padding: 10px 15px;
     transition: .4s;
     min-width: 200px;
     text-align: center;
 }
+
+.billing-selectors__pricing-option--left {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.billing-selectors__pricing-option--right {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-left: 0;
+}
+
 .billing-selectors__pricing-option input[type="radio"] {
     visibility: hidden;
     position: absolute;
@@ -42,23 +65,55 @@
 }
 .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
     background-color: #fff;
-    border: 6px solid #000;
-    height: 6px;
-    width: 6px;
 }
 .price-block__header {
-    background-color: #eee;
-    padding: 10px;
+    padding: 40px 10px;
     text-align: center;
+}
+.price-block__title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+}
+.price-block__price {
+    position: relative; 
+}
+.price-block__currency,
+.price-block__number {
+    display: inline-block; 
+}
+.price-block__currency {
+    font-size: 1.4rem;
+    line-height: 3rem; 
+    vertical-align: top; 
+}
+.price-block__number {
+    font-size: 4rem;
+    font-weight: bold;  
+    line-height: 4rem; 
+    vertical-align: top;
 }
 .price-block__description-block {
     background-color: #fff;
     padding: 20px 40px;
-    border: 1px solid #eee
+    border: 1px solid #d0d0d0;
+}
+.price-block__cta {
+    text-align: center; 
+}
+
+@media (max-width: 1000px) {
+    .price-block--3,
+    .price-block--4 {
+        width: 45%; 
+    }
 }
 
 @media (max-width: 768px) {
-    .price-block {
-        width: 100% !important;
+    .price-block--2,
+    .price-block--3,
+    .price-block--4 {
+        width: 100%; 
     }
 }
