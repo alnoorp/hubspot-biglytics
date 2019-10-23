@@ -1,14 +1,14 @@
 .statistic {
   text-align: center; 
 }
-.statistic-circle *, 
-.statistic-circle *:before, 
-.statistic-circle *:after {
+.statistic__circle *, 
+.statistic__circle *:before, 
+.statistic__circle *:after {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
-.statistic-circle {
+.statistic__circle {
   border-radius: 50%;
   float: none;
   font-size: 150px;
@@ -17,7 +17,7 @@
   position: relative;
   width: 1em;
 }
-.statistic-circle > .statistic-info {
+.statistic__info {
   display: block;
   font-size: 0.3em;
   left: 0;
@@ -30,20 +30,20 @@
   width: 100%;
   z-index: 1;
 }
-.statistic-circle > .statistic-info .unit {
+.statistic__unit {
   font-size: 0.6em; 
 }
-.statistic-circle .slice {
+.statistic__slice {
   clip: rect(0em, 1em, 1em, 0.5em);
   height: 1em;
   position: absolute;
   width: 1em;
 }
-.statistic-circle .slice.large {
+.statistic__circle .statistic__slice--large {
   clip: rect(auto, auto, auto, auto);
 }
-.statistic-circle .bar,
-.statistic-circle .large .fill {
+.statistic__bar,
+.statistic__fill--large {
   border-radius: 50%;
   border-width: 0.08em;
   border-style: solid;
@@ -53,14 +53,14 @@
   position: absolute;
   width: 0.84em;
 }
-.statistic-circle .fill {
+.statistic__fill {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
   transform: rotate(180deg); 
 }
-.statistic-circle::after {
+.statistic__circle::after {
   border-radius: 50%;
   content: " ";
   display: block;
