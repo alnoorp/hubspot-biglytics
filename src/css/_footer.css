@@ -2,41 +2,41 @@
   background-color: {{ get_theme_style_setting('footer.footer_bg_color.color') }};
 }
 
-.footer-container {
+.footer__container {
   max-width: {{ get_theme_style_setting('spacing.max_width', 'px') }};
   margin: 0 auto;
   padding: 40px 40px 0px 40px; 
 }
 
-.footer-top-section {
+.footer__top-section {
   padding-bottom: 80px; 
 }
 
-.footer-logo {
+.footer__logo {
   margin-bottom: 60px; 
 }
 
-.footer .follow-me .social-links {
+.footer__follow-me .social-links {
   border-color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
-.footer .follow-me .social-links-icon {
+.footer__follow-me .social-links__icon {
   border-right-color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
-.footer .follow-me .social-links-icon svg {
+.footer__follow-me .social-links__icon svg {
   fill: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
-.footer .follow-me .social-links-icon:hover {
+.footer__follow-me .social-links__icon:hover {
   background-color: {{ get_theme_style_setting('footer.footer_content_color.color') }}; 
 }
 
-.footer .follow-me .social-links-icon:hover svg {
+.footer__follow-me .social-links__icon:hover svg {
   fill: {{ get_theme_style_setting('footer.footer_bg_color.color') }};
 }
 
-.footer-bottom-section {
+.footer__bottom-section {
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: {{ get_theme_style_setting('footer.footer_content_color.color') }};
@@ -58,27 +58,27 @@
   text-transform: uppercase; 
 }
 
-.footer-navigation ul {
+.footer__navigation ul {
   list-style: none; 
 }
 
 @media (max-width: 767px) {
-  .footer-top-section,
-  .footer-bottom-section {
+  .footer__top-section,
+  .footer__bottom-section {
     text-align: center; 
   }
-  .footer-top-section {
+  .footer__top-section {
     padding-bottom: 40px; 
   }
-  .footer .footer-logo, 
-  .footer .follow-me {
+  .footer__logo, 
+  .footer__follow-me {
     margin-bottom: 40px; 
   }
-  .footer .footer-navigation {
+  .footer .footer__navigation {
     float: left; 
     width: 50%; 
   }
-  .footer .footer-navigation:nth-child(2n+2) {
+  .footer .footer__navigation:nth-child(2n+2) {
     clear: left; 
   }
 }
