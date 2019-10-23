@@ -1,14 +1,14 @@
 {% set my_tags = blog_tags('default', 250) %}
+{% set currentURL = content.absolute_url %}
 
 <div class="blog-tag-filter">
   <span class="blog-tag-filter__title">Browse by</span>
   <div class="blog-tag-filter__dropdown">
     <select>
-      <option selected="selected" value="{{ group.absolute_url }}">All</option>
+      <option {% if currentURL == group.absolute_url %}selected="selected"{% endif %} value="{{ group.absolute_url }}">All</option>
     {% for item in my_tags %}
-      <option value="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</option>
+      <option {% if currentURL == blog_tag_url(group.id, item.slug) %}selected="selected"{% endif %} value="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</option>
     {% endfor %}
     </select>
   </div>
 </div>
-

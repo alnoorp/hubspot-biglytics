@@ -5,9 +5,8 @@
 
   if (blogCommentsButton) {
     blogCommentsButton.addEventListener('click', function() {
-      var blogCommentsSection = document.querySelector(
-        '.blog-comments__listing'
-      );
+      blogCommentsButton.style.display="none"; 
+      var blogCommentsSection = document.querySelector('.blog-comments__listing');
       blogCommentsSection.style.display = 'block';
     });
   }
