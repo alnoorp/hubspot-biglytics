@@ -24,7 +24,7 @@
   }
 }
 
-.error-page-heading {
+.error-page__heading {
   margin-bottom: 1rem;
 }
 
@@ -42,6 +42,14 @@
   font-size: 0.75rem;
   color: #4F7D24;
   padding: 0.1rem 0.75rem;
+}
+
+.systems-page form {
+  margin: 0 auto; 
+}
+
+.systems-page form input {
+  max-width: 100%; 
 }
 
 .hs-search-results {
