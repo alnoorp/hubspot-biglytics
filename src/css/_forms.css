@@ -121,8 +121,7 @@ form ul li::before {
 }
 
 .hs-dropdown .input:after {
-  content: "\f0d7";
-  font-family: FontAwesome;
+  content: "\25BE";
   position: absolute;
   top: 50%;
   right: 2em;
@@ -132,12 +131,11 @@ form ul li::before {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   pointer-events: none;
-  color: {{ get_theme_style_setting('typography.body_font.font') }};
+  color: {{ get_theme_style_setting('typography.body_font.color') }};
 }
 
 .hs-date_picker .input .hs-dateinput:before {
-  content:"\f073";
-  font-family: fontAwesome;
+  content:"\01F4C5";
   position: absolute;
   color: {{ get_theme_style_setting('typography.body_font.color') }};
   right: 10px;
