@@ -52,6 +52,19 @@
   max-width: 100%; 
 }
 
+.hs-search-field__bar {
+  position: relative; 
+}
+
+.hs-search-field__suggestions {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 100%;
+  max-width: 360px;
+  background-color: #fff;
+}
+
 .hs-search-results {
   margin-top: 2rem;
 }
