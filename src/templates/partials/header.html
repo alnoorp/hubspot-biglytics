@@ -3,15 +3,15 @@
   label: Page header
 -->
 <header class="header">
-  <div class="header-container">
+  <div class="header__container">
     <div class="row-fluid span12">
-        <div class="header-logo column span3">
+        <div class="header__logo column span3">
             {% module "header_logo" path="@hubspot/logo", label="Logo" %}
         </div>
-        <div class="header-menu column span9">
+        <div class="header__menu column span9">
             <input type="checkbox" id="nav-toggle">
-            <label class="header-navigation-toggle" for="nav-toggle"></label>
-            <div class="header-navigation">
+            <label class="header__navigation-toggle" for="nav-toggle"></label>
+            <div class="header__navigation">
               {% module "header_navigation_primary" path="../../modules/Menu section", label="Primary Navigation" %}
             </div>
         </div>
