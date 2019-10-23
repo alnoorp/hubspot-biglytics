@@ -3,7 +3,7 @@
   border-radius: 4px; 
   display: inline-block; 
 }
-.social-links-icon {
+.social-links__icon {
   border-right: 2px solid #000; 
   box-sizing: border-box; 
   float: left; 
@@ -12,18 +12,18 @@
   text-align: center;
   width: 42px;
 }
-.social-links-icon:last-child {
+.social-links__icon:last-child {
   width: 40px; 
   border-right: 0px; 
 }
-.social-links-icon svg {
+.social-links__icon svg {
   fill: #000;
   height: 15px;
   width: auto;
 }
-.social-links-icon:hover {
+.social-links__icon:hover {
   background-color: #000; 
 }
-.social-links-icon:hover svg {
+.social-links__icon:hover svg {
   fill: #fff; 
 }
