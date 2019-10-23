@@ -1,22 +1,22 @@
 <div class="feature" id="{{ name }}">
-  <span class="icon">	
+  <span class="feature__icon">	
     {% icon
       name="{{ module.feature_icon.name }}"
       style="{{ module.feature_icon.type }}"
       unicode="{{ module.feature_icon.unicode }}"
     %}
   </span>
-  <h3 class="title">{{ module.feature_title }}</h3>
-  <div clas="description">{{ module.feature_description }}</div>
+  <h3 class="feature__title">{{ module.feature_title }}</h3>
+  <div clas="feature__description">{{ module.feature_description }}</div>
 </div>
 
 {% require_css %}
 <style>
-  #hs_cos_wrapper_{{name}} .feature .icon > span {
+  #hs_cos_wrapper_{{name}} .feature__icon > span {
     background-color: {{ module.icon_bg_color.color }}; 
     border-color: {{ module.icon_border_color.color }}; 
   }
-  #hs_cos_wrapper_{{name}} .feature .icon svg {
+  #hs_cos_wrapper_{{name}} .feature__icon svg {
     fill: {{ module.icon_color.color }}; 
   }
 </style>

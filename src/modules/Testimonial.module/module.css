@@ -5,14 +5,14 @@
     margin-top: 20px; 
 }
 
-.testimonial .avatar, 
-.testimonial .name {
+.testimonial__avatar, 
+.testimonial__name {
     display: inline-block;
     vertical-align: middle;
     margin: 20px 0;
 }
 
-.testimonial .avatar {
+.testimonial__avatar {
     height: 45px;
     width: 45px;
     background-size: cover;
