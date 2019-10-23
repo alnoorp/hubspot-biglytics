@@ -276,7 +276,7 @@
             "name":"form_header_bg_color",
             "label":"Form header background color",
             "default":{
-               "color":"#c168c2",
+               "color":"#34b5e5",
                "opacity":100
             }
          },
@@ -346,7 +346,7 @@
             "name":"table_header_bg_color",
             "label":"Table header background color",
             "default":{
-               "color":"#c168c2",
+               "color":"#34b5e5",
                "opacity":100
             }
          },
