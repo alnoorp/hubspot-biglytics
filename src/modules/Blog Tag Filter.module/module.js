@@ -5,4 +5,4 @@ blogTagSelect.addEventListener('change', function (event) {
       window.location = blogTagSelect.value;
     }
     return false;
-  });
+});
