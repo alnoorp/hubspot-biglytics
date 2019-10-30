@@ -54,7 +54,7 @@
                     {% endfor %}
                 </div>
                 {{ content.post_list_content|truncatehtml(170) }}
-                <a class="blog-card__button hs-button" href="{{ content.absolute_url }}">Read More</a>
+                <a class="blog-card__button button button__primary" href="{{ content.absolute_url }}">Read More</a>
                 <div class="blog-card__comment-count">
                     {% set comments_number =  content.comment_list|length %}
                     {% set comments_label = "Comment" if comments_number == 1 else "Comments" %}

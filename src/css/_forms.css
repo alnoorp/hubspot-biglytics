@@ -22,7 +22,7 @@ h3.form-title {
 }
 
 .hs-button,
-.cta_button {
+.button__primary {
   background-color: {{ get_theme_style_setting('buttons.button_bg_color.color') }};
   border: 1px solid {{ get_theme_style_setting('buttons.button_bg_color.color') }};
   border-radius: {{ get_theme_style_setting('buttons.button_border_radius', 'px') }};
@@ -43,9 +43,9 @@ h3.form-title {
 .hs-button:hover, 
 .hs-button:focus,
 .hs-button:active,
-.cta_button:hover,
-.cta_button:focus,
-.cta_button:active {
+.button__primary:hover, 
+.button__primary:focus,
+.button__primary:active {
   border-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
   background-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
   color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
@@ -303,6 +303,7 @@ ul.no-list {
 }
 
 .hs-button,
+.button__primary,
 .hs-form-field input[type=text],
 .hs-form-field input[type=email],
 .hs-form-field input[type=phone],

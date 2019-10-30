@@ -23,7 +23,7 @@
           {% endfor %}
       </div>
       {{ post.post_list_content|truncatehtml(170) }}
-      <a class="blog-card__button hs-button" href="{{ post.absolute_url }}">Read More</a>
+      <a class="blog-card__button button button__primary" href="{{ post.absolute_url }}">Read More</a>
       <div class="blog-card__comment-count">
           {% set comments_number =  post.comment_list|length %}
           {% set comments_label = "Comment" if comments_number == 1 else "Comments" %}
