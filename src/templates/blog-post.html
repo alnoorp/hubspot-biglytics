@@ -10,7 +10,6 @@
 
     {% module "blog_post_banner"
       path="../modules/Blog Post Banner",
-      label="Blog Post Banner",
       background_image={
         "src": get_asset_url("../images/blog-post-banner.png")
       }
@@ -36,21 +35,20 @@
           </div>
         <div class="blog-post__body">
           {{ content.post_body }}
-          {% module "blog_post_social_share" path="@hubspot/social_sharing", label="Social Sharing" %}
+          {% module "blog_post_social_share" path="@hubspot/social_sharing" %}
         </div>
       </div>
       <div class="blog-post__comments">
           <a class="blog-comments__toggle button button__primary">View Comments</a>
           <div class="blog-comments__listing">
-              {% module "blog_comments" path="@hubspot/blog_comments", label="Blog Comments" %}
+              {% module "blog_comments" path="@hubspot/blog_comments" %}
           </div>
       </div>
     </div>
 
     <div class="blog-cta">
       {% module "blog_cta" 
-        path="../modules/Blog CTA", 
-        label="Blog CTA",
+        path="../modules/Blog CTA",
         background_color={
           "color": "#34b5e5"
         },
@@ -63,7 +61,7 @@
     </div>
 
     <div class="blog-related-posts">
-      {% module "blog_related_posts" path="../modules/Blog Related Posts", label="Blog Related Posts" %}
+      {% module "blog_related_posts" path="../modules/Blog Related Posts" %}
     </div>
 
   </div>

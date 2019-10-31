@@ -26,8 +26,7 @@
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module path="@hubspot/rich_text", 
-            flexbox_positioning="TOP_CENTER",
-            label="Rich text"
+            flexbox_positioning="TOP_CENTER"
           %}
           {% module_attribute "html" %}
             <div style="text-align: center">
@@ -38,9 +37,8 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module path="../modules/Customizable button", 
+          {% dnd_module path="../modules/Customizable Button", 
             flexbox_positioning="MIDDLE_CENTER",
-            label="Button",
             link="#",
             button_text="Free Trial"
           %}
@@ -62,7 +60,6 @@
           %}
             {% dnd_module path="@hubspot/header", 
               flexbox_positioning="MIDDLE_CENTER",
-              label="Header",
               header_tag="h2",
               value="Headlines and Mission Statements for Days"
             %}
@@ -81,7 +78,6 @@
               offset=0,
               width=4,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Feature",
               feature_icon={
                   "name": "clock",
                   "type": "REGULAR",
@@ -96,7 +92,6 @@
               offset=4,
               width=4,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Feature",
               feature_icon={
                   "name": "cloud",
                   "type": "SOLID",
@@ -111,7 +106,6 @@
               offset=8,
               width=4,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Feature",
               feature_icon={
                   "name": "mobile-alt",
                   "type": "SOLID",
@@ -123,9 +117,8 @@
             {% end_dnd_module %}
           {% end_dnd_row %}
           {% dnd_row %}
-            {% dnd_module path="../modules/Customizable button", 
-              flexbox_positioning="MIDDLE_CENTER", 
-              label="Button",
+            {% dnd_module path="../modules/Customizable Button", 
+              flexbox_positioning="MIDDLE_CENTER",
               link="#",
               button_text="View Features"
             %}
@@ -149,7 +142,6 @@
         %}
           {% dnd_row %}
             {% dnd_module path="@hubspot/linked_image",
-              label="Image",
               img={
                 "src": get_asset_url("../images/computer.png"),
                 "alt": "Computer and phone",
@@ -164,7 +156,7 @@
           width=6
         %}
           {% dnd_row %}
-            {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
+            {% dnd_module path="@hubspot/rich_text" %}
               {% module_attribute "html" %}
                 <div>
                   <h2 style="color: #fff;">Full Control</h2>
@@ -180,9 +172,8 @@
           {% end_dnd_row %}
           {% dnd_row %}
             {% dnd_module 
-              path="../modules/Customizable button",
+              path="../modules/Customizable Button",
               flexbox_positioning='MIDDLE_LEFT',
-              label="Button", 
               link="#",
               button_text="Free Trial" 
             %}
@@ -203,8 +194,7 @@
             }
           %}
             {% dnd_module path="@hubspot/rich_text",
-              flexbox_positioning="MIDDLE_CENTER",
-              label="Rich text"  
+              flexbox_positioning="MIDDLE_CENTER"
             %}
               {% module_attribute "html" %}
                 <div style="text-align: center">
@@ -220,7 +210,6 @@
               offset=0,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Statistic",
               statistic_number="10",
               statistic_unit="k",
               statistic_percentage="50",
@@ -232,7 +221,6 @@
               offset=3,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Statistic",
               statistic_number="98",
               statistic_unit="%",
               statistic_percentage="98",
@@ -244,7 +232,6 @@
               offset=6,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Statistic",
               statistic_number="1,211",
               statistic_percentage="75",
               statistic_description="<p>Custom configurations</p>"
@@ -255,7 +242,6 @@
               offset=9,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
-              label="Statistic",
               statistic_number="36",
               statistic_unit="m",
               statistic_percentage="100",
@@ -285,8 +271,7 @@
           }
          %}
           {% dnd_module path="@hubspot/rich_text", 
-            flexbox_positioning="TOP_CENTER",
-            label="Rich text" 
+            flexbox_positioning="TOP_CENTER"
           %}
             {% module_attribute "html" %}
               <div style="text-align: center;">
@@ -301,7 +286,6 @@
             offset=0,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
-            label="Testimonial",
             testimonial_headshot={
                 "src": get_asset_url("../images/alan.png"),
                 "alt": "Alan Dixon"
@@ -313,7 +297,6 @@
             offset=4,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
-            label="Testimonial",
             testimonial_headshot={
                 "src": get_asset_url("../images/alan.png"),
                 "alt": "Alan Dixon"
@@ -325,7 +308,6 @@
             offset=8,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
-            label="Testimonial",
             testimonial_headshot={
                 "src": get_asset_url("../images/alan.png"),
                 "alt": "Alan Dixon"
@@ -343,7 +325,6 @@
         offset=0,
         width=2,
         flexbox_positioning="MIDDLE_CENTER",
-        label="Image",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -357,7 +338,6 @@
         offset=2,
         width=2,
         flexbox_positioning="MIDDLE_CENTER",
-        label="Image",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -371,7 +351,6 @@
         offset=4,
         width=2,
         flexbox_positioning="MIDDLE_CENTER",
-        label="Image",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -385,7 +364,6 @@
         offset=6,
         width=2,
         flexbox_positioning="MIDDLE_CENTER",
-        label="Image",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -399,7 +377,6 @@
         offset=8,
         width=2,
         flexbox_positioning="MIDDLE_CENTER",
-        label="Image",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -413,7 +390,6 @@
         offset=10,
         width=2,
         flexbox_positioning="MIDDLE_CENTER",
-        label="Image",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -436,8 +412,7 @@
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module path="@hubspot/rich_text", 
-            flexbox_positioning="TOP_CENTER",
-            label="Rich text"
+            flexbox_positioning="TOP_CENTER"
           %}
           {% module_attribute "html" %}
             <div style="text-align: center;">
@@ -448,9 +423,8 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module path="../modules/Customizable button", 
-            flexbox_positioning="MIDDLE_CENTER" 
-            label="Button",
+          {% dnd_module path="../modules/Customizable Button", 
+            flexbox_positioning="MIDDLE_CENTER",
             link="#",
             button_text="Free Trial"
           %}
