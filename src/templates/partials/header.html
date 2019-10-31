@@ -5,7 +5,17 @@
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-        {% module "header_logo" path="@hubspot/logo", label="Logo" %}
+      {% module "header_logo" 
+        path="@hubspot/logo", 
+        label="Logo",
+        img={
+          "override_inherited_src": true,
+          "src": get_asset_url("../../images/logo.png"),
+          "width": "205",
+          "alt": "Perfect Logo",
+          "size_type": "auto"
+        }
+      %}
     </div>
     <div class="header__menu">
         <input type="checkbox" id="nav-toggle">

@@ -8,7 +8,17 @@
       <div class="row-fluid span12">
           <div class="column span4">
             <div class="footer__logo">
-                {% module "footer_logo" path="@hubspot/logo", label="Logo" %}
+              {% module "footer_logo" 
+                path="@hubspot/logo", 
+                label="Logo",
+                img={
+                  "override_inherited_src": true,
+                  "src": get_asset_url("../../images/logo.png"),
+                  "width": "205",
+                  "alt": "Perfect Logo",
+                  "size_type": "auto"
+                }
+              %}
             </div>
             <div class="footer__follow-me">
               {% module "footer_social" 
