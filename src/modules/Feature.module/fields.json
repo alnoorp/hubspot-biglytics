@@ -1,8 +1,6 @@
 [ {
   "name" : "feature_icon",
   "label" : "Feature Icon",
-  "required" : true,
-  "locked" : false,
   "type" : "icon",
   "default" : {
     "name" : "clock",
@@ -12,9 +10,7 @@
 }, {
   "name" : "icon_color",
   "label" : "Icon Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#34b5e5",
@@ -23,9 +19,7 @@
 }, {
   "name" : "icon_bg_color",
   "label" : "Icon Background Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#fff",
@@ -34,9 +28,7 @@
 }, {
   "name" : "icon_border_color",
   "label" : "Icon Border Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#d0d0d0",
@@ -46,17 +38,12 @@
   "name" : "feature_title",
   "label" : "Feature Title",
   "required" : true,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Quick and Simple"
 }, {
   "name" : "feature_description",
   "label" : "Feature Description",
   "required" : true,
-  "locked" : false,
   "type" : "richtext",
   "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
 } ]

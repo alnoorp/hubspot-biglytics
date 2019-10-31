@@ -1,8 +1,6 @@
 [ {
   "name" : "background_color",
   "label" : "Background Color",
-  "required" : false,
-  "locked" : false,
   "type" : "color",
   "default" : {
     "color" : "#ffffff",
@@ -11,8 +9,6 @@
 }, {
   "name" : "image",
   "label" : "Image",
-  "required" : false,
-  "locked" : false,
   "responsive" : true,
   "resizable" : true,
   "type" : "image",
@@ -24,15 +20,11 @@
 }, {
   "name" : "content",
   "label" : "Content",
-  "required" : false,
-  "locked" : false,
   "type" : "richtext",
   "default" : null
 }, {
   "name" : "cta_field",
   "label" : "CTA",
-  "required" : false,
-  "locked" : false,
   "type" : "cta",
   "default" : null
 } ]

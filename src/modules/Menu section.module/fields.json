@@ -2,8 +2,6 @@
   {
     "name": "primary_menu_field",
     "label": "Primary Menu field",
-    "sortable": false,
-    "required": false,
     "locked": true,
     "type": "menu"
   }

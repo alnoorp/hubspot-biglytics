@@ -1,8 +1,6 @@
 [ {
   "name" : "background_image",
   "label" : "Background Image",
-  "required" : false,
-  "locked" : false,
   "responsive" : true,
   "resizable" : true,
   "type" : "image",
@@ -14,19 +12,12 @@
 }, {
   "name" : "blog_title",
   "label" : "Blog Title",
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
   "type" : "text",
   "default" : "PERFECT SAVES TIME."
 }, {
   "name" : "blog_title_color",
   "label" : "Blog Title Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#ffffff",
@@ -35,19 +26,12 @@
 }, {
   "name" : "blog_subtitle",
   "label" : "Blog Subtitle",
-  "required" : false,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
 }, {
   "name" : "blog_subtitle_color",
   "label" : "Blog Subtitle Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#ffffff",

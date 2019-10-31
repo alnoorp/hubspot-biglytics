@@ -1,8 +1,6 @@
 [ {
   "name" : "accordion",
   "label" : "Accordion",
-  "required" : false,
-  "locked" : false,
   "occurrence" : {
     "min" : 1,
     "max" : null,
@@ -11,22 +9,16 @@
   "children" : [ {
     "name" : "accordion_content",
     "label" : "Accordion Content",
-    "required" : false,
-    "locked" : false,
     "type" : "richtext",
     "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
   }, {
     "name" : "expanded",
     "label" : "Expanded?",
-    "required" : false,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {
     "name" : "accordion_header",
     "label" : "Accordion Header",
-    "required" : false,
-    "locked" : false,
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
@@ -43,9 +35,7 @@
 }, {
   "name" : "faq_color",
   "label" : "FAQ Header Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#34b5e5",
@@ -54,9 +44,7 @@
 }, {
   "name" : "faq_icon_color",
   "label" : "FAQ Icon Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#ffffff",
@@ -65,9 +53,7 @@
 }, {
   "name" : "faq_open_color",
   "label" : "FAQ Header Open Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#000000",
@@ -76,9 +62,7 @@
 }, {
   "name" : "faq_icon_open_color",
   "label" : "FAQ Icon Open Color",
-  "sortable" : false,
   "required" : true,
-  "locked" : false,
   "type" : "color",
   "default" : {
      "color" : "#ffffff",
