@@ -38,7 +38,7 @@
   "required" : true,
   "type" : "color",
   "default" : {
-     "color" : "#34b5e5",
+     "color" : "#c168c2",
      "opacity" : 100
   }
 }, {
@@ -56,7 +56,7 @@
   "required" : true,
   "type" : "color",
   "default" : {
-     "color" : "#000000",
+     "color" : "#e77de8",
      "opacity" : 100
   }
 }, {
