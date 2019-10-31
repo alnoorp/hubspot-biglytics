@@ -17,7 +17,7 @@
             "bottom": 40
           }
         %}
-            {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
+            {% dnd_module path="@hubspot/rich_text" %}
                 {% module_attribute "html" %}
                 <div style="text-align: center;">
                     <h1>Pricing</h1>
@@ -27,9 +27,7 @@
             {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-            {% dnd_module path="../modules/Pricing Table",
-                label="Pricing Table"
-            %}
+            {% dnd_module path="../modules/Pricing Table" %}
             {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
@@ -50,7 +48,6 @@
         %}
           {% dnd_row %}
             {% dnd_module path="@hubspot/linked_image",
-              label="Image",
               img={
                 "src": get_asset_url("../images/iphones.png"),
                 "alt": "Computer and phone",
@@ -65,7 +62,7 @@
           width=6
         %}
           {% dnd_row %}
-            {% dnd_module path="@hubspot/rich_text", label="Rich Text" %}
+            {% dnd_module path="@hubspot/rich_text" %}
               {% module_attribute "html" %}
                 <div>
                   <h2 style="color: #fff;">Full Control</h2>
@@ -84,9 +81,8 @@
           {% end_dnd_row %}
           {% dnd_row %}
             {% dnd_module 
-              path="../modules/Customizable button",
+              path="../modules/Customizable Button",
               flexbox_positioning="MIDDLE_LEFT",
-              label="Button",
               link="#",
               button_text="Free Trial"
             %}
@@ -99,7 +95,7 @@
     {% dnd_section %}
         {% dnd_column %}
           {% dnd_row %}
-              {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
+              {% dnd_module path="@hubspot/rich_text" %}
                   {% module_attribute "html" %}
                   <div style="text-align: center;">
                       <h2>Frequently Asked Questions</h2>
@@ -110,13 +106,11 @@
           {% end_dnd_row %}
           {% dnd_row %}
             {% dnd_module path="../modules/Accordion",
-                label="Accordion",
                 width=6,
                 offset=0
             %}
             {% end_dnd_module %}
             {% dnd_module path="../modules/Accordion",
-                label="Accordion",
                 width=6,
                 offset=6
             %}

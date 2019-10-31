@@ -35,8 +35,7 @@
           }
         %}
           {% dnd_module path="@hubspot/logo", 
-            flexbox_positioning="MIDDLE_CENTER",
-            label="Logo"  
+            flexbox_positioning="MIDDLE_CENTER"
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
@@ -46,7 +45,6 @@
             offset=0,
             width=4,
             flexbox_positioning="TOP_CENTER",
-            label="Image",
             img={
               "src": get_asset_url("../images/ebook.png"),
               "alt": "Ebook",
@@ -59,7 +57,6 @@
             offset=4,
             width=4,
             flexbox_positioning="MIDDLE_LEFT",
-            label="Rich text"
           %}
             {% module_attribute "html" %}
               <div>
@@ -74,7 +71,6 @@
             offset=8,
             width=4,
             flexbox_positioning="TOP_CENTER",
-            label="Form",
             title="Yes! Send Me the Ebook!"
           %}
           {% end_dnd_module %}
@@ -93,7 +89,7 @@
     %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/rich_text", label="Rich text" %}
+          {% dnd_module path="@hubspot/rich_text" %}
             {% module_attribute "html" %}
               <h2 style="color: #fff;">What's Inside?</h2>
             {% end_module_attribute %}
@@ -103,8 +99,7 @@
           {% dnd_module 
             path="@hubspot/rich_text",
             offset=0,
-            width=4,
-            label="Rich text"
+            width=4
           %}
             {% module_attribute "html" %}
               <div>
@@ -118,8 +113,7 @@
           {% dnd_module 
             path="@hubspot/rich_text",
             offset=4,
-            width=4,
-            label="Rich text"
+            width=4
           %}
             {% module_attribute "html" %}
               <div>
@@ -133,8 +127,7 @@
           {% dnd_module 
             path="@hubspot/rich_text",
             offset=8,
-            width=4,
-            label="Rich text"
+            width=4
           %}
             {% module_attribute "html" %}
               <div>
