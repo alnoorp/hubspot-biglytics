@@ -2,24 +2,18 @@
   "name" : "testimonial_title",
   "label" : "Testimonial Title",
   "required" : true,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Wow, this is amazing!"
 }, {
   "name" : "testimonial_description",
   "label" : "Testimonial Description",
   "required" : true,
-  "locked" : false,
   "type" : "richtext",
   "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor”&nbsp;"
 }, {
   "name" : "testimonial_headshot",
   "label" : "Testimonial Headshot",
   "required" : true,
-  "locked" : false,
   "responsive" : false,
   "resizable" : true,
   "type" : "image",
@@ -31,10 +25,6 @@
   "name" : "testimonial_name",
   "label" : "Testimonial Name",
   "required" : true,
-  "locked" : false,
-  "validation_regex" : "",
-  "allow_new_line" : false,
-  "show_emoji_picker" : false,
   "type" : "text",
   "default" : "Alan Dixon"
 } ]

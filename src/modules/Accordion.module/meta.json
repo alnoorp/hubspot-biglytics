@@ -1,14 +1,10 @@
 {
-  "content_tags" : [ ],
-  "css_assets" : [ ],
-  "external_js" : [ ],
-  "extra_classes" : "",
+  "css_assets" : [],
+  "external_js" : [],
   "global" : false,
   "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
-  "js_assets" : [ ],
-  "other_assets" : [ ],
-  "placement_rules" : [ ],
+  "js_assets" : [],
+  "other_assets" : [],
   "smart_type" : "NOT_SMART",
-  "module_id" : 9679441,
   "is_available_for_new_content" : true
 }

@@ -39,6 +39,7 @@ h6 {
   margin-top: 0;
   margin-bottom: 1em;
   font-weight: 600;
+  letter-spacing: 0.05em;
   word-break: break-word;
 }
 
@@ -46,7 +47,6 @@ h1 {
   color: {{ get_theme_style_setting('typography.heading_one.color') }};
   font-family: {{ get_theme_style_setting('typography.heading_one.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_one.size.value', 'typography.heading_one.size.units') }};
-  letter-spacing: 0.05em;
   line-height: 2.75rem; 
   text-transform: uppercase; 
 }
@@ -55,7 +55,6 @@ h2 {
   color: {{ get_theme_style_setting('typography.heading_two.color') }};
   font-family: {{ get_theme_style_setting('typography.heading_two.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_two.size.value', 'typography.heading_two.size.units') }};
-  letter-spacing: 0.05em;
   line-height: 2.25rem; 
   text-transform: uppercase; 
 }
@@ -64,7 +63,6 @@ h3 {
   color: {{ get_theme_style_setting('typography.heading_three.color') }};
   font-family: {{ get_theme_style_setting('typography.heading_three.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_three.size.value', 'typography.heading_three.size.units') }};
-  letter-spacing: 0.05em; 
   line-height: 1.75rem; 
 }
 
@@ -73,7 +71,6 @@ h4 {
   font-family: {{ get_theme_style_setting('typography.heading_four.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_four.size.value', 'typography.heading_four.size.units') }};
   font-weight: normal;
-  letter-spacing: 0.05em;
   line-height: 1.625rem; 
   text-transform: uppercase; 
 }
@@ -82,7 +79,6 @@ h5 {
   color: {{ get_theme_style_setting('typography.heading_five.color') }};
   font-family: {{ get_theme_style_setting('typography.heading_five.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_five.size.value', 'typography.heading_five.size.units') }};
-  letter-spacing: 0.05em;
   line-height: 1.375rem;
   text-transform: uppercase; 
 }
@@ -91,7 +87,6 @@ h6 {
   color: {{ get_theme_style_setting('typography.heading_six.color') }};
   font-family: {{ get_theme_style_setting('typography.heading_six.font') }};
   font-size: {{ get_theme_style_setting('typography.heading_six.size.value', 'typography.heading_six.size.units') }};
-  letter-spacing: 0.05em;
   line-height: 1.125rem;
 }
 
