@@ -1,4 +1,4 @@
-<div class="testimonial">
+<div class="testimonial" id="{{ name }}">
   <h3 class="testimonial__title">{{ module.testimonial_title }}</h3>
   <div class="testimonial__description">
     {{ module.testimonial_description }}
@@ -8,3 +8,11 @@
     {{ module.testimonial_name }}
   </div>
 </div>
+
+{% require_css %}
+<style>
+#hs_cos_wrapper_{{name}} .testimonial:hover {
+  border-bottom: 15px solid {{ module.testimonial_hover_accent_color.color }};
+}
+</style>
+{% end_require_css %}
