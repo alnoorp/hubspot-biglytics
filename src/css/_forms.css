@@ -1,8 +1,6 @@
 form {
   background-color: {{ get_theme_style_setting('forms.form_bg_color.color') }};
-  border-width: 1px;
-  border-style: solid;
-  border-color: {{ get_theme_style_setting('forms.form_border_color.color') }}; 
+  border: 1px solid {{ get_theme_style_setting('forms.form_border_color.color') }}; 
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   font-family: {{ get_theme_style_setting('typography.body_font.font') }};
@@ -17,7 +15,7 @@ h3.form-title {
   color: {{ get_theme_style_setting('forms.form_header_text_color.color') }}; 
   margin: 0; 
   max-width: 500px;
-  padding: 2.88rem 2.63rem 2.44rem;
+  padding: 2.8rem 2.6rem;
   text-transform: uppercase;  
 }
 
@@ -33,10 +31,12 @@ h3.form-title {
   font-weight: 600;
   letter-spacing: 0.2em; 
   margin: 0; 
-  padding: 0.86rem;
+  padding: 0.8rem;
   text-align: center; 
   text-decoration: none;
   text-transform: uppercase; 
+  -webkit-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
 
@@ -97,10 +97,6 @@ form textarea:focus {
   border-width: 1px;
 }
 
-form ul li::before {
-  content: none; 
-}
-
 .hs-input[type=checkbox],
 .hs-input[type=radio] {
   cursor: pointer;
@@ -147,6 +143,25 @@ form ul li::before {
   transform: translateY(-50%);
 }
 
+.fn-date-picker .pika-table thead th {
+  color: {{ get_theme_style_setting('tables.table_header_text_color.color') }};
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: #34b5e5;
+}
+
+.fn-date-picker td.is-selected .pika-button {
+  background: #34b5e5;
+  box-shadow: none; 
+  border-radius: 0; 
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: #c168c2 !important; 
+  border-radius: 0 !important; 
+}
+
 .hs-input:-moz-placeholder {
   color: {{ get_theme_style_setting('typography.body_font.color') }};
 }
@@ -157,6 +172,8 @@ form ul li::before {
 
 .hs-input input,
 .hs-input textarea {
+  -webkit-transition: border 0.2s linear;
+  -o-transition: border 0.2s linear;
   transition: border 0.2s linear;
 }
 
