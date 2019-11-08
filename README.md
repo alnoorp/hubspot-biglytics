@@ -5,7 +5,7 @@ Vast 2.0 - aka Sass
 
 A website theme built off of the [CMS theme boilerplate](https://github.com/HubSpot/cms-theme-boilerplate)
 
-## Getting started
+## Getting Started
 
 It is recommended that you create a new portal for testing the cms-website-theme. If you would like to use an existing portal to test the cms-website-theme, please ensure that you ungate your portal for the gates listed in step three under "Creating and Setting Up Your Portal". When uploading the Theme Project to your portal, you'll be using the CLI. To learn more about the CLI/local development tools, please reference our documentation [here](https://designers.hubspot.com/docs/tools/local-development). 
 
