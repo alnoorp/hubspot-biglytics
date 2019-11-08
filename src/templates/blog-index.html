@@ -42,17 +42,21 @@
                     <span class="blog-card__date">{{ content.publish_date_localized }}</span>
                 </div>
               </div>
-              {% if content.featured_image %}
-                <a class="blog-card__image" style="background-image: url('{{ content.featured_image }}')"; href="{{ content.absolute_url }}"></a>
-              {% endif %}
-              <div class="blog-card__content">
-                <div class="blog-card__tags">
-                    {% icon name="tag" style="SOLID" %}
-                    {% for tag in content.tag_list %}
-                      <a class="blog-card__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
-                    {% endfor %}
+              <div class="blog-card__body">
+                {% if content.featured_image %}
+                  <a class="blog-card__image" style="background-image: url('{{ content.featured_image }}')"; href="{{ content.absolute_url }}"></a>
+                {% endif %}
+                <div class="blog-card__content">
+                  <div class="blog-card__tags">
+                      {% icon name="tag" style="SOLID" %}
+                      {% for tag in content.tag_list %}
+                        <a class="blog-card__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                      {% endfor %}
+                  </div>
+                  {{ content.post_list_content|truncatehtml(170) }}
                 </div>
-                {{ content.post_list_content|truncatehtml(170) }}
+              </div>
+              <div class="blog-card__footer">
                 <a class="blog-card__button button button__primary" href="{{ content.absolute_url }}">Read More</a>
                 <div class="blog-card__comment-count">
                     {% set comments_number =  content.comment_list|length %}
