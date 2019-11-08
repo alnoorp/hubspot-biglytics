@@ -27,4 +27,13 @@
   "required" : true,
   "type" : "text",
   "default" : "Alan Dixon"
+}, {
+  "name" : "testimonial_hover_accent_color",
+  "label" : "Testimonial Hover Accent Color",
+  "required" : true,
+  "type" : "color",
+  "default" : {
+     "color" : "#34b5e5",
+     "opacity" : 100
+  }
 } ]
