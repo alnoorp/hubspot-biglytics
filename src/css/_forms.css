@@ -110,6 +110,7 @@ form textarea:focus {
 
 .hs-input[type=file] {
   background-color: transparent;
+  border: 0px; 
   padding: initial;
   border: initial;
   line-height: initial;
@@ -120,7 +121,7 @@ form textarea:focus {
   content: "\25BE";
   position: absolute;
   top: 50%;
-  right: 2em;
+  right: 15px;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -o-transform: translateY(-50%);
@@ -333,6 +334,10 @@ ul.no-list {
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
+}
+
+.hs-form-field select::-ms-expand { 
+  display: none; 
 }
 
 .hs-default-font-element,
