@@ -30,7 +30,9 @@
   {% if node.children %}
   <input type="checkbox" id="{{ node.label }}" class="submenu-toggle">
   <label class="menu-arrow" for="{{ node.label }}">
-    <span class="menu-arrow-bg"></span>
+    <span class="menu-arrow-bg">
+      <span class="menu-arrow-icon"></span>
+    </span>
   </label>
   {{ renderNavigation(node) }}
   {% endif %}
