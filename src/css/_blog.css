@@ -101,6 +101,10 @@
     width: 200px; 
 }
 
+.blog-tag-filter__dropdown select::-ms-expand { 
+    display: none; 
+  }
+
 .blog-tag-filter__dropdown select:focus {
     outline: none; 
 }
@@ -217,7 +221,7 @@
     -webkit-transform: rotate(90deg); 
     transform: rotate(90deg);
     width: 15px;
-    height: auto;
+    height: 15px;
     margin-right: 10px;
     fill: #34b5e5; 
 }
