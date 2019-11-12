@@ -32,10 +32,8 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 
 ### Uploading the Theme Project Folder to Your Portal
 
-1.) Navigate to the directory where the repository was downloaded. 
+1.) Create a `hubspot.config.yml` file in the folder that you downloaded and [configure](https://designers.hubspot.com/docs/tools/local-development#2-set-up-your-configuration-file) the file so that you can upload files to the HubSpot portals that you want to use.
 
-2.) Run `npx @hubspot/create-cms-project <directory>` to create a project from the theme.
+2.) In the CLI, navigate to the directory where the repository was downloaded. 
 
-3.) Create a `hubspot.config.yml` file and [configure](https://designers.hubspot.com/docs/tools/local-development#2-set-up-your-configuration-file) the CLI so that you can upload files to the HubSpot portals that you use.
-
-4.) Run `npx hs watch --portal=<portal> src <directory>` to upload all the files in the cms-theme-project and [watch for changes](https://designers.hubspot.com/docs/tools/local-development-reference#watch) to files in the `src` directory.
+3.) Run `npx hs watch --portal=<portal> src <directory>` to upload all the files in the cms-theme-project and [watch for changes](https://designers.hubspot.com/docs/tools/local-development-reference#watch) to files in the `src` directory.
