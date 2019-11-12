@@ -28,12 +28,14 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 
 ### Downloading the Theme Project Folder
 
-1.) Download this repository to your computer by clicking on "Clone or download" in the top right hand corner and clicking on "Download ZIP" in the dropdown. 
+1.) Download this repository to your computer by either clicking on "Clone or download" in the top right hand corner of the repository and clicking on "Download ZIP" in the dropdown or by cloning the repository via the CLI using `git clone git@git.hubteam.com:HubSpot/cms-website-theme.git`. 
 
 ### Uploading the Theme Project Folder to Your Portal
 
-1.) Create a `hubspot.config.yml` file in the folder that you downloaded and [configure](https://designers.hubspot.com/docs/tools/local-development#2-set-up-your-configuration-file) the file so that you can upload files to the HubSpot portals that you want to use.
+1.) Before using the CLI to upload the theme to your portal, you'll need to download a couple of [required dependencies](https://designers.hubspot.com/docs/tools/local-development#install-dependencies). The first depdency would be [Node.js](https://nodejs.org/en/). Versions 8.9.1 or higher of Node are supported, but the long-term support (LTS) version is recommended. The second dependency would be the HubSpot CLI tools. This can be downloaded globally by running `npm install -g @hubspot/cms-cli` or in your current directory by running `npm install @hubspot/cms-cli`. 
 
-2.) In the CLI, navigate to the directory where the repository was downloaded. 
+2.) Create a `hubspot.config.yml` file in the folder that you downloaded and [configure](https://designers.hubspot.com/docs/tools/local-development#2-set-up-your-configuration-file) the file so that you can upload files to the HubSpot portals that you want to use.
 
-3.) Run `npx hs watch --portal=<portal> src <directory>` to upload all the files in the cms-theme-project and [watch for changes](https://designers.hubspot.com/docs/tools/local-development-reference#watch) to files in the `src` directory.
+3.) In the CLI, navigate to the directory where the repository was downloaded. 
+
+4.) Run `npx hs watch --portal=<portal> src <directory>` to upload all the files in the cms-theme-project and [watch for changes](https://designers.hubspot.com/docs/tools/local-development-reference#watch) to files in the `src` directory.
