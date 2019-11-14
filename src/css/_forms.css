@@ -1,6 +1,6 @@
 form {
   background-color: {{ get_theme_style_setting('forms.form_bg_color.color') }};
-  border: 1px solid {{ get_theme_style_setting('forms.form_border_color.color') }}; 
+  border: 1px solid {{ get_theme_style_setting('forms.form_border_color.color') }};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   font-family: {{ get_theme_style_setting('typography.body_font.font') }};
@@ -9,14 +9,14 @@ form {
 }
 
 h3.form-title {
-  background-color: {{ get_theme_style_setting('forms.form_header_bg_color.color') }}; 
+  background-color: {{ get_theme_style_setting('forms.form_header_bg_color.color') }};
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  color: {{ get_theme_style_setting('forms.form_header_text_color.color') }}; 
-  margin: 0; 
+  color: {{ get_theme_style_setting('forms.form_header_text_color.color') }};
+  margin: 0;
   max-width: 500px;
   padding: 2.8rem 2.6rem;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 .hs-button,
@@ -29,36 +29,36 @@ h3.form-title {
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.2em; 
-  margin: 0; 
+  letter-spacing: 0.2em;
+  margin: 0;
   padding: 0.8rem;
-  text-align: center; 
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   -webkit-transition: all 0.15s linear;
   -o-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
 
-.hs-button:hover, 
+.hs-button:hover,
 .hs-button:focus,
 .hs-button:active,
-.button__primary:hover, 
+.button__primary:hover,
 .button__primary:focus,
 .button__primary:active {
   border-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
   background-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
-  color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
-  text-decoration: none; 
+  color: {{ get_theme_style_setting('buttons.button_text_hover_color.color') }};
+  text-decoration: none;
 }
 
 form .hs-button {
-  width: 100%; 
+  width: 100%;
 }
 
 .hs-form label {
   font-size: 1rem;
-  color: {{ get_theme_style_setting('forms.form_label_color.color') }}; 
+  color: {{ get_theme_style_setting('forms.form_label_color.color') }};
   display: block;
   float: none;
   width: auto;
@@ -73,7 +73,7 @@ form .hs-button {
 }
 
 form .input {
-  position: relative; 
+  position: relative;
 }
 
 form input,
@@ -82,11 +82,11 @@ form textarea {
   border-width: 1px;
   border-style: solid;
   border-color: {{ get_theme_style_setting('forms.form_field_border_color.color') }};
-  background-color: #fff; 
+  background-color: #fff;
   color: {{ get_theme_style_setting('typography.body_font.color') }};
-  display: inline-block; 
-  padding: 0.75rem; 
-  width: 100%; 
+  display: inline-block;
+  padding: 0.75rem;
+  width: 100%;
 }
 
 form input:focus,
@@ -110,7 +110,7 @@ form textarea:focus {
 
 .hs-input[type=file] {
   background-color: transparent;
-  border: 0px; 
+  border: 0px;
   padding: initial;
   border: initial;
   line-height: initial;
@@ -154,13 +154,13 @@ form textarea:focus {
 
 .fn-date-picker td.is-selected .pika-button {
   background: #34b5e5;
-  box-shadow: none; 
-  border-radius: 0; 
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .fn-date-picker td .pika-button:hover {
-  background-color: #c168c2 !important; 
-  border-radius: 0 !important; 
+  background-color: #c168c2 !important;
+  border-radius: 0 !important;
 }
 
 .hs-input:-moz-placeholder {
@@ -336,8 +336,8 @@ ul.no-list {
   appearance: none;
 }
 
-.hs-form-field select::-ms-expand { 
-  display: none; 
+.hs-form-field select::-ms-expand {
+  display: none;
 }
 
 .hs-default-font-element,
