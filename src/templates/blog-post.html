@@ -26,12 +26,14 @@
                 <a class="blog-post__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
                 <span class="blog-post__date">{{ content.publish_date_localized }}</span>
             </div>
-            <div class="blog-post__tags">
-                {% icon name="tag" style="SOLID" %}
-                {% for tag in content.tag_list %}
-                  <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
-                {% endfor %}
-            </div>
+            {% if content.tag_list %}
+              <div class="blog-post__tags">
+                  {% icon name="tag" style="SOLID" %}
+                  {% for tag in content.tag_list %}
+                    <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                  {% endfor %}
+              </div>
+            {% endif %}
           </div>
         <div class="blog-post__body">
           {{ content.post_body }}
@@ -47,7 +49,7 @@
     </div>
 
     <div class="blog-cta">
-      {% module "blog_cta" 
+      {% module "blog_cta"
         path="../modules/Blog CTA",
         background_color={
           "color": "#34b5e5"
