@@ -1,4 +1,12 @@
-<div class="blog-post-header" style="background-image: url('{{ module.background_image.src }}');">
+{% macro banner_image()  %}
+  {% if module.banner_image_select == "featured_image" %}
+    {{ content.post_list_summary_featured_image }}
+  {% elif module.banner_image_select == "custom_image" %}
+    {{ module.background_image.src }}
+  {% endif %}
+{% endmacro %}
+
+<div class="blog-post-header" style="background-image: url('{{ banner_image()|trim }}');">
   <div class="blog-post-header__inner">
     <div class="blog-post-header__back-button">
       <a href="{{ group.absolute_url }}">{% icon name="chevron-left" style="SOLID", width="13", no_wrapper=True %} Back to Blog</a>
