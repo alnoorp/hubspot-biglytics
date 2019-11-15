@@ -1,12 +1,12 @@
 .dnd-section {
-  padding-top: {{ get_theme_style_setting('spacing.vertical_spacing', 'px') }};
-  padding-bottom: {{ get_theme_style_setting('spacing.vertical_spacing', 'px') }};
+  padding-top: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
+  padding-bottom: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .dnd-section > .row-fluid {
-  max-width: {{ get_theme_style_setting('spacing.max_width', 'px') }};
+  max-width: {{ get_theme_style_setting('spacing_group.spacing.max_width', 'px') }};
   margin-left: auto;
   margin-right: auto;
 }

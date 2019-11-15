@@ -1,41 +1,45 @@
 table {
   margin-bottom: 1rem;
   border-width: 1px;
-  border-style: solid; 
-  border-color: {{ get_theme_style_setting('tables.table_border_color.color') }};
+  border-style: solid;
+  border-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
 }
 
+tbody + tbody {
+  border-top-width: 2px;
+  border-top-style: solid;
+  border-top-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
+}
+
+/* Table Cells */
 th,
 td {
   padding: 0.75rem;
   vertical-align: top;
   border-width: 1px;
-  border-style: solid; 
-  border-color: {{ get_theme_style_setting('tables.table_border_color.color') }};
+  border-style: solid;
+  border-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
 }
 
+/* Table Header */
 thead th,
 thead td {
-  color: {{ get_theme_style_setting('tables.table_header_text_color.color') }};
-  background-color: {{ get_theme_style_setting('tables.table_header_bg_color.color') }};
+  color: {{ get_theme_style_setting('tables_group.tables.table_header_text_color.color') }};
+  background-color: {{ get_theme_style_setting('tables_group.tables.table_header_bg_color.color') }};
 }
 
 thead th {
   vertical-align: bottom;
 }
 
+/* Table Body */
 tbody td {
-  color: {{ get_theme_style_setting('tables.table_body_text_color.color') }};
-  background-color: {{ get_theme_style_setting('tables.table_body_bg_color.color') }};
+  color: {{ get_theme_style_setting('tables_group.tables.table_body_text_color.color') }};
+  background-color: {{ get_theme_style_setting('tables_group.tables.table_body_bg_color.color') }};
 }
 
+/* Table Footer */
 tfoot td {
-  color: {{ get_theme_style_setting('tables.table_footer_text_color.color') }};
-  background-color: {{ get_theme_style_setting('tables.table_footer_bg_color.color') }};
-}
-
-tbody + tbody {
-  border-top-width: 2px;
-  border-top-style: solid;
-  border-top-color: {{ get_theme_style_setting('tables.table_border_color.color') }};
+  color: {{ get_theme_style_setting('tables_group.tables.table_footer_text_color.color') }};
+  background-color: {{ get_theme_style_setting('tables_group.tables.table_footer_bg_color.color') }};
 }

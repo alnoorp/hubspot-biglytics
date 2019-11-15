@@ -1,30 +1,34 @@
 html {
-  font-size: {{ get_theme_style_setting('typography.body_font.size.value', 'typography.body_font.size.units') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
 }
 
 body {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
-  font-family: {{ get_theme_style_setting('typography.body_font.font') }};
-  font-size: {{ get_theme_style_setting('typography.body_font.size.value', 'typography.body_font.size.units') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
   line-height: 1.4;
 }
 
 p {
-  font-size: 1rem; 
+  font-size: 1rem;
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 1.4rem;
 }
 
+strong {
+  font-weight: 600;
+}
+
 /* Anchor Links */
 a {
-  color: {{ get_theme_style_setting('links.link_color.color') }};
-  cursor: pointer; 
+  color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
+  cursor: pointer;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: {{ get_theme_style_setting('links.link_hover_color.color') }};
+  color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
   text-decoration: underline;
 }
 
@@ -42,59 +46,55 @@ h6 {
   word-break: break-word;
 }
 
+h1,
+h2,
+h4,
+h5 {
+  text-transform: uppercase;
+}
+
 h1 {
-  color: {{ get_theme_style_setting('typography.heading_one.color') }};
-  font-family: {{ get_theme_style_setting('typography.heading_one.font') }};
-  font-size: {{ get_theme_style_setting('typography.heading_one.size.value', 'typography.heading_one.size.units') }};
-  text-transform: uppercase; 
+  color: {{ get_theme_style_setting('typography_group.typography.heading_one.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.heading_one.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.heading_one.size.value', 'typography_group.typography.heading_one.size.units') }};
 }
 
 h2 {
-  color: {{ get_theme_style_setting('typography.heading_two.color') }};
-  font-family: {{ get_theme_style_setting('typography.heading_two.font') }};
-  font-size: {{ get_theme_style_setting('typography.heading_two.size.value', 'typography.heading_two.size.units') }};
-  text-transform: uppercase; 
+  color: {{ get_theme_style_setting('typography_group.typography.heading_two.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.heading_two.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.heading_two.size.value', 'typography_group.typography.heading_two.size.units') }};
 }
 
 h3 {
-  color: {{ get_theme_style_setting('typography.heading_three.color') }};
-  font-family: {{ get_theme_style_setting('typography.heading_three.font') }};
-  font-size: {{ get_theme_style_setting('typography.heading_three.size.value', 'typography.heading_three.size.units') }};
+  color: {{ get_theme_style_setting('typography_group.typography.heading_three.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.heading_three.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.heading_three.size.value', 'typography_group.typography.heading_three.size.units') }};
 }
 
 h4 {
-  color: {{ get_theme_style_setting('typography.heading_four.color') }};
-  font-family: {{ get_theme_style_setting('typography.heading_four.font') }};
-  font-size: {{ get_theme_style_setting('typography.heading_four.size.value', 'typography.heading_four.size.units') }};
+  color: {{ get_theme_style_setting('typography_group.typography.heading_four.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.heading_four.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.heading_four.size.value', 'typography_group.typography.heading_four.size.units') }};
   font-weight: normal;
-  text-transform: uppercase; 
 }
 
 h5 {
-  color: {{ get_theme_style_setting('typography.heading_five.color') }};
-  font-family: {{ get_theme_style_setting('typography.heading_five.font') }};
-  font-size: {{ get_theme_style_setting('typography.heading_five.size.value', 'typography.heading_five.size.units') }};
-  text-transform: uppercase; 
+  color: {{ get_theme_style_setting('typography_group.typography.heading_five.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.heading_five.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.heading_five.size.value', 'typography_group.typography.heading_five.size.units') }};
 }
 
 h6 {
-  color: {{ get_theme_style_setting('typography.heading_six.color') }};
-  font-family: {{ get_theme_style_setting('typography.heading_six.font') }};
-  font-size: {{ get_theme_style_setting('typography.heading_six.size.value', 'typography.heading_six.size.units') }};
+  color: {{ get_theme_style_setting('typography_group.typography.heading_six.color') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.heading_six.font') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.heading_six.size.value', 'typography_group.typography.heading_six.size.units') }};
 }
 
-strong {
-  font-weight: 600;
-}
-
-code {
-  vertical-align: bottom;
-}
-
+/* Lists */
 ul,
 ol {
-  list-style-position: inside; 
-  padding-left: 0; 
+  list-style-position: inside;
+  padding-left: 0;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
@@ -102,7 +102,7 @@ ol {
 ul li,
 ol li {
   font-size: 1rem;
-  line-height: 2; 
+  line-height: 2;
 }
 
 ul ul,
@@ -111,18 +111,24 @@ ul ol,
 ol ol {
   margin-top: 0;
   margin-bottom: 0;
-  padding-left: 2.8rem; 
+  padding-left: 2.8rem;
 }
 
+/* Code Blocks */
+code {
+  vertical-align: bottom;
+}
+
+/* Blockquotes */
 blockquote {
-  border-left-color: {{ get_theme_style_setting('typography.body_font.color') }};
+  border-left-color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   border-left-style: solid;
   border-left-width: 4px;
   font-size: 1.4rem;
   font-weight: 400;
   letter-spacing: 0;
   margin: 0;
-  padding: 1.4rem 2.8rem; 
+  padding: 1.4rem 2.8rem;
 }
 
 /* Horizontal Rules */
@@ -133,6 +139,7 @@ hr {
   border: none;
 }
 
+/* Subscripts and Superscripts */
 sup,
 sub {
   position: relative;
