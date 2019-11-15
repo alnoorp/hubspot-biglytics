@@ -379,6 +379,15 @@
                },
                {
                   "type":"color",
+                  "name":"form_help_text_color",
+                  "label":"Form help text color",
+                  "default":{
+                     "color":"#1e2b33",
+                     "opacity":100
+                  }
+               },
+               {
+                  "type":"color",
                   "name":"form_field_border_color",
                   "label":"Form field border color",
                   "default":{

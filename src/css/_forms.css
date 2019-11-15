@@ -72,6 +72,10 @@ form .hs-button {
   margin-bottom: 4px;
 }
 
+.hs-form legend {
+  color: {{ get_theme_style_setting('forms_group.forms.form_help_text_color.color') }};
+}
+
 .hs-error-msgs label {
   margin-top: 0.5rem;
   color: #ef6b51;
