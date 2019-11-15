@@ -247,6 +247,33 @@
                   }
                },
                {
+                  "type":"number",
+                  "name":"button_border_width",
+                  "label":"Button border width",
+                  "display":"slider",
+                  "default":1,
+                  "min":0,
+                  "max":20
+               },
+               {
+                  "type":"color",
+                  "name":"button_border_color",
+                  "label":"Button border color",
+                  "default":{
+                     "color":"#c168c2",
+                     "opacity":100
+                  }
+               },
+               {
+                  "type":"number",
+                  "name":"button_border_radius",
+                  "label":"Button corner radius",
+                  "display":"slider",
+                  "default":4,
+                  "min":0,
+                  "max":100
+               },
+               {
                   "type":"color",
                   "name":"button_bg_hover_color",
                   "label":"Button background hover color",
@@ -265,11 +292,29 @@
                   }
                },
                {
+                  "type":"color",
+                  "name":"button_border_hover_color",
+                  "label":"Button border hover color",
+                  "default":{
+                     "color":"#e77de8",
+                     "opacity":100
+                  }
+               },
+               {
                   "type":"number",
-                  "name":"button_border_radius",
-                  "label":"Button corner radius",
+                  "name":"button_horizontal_padding",
+                  "label":"Button horizontal padding",
                   "display":"slider",
-                  "default":4,
+                  "default":13,
+                  "min":0,
+                  "max":100
+               },
+               {
+                  "type":"number",
+                  "name":"button_vertical_padding",
+                  "label":"Button vertical padding",
+                  "display":"slider",
+                  "default":13,
                   "min":0,
                   "max":100
                }
