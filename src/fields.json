@@ -561,10 +561,37 @@
             "children":[
                {
                   "type":"color",
-                  "name":"example_color",
-                  "label":"Example color",
+                  "name":"blog_tag_bg_color",
+                  "label":"Blog tag background color",
                   "default":{
                      "color":"#34b5e5",
+                     "opacity":100
+                  }
+               },
+               {
+                  "type":"color",
+                  "name":"blog_tag_text_color",
+                  "label":"Blog tag text color",
+                  "default":{
+                     "color":"#ffffff",
+                     "opacity":100
+                  }
+               },
+               {
+                  "type":"color",
+                  "name":"blog_cta_bg_color",
+                  "label":"Blog CTA background color",
+                  "default":{
+                     "color":"#34b5e5",
+                     "opacity":100
+                  }
+               },
+               {
+                  "type":"color",
+                  "name":"blog_cta_text_color",
+                  "label":"Blog CTA text color",
+                  "default":{
+                     "color":"#ffffff",
                      "opacity":100
                   }
                }
