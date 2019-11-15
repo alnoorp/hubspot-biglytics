@@ -1,18 +1,18 @@
 form {
-  background-color: {{ get_theme_style_setting('forms.form_bg_color.color') }};
-  border: 1px solid {{ get_theme_style_setting('forms.form_border_color.color') }};
+  background-color: {{ get_theme_style_setting('forms_group.forms.form_bg_color.color') }};
+  border: 1px solid {{ get_theme_style_setting('forms_group.forms.form_border_color.color') }};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  font-family: {{ get_theme_style_setting('typography.body_font.font') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
   max-width: 500px;
   padding: 2.6rem;
 }
 
 h3.form-title {
-  background-color: {{ get_theme_style_setting('forms.form_header_bg_color.color') }};
+  background-color: {{ get_theme_style_setting('forms_group.forms.form_header_bg_color.color') }};
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  color: {{ get_theme_style_setting('forms.form_header_text_color.color') }};
+  color: {{ get_theme_style_setting('forms_group.forms.form_header_text_color.color') }};
   margin: 0;
   max-width: 500px;
   padding: 2.8rem 2.6rem;
@@ -21,10 +21,10 @@ h3.form-title {
 
 .hs-button,
 .button__primary {
-  background-color: {{ get_theme_style_setting('buttons.button_bg_color.color') }};
-  border: 1px solid {{ get_theme_style_setting('buttons.button_bg_color.color') }};
-  border-radius: {{ get_theme_style_setting('buttons.button_border_radius', 'px') }};
-  color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
+  background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
+  border: 1px solid {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
+  border-radius: {{ get_theme_style_setting('buttons_group.buttons.button_border_radius', 'px') }};
+  color: {{ get_theme_style_setting('buttons_group.buttons.button_text_color.color') }};
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
@@ -46,9 +46,9 @@ h3.form-title {
 .button__primary:hover,
 .button__primary:focus,
 .button__primary:active {
-  border-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
-  background-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
-  color: {{ get_theme_style_setting('buttons.button_text_hover_color.color') }};
+  border-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_hover_color.color') }};
+  background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_hover_color.color') }};
+  color: {{ get_theme_style_setting('buttons_group.buttons.button_text_hover_color.color') }};
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ form .hs-button {
 
 .hs-form label {
   font-size: 1rem;
-  color: {{ get_theme_style_setting('forms.form_label_color.color') }};
+  color: {{ get_theme_style_setting('forms_group.forms.form_label_color.color') }};
   display: block;
   float: none;
   width: auto;
@@ -81,9 +81,9 @@ form select,
 form textarea {
   border-width: 1px;
   border-style: solid;
-  border-color: {{ get_theme_style_setting('forms.form_field_border_color.color') }};
+  border-color: {{ get_theme_style_setting('forms_group.forms.form_field_border_color.color') }};
   background-color: #fff;
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   display: inline-block;
   padding: 0.75rem;
   width: 100%;
@@ -93,7 +93,7 @@ form input:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
-  border-color: {{ get_theme_style_setting('forms.form_field_focus_border_color.color') }};
+  border-color: {{ get_theme_style_setting('forms_group.forms.form_field_focus_border_color.color') }};
   border-width: 1px;
 }
 
@@ -128,13 +128,13 @@ form textarea:focus {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   pointer-events: none;
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-date_picker .input .hs-dateinput:before {
   content:"\01F4C5";
   position: absolute;
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   right: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -145,7 +145,7 @@ form textarea:focus {
 }
 
 .fn-date-picker .pika-table thead th {
-  color: {{ get_theme_style_setting('tables.table_header_text_color.color') }};
+  color: {{ get_theme_style_setting('tables_group.tables.table_header_text_color.color') }};
 }
 
 .fn-date-picker td.is-today .pika-button {
@@ -164,11 +164,11 @@ form textarea:focus {
 }
 
 .hs-input:-moz-placeholder {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-input::-webkit-input-placeholder {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-input input,
@@ -257,7 +257,7 @@ ul.no-list {
 }
 
 .hs-field-desc {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   margin: 0px 0px 6px;
   font-size: 14px;
 }
@@ -269,8 +269,8 @@ ul.no-list {
 .hs-richtext {
   margin-bottom: 3px;
   line-height: 1.2;
-  font-size: {{ get_theme_style_setting('typography.body_font.size.value', 'typography.body_font.size.units') }};
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-richtext hr {
@@ -342,5 +342,5 @@ ul.no-list {
 
 .hs-default-font-element,
 .hs-main-font-element {
-  font-family: {{ get_theme_style_setting('typography.body_font.font') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
 }
