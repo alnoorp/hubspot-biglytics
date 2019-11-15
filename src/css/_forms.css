@@ -22,8 +22,10 @@ h3.form-title {
 .hs-button,
 .button__primary {
   background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
-  border: 1px solid {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
+  border-color: {{ get_theme_style_setting('buttons_group.buttons.button_border_color.color') }};
   border-radius: {{ get_theme_style_setting('buttons_group.buttons.button_border_radius', 'px') }};
+  border-style: solid;
+  border-width: {{ get_theme_style_setting('buttons_group.buttons.button_border_width', 'px') }};
   color: {{ get_theme_style_setting('buttons_group.buttons.button_text_color.color') }};
   cursor: pointer;
   display: inline-block;
@@ -31,7 +33,10 @@ h3.form-title {
   font-weight: 600;
   letter-spacing: 0.2em;
   margin: 0;
-  padding: 0.8rem;
+  padding-left: {{ get_theme_style_setting('buttons_group.buttons.button_horizontal_padding', 'px') }};
+  padding-right: {{ get_theme_style_setting('buttons_group.buttons.button_horizontal_padding', 'px') }};
+  padding-top: {{ get_theme_style_setting('buttons_group.buttons.button_vertical_padding', 'px') }};
+  padding-bottom: {{ get_theme_style_setting('buttons_group.buttons.button_vertical_padding', 'px') }};
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
@@ -46,7 +51,7 @@ h3.form-title {
 .button__primary:hover,
 .button__primary:focus,
 .button__primary:active {
-  border-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_hover_color.color') }};
+  border-color: {{ get_theme_style_setting('buttons_group.buttons.button_border_hover_color.color') }};
   background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_hover_color.color') }};
   color: {{ get_theme_style_setting('buttons_group.buttons.button_text_hover_color.color') }};
   text-decoration: none;
