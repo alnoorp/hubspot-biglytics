@@ -1,23 +1,19 @@
-<div class="blog-cta">
-  <div class="content-wrapper">
-    <div class="row-fluid span12">
-      <div class="column span3">
-        {% if module.image.src %}
-          {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
-          {% if module.image.size_type == 'auto' %}
-            {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
-          {% elif module.image.size_type == 'auto_custom_max' %}
-            {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.image.max_width }}px; max-height: {{ module.image.max_height }}px"' %}
-          {% endif %}
-          <img class="blog-cta__image" src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ sizeAttrs }}>
-        {% endif %}
-      </div>
-      <div class="blog-cta__content column span6">
-        {{ module.content }}
-      </div>
-      <div class="blog-cta__cta column span3">
-        {% cta guid="{{ module.cta_field }}" %}
-      </div>
+<div class="content-wrapper">
+  <div class="blog-cta__wrapper">
+    {% if module.image.src %}
+      {% set sizeAttrs = 'width="{{ module.image.width }}" height="{{ module.image.height }}"' %}
+      {% if module.image.size_type == 'auto' %}
+        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+      {% elif module.image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.image.max_width }}px; max-height: {{ module.image.max_height }}px"' %}
+      {% endif %}
+      <img class="blog-cta__image" src="{{ module.image.src }}" alt="{{ module.image.alt }}" {{ sizeAttrs }}>
+    {% endif %}
+    <div class="blog-cta__content">
+      {{ module.content }}
+    </div>
+    <div class="blog-cta__button">
+      {% cta guid="{{ module.cta_field }}" %}
     </div>
   </div>
 </div>
