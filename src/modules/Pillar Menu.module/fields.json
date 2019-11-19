@@ -1,0 +1,9 @@
+[
+  {
+    "name" : "pillar_title",
+    "label" : "Pillar Title",
+    "required" : false,
+    "type" : "text",
+    "default" : "Table of Contents"
+    }
+]

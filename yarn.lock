@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@hubspot/api-auth-lib@^0.0.24":
-  version "0.0.24"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/@hubspot/api-auth-lib/-/api-auth-lib-0.0.24.tgz#48a76bfb09ad3434ebce41f2792bf881d852e56e"
-  integrity sha512-m6Jf36NH9/3ZVH48OiBP0F5KSgviknKzk2Bfcv1gjim+reZDajAuAg0EjqO+QixnOR7p4sTn1zA9hkbSj5otew==
+"@hubspot/api-auth-lib@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/@hubspot/api-auth-lib/-/api-auth-lib-1.0.1.tgz#9e819497e940bff06069a41e424aae6c5dd71615"
+  integrity sha512-nl8zJlq5aVR9OkDmz4yWg+yoOqGJkXkzLNaHZ4Ym0k7ldBTZlqrM7Yvz4R2YzP5o6rsaduGF3fR6DnbiC2L3pA==
   dependencies:
     express "^4.16.3"
     moment "^2.24.0"
@@ -29,22 +29,22 @@
     request "^2.88.0"
     request-promise-native "^1.0.7"
 
-"@hubspot/cms-cli@0.0.25":
-  version "0.0.25"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/@hubspot/cms-cli/-/cms-cli-0.0.25.tgz#325548fb986285f23afd1dae14bf76cc8addcfbf"
-  integrity sha512-5bWZP0M5T64cg5LlPCv1IpzESM7Gd9s0T6IZ96Qo5Gn8VG0lpM+sVBkGXfwYZNdNHCA9hHgfxnWYvJfILB548A==
+"@hubspot/cms-cli@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/@hubspot/cms-cli/-/cms-cli-1.0.1.tgz#cedf468faa6d3f4951684b787a7658f14c1c3312"
+  integrity sha512-OAKuM535Ek7MdC5nW8i75ScfOqmkf46p6U3frqbk5GEeleE+2rp/CKo6rZ+5nlVK8j/PNU+oX47UJbBYaEaZRA==
   dependencies:
-    "@hubspot/api-auth-lib" "^0.0.24"
-    "@hubspot/cms-lib" "^0.0.25"
+    "@hubspot/api-auth-lib" "^1.0.1"
+    "@hubspot/cms-lib" "^1.0.1"
     commander "^2.16.0"
     inquirer "^6.3.1"
     shelljs "0.8.3"
     update-notifier "3.0.1"
 
-"@hubspot/cms-lib@^0.0.25":
-  version "0.0.25"
-  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/@hubspot/cms-lib/-/cms-lib-0.0.25.tgz#d046ee4c505ca1a69f5a4fe1451b0ed6b8129c10"
-  integrity sha512-3fadRxix03KbfrcTy1OhyxJUn9U5BcHDxWEZdB+3xk8QAumTt57BX/YxGSCdHGGGUls9MEE1c0QK6hZ17xp51w==
+"@hubspot/cms-lib@^1.0.1":
+  version "1.0.1"
+  resolved "https://npm.hubteam.com/npm-nexus/repository/npm-all/@hubspot/cms-lib/-/cms-lib-1.0.1.tgz#0f2ad4cbb32fc19dca580c907616fca11655b0a0"
+  integrity sha512-gGbM4x4oZ10k+DRHnbVFAElnVPoFiOn15JBFRkFMoD8nzQJ44V+ELzWFOWByDWvju1rN6Boc0EOC9TVSTT3m0Q==
   dependencies:
     chalk "^2.4.2"
     chokidar "^3.0.1"

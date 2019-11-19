@@ -1,0 +1,19 @@
+{% set section_title_clean = module.section_title|lower|regex_replace("[^a-zA-Z]", "")%}
+
+<section class="pillar-section" id="{{ sectionId }}{{ name }}">
+  <div style="text-align: center; margin-top: 5em; margin-bottom: 3em;">
+    <h2 class="pillar-section__title" style="text-align: center; font-size: 2em;">{{ module.section_title }}</h2>
+  </div>
+</section>
+
+{# Append a unique ID to the pillar navigation #}
+{% require_js %}
+<script>
+(function() {
+  var navMenu = document.getElementById('pillar-navigation__menu'),
+    elchild = document.createElement('li');
+      elchild.innerHTML = '<a href="#{{ sectionId }}{{ name }}"><span class="tab">{{ module.section_title|escape }}</span></a>';
+  navMenu.appendChild(elchild);
+})();
+</script>
+{% end_require_js %}

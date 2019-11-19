@@ -1,0 +1,10 @@
+{
+  "css_assets" : [],
+  "external_js" : [],
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_LISTING", "BLOG_POST" ],
+  "js_assets" : ["../js/pillar.js"],
+  "other_assets" : [],
+  "smart_type" : "NOT_SMART",
+  "is_available_for_new_content" : true
+}
