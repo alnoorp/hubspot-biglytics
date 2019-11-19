@@ -106,8 +106,8 @@ form textarea:focus {
   border-width: 1px;
 }
 
-.hs-input[type=checkbox],
-.hs-input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
   cursor: pointer;
   width: auto;
   height: auto;
@@ -117,7 +117,7 @@ form textarea:focus {
   border: none;
 }
 
-.hs-input[type=file] {
+input[type=file] {
   background-color: transparent;
   border: 0px;
   padding: initial;

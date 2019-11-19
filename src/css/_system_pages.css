@@ -1,20 +1,23 @@
+/* Error Pages */
 .error-page {
   padding: 10rem 0;
-  text-align: center;
   position: relative;
+  text-align: center;
 }
 
 .error-page:before {
+  color: #F3F6F9;
   content: attr(data-error);
-  position: absolute;
-  width: 100%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
   font-size: 40vw;
   font-weight: bold;
-  color: #F3F6F9;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+  width: 100%;
   z-index: -1;
 }
 
@@ -28,57 +31,58 @@
   margin-bottom: 1rem;
 }
 
+/* System Pages */
 .systems-page {
   padding: 3rem 20px;
 }
 
 .systems-page .success {
-  display: inline-block;
-  margin: 2rem 0;
-  min-width: 650px;
   background-color: #CDE3CC;
   border: 1.5px solid #4F7D24;
   border-radius: 6px;
-  font-size: 0.75rem;
   color: #4F7D24;
+  display: inline-block;
+  margin: 2rem 0;
+  min-width: 650px;
   padding: 0.1rem 0.75rem;
-}
-
-.systems-page form {
-  margin: 0 auto;
 }
 
 .systems-page form input {
   max-width: 100%;
 }
 
+#email-prefs-form .header {
+  background-color: transparent;
+}
+
+/* Search Pages */
 .hs-search-field__bar {
   position: relative;
 }
 
 .hs-search-field__suggestions {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  max-width: 360px;
   background-color: #fff;
+  max-width: 360px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  width: 100%;
 }
 
 .hs-search-results {
   margin-top: 2rem;
 }
 
-ul.hs-search-results__listing li {
+.hs-search-results__listing li {
   margin-bottom: 2rem;
 }
 
 .hs-search-results__title {
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
   font-size: 1.25rem;
-  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
-  text-decoration: underline;
   margin-bottom: 0.25rem;
+  text-decoration: underline;
 }
 
 .hs-search-results__title:hover {
