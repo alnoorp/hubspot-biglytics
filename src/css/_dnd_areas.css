@@ -1,14 +1,15 @@
+/* Drag and Drop Section */
 .dnd-section {
-  padding-top: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
   padding-bottom: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
   padding-left: 20px;
   padding-right: 20px;
+  padding-top: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
 }
 
 .dnd-section > .row-fluid {
-  max-width: {{ get_theme_style_setting('spacing_group.spacing.max_width', 'px') }};
   margin-left: auto;
   margin-right: auto;
+  max-width: {{ get_theme_style_setting('spacing_group.spacing.max_width', 'px') }};
 }
 
 .dnd-section .widget-type-cell {

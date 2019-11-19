@@ -84,9 +84,11 @@
     float: left;
     width: 50%;
   }
+
   .footer .footer__navigation:nth-child(2n+2) {
     clear: left;
   }
+
   .footer__logo,
   .footer__follow-me {
     margin-bottom: 40px;
