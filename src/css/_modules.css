@@ -1,4 +1,13 @@
-/* Image Module */ 
+/* Image Module */
 img {
-    max-width: 100%; 
+    max-width: 100%;
+}
+
+/* Blog CTA */
+.blog-cta {
+    background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
+}
+
+.blog-cta__content-column * {
+    color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
 }
