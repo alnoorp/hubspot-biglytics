@@ -10,6 +10,11 @@
     padding: 60px 0px;
 }
 
+.blog-post {
+    margin: 0 auto;
+    max-width: 760px;
+}
+
 /* Blog Header */
 .blog-index-header,
 .blog-post-header {
