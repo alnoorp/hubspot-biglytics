@@ -367,14 +367,6 @@
     margin: 0 auto;
 }
 
-.blog-cta {
-    background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
-}
-
-.blog-cta__content * {
-    color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
-}
-
 @media (max-width: 767px) {
 
     .blog-card {
