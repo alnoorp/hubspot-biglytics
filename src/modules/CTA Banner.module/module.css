@@ -1,19 +1,19 @@
-.blog-cta {
+.cta-banner {
     margin: 80px 0px; 
     position: relative; 
 }
 
-.blog-cta__image {
+.cta-banner__image {
     max-height: calc(100% + 160px); 
     position: absolute;
     top: -80px;  
 }
 
-.blog-cta__content {
+.cta-banner__content {
     padding: 40px 0px 60px; 
 }
 
-.blog-cta__cta {
+.cta-banner__cta {
     position: absolute; 
     max-width: 100%; 
     right: 0; 
@@ -25,12 +25,12 @@
 
 @media (max-width: 767px) {
 
-    .blog-cta {
+    .cta-banner {
         margin: 0px; 
         padding: 20px 0px; 
     }
 
-    .blog-cta__image {
+    .cta-banner__image {
         display: block; 
         margin: 0 auto; 
         max-height: 100%; 
@@ -38,11 +38,11 @@
         top: 0; 
     }
 
-    .blog-cta__content {
+    .cta-banner__content {
         padding: 20px 0px; 
     }
 
-    .blog-cta__cta {
+    .cta-banner__cta {
         position: static;
         text-align: center;  
         top: 0; 
