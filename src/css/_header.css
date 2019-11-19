@@ -1,4 +1,4 @@
-/* Header */
+/* Header Container */
 .header {
   background-color: {{ get_theme_style_setting('header_group.header.header_bg_color.color') }};
 }
