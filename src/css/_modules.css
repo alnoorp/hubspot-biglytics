@@ -3,7 +3,7 @@ img {
     max-width: 100%;
 }
 
-/* Blog CTA */
+/* Blog CTA Module */
 .blog-cta {
     background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
 }
