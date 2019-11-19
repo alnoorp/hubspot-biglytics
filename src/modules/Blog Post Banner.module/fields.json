@@ -1,22 +1,21 @@
 [ {
+  "name" : "banner_image_select",
+  "label" : "Which Banner Image Would You Like to Use?",
+  "required" : true,
+  "display" : "select",
+  "choices" : [ [ "featured_image", "Featured Image" ], [ "custom_image", "Custom Image" ] ],
+  "type" : "choice",
+  "default" : "featured_image"
+}, {
   "name" : "background_image",
   "label" : "Background Image",
-  "responsive" : true,
-  "resizable" : true,
+  "required" : true,
+  "responsive" : false,
+  "resizable" : false,
   "type" : "image",
-  "default" : {
-    "size_type" : "auto",
-    "src" : "",
-    "alt" : null
+  "visibility": {
+    "controlling_field": "banner_image_select",
+    "operator": "EQUAL",
+    "controlling_value_regex": "custom_image"
   }
-}, {
-  "name" : "blog_title",
-  "label" : "Blog Title",
-  "type" : "text",
-  "default" : "PERFECT SAVES TIME."
-}, {
-  "name" : "blog_subtitle",
-  "label" : "Blog Subtitle",
-  "type" : "text",
-  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
 } ]

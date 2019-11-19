@@ -1,64 +1,69 @@
 form {
-  background-color: {{ get_theme_style_setting('forms.form_bg_color.color') }};
-  border: 1px solid {{ get_theme_style_setting('forms.form_border_color.color') }}; 
+  background-color: {{ get_theme_style_setting('forms_group.forms.form_bg_color.color') }};
+  border: 1px solid {{ get_theme_style_setting('forms_group.forms.form_border_color.color') }};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  font-family: {{ get_theme_style_setting('typography.body_font.font') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
   max-width: 500px;
   padding: 2.6rem;
 }
 
 h3.form-title {
-  background-color: {{ get_theme_style_setting('forms.form_header_bg_color.color') }}; 
+  background-color: {{ get_theme_style_setting('forms_group.forms.form_header_bg_color.color') }};
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-  color: {{ get_theme_style_setting('forms.form_header_text_color.color') }}; 
-  margin: 0; 
+  color: {{ get_theme_style_setting('forms_group.forms.form_header_text_color.color') }};
+  margin: 0;
   max-width: 500px;
   padding: 2.8rem 2.6rem;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 }
 
 .hs-button,
 .button__primary {
-  background-color: {{ get_theme_style_setting('buttons.button_bg_color.color') }};
-  border: 1px solid {{ get_theme_style_setting('buttons.button_bg_color.color') }};
-  border-radius: {{ get_theme_style_setting('buttons.button_border_radius', 'px') }};
-  color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
+  background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
+  border-color: {{ get_theme_style_setting('buttons_group.buttons.button_border_color.color') }};
+  border-radius: {{ get_theme_style_setting('buttons_group.buttons.button_border_radius', 'px') }};
+  border-style: solid;
+  border-width: {{ get_theme_style_setting('buttons_group.buttons.button_border_width', 'px') }};
+  color: {{ get_theme_style_setting('buttons_group.buttons.button_text_color.color') }};
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.2em; 
-  margin: 0; 
-  padding: 0.8rem;
-  text-align: center; 
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding-left: {{ get_theme_style_setting('buttons_group.buttons.button_horizontal_padding', 'px') }};
+  padding-right: {{ get_theme_style_setting('buttons_group.buttons.button_horizontal_padding', 'px') }};
+  padding-top: {{ get_theme_style_setting('buttons_group.buttons.button_vertical_padding', 'px') }};
+  padding-bottom: {{ get_theme_style_setting('buttons_group.buttons.button_vertical_padding', 'px') }};
+  text-align: center;
   text-decoration: none;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   -webkit-transition: all 0.15s linear;
   -o-transition: all 0.15s linear;
   transition: all 0.15s linear;
 }
 
-.hs-button:hover, 
+.hs-button:hover,
 .hs-button:focus,
 .hs-button:active,
-.button__primary:hover, 
+.button__primary:hover,
 .button__primary:focus,
 .button__primary:active {
-  border-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
-  background-color: {{ get_theme_style_setting('buttons.button_bg_hover_color.color') }};
-  color: {{ get_theme_style_setting('buttons.button_text_color.color') }};
-  text-decoration: none; 
+  border-color: {{ get_theme_style_setting('buttons_group.buttons.button_border_hover_color.color') }};
+  background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_hover_color.color') }};
+  color: {{ get_theme_style_setting('buttons_group.buttons.button_text_hover_color.color') }};
+  text-decoration: none;
 }
 
 form .hs-button {
-  width: 100%; 
+  width: 100%;
 }
 
 .hs-form label {
   font-size: 1rem;
-  color: {{ get_theme_style_setting('forms.form_label_color.color') }}; 
+  color: {{ get_theme_style_setting('forms_group.forms.form_label_color.color') }};
   display: block;
   float: none;
   width: auto;
@@ -67,13 +72,17 @@ form .hs-button {
   margin-bottom: 4px;
 }
 
+.hs-form legend {
+  color: {{ get_theme_style_setting('forms_group.forms.form_help_text_color.color') }};
+}
+
 .hs-error-msgs label {
   margin-top: 0.5rem;
   color: #ef6b51;
 }
 
 form .input {
-  position: relative; 
+  position: relative;
 }
 
 form input,
@@ -81,19 +90,19 @@ form select,
 form textarea {
   border-width: 1px;
   border-style: solid;
-  border-color: {{ get_theme_style_setting('forms.form_field_border_color.color') }};
-  background-color: #fff; 
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
-  display: inline-block; 
-  padding: 0.75rem; 
-  width: 100%; 
+  border-color: {{ get_theme_style_setting('forms_group.forms.form_field_border_color.color') }};
+  background-color: #fff;
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+  display: inline-block;
+  padding: 0.75rem;
+  width: 100%;
 }
 
 form input:focus,
 form select:focus,
 form textarea:focus {
   outline: none;
-  border-color: {{ get_theme_style_setting('forms.form_field_focus_border_color.color') }};
+  border-color: {{ get_theme_style_setting('forms_group.forms.form_field_focus_border_color.color') }};
   border-width: 1px;
 }
 
@@ -110,7 +119,7 @@ form textarea:focus {
 
 .hs-input[type=file] {
   background-color: transparent;
-  border: 0px; 
+  border: 0px;
   padding: initial;
   border: initial;
   line-height: initial;
@@ -128,13 +137,13 @@ form textarea:focus {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   pointer-events: none;
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-date_picker .input .hs-dateinput:before {
   content:"\01F4C5";
   position: absolute;
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   right: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -145,7 +154,7 @@ form textarea:focus {
 }
 
 .fn-date-picker .pika-table thead th {
-  color: {{ get_theme_style_setting('tables.table_header_text_color.color') }};
+  color: {{ get_theme_style_setting('tables_group.tables.table_header_text_color.color') }};
 }
 
 .fn-date-picker td.is-today .pika-button {
@@ -154,21 +163,21 @@ form textarea:focus {
 
 .fn-date-picker td.is-selected .pika-button {
   background: #34b5e5;
-  box-shadow: none; 
-  border-radius: 0; 
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .fn-date-picker td .pika-button:hover {
-  background-color: #c168c2 !important; 
-  border-radius: 0 !important; 
+  background-color: #c168c2 !important;
+  border-radius: 0 !important;
 }
 
 .hs-input:-moz-placeholder {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-input::-webkit-input-placeholder {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-input input,
@@ -257,7 +266,7 @@ ul.no-list {
 }
 
 .hs-field-desc {
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   margin: 0px 0px 6px;
   font-size: 14px;
 }
@@ -269,8 +278,8 @@ ul.no-list {
 .hs-richtext {
   margin-bottom: 3px;
   line-height: 1.2;
-  font-size: {{ get_theme_style_setting('typography.body_font.size.value', 'typography.body_font.size.units') }};
-  color: {{ get_theme_style_setting('typography.body_font.color') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
 
 .hs-richtext hr {
@@ -336,11 +345,11 @@ ul.no-list {
   appearance: none;
 }
 
-.hs-form-field select::-ms-expand { 
-  display: none; 
+.hs-form-field select::-ms-expand {
+  display: none;
 }
 
 .hs-default-font-element,
 .hs-main-font-element {
-  font-family: {{ get_theme_style_setting('typography.body_font.font') }};
+  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
 }

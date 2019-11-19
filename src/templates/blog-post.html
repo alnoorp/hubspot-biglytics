@@ -26,12 +26,14 @@
                 <a class="blog-post__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
                 <span class="blog-post__date">{{ content.publish_date_localized }}</span>
             </div>
-            <div class="blog-post__tags">
-                {% icon name="tag" style="SOLID" %}
-                {% for tag in content.tag_list %}
-                  <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
-                {% endfor %}
-            </div>
+            {% if content.tag_list %}
+              <div class="blog-post__tags">
+                  {% icon name="tag" style="SOLID" %}
+                  {% for tag in content.tag_list %}
+                    <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+                  {% endfor %}
+              </div>
+            {% endif %}
           </div>
         <div class="blog-post__body">
           {{ content.post_body }}
@@ -46,23 +48,19 @@
       </div>
     </div>
 
-    <div class="blog-cta">
-      {% module "blog_cta" 
-        path="../modules/Blog CTA",
-        background_color={
-          "color": "#34b5e5"
-        },
-        image={
-          "src": get_asset_url("../images/phone.png")
-        },
-        content="<h2 style='color: #fff;'>Download Perfect Today!</h2><p style='color: #fff;'>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>",
-        cta_field="782d9df3-4dc5-44dc-81ad-a0efffcf0cb2"
-      %}
-    </div>
+    {% module "blog_cta"
+      path="../modules/Blog CTA",
+      background_color={
+        "color": "#34b5e5"
+      },
+      image={
+        "src": get_asset_url("../images/phone.png")
+      },
+      content="<h2>Download Perfect Today!</h2><p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>",
+      cta_field="782d9df3-4dc5-44dc-81ad-a0efffcf0cb2"
+    %}
 
-    <div class="blog-related-posts">
-      {% module "blog_related_posts" path="../modules/Blog Related Posts" %}
-    </div>
+    {% module "blog_related_posts" path="../modules/Blog Related Posts" %}
 
   </div>
 </main>

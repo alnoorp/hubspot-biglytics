@@ -25,7 +25,7 @@
     %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/rich_text", 
+          {% dnd_module path="@hubspot/rich_text",
             flexbox_positioning="TOP_CENTER"
           %}
           {% module_attribute "html" %}
@@ -37,7 +37,7 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module path="../modules/Customizable Button", 
+          {% dnd_module path="../modules/Customizable Button",
             flexbox_positioning="MIDDLE_CENTER",
             link="#",
             button_text="Free Trial"
@@ -58,14 +58,14 @@
               "right": 0
             }
           %}
-            {% dnd_module path="@hubspot/header", 
+            {% dnd_module path="@hubspot/header",
               flexbox_positioning="MIDDLE_CENTER",
               header_tag="h2",
               value="Headlines and Mission Statements for Days"
             %}
             {% end_dnd_module %}
           {% end_dnd_row %}
-          {% dnd_row 
+          {% dnd_row
             padding={
               "top": 0,
               "bottom": 40,
@@ -73,7 +73,7 @@
               "right": 0
             }
           %}
-            {% dnd_module 
+            {% dnd_module
               path="../modules/Feature",
               offset=0,
               width=4,
@@ -101,7 +101,7 @@
               feature_description="Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
             %}
             {% end_dnd_module %}
-            {% dnd_module 
+            {% dnd_module
               path='../modules/Feature',
               offset=8,
               width=4,
@@ -117,7 +117,7 @@
             {% end_dnd_module %}
           {% end_dnd_row %}
           {% dnd_row %}
-            {% dnd_module path="../modules/Customizable Button", 
+            {% dnd_module path="../modules/Customizable Button",
               flexbox_positioning="MIDDLE_CENTER",
               link="#",
               button_text="View Features"
@@ -146,12 +146,12 @@
                 "src": get_asset_url("../images/computer.png"),
                 "alt": "Computer and phone",
                 "size_type": "auto"
-              } 
+              }
             %}
             {% end_dnd_module %}
           {% end_dnd_row %}
         {% end_dnd_column %}
-        {% dnd_column 
+        {% dnd_column
           offset=6,
           width=6
         %}
@@ -162,20 +162,20 @@
                   <h2 style="color: #fff;">Full Control</h2>
                   <p style="color: #fff;">Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
                   <ul style="color: #fff;">
-                    <li>Someting awesome here</li>
-                    <li>Someting awesome here</li>
-                    <li>Someting awesome here</li>
+                    <li>Something awesome here</li>
+                    <li>Something awesome here</li>
+                    <li>Something awesome here</li>
                   </ul>
                 </div>
               {% end_module_attribute %}
             {% end_dnd_module %}
           {% end_dnd_row %}
           {% dnd_row %}
-            {% dnd_module 
+            {% dnd_module
               path="../modules/Customizable Button",
               flexbox_positioning='MIDDLE_LEFT',
               link="#",
-              button_text="Free Trial" 
+              button_text="Free Trial"
             %}
             {% end_dnd_module %}
           {% end_dnd_row %}
@@ -185,7 +185,7 @@
     {# Statistics Section #}
       {% dnd_section %}
         {% dnd_column %}
-          {% dnd_row 
+          {% dnd_row
             padding={
               "top": 0,
               "bottom": 40,
@@ -205,7 +205,7 @@
             {% end_dnd_module %}
           {% end_dnd_row %}
           {% dnd_row %}
-            {% dnd_module 
+            {% dnd_module
               path="../modules/Statistic",
               offset=0,
               width=3,
@@ -216,7 +216,7 @@
               statistic_description="<p>Awards won for excellence</p>"
             %}
             {% end_dnd_module %}
-            {% dnd_module 
+            {% dnd_module
               path="../modules/Statistic",
               offset=3,
               width=3,
@@ -227,7 +227,7 @@
               statistic_description="<p>Customer satisfaction rating</p>"
             %}
             {% end_dnd_module %}
-            {% dnd_module 
+            {% dnd_module
               path="../modules/Statistic",
               offset=6,
               width=3,
@@ -237,7 +237,7 @@
               statistic_description="<p>Custom configurations</p>"
             %}
             {% end_dnd_module %}
-            {% dnd_module 
+            {% dnd_module
               path="../modules/Statistic",
               offset=9,
               width=3,
@@ -259,7 +259,7 @@
         "backgroundPosition": "MIDDLE_CENTER",
         "backgroundSize": "cover",
         "imageUrl": get_asset_url("../images/testimonials-banner.png")
-      } 
+      }
     %}
       {% dnd_column %}
         {% dnd_row
@@ -270,7 +270,7 @@
             "right": 0
           }
          %}
-          {% dnd_module path="@hubspot/rich_text", 
+          {% dnd_module path="@hubspot/rich_text",
             flexbox_positioning="TOP_CENTER"
           %}
             {% module_attribute "html" %}
@@ -281,7 +281,7 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="../modules/Testimonial",
             offset=0,
             width=4,
@@ -292,7 +292,7 @@
             }
           %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="../modules/Testimonial",
             offset=4,
             width=4,
@@ -303,7 +303,7 @@
             }
           %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="../modules/Testimonial",
             offset=8,
             width=4,
@@ -320,7 +320,7 @@
 
     {# Logo Section #}
     {% dnd_section %}
-      {% dnd_module 
+      {% dnd_module
         path="@hubspot/linked_image",
         offset=0,
         width=2,
@@ -333,7 +333,7 @@
         }
       %}
       {% end_dnd_module %}
-      {% dnd_module 
+      {% dnd_module
         path="@hubspot/linked_image",
         offset=2,
         width=2,
@@ -346,7 +346,7 @@
         }
       %}
       {% end_dnd_module %}
-      {% dnd_module 
+      {% dnd_module
         path="@hubspot/linked_image",
         offset=4,
         width=2,
@@ -359,7 +359,7 @@
         }
       %}
       {% end_dnd_module %}
-      {% dnd_module 
+      {% dnd_module
         path="@hubspot/linked_image",
         offset=6,
         width=2,
@@ -372,7 +372,7 @@
         }
       %}
       {% end_dnd_module %}
-      {% dnd_module 
+      {% dnd_module
         path="@hubspot/linked_image",
         offset=8,
         width=2,
@@ -385,7 +385,7 @@
         }
       %}
       {% end_dnd_module %}
-      {% dnd_module 
+      {% dnd_module
         path="@hubspot/linked_image",
         offset=10,
         width=2,
@@ -399,19 +399,19 @@
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
-    
+
     {# Call to Action Section #}
     {% dnd_section
       background_color={
         r: 52,
         g: 181,
         b: 229,
-        a: 1.0 
+        a: 1.0
       }
     %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/rich_text", 
+          {% dnd_module path="@hubspot/rich_text",
             flexbox_positioning="TOP_CENTER"
           %}
           {% module_attribute "html" %}
@@ -423,7 +423,7 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module path="../modules/Customizable Button", 
+          {% dnd_module path="../modules/Customizable Button",
             flexbox_positioning="MIDDLE_CENTER",
             link="#",
             button_text="Free Trial"
