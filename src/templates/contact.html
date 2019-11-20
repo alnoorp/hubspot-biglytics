@@ -8,19 +8,42 @@
 <main class="body-container-wrapper">
   {% dnd_area "dnd_area" class="body-container body-container-contact", label="Main section" %}
 
+    {# Banner Section #}
+    {% dnd_section max_width=760,
+      padding={
+        "top": 130,
+        "bottom": 130,
+        "left": 20,
+        "right": 20
+      },
+      background_image={
+        "backgroundPosition": "MIDDLE_CENTER",
+        "backgroundSize": "cover",
+        'imageUrl': get_asset_url("../images/contact-banner.jpg")
+      },
+      vertical_alignment="MIDDLE"
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module path="@hubspot/rich_text",
+            flexbox_positioning="TOP_CENTER"
+          %}
+          {% module_attribute "html" %}
+            <div style="text-align: center">
+              <h1 style="color: #fff; margin-bottom: 0px;">Contact Us</h1>
+            </div>
+          {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
     {# Event Post Section #}
     {% dnd_section %}
       {% dnd_column
         offset=0,
         width=6
       %}
-        {% dnd_row %}
-            {% dnd_module path="@hubspot/header",
-              header_tag="h1",
-              value="Contact Us"  
-            %}
-            {% end_dnd_module %}
-        {% end_dnd_row %}
         {% dnd_row %}
             {% dnd_module path="@hubspot/rich_text" %}
                 {% module_attribute "html" %}
@@ -34,13 +57,13 @@
             {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
-      {% dnd_column 
+      {% dnd_column
         offset=6,
         width=6
       %}
         {% dnd_row %}
           {% dnd_module path="@hubspot/form",
-            title="Yes! Send Me the Ebook!" 
+            title="Yes! Send Me the Ebook!"
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}

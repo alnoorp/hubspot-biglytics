@@ -8,30 +8,29 @@
 <main class="body-container-wrapper">
   {% dnd_area "dnd_area" class="body-container body-container-pillar-page", label="Main section" %}
 
-    {# Hero Section #}
+    {# Banner Section #}
     {% dnd_section max_width=760,
       padding={
-        "top": 210,
-        "bottom": 210,
+        "top": 130,
+        "bottom": 130,
         "left": 20,
         "right": 20
       },
       background_image={
         "backgroundPosition": "MIDDLE_CENTER",
         "backgroundSize": "cover",
-        'imageUrl': get_asset_url("../images/home-banner.png")
+        'imageUrl': get_asset_url("../images/pillar-banner.jpg")
       },
       vertical_alignment="MIDDLE"
     %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/rich_text", 
+          {% dnd_module path="@hubspot/rich_text",
             flexbox_positioning="TOP_CENTER"
           %}
           {% module_attribute "html" %}
             <div style="text-align: center">
-              <h1>Perfect Saves Time.</h1>
-              <p>Share your knowledge on a topic with a high-converting pillar page.</p>
+              <h1 style="color: #fff; margin-bottom: 0px;">Pillar Topic</h1>
             </div>
           {% end_module_attribute %}
           {% end_dnd_module %}
@@ -41,20 +40,20 @@
 
     {# Top Content Section #}
     {% dnd_section %}
-      {% dnd_column 
+      {% dnd_column
         offset=0,
         width=8
       %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/header", 
+          {% dnd_module path="@hubspot/header",
             flexbox_positioning="MIDDLE_LEFT",
             header_tag="h2",
-            value="Learn about this topic"          
+            value="Learn about this topic"
           %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
@@ -62,16 +61,16 @@
                 A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
-      {% end_dnd_column %}      
-      {% dnd_column 
+      {% end_dnd_column %}
+      {% dnd_column
         offset=8,
         width=4
       %}
-        {% dnd_row %}              
-          {% dnd_module path="../modules/Pillar Menu", 
-            flexbox_positioning="MIDDLE_LEFT",     
+        {% dnd_row %}
+          {% dnd_module path="../modules/Pillar Menu",
+            flexbox_positioning="MIDDLE_LEFT",
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
@@ -80,23 +79,23 @@
 
     {# Pillar Content Section #}
     {% dnd_section %}
-      {% dnd_column 
+      {% dnd_column
         offset=0,
         width=12
       %}
 
       {# First Pillar Chapter #}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title", 
-            flexbox_positioning="MIDDLE_LEFT"      
+          {% dnd_module path="../modules/Pillar Section Title",
+            flexbox_positioning="MIDDLE_LEFT"
           %}
           {% module_attribute "section_title" %}
             First Section Title
           {% end_module_attribute %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
@@ -106,21 +105,21 @@
                 <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
 
       {# Second Pillar Chapter #}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title", 
-            flexbox_positioning="MIDDLE_LEFT"     
+          {% dnd_module path="../modules/Pillar Section Title",
+            flexbox_positioning="MIDDLE_LEFT"
           %}
           {% module_attribute "section_title" %}
             Second Section Title
           {% end_module_attribute %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
@@ -130,21 +129,21 @@
                 <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
 
       {# Third Pillar Chapter #}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title", 
-            flexbox_positioning="MIDDLE_LEFT"       
+          {% dnd_module path="../modules/Pillar Section Title",
+            flexbox_positioning="MIDDLE_LEFT"
           %}
           {% module_attribute "section_title" %}
             Third Section Title
-          {% end_module_attribute %}          
-          {% end_dnd_module %}       
+          {% end_module_attribute %}
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
@@ -154,23 +153,23 @@
                 <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}       
+          {% end_dnd_module %}
         {% end_dnd_row %}
 
-      
+
 
       {# Fourth Pillar Chapter #}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title", 
-            flexbox_positioning="MIDDLE_LEFT"       
+          {% dnd_module path="../modules/Pillar Section Title",
+            flexbox_positioning="MIDDLE_LEFT"
           %}
           {% module_attribute "section_title" %}
             Fourth Section Title
-          {% end_module_attribute %}          
-          {% end_dnd_module %}       
+          {% end_module_attribute %}
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
@@ -180,21 +179,21 @@
                 <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}       
-        {% end_dnd_row %}    
+          {% end_dnd_module %}
+        {% end_dnd_row %}
 
       {# Fifth Pillar Chapter #}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title", 
-            flexbox_positioning="MIDDLE_LEFT"       
+          {% dnd_module path="../modules/Pillar Section Title",
+            flexbox_positioning="MIDDLE_LEFT"
           %}
           {% module_attribute "section_title" %}
             Fifth Section Title
-          {% end_module_attribute %}          
-          {% end_dnd_module %}       
+          {% end_module_attribute %}
+          {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
@@ -204,11 +203,11 @@
                 <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}       
-        {% end_dnd_row %}            
+          {% end_dnd_module %}
+        {% end_dnd_row %}
 
-      {% end_dnd_column %}      
-    {% end_dnd_section %}    
+      {% end_dnd_column %}
+    {% end_dnd_section %}
 
     {# Bottom Section #}
     {% dnd_section
@@ -216,7 +215,7 @@
         r: 52,
         g: 181,
         b: 229,
-        a: 1.0 
+        a: 1.0
       }
     %}
       {% dnd_column %}
@@ -228,7 +227,7 @@
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
             offset=0,
             width=8
@@ -242,7 +241,7 @@
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/form",
             offset=8,
             width=4,
