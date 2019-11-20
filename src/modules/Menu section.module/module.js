@@ -17,3 +17,17 @@ menuLinks.forEach(function(link) {
     });
   }
 });
+
+firstSubmenuItems.forEach(function(item) {
+  if (window.hsInEditor) {
+    return;
+  } else if (item) {
+    item.addEventListener('mouseover', function() {
+      item.previousElementSibling.classList.add('hover');
+    });
+
+    item.addEventListener('mouseout', function() {
+      item.previousElementSibling.classList.remove('hover');
+    });
+  }
+});
