@@ -11,3 +11,34 @@ img {
 .blog-cta__content-column * {
     color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
 }
+
+/* Social Follow Me and Social Sharing */
+.social-links {
+    border: 2px solid #000;
+    border-radius: 4px;
+    display: inline-block;
+}
+.social-links__icon {
+    border-right: 2px solid #000;
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 42px;
+}
+.social-links__icon:last-child {
+    width: 40px;
+    border-right: 0px;
+}
+.social-links__icon svg {
+    fill: #000;
+    height: 15px;
+    width: auto;
+}
+.social-links__icon:hover {
+    background-color: #000;
+}
+.social-links__icon:hover svg {
+    fill: #fff;
+}
