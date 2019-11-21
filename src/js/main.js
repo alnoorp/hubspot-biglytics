@@ -3,7 +3,10 @@
   // Variables
   var langToggle = document.querySelector(".header__language-switcher");
   var navToggle = document.querySelector("#nav-toggle");
-  var blogCommentsButton = document.querySelector('.blog-comments__toggle');
+  var blogCommentsButtons = document.querySelector('.blog-post__comments-buttons');
+  var blogShowCommentsButton = document.querySelector('.blog-post__show-comments');
+  var blogHideCommentsButton = document.querySelector('.blog-post__hide-comments');
+  var blogCommentsListing = document.querySelector('.blog-post__comments-listing');
 
   // Functions
   function domReady(callback) {
@@ -14,10 +17,10 @@
     }
   }
 
-  function showComments() {
-    blogCommentsButton.style.display="none";
-    var blogCommentsSection = document.querySelector('.blog-comments__listing');
-    blogCommentsSection.style.display = 'block';
+  function toggleNav() {
+    if (langToggle.classList.contains('open')) {
+      langToggle.classList.remove('open');
+    }
   }
 
   function toggleLang() {
@@ -28,10 +31,10 @@
     }
   }
 
-  function toggleNav() {
-    if (langToggle.classList.contains('open')) {
-      langToggle.classList.remove('open');
-    }
+  function toggleComments() {
+    blogShowCommentsButton.classList.toggle("hide-button");
+    blogHideCommentsButton.classList.toggle("hide-button");
+    blogCommentsListing.classList.toggle("hide-comments");
   }
 
   // Event Listeners
@@ -53,9 +56,10 @@
       }
 
       // Function dependent on blog comments component
-      if (blogCommentsButton) {
+      if (blogCommentsButtons) {
         // Displays the blog comment section on click
-        blogCommentsButton.addEventListener('click', showComments);
+        blogShowCommentsButton.addEventListener('click', toggleComments);
+        blogHideCommentsButton.addEventListener('click', toggleComments);
       }
     }
   });
