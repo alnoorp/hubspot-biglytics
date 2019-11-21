@@ -37,16 +37,41 @@
           </div>
         <div class="blog-post__body">
           {{ content.post_body }}
-          {% module "blog_post_social_share" path="@hubspot/social_sharing" %}
         </div>
-      </div>
-      <div class="blog-post__comments">
-          <a class="blog-comments__toggle button button__primary">View Comments</a>
-          <div class="blog-comments__listing">
+        <div class="blog-post__footer">
+        <div class="blog-post__footer__row-one">
+          <div class="blog-post__comments-buttons">
+              <a class="blog-post__show-comments button button__primary">View Comments</a>
+              <a class="blog-post__hide-comments hide-button button button__primary">Hide Comments</a>
+          </div>
+          <div class="blog-post__social-sharing">
+            <div class="social-links">
+              <a href="https://twitter.com/intent/tweet?original_referer=http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Dtwitter&url=http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Dtwitter&source=tweetbutton&text=" target="_blank" class="social-links__icon">
+                {% icon name="twitter", style="solid" %}
+              </a>
+              <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Dfacebook" target="_blank" class="social-links__icon">
+                {% icon name="facebook-f", style="solid" %}
+              </a>
+              <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Dlinkedin" target="_blank" class="social-links__icon">
+                {% icon name="linkedin-in", style="solid" %}
+              </a>
+              </a> <a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Dpinterest&media=http%3A%2F%2Fcdn1.hubspot.com%2Fhub%2F158015%2F305390_10100548508246879_837195_59275782_6882128_n.jpg" target="_blank" class="social-links__icon">
+                {% icon name="pinterest-p", style="solid" %}
+              </a>
+              <a href="mailto:?subject=Check out http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Demail &body=Check out http%3A%2F%2Fexample.com%2Fmy-page%3Futm_medium%3Dsocial%26utm_source%3Demail" target="_blank" class="social-links__icon">
+                {% icon name="envelope", style="solid" %}
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="blog-post__footer__row-two">
+          <div class="blog-post__comments-listing hide-comments">
               {% module "blog_comments" path="@hubspot/blog_comments" %}
           </div>
+        </div>
       </div>
     </div>
+  </div>
 
     {% module "blog_cta"
       path="../modules/CTA Banner",
