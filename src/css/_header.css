@@ -39,9 +39,14 @@
 
 /* Navigation Menu */
 
+.header__menu {
+  margin-left: auto;
+}
+
 @media screen and (max-width: 767px) {
   .header .header__menu {
-      min-height: 0px;
+      margin-left: 0;
+      min-height: 0;
       -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
