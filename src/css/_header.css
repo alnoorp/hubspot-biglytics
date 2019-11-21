@@ -75,10 +75,8 @@
 }
 
 .header__language-switcher .lang_switcher_class .globe_class {
-  background-color: {{ get_theme_style_setting('header_group.header.header_menu_link_color.color') }};
-  border-color: {{ get_theme_style_setting('header_group.header.header_menu_link_color.color') }};
-  border-style: solid;
-  border-width: 1px;
+  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 50%;
   margin-top: 5px;
 }
