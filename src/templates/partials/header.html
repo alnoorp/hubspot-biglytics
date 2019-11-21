@@ -5,7 +5,7 @@
 <header class="header">
   <div class="header__container">
     <div class="header__logo">
-      {% module "header_logo" 
+      {% module "header_logo"
         path="@hubspot/logo",
         img={
           "override_inherited_src": true,
@@ -22,11 +22,19 @@
           <span class="header__mobile-menu-icon"></span>
         </label>
         <div class="header__navigation">
-          {% module "header_navigation_primary" 
-            path="../../modules/Menu Section", 
-            label="Primary Navigation" 
+          {% module "header_navigation_primary"
+            path="../../modules/Menu Section",
+            label="Primary Navigation"
           %}
         </div>
     </div>
+    {% if content.translated_content|length %}
+      <div class="header__language-switcher">
+        <div class="header__language-switcher-label">
+          {% module "language-switcher" path="@hubspot/language_switcher", display_mode='localized', label="Language Switcher" %}
+          <div class="header__language-switcher-label-current"> {{ locale_name(locale) }}</div>
+        </div>
+      </div>
+    {% endif %}
   </div>
 </header>
