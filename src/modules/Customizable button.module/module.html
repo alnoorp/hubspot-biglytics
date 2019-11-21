@@ -1,15 +1,38 @@
-{% if module.link.url.type is equalto "EMAIL_ADDRESS" %}
-  {% set href = "mailto:" ~ module.link.url.href %}
+{% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+  {% set href = "mailto:" ~ module.button_link.url.href %}
 {% else %}
-  {% unless (module.link.url.href is string_containing "//") or !module.link.url.href %}
-    {% set href = "//" ~ module.link.url.href %}
+  {% unless (module.button_link.url.href is string_containing "//") or !module.button_link.url.href %}
+    {% set href = "//" ~ module.button_link.url.href %}
   {% else %}
-    {% set href = module.link.url.href || "" %}
+    {% set href = module.button_link.url.href || "" %}
   {% endunless %}
 {% endif %}
-{% set rel = (module.link.open_in_new_tab ? "noopener " : null) ~ (module.link.no_follow ? "nofollow" : null) %}
+
+{% set rel = (module.button_link.open_in_new_tab ? "noopener " : null) ~ (module.button_link.no_follow ? "nofollow" : null) %}
 <a class="button button__primary" href="{{ href }}"
-   {% if module.link.open_in_new_tab %}target="_blank"{% endif %}
-   rel ="{{ rel }}">
+    id="hs-button_{{ name }}"
+    {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+    rel="{{ rel }}">
   {{ module.button_text }}
 </a>
+
+{% if module.style.override_default_style %}
+<style>
+  #hs-button_{{ name }} {
+    background-color: rgba({{ module.style.button_bg_color.color|convert_rgb }},{{ module.style.button_bg_color.opacity }});
+    border-color: rgba({{ module.style.button_border_color.color|convert_rgb }},{{ module.style.button_border_color.opacity }});
+    border-radius: {{ module.style.button_corner_radius }}px;
+    border-width: {{ module.style.button_border_width }}px;
+    color: rgba({{ module.style.button_text_color.color|convert_rgb }},{{ module.style.button_text_color.opacity }});
+    padding-left: {{ module.style.button_horizontal_padding }}px;
+    padding-right: {{ module.style.button_horizontal_padding }}px;
+    padding-top: {{ module.style.button_vertical_padding }}px;
+    padding-bottom: {{ module.style.button_vertical_padding }}px;
+  }
+  #hs-button_{{ name }}:hover {
+    border-color: rgba({{ module.style.button_border_hover_color .color|convert_rgb }},{{ module.style.button_border_hover_color .opacity }});
+    background-color: rgba({{ module.style.button_bg_hover_color.color|convert_rgb }},{{ module.style.button_bg_hover_color.opacity }});
+    color: rgba({{ module.style.button_text_hover_color.color|convert_rgb }},{{ module.style.button_text_hover_color.opacity }});"
+  }
+</style>
+{% endif %}
