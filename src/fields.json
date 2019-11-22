@@ -104,7 +104,8 @@
                     "size":{
                        "units":"px",
                        "value":40
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -119,7 +120,8 @@
                     "size":{
                        "units":"px",
                        "value":30
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -134,7 +136,8 @@
                     "size":{
                        "units":"px",
                        "value":24
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -164,7 +167,8 @@
                     "size":{
                        "units":"px",
                        "value":18
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -179,7 +183,8 @@
                     "size":{
                        "units":"px",
                        "value":15
-                    }
+                    },
+                    "variant":"600"
                  }
                }
             ]

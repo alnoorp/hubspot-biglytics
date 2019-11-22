@@ -6,13 +6,13 @@ body {
   color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.body_font.styles.font-weight') }};
   line-height: 1.4;
 }
 
 /* Paragraphs */
 p {
   font-size: 1rem;
-  font-weight: 400;
   margin: 0 0 1.4rem;
 }
 
@@ -41,7 +41,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
   letter-spacing: 0.05em;
   margin: 0 0 1.4rem;
   word-break: break-word;
@@ -58,37 +57,42 @@ h1 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_one.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_one.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_one.size.value', 'typography_group.typography.heading_one.size.units') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.font-weight') }};
 }
 
 h2 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_two.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_two.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_two.size.value', 'typography_group.typography.heading_two.size.units') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.font-weight') }};
 }
 
 h3 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_three.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_three.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_three.size.value', 'typography_group.typography.heading_three.size.units') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.font-weight') }};
 }
 
 h4 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_four.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_four.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_four.size.value', 'typography_group.typography.heading_four.size.units') }};
-  font-weight: normal;
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.font-weight') }};
 }
 
 h5 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_five.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_five.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_five.size.value', 'typography_group.typography.heading_five.size.units') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.font-weight') }};
 }
 
 h6 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_six.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_six.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_six.size.value', 'typography_group.typography.heading_six.size.units') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.font-weight') }};
 }
 
 /* Lists */
