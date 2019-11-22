@@ -82,6 +82,11 @@
                   "name":"body_font",
                   "label":"Body text",
                   "load_external_fonts":true,
+                  "visibility":{
+                     "hidden_subfields":{
+                        "styles":true
+                     }
+                  },
                   "default":{
                      "color":"#1e2b33",
                      "font":"Work Sans",
@@ -104,7 +109,8 @@
                     "size":{
                        "units":"px",
                        "value":40
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -119,7 +125,8 @@
                     "size":{
                        "units":"px",
                        "value":30
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -134,7 +141,8 @@
                     "size":{
                        "units":"px",
                        "value":24
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -164,7 +172,8 @@
                     "size":{
                        "units":"px",
                        "value":18
-                    }
+                    },
+                    "variant":"600"
                  }
                },
                {
@@ -179,7 +188,8 @@
                     "size":{
                        "units":"px",
                        "value":15
-                    }
+                    },
+                    "variant":"600"
                  }
                }
             ]

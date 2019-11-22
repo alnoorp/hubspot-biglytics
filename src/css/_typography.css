@@ -12,7 +12,6 @@ body {
 /* Paragraphs */
 p {
   font-size: 1rem;
-  font-weight: 400;
   margin: 0 0 1.4rem;
 }
 
@@ -41,7 +40,6 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
   letter-spacing: 0.05em;
   margin: 0 0 1.4rem;
   word-break: break-word;
@@ -58,37 +56,54 @@ h1 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_one.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_one.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_one.size.value', 'typography_group.typography.heading_one.size.units') }};
+  font-style: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.font-style') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.font-weight') }};
+  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.text-decoration') }};
 }
 
 h2 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_two.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_two.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_two.size.value', 'typography_group.typography.heading_two.size.units') }};
+  font-style: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.font-style') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.font-weight') }};
+  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.text-decoration') }};
 }
 
 h3 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_three.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_three.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_three.size.value', 'typography_group.typography.heading_three.size.units') }};
+  font-style: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.font-style') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.font-weight') }};
+  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.text-decoration') }};
 }
 
 h4 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_four.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_four.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_four.size.value', 'typography_group.typography.heading_four.size.units') }};
-  font-weight: normal;
+  font-style: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.font-style') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.font-weight') }};
+  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.text-decoration') }};
 }
 
 h5 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_five.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_five.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_five.size.value', 'typography_group.typography.heading_five.size.units') }};
+  font-style: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.font-style') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.font-weight') }};
+  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.text-decoration') }};
 }
 
 h6 {
   color: {{ get_theme_style_setting('typography_group.typography.heading_six.color') }};
   font-family: {{ get_theme_style_setting('typography_group.typography.heading_six.font') }};
   font-size: {{ get_theme_style_setting('typography_group.typography.heading_six.size.value', 'typography_group.typography.heading_six.size.units') }};
+  font-style: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.font-style') }};
+  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.font-weight') }};
+  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.text-decoration') }};
 }
 
 /* Lists */
