@@ -82,6 +82,11 @@
                   "name":"body_font",
                   "label":"Body text",
                   "load_external_fonts":true,
+                  "visibility":{
+                     "hidden_subfields":{
+                        "styles":true
+                     }
+                  },
                   "default":{
                      "color":"#1e2b33",
                      "font":"Work Sans",
