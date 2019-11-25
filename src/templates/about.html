@@ -39,14 +39,13 @@
     {% end_dnd_section %}
 
     {# About Section #}
-    {% dnd_section
-      max_width=760
-    %}
+    {% dnd_section %}
         {% dnd_column %}
             {% dnd_row %}
                 {% dnd_module path="@hubspot/rich_text" %}
                     {% module_attribute "html" %}
-                    <div style="text-align: center;">
+                    <div>
+                        <p>In id rhoncus arcu. Duis pretium interdum erat ut sodales. Etiam metus arcu, interdum vel neque a, mattis fermentum nisl. Nunc pulvinar lacinia eleifend. Morbi fermentum euismod lorem at vehicula. Mauris euismod erat nulla. Vestibulum dapibus imperdiet felis, nec sagittis arcu auctor quis. Donec id faucibus nunc.</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus diam, dignissim non scelerisque eu, lobortis nec tellus. Suspendisse sed felis cursus, maximus metus at, pellentesque elit. Curabitur vel urna malesuada elit luctus volutpat. Etiam varius massa a ante vehicula gravida. Sed bibendum lacinia arcu. Duis quis velit ut lorem elementum tincidunt ut ut lacus. In pharetra eu felis eget pulvinar. Nullam fringilla felis at lectus posuere tempus.</p>
                     </div>
                     {% end_module_attribute %}
