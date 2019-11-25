@@ -34,16 +34,4 @@
      "color" : "#d0d0d0",
      "opacity" : 100
   }
-}, {
-  "name" : "feature_title",
-  "label" : "Feature Title",
-  "required" : true,
-  "type" : "text",
-  "default" : "Quick and Simple"
-}, {
-  "name" : "feature_description",
-  "label" : "Feature Description",
-  "required" : true,
-  "type" : "richtext",
-  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
 } ]
