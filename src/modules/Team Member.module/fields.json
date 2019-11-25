@@ -1,0 +1,47 @@
+[ {
+  "id" : "team_member_image",
+  "name" : "team_member_image",
+  "label" : "Team member image",
+  "required" : true,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "type" : "image",
+  "default" : {
+     "src" : "../../images/team-member-default.png",
+     "alt" : "an_image",
+     "width" : 100,
+     "height" : 100
+  }
+}, {
+  "id" : "team_member_name",
+  "name" : "team_member_name",
+  "label" : "Team member name",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Gene Maxwell"
+}, {
+  "id" : "team_member_position",
+  "name" : "team_member_position",
+  "label" : "Team member position",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "CEO, Co-Founder"
+}, {
+  "id" : "team_member_bio",
+  "name" : "team_member_bio",
+  "label" : "Team member bio",
+  "required" : true,
+  "locked" : false,
+  "sortable": false,
+  "type": "richtext",
+  "default": "<p>Thought experiments are facts in the sense that they have a real life correlate in the form of electrochemical activity in the brain. But it is quite obvious that they do not relate to facts out there. They are not true statements.</p>"
+} ]

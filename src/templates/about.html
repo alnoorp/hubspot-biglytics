@@ -185,10 +185,49 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/Team Member",
+            offset=0,
+            width=4,
+            flexbox_positioning="MIDDLE_CENTER",
+            team_member_image={
+                "src": get_asset_url("../images/team-member-one.jpg"),
+                "alt": "Sarah Stevens"
+            },
+            team_member_name="Sarah Stevens",
+            team_member_position="CEO, Co-Founder"
+          %}
+          {% end_dnd_module %}
+          {% dnd_module
+            path="../modules/Team Member",
+            offset=4,
+            width=4,
+            flexbox_positioning="MIDDLE_CENTER",
+            team_member_image={
+                "src": get_asset_url("../images/team-member-two.png"),
+                "alt": "Joshua Beck"
+            },
+            team_member_name="Joshua Beck",
+            team_member_position="CMO, Co-Founder"
+          %}
+          {% end_dnd_module %}
+          {% dnd_module
+            path="../modules/Team Member",
+            offset=8,
+            width=4,
+            flexbox_positioning="MIDDLE_CENTER",
+            team_member_image={
+                "src": get_asset_url("../images/team-member-three.jpg"),
+                "alt": "Gene Maxwell"
+            },
+            team_member_name="Gene Maxwell",
+            team_member_position="CFO"
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
-
-
   {% end_dnd_area %}
 </main>
 {% endblock body %}
