@@ -38,7 +38,7 @@
       {% end_dnd_column %}
     {% end_dnd_section %}
 
-    {# Event Post Section #}
+    {# Two Column With Form Section #}
     {% dnd_section %}
       {% dnd_column
         offset=0,
@@ -70,6 +70,127 @@
       {% end_dnd_column %}
     {% end_dnd_section %}
 
+    {# Contact Information Section #}
+    {% dnd_section
+      background_color={
+        r: 52,
+        g: 181,
+        b: 229,
+        a: 1.0
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row
+          padding={
+            "top": 0,
+            "bottom": 40,
+            "left": 0,
+            "right": 0
+          }
+        %}
+          {% dnd_module path="@hubspot/rich_text" %}
+              {% module_attribute "html" %}
+              <div style="text-align: center;">
+                  <h2 style="color: #fff;">Get In Touch</h2>
+              </div>
+              {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row
+          padding={
+            "top": 0,
+            "bottom": 40,
+            "left": 0,
+            "right": 0
+          }
+        %}
+          {% dnd_column
+            offset=0,
+            width=4
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path="../modules/Icon",
+                flexbox_positioning="MIDDLE_CENTER",
+                feature_icon={
+                    "name": "map-marker",
+                    "type": "REGULAR",
+                    "unicode": "f041"
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                  {% module_attribute "html" %}
+                  <div style="text-align: center;">
+                      <h3 style="color: #fff;">Address</h3>
+                      <p style="color: #fff;"><strong>Our Portsmouth Office:</strong></p>
+                      <p style="color: #fff;">511 Seacoast Avenue, Portsmouth NH</p>
+                  </div>
+                  {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
+            offset=4,
+            width=4
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path="../modules/Icon",
+                flexbox_positioning="MIDDLE_CENTER",
+                feature_icon={
+                    "name": "phone",
+                    "type": "SOLID",
+                    "unicode": "f095"
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                  {% module_attribute "html" %}
+                  <div style="text-align: center;">
+                      <h3 style="color: #fff;">Phone</h3>
+                      <p style="color: #fff;"><strong>Our Portsmouth Office:</strong></p>
+                      <p style="color: #fff;">111.111.1111</p>
+                  </div>
+                  {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
+            offset=8,
+            width=4
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path='../modules/Icon',
+                flexbox_positioning="MIDDLE_CENTER",
+                feature_icon={
+                    "name": "envelope",
+                    "type": "SOLID",
+                    "unicode": "f0e0"
+                }
+              %}
+              {% end_dnd_module %}
+              {% end_dnd_row %}
+              {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                  {% module_attribute "html" %}
+                  <div style="text-align: center;">
+                      <h3 style="color: #fff;">Email</h3>
+                      <p style="color: #fff;"><strong>Our Portsmouth Office:</strong></p>
+                      <p style="color: #fff;">contact@perfect.co</p>
+                  </div>
+                  {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
 
   {% end_dnd_area %}
 </main>
