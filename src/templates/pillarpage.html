@@ -45,20 +45,13 @@
         width=8
       %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/header",
-            flexbox_positioning="MIDDLE_LEFT",
-            header_tag="h2",
-            value="Learn about this topic"
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
           {% dnd_module
             path="@hubspot/rich_text",
           %}
             {% module_attribute "html" %}
               <div>
-                A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.
+                <h2>Learn About This Topic</h2>
+                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
@@ -155,8 +148,6 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
-
-
 
       {# Fourth Pillar Chapter #}
         {% dnd_row %}

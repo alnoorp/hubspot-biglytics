@@ -1,7 +1,7 @@
 [
   {
     "name" : "section_title",
-    "label" : "Section Title",
+    "label" : "Section title",
     "required" : false,
     "type" : "text",
     "default" : "Section Title"
