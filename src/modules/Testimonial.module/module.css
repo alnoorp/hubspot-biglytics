@@ -1,19 +1,20 @@
 .testimonial {
-    background-color: rgba(255, 255, 255, 0.9); 
-    padding: 45px 40px 30px; 
-    text-align: center; 
-    margin-top: 20px; 
-    border-bottom: 15px solid transparent; 
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 45px 40px 30px;
+    text-align: center;
+    margin-top: 20px;
+    border-bottom: 15px solid transparent;
     -webkit-transition: all .15s linear;
     -o-transition: all .15s linear;
     transition: all .15s linear;
 }
 
 .testimonial:hover {
-    background-color: #fff; 
+    background-color: #fff;
+    border-bottom: 15px solid #34B5E5;
 }
 
-.testimonial__avatar, 
+.testimonial__avatar,
 .testimonial__name {
     display: inline-block;
     vertical-align: middle;
