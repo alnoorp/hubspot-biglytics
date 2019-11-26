@@ -1,0 +1,77 @@
+[ {
+  "id" : "cta_image",
+  "name" : "cta_image",
+  "label" : "Call to action image",
+  "responsive" : true,
+  "resizable" : true,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null
+  }
+}, {
+  "id" : "cta_content",
+  "name" : "cta_content",
+  "label" : "Call to action content",
+  "type" : "richtext",
+  "default" : null
+}, {
+  "id" : "cta",
+  "name" : "cta",
+  "label" : "Call to action",
+  "type" : "cta",
+  "default" : null
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "type" : "group",
+  "children" : [ {
+    "id" : "style.override_default_style",
+    "name" : "override_default_style",
+    "label" : "Override default style",
+    "required" : true,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "style.cta_background_color",
+    "name" : "cta_bg_color",
+    "label" : "Call to action background color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "style.override_default_style",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#34B5E5",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.cta_text_color",
+    "name" : "cta_text_color",
+    "label" : "Call to action text color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "style.override_default_style",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ]
+} ]

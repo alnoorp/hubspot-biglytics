@@ -4,11 +4,11 @@ img {
 }
 
 /* Blog CTA Module */
-.blog-cta {
+.cta-banner {
     background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
 }
 
-.blog-cta__content-column * {
+.cta-banner__content-column * {
     color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
 }
 
