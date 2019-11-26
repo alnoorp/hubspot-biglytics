@@ -1,7 +1,7 @@
-{% set section_anchor = module.section_title|lower|regex_replace("[^a-zA-Z]", "")%}
+{% set section_anchor = module.pillar_section_title|lower|regex_replace("[^a-zA-Z]", "")%}
 
 <div class="pillar-section-title" id="{{ section_anchor }}">
-  <h2 class="pillar-section-title__header">{{ module.section_title }}</h2>
+  <h2 class="pillar-section-title__header">{{ module.pillar_section_title }}</h2>
 </div>
 
 {# Appends a navigation item to the pillar menu #}
@@ -12,7 +12,7 @@
       if (navMenu) {
         var navChild = document.createElement("li");
         navChild.className = "pillar-navigation__menu-item";
-        navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.section_title|escape }}</a>';
+        navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.pillar_section_title|escape }}</a>';
         navMenu.appendChild(navChild);
       }
     })();

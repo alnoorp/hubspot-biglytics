@@ -1,7 +1,8 @@
 [
   {
-    "name" : "section_title",
-    "label" : "Section title",
+    "id" : "pillar_section_title",
+    "name" : "pillar_section_title",
+    "label" : "Pillar section title",
     "required" : false,
     "type" : "text",
     "default" : "Section Title"
