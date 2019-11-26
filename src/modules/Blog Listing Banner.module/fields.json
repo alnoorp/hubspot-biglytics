@@ -1,6 +1,7 @@
 [ {
-  "name" : "background_image",
-  "label" : "Background Image",
+  "id" : "blog_listing_banner_image",
+  "name" : "blog_listing_banner_image",
+  "label" : "Blog listing banner image",
   "responsive" : true,
   "resizable" : true,
   "type" : "image",
@@ -10,31 +11,51 @@
     "alt" : null
   }
 }, {
-  "name" : "blog_title",
-  "label" : "Blog Title",
+  "id" : "blog_listing_banner_title",
+  "name" : "blog_listing_banner_title",
+  "label" : "Blog listing banner title",
   "type" : "text",
-  "default" : "PERFECT SAVES TIME."
+  "default" : "Perfect Saves Time."
 }, {
-  "name" : "blog_title_color",
-  "label" : "Blog Title Color",
-  "required" : true,
-  "type" : "color",
-  "default" : {
-     "color" : "#ffffff",
-     "opacity" : 100
-  }
-}, {
-  "name" : "blog_subtitle",
-  "label" : "Blog Subtitle",
+  "id" : "blog_listing_banner_subtitle",
+  "name" : "blog_listing_banner_subtitle",
+  "label" : "Blog listing banner subtitle",
   "type" : "text",
   "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
 }, {
-  "name" : "blog_subtitle_color",
-  "label" : "Blog Subtitle Color",
-  "required" : true,
-  "type" : "color",
-  "default" : {
-     "color" : "#ffffff",
-     "opacity" : 100
-  }
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "type" : "group",
+  "children" : [ {
+    "id" : "style.override_default_style",
+    "name" : "override_default_style",
+    "label" : "Override default style",
+    "required" : true,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : false
+  }, {
+      "id" : "style.blog_listing_banner_title_color",
+      "name" : "blog_listing_banner_title_color",
+      "label" : "Blog listing banner title color",
+      "required" : true,
+      "type" : "color",
+      "default" : {
+         "color" : "#FFFFFF",
+         "opacity" : 100
+      }
+    }, {
+      "id" : "style.blog_listing_banner_subtitle_color",
+      "name" : "blog_listing_banner_subtitle_color",
+      "label" : "Blog listing banner subtitle color",
+      "required" : true,
+      "type" : "color",
+      "default" : {
+         "color" : "#FFFFFF",
+         "opacity" : 100
+      }
+  } ]
 } ]
