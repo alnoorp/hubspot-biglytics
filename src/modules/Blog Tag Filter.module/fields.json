@@ -1,17 +1,1 @@
-[
-    {
-      "id" : "blog_tag_filter_title",
-      "name" : "blog_tag_filter_title",
-      "label" : "Blog tag filter title",
-      "required" : true,
-      "type" : "text",
-      "default" : "Browse by"
-    }, {
-        "id" : "blog_tag_filter_all_posts_text",
-        "name" : "blog_tag_filter_all_posts_text",
-        "label" : "Blog tag fitler all posts text",
-        "required" : true,
-        "type" : "text",
-        "default" : "All"
-    }
-  ]
+[ ]

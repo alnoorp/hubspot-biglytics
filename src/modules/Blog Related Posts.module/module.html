@@ -1,22 +1,20 @@
-{# This macro is used to format each recent post card and
-  gets passed to the 'related_blog_posts' tag below #}
 {% macro recent_post(post, count, total) %}
 {% if count == 1 %}
-<div class="blog-related-posts">
+<section class="blog-related-posts">
   <div class="content-wrapper">
     <h2 class="blog-related-posts__title">Related Articles</h2>
     <div class="blog-related-posts__list">
 {% endif %}
-      <div class="blog-card">
+      <article class="blog-card">
         <div class="blog-card__header">
-            <h2 class="blog-card__title"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h2>
-            {% if post.blog_author.avatar %}
-              <div class="blog-card__author-image" style="background-image: url('{{ post.blog_author.avatar }}');"></div>
-            {% endif %}
-            <div class="blog-card__meta">
-                <a class="blog-card__author-name" href="{{ group.absolute_url }}/author/{{ post.blog_post_author.slug }}">{{ post.blog_post_author.display_name }}</a>
-                <span class="blog-card__date">{{ post.publish_date_localized }}</span>
-            </div>
+          <h2 class="blog-card__title"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h2>
+          {% if post.blog_author.avatar %}
+            <div class="blog-card__author-image" style="background-image: url('{{ post.blog_author.avatar }}');"></div>
+          {% endif %}
+          <div class="blog-card__meta">
+            <a class="blog-card__author-name" href="{{ group.absolute_url }}/author/{{ post.blog_post_author.slug }}">{{ post.blog_post_author.display_name }}</a>
+            <span class="blog-card__date">{{ post.publish_date_localized }}</span>
+          </div>
         </div>
         <div class="blog-card__body">
             {% if post.featured_image %}
@@ -40,11 +38,11 @@
                 {{ comments_number }} {{ comments_label }}
             </div>
           </div>
-      </div>
+      </article>
 {% if count == total %}
     </div>
   </div>
-</div>
+</section>
 {% endif %}
 {% endmacro %}
 

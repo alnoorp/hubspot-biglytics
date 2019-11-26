@@ -2,10 +2,10 @@
 {% set currentURL = content.absolute_url %}
 
 <div class="blog-tag-filter">
-  <span class="blog-tag-filter__title">{{ module.blog_tag_filter_title }}</span>
+  <span class="blog-tag-filter__title">Browse by</span>
   <div class="blog-tag-filter__dropdown">
     <select>
-      <option {% if currentURL == group.absolute_url %}selected="selected"{% endif %} value="{{ group.absolute_url }}">{{ module.blog_tag_filter_all_posts_text }}</option>
+      <option {% if currentURL == group.absolute_url %}selected="selected"{% endif %} value="{{ group.absolute_url }}">All</option>
     {% for item in my_tags %}
       <option {% if currentURL == blog_tag_url(group.id, item.slug) %}selected="selected"{% endif %} value="{{ blog_tag_url(group.id, item.slug) }}">{{ item }}</option>
     {% endfor %}
