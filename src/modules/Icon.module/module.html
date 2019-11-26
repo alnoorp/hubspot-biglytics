@@ -1,35 +1,28 @@
-<div class="feature" id="{{ name }}">
-  <span class="feature__icon">	
+<div class="icon" id="icon_{{ name }}">
+  <span class="icon__wrapper">
     {% icon
-      name="{{ module.feature_icon.name }}"
-      style="{{ module.feature_icon.type }}"
-      unicode="{{ module.feature_icon.unicode }}"
+      name="{{ module.icon.name }}"
+      style="{{ module.icon.type }}"
+      unicode="{{ module.icon.unicode }}"
     %}
-  </span>
-  <h3 class="feature__title">{{ module.feature_title }}</h3>
-  <div clas="feature__description">{{ module.feature_description }}</div>
 </div>
 
-{% require_css %}
-<style>
-  #hs_cos_wrapper_{{name}} .feature__icon > span {
-    background-color: {{ module.icon_bg_color.color }}; 
-    border-color: {{ module.icon_border_color.color }}; 
-    -webkit-transition: all .15s linear;
-    -o-transition: all .15s linear;
-    transition: all .15s linear;
-  }
-  #hs_cos_wrapper_{{name}} .feature__icon svg {
-    fill: {{ module.icon_color.color }}; 
-    -webkit-transition: all .15s linear;
-    -o-transition: all .15s linear;
-    transition: all .15s linear;
-  }
-  #hs_cos_wrapper_{{name}} .feature__icon > span:hover {
-    background-color: {{ module.icon_color.color }}; 
-  }
-  #hs_cos_wrapper_{{name}} .feature__icon > span:hover svg {
-    fill: {{ module.icon_bg_color.color }};; 
-  }
-</style>
-{% end_require_css %}
+{% if module.style.override_default_style %}
+  {% require_css %}
+    <style>
+      #icon_{{ name }} .icon__wrapper {
+          background-color: rgba({{ module.style.icon_bg_color.color|convert_rgb }},{{ module.style.icon_bg_color.opacity }});
+          border-color: rgba({{ module.style.icon_border_color.color|convert_rgb }},{{ module.style.icon_border_color.opacity }});
+      }
+      #icon_{{ name }} .icon__wrapper:hover {
+          background-color: rgba({{ module.style.icon_color.color|convert_rgb }},{{ module.style.icon_color.opacity }});
+      }
+      #icon_{{ name }} svg {
+          fill: rgba({{ module.style.icon_color.color|convert_rgb }},{{ module.style.icon_color.opacity }});
+      }
+      #icon_{{ name }} .icon__wrapper:hover svg {
+          fill: rgba({{ module.style.icon_bg_color.color|convert_rgb }},{{ module.style.icon_bg_color.opacity }});
+      }
+    </style>
+  {% end_require_css %}
+{% endif %}

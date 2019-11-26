@@ -42,6 +42,13 @@
       "name" : "blog_listing_banner_title_color",
       "label" : "Blog listing banner title color",
       "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
       "type" : "color",
       "default" : {
          "color" : "#FFFFFF",
@@ -52,6 +59,13 @@
       "name" : "blog_listing_banner_subtitle_color",
       "label" : "Blog listing banner subtitle color",
       "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
       "type" : "color",
       "default" : {
          "color" : "#FFFFFF",
