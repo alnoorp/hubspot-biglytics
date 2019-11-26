@@ -42,8 +42,3 @@ img {
 .social-links__icon:hover svg {
     fill: #fff;
 }
-
-/* Team Member */
-.team-member__image {
-    margin: 0 auto;
-}

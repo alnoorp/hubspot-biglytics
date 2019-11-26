@@ -8,10 +8,9 @@
   "resizable" : true,
   "type" : "image",
   "default" : {
-     "src" : "../../images/team-member-default.png",
-     "alt" : "an_image",
-     "width" : 100,
-     "height" : 100
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null
   }
 }, {
   "id" : "team_member_name",
