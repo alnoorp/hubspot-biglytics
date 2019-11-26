@@ -36,7 +36,7 @@
       },
       "type" : "color",
       "default" : {
-        "color" : "#d0d0d0",
+        "color" : "#D0D0D0",
         "opacity" : 100
       }
   } ]
