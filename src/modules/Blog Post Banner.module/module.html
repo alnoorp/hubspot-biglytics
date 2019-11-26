@@ -2,7 +2,7 @@
   {% if module.banner_image_select == "featured_image" and content.featured_image %}
     background-image: url('{{ content.featured_image }}');
   {% elif module.banner_image_select == "custom_image" %}
-    background-image: url('{{ module.background_image.src }}');
+    background-image: url('{{ module.custom_background_image.src }}');
   {% else %}
     background-color: #ccc;
   {% endif %}

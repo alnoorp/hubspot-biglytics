@@ -1,4 +1,5 @@
 [ {
+  "id" : "banner_image_select",
   "name" : "banner_image_select",
   "label" : "Which Banner Image Would You Like to Use?",
   "required" : true,
@@ -7,7 +8,8 @@
   "type" : "choice",
   "default" : "featured_image"
 }, {
-  "name" : "background_image",
+  "id" : "custom_background_image",
+  "name" : "custom_background_image",
   "label" : "Background Image",
   "required" : true,
   "responsive" : false,
