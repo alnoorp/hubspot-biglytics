@@ -42,3 +42,8 @@ img {
 .social-links__icon:hover svg {
     fill: #fff;
 }
+
+/* Statististic */
+.statistic__info {
+    color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+}

@@ -1,14 +1,15 @@
 .statistic {
-  text-align: center; 
+  text-align: center;
 }
-.statistic__circle *, 
-.statistic__circle *:before, 
+.statistic__circle *,
+.statistic__circle *:before,
 .statistic__circle *:after {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
 }
 .statistic__circle {
+  background-color: #D0D0D0;
   border-radius: 50%;
   float: none;
   font-size: 150px;
@@ -16,6 +17,11 @@
   margin: 0 auto 20px;
   position: relative;
   width: 1em;
+}
+.statistic__bar,
+.statistic__fill,
+.statistic__fill {
+  border-color: #34B5E5;
 }
 .statistic__info {
   display: block;
@@ -31,7 +37,7 @@
   z-index: 1;
 }
 .statistic__unit {
-  font-size: 0.6em; 
+  font-size: 0.6em;
 }
 .statistic__slice {
   clip: rect(0em, 1em, 1em, 0.5em);
@@ -58,9 +64,10 @@
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -o-transform: rotate(180deg);
-  transform: rotate(180deg); 
+  transform: rotate(180deg);
 }
 .statistic__circle::after {
+  background-color: #FFFFFF;
   border-radius: 50%;
   content: " ";
   display: block;
