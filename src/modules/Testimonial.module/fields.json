@@ -1,39 +1,66 @@
 [ {
+  "id" : "testimonial_title",
   "name" : "testimonial_title",
-  "label" : "Testimonial Title",
+  "label" : "Testimonial title",
   "required" : true,
   "type" : "text",
   "default" : "Wow, this is amazing!"
 }, {
+  "id" : "testimonial_description",
   "name" : "testimonial_description",
-  "label" : "Testimonial Description",
+  "label" : "Testimonial description",
   "required" : true,
   "type" : "richtext",
-  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor”&nbsp;"
+  "default" : "The service was incredibly easy to use. The support team did a fantastic job assisting with all of my questions. I can't wait to tell all of my friends!"
 }, {
-  "name" : "testimonial_headshot",
-  "label" : "Testimonial Headshot",
+  "id" : "testimonial_image",
+  "name" : "testimonial_image",
+  "label" : "Testimonial image",
   "required" : true,
   "responsive" : false,
   "resizable" : true,
   "type" : "image",
   "default" : {
     "src" : "",
-    "alt" : "alan"
+    "alt" : ""
   }
 }, {
+  "id" : "testimonial_name",
   "name" : "testimonial_name",
-  "label" : "Testimonial Name",
+  "label" : "Testimonial name",
   "required" : true,
   "type" : "text",
   "default" : "Alan Dixon"
 }, {
-  "name" : "testimonial_hover_accent_color",
-  "label" : "Testimonial Hover Accent Color",
-  "required" : true,
-  "type" : "color",
-  "default" : {
-     "color" : "#34b5e5",
-     "opacity" : 100
-  }
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "type" : "group",
+  "children" : [ {
+    "id" : "style.override_default_style",
+    "name" : "override_default_style",
+    "label" : "Override default style",
+    "required" : true,
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "style.testimonial_hover_accent_color",
+    "name" : "testimonial_hover_accent_color",
+    "label" : "Testimonial hover accent color",
+    "required" : true,
+    "visibility" : {
+      "controlling_field" : "style.override_default_style",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+       "color" : "#34B5E5",
+       "opacity" : 100
+    }
+  } ]
 } ]

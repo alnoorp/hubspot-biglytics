@@ -4,11 +4,11 @@ img {
 }
 
 /* Blog CTA Module */
-.blog-cta {
+.cta-banner {
     background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
 }
 
-.blog-cta__content-column * {
+.cta-banner__content-column * {
     color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
 }
 
@@ -43,7 +43,34 @@ img {
     fill: #fff;
 }
 
-/* Team Member */
-.team-member__image {
-    margin: 0 auto;
+/* Statististic */
+.statistic__info {
+    color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+}
+
+/* Accordion */
+.accordion__item button {
+    color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
+}
+
+.accordion__icon {
+    background-color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
+}
+
+.accordion__icon:before,
+.accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] button {
+    color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon:before,
+.accordion__item[aria-expanded=true] .accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon {
+    background-color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
 }

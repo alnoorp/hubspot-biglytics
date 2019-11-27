@@ -1,14 +1,16 @@
 [ {
+  "id" : "banner_image_select",
   "name" : "banner_image_select",
-  "label" : "Which Banner Image Would You Like to Use?",
+  "label" : "Which banner image would you like to use?",
   "required" : true,
   "display" : "select",
   "choices" : [ [ "featured_image", "Featured Image" ], [ "custom_image", "Custom Image" ] ],
   "type" : "choice",
   "default" : "featured_image"
 }, {
-  "name" : "background_image",
-  "label" : "Background Image",
+  "id" : "custom_bg_image",
+  "name" : "custom_bg_image",
+  "label" : "Background image",
   "required" : true,
   "responsive" : false,
   "resizable" : false,

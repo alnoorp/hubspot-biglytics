@@ -1,8 +1,8 @@
-<div class="accordion" id="{{ name }}" {% if module.max_1_open %}data-sync="true"{% endif %}>
+<div class="accordion" id="accordion_{{ name }}" {% if module.max_1_open %}data-sync="true"{% endif %}>
   {% for accordion in module.accordion %}
     <div class="accordion__item" aria-expanded="{% if accordion.open_by_default %}true{% endif %}">
       <button>
-        {{accordion.accordion_header}}
+        {{ accordion.accordion_header }}
         <span class="accordion__icon"></span>
       </button>
       <main>
@@ -14,25 +14,29 @@
   {% endfor %}
 </div>
 
+{% if module.style.override_default_style %}
 {% require_css %}
 <style>
-  #hs_cos_wrapper_{{name}} .accordion__item button {
-    color: {{ module.faq_color.color }};
+  #accordion_{{name}} .accordion__item button {
+    color: rgba({{ module.style.accordion_color.color|convert_rgb }},{{ module.style.accordion_color.opacity * 0.01 }});
   }
-  #hs_cos_wrapper_{{name}} .accordion__icon {
-    background-color: {{ module.faq_color.color }}; 
+  #accordion_{{name}} .accordion__icon {
+    background-color: rgba({{ module.style.accordion_color.color|convert_rgb }},{{ module.style.accordion_color.opacity * 0.01 }});
   }
-  #hs_cos_wrapper_{{name}} .accordion__icon:before,
-  #hs_cos_wrapper_{{name}} .accordion__icon:after {
-    background-color: {{ module.faq_icon_color.color }}; 
+  #accordion_{{name}} .accordion__icon:before,
+  #accordion_{{name}} .accordion__icon:after {
+    background-color: rgba({{ module.style.accordion_icon_color.color|convert_rgb }},{{ module.style.accordion_icon_color.opacity * 0.01 }});
   }
-  #hs_cos_wrapper_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:before,
-  #hs_cos_wrapper_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:after {
-    background-color: {{ module.faq_icon_open_color.color }}; 
+  #accordion_{{name}} .accordion__item[aria-expanded=true] button {
+    color: rgba({{ module.style.accordion_open_color.color|convert_rgb }},{{ module.style.accordion_open_color.opacity * 0.01 }});
   }
-  #hs_cos_wrapper_{{name}} .accordion__item[aria-expanded=true] .accordion__icon { 
-    background-color: {{ module.faq_open_color.color }}; 
+  #accordion_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:before,
+  #accordion_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:after {
+    background-color: rgba({{ module.style.accordion_icon_open_color.color|convert_rgb }},{{ module.style.accordion_icon_open_color.opacity * 0.01 }});
+  }
+  #accordion_{{name}} .accordion__item[aria-expanded=true] .accordion__icon {
+    background-color: rgba({{ module.style.accordion_open_color.color|convert_rgb }},{{ module.style.accordion_open_color.opacity * 0.01 }});
   }
 </style>
 {% end_require_css %}
-
+{% endif %}

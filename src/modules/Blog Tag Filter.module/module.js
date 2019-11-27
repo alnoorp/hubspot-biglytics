@@ -1,8 +1,14 @@
-var blogTagSelect = document.querySelector('.blog-tag-filter__dropdown select');
+(function() {
 
-blogTagSelect.addEventListener('change', function (event) {
-    if (blogTagSelect.value) {
-      window.location = blogTagSelect.value;
-    }
-    return false;
-});
+  // Variables
+  var blogTagSelect = document.querySelector('.blog-tag-filter__dropdown select');
+
+  // Functions
+  blogTagSelect.addEventListener('change', function() {
+      if (blogTagSelect.value) {
+        window.location = blogTagSelect.value;
+      }
+      return false;
+  });
+
+})();

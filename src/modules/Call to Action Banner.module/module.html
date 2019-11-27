@@ -1,0 +1,34 @@
+<section class="cta-banner" id="cta-banner_{{ name }}">
+  <div class="cta-banner__wrapper content-wrapper">
+    <div class="cta-banner__image-column">
+    {% if module.cta_banner_image.src %}
+      {% set sizeAttrs = 'width="{{ module.cta_banner_image.width }}" height="{{ module.cta_banner_image.height }}"' %}
+      {% if module.cta_banner_image.size_type == 'auto' %}
+        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+      {% elif module.cta_banner_image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="100%" height="auto" style="max-width: {{ module.cta_banner_image.max_width }}px; max-height: {{ module.cta_banner_image.max_height }}px"' %}
+      {% endif %}
+      <img class="cta-banner__image" src="{{ module.cta_banner_image.src }}" alt="{{ module.cta_banner_image.alt }}" {{ sizeAttrs }}>
+    {% endif %}
+    </div>
+    <div class="cta-banner__content-column">
+      {{ module.cta_banner_content }}
+    </div>
+    <div class="cta-banner__button-column">
+      {% cta guid="{{ module.cta_button }}" %}
+    </div>
+  </div>
+</section>
+
+{% if module.style.override_default_style %}
+{% require_css %}
+<style>
+  #cta-banner_{{ name }} {
+    background-color: rgba({{ module.style.cta_banner_bg_color.color|convert_rgb }},{{ module.style.cta_banner_bg_color.opacity * 0.01 }});
+  }
+  #cta-banner_{{ name }} .cta-banner__content-column * {
+    color: rgba({{ module.style.cta_banner_text_color.color|convert_rgb }},{{ module.style.cta_banner_text_color.opacity * 0.01 }});
+  }
+</style>
+{% end_require_css %}
+{% endif %}

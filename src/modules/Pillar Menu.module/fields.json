@@ -1,9 +1,40 @@
 [
   {
-    "name" : "pillar_title",
-    "label" : "Pillar title",
-    "required" : false,
+    "id" : "pillar_menu_title",
+    "name" : "pillar_menu_title",
+    "label" : "Pillar menu title",
+    "required" : true,
     "type" : "text",
     "default" : "Table of Contents"
-    }
-]
+  }, {
+    "id" : "style",
+    "name" : "style",
+    "label" : "Style options",
+    "required" : true,
+    "type" : "group",
+    "children" : [ {
+      "id" : "style.override_default_style",
+      "name" : "override_default_style",
+      "label" : "Override default style",
+      "required" : true,
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "style.pillar_menu_border_color",
+      "name" : "pillar_menu_border_color",
+      "label" : "Pillar menu border color",
+      "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+        "color" : "#D0D0D0",
+        "opacity" : 100
+      }
+  } ]
+} ]

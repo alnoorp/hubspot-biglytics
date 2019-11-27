@@ -2,8 +2,7 @@
   "id" : "button_link",
   "name" : "button_link",
   "label" : "Button link",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS" ],
   "type" : "link",
   "default" : {
@@ -20,7 +19,6 @@
   "name" : "button_text",
   "label" : "Button text",
   "required" : true,
-  "locked" : false,
   "validation_regex" : "",
   "allow_new_line" : false,
   "show_emoji_picker" : false,
@@ -30,23 +28,20 @@
   "id" : "style",
   "name" : "style",
   "label" : "Style options",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "type" : "group",
   "children" : [ {
     "id" : "style.override_default_style",
     "name" : "override_default_style",
     "label" : "Override default style",
     "required" : true,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {
     "id" : "style.button_bg_color",
     "name" : "button_bg_color",
     "label" : "Button background color",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -63,8 +58,7 @@
     "id" : "style.button_text_color",
     "name" : "button_text_color",
     "label" : "Button text color",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -81,8 +75,7 @@
     "id" : "style.button_border_width",
     "name" : "button_border_width",
     "label" : "Button border width",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -100,8 +93,7 @@
     "id" : "style.button_border_color",
     "name" : "button_border_color",
     "label" : "Button border color",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -118,8 +110,7 @@
     "id" : "style.button_corner_radius",
     "name" : "button_corner_radius",
     "label" : "Button corner radius",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -137,8 +128,7 @@
     "id" : "style.button_bg_hover_color",
     "name" : "button_bg_hover_color",
     "label" : "Button background hover color",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -155,8 +145,7 @@
     "id" : "style.button_text_hover_color",
     "name" : "button_text_hover_color",
     "label" : "Button text hover color",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -173,8 +162,7 @@
     "id" : "style.button_border_hover_color",
     "name" : "button_border_hover_color",
     "label" : "Button border hover color",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -191,8 +179,7 @@
     "id" : "style.button_horizontal_padding",
     "name" : "button_horizontal_padding",
     "label" : "Button horizontal padding",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -210,8 +197,7 @@
     "id" : "style.button_vertical_padding",
     "name" : "button_vertical_padding",
     "label" : "Button vertical padding",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",

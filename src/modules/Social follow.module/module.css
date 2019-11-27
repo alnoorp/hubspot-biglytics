@@ -1,0 +1,35 @@
+.social-links {
+    border: 2px solid #000000;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.social-links__icon {
+    background-color: transparent;
+    border-right: 2px solid #000000;
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 42px;
+}
+
+.social-links__icon:last-child {
+    border-right: 0;
+    width: 40px;
+}
+
+.social-links__icon svg {
+    fill: #000000;
+    height: 15px;
+    width: auto;
+}
+
+.social-links__icon:hover {
+    background-color: #000000;
+}
+
+.social-links__icon:hover svg {
+    fill: #FFFFFF;
+}

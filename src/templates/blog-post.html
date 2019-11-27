@@ -10,7 +10,7 @@
 
     {% module "blog_post_banner"
       path="../modules/Blog Post Banner",
-      background_image={
+      custom_bg_image={
         "src": get_asset_url("../images/blog-post-banner.png")
       }
     %}
@@ -71,15 +71,13 @@
     </div>
 
     {% module "blog_cta"
-      path="../modules/CTA Banner",
-      background_color={
-        "color": "#34b5e5"
+      path="../modules/Call to Action Banner",
+      cta_banner_image={
+        "src": get_asset_url("../images/phone.png"),
+        "alt": "Mobile phone"
       },
-      image={
-        "src": get_asset_url("../images/phone.png")
-      },
-      content="<h2>Download Perfect Today!</h2><p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>",
-      cta_field="782d9df3-4dc5-44dc-81ad-a0efffcf0cb2"
+      cta_banner_content="<h2>Download Perfect Today!</h2><p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>",
+      cta_button="782d9df3-4dc5-44dc-81ad-a0efffcf0cb2"
     %}
 
     {% module "blog_related_posts" path="../modules/Blog Related Posts" %}

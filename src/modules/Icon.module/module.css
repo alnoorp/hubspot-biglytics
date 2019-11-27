@@ -1,21 +1,22 @@
-.feature {
-    padding: 0px 20px; 
-    text-align: center; 
+.icon {
+    padding: 0 20px;
+    text-align: center;
 }
 
-.feature__icon > span {
-    border-radius: 100%; 
-    border-width: 1px;
-    border-style: solid;
-    display: block; 
-    height: 100px; 
-    margin: 0px auto 20px; 
-    width: 100px; 
-}
-
-.feature__icon svg {
-    box-sizing: border-box; 
+.icon__wrapper {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+    border-radius: 100%;
+    display: block;
     height: 100px;
-    padding: 20px; 
-    width: 100px; 
+    margin: 0 auto 20px;
+    width: 100px;
+}
+
+.icon svg {
+    box-sizing: border-box;
+    fill: #34B5E5;
+    height: 100px;
+    padding: 20px;
+    width: 100px;
 }

@@ -1,14 +1,14 @@
 {% set circleDegrees = module.statistic_percentage * 0.01 * 360 %}
 {% set rotate = circleDegrees|round %}
 
-<div class="statistic" id="{{ name }}">
+<div class="statistic" id="statistic_{{ name }}">
   <div class="statistic__circle">
     <div class="statistic__info">
       {{ module.statistic_number }}{% if module.statistic_unit %}<span class="statistic__unit">{{ module.statistic_unit }}</span>{% endif %}
     </div>
     <div class="statistic__slice {% if module.statistic_percentage > 50 %}statistic__slice--large{% endif %}">
-      <div class="statistic__bar" style="-webkit-transform: rotate({{ rotate }}deg); -moz-transform: rotate({{ rotate }}deg); -ms-transform: rotate({{ rotate }}deg); -o-transform: rotate({{ rotate }}deg); transform: rotate({{ rotate }}deg); border-color: {{ module.statistic_fill_color.color }};"></div>
-      <div class="statistic__fill {% if module.statistic_percentage > 50 %}statistic__fill--large{% endif %}" style="border-color: {{ module.statistic_fill_color.color }};"></div>
+      <div class="statistic__bar"></div>
+      <div class="statistic__fill {% if module.statistic_percentage > 50 %}statistic__fill--large{% endif %}"></div>
     </div>
   </div>
   <div class="statistic__description">{{ module.statistic_description }}</div>
@@ -16,26 +16,28 @@
 
 {% require_css %}
 <style>
-  #hs_cos_wrapper_{{name}} .statistic__circle {
-    background-color: {{ module.statistic_bar_color.color }};
-  }
-  #hs_cos_wrapper_{{name}} .statistic__bar,
-  #hs_cos_wrapper_{{name}} .statistic__fill,
-  #hs_cos_wrapper_{{name}} .statistic__fill {
-    border-color: {{ module.statistic_fill_color.color }};
-  }
-  #hs_cos_wrapper_{{name}} .statistic__bar {
-    -webkit-transform: rotate({{ rotate }}deg); 
-    -moz-transform: rotate({{ rotate }}deg); 
-    -ms-transform: rotate({{ rotate }}deg); 
-    -o-transform: rotate({{ rotate }}deg); 
+  {% if module.style.override_default_style %}
+    #statistic_{{name}} .statistic__circle {
+      background-color: rgba({{ module.style.statistic_bar_color.color|convert_rgb }},{{ module.style.statistic_bar_color.opacity * 0.01 }});
+    }
+    #statistic_{{name}} .statistic__bar,
+    #statistic_{{name}} .statistic__fill,
+    #statistic_{{name}} .statistic__fill {
+      border-color: rgba({{ module.style.statistic_fill_color.color|convert_rgb }},{{ module.style.statistic_fill_color.opacity * 0.01 }});
+    }
+    #statistic_{{name}} .statistic__info {
+      color: rgba({{ module.style.statistic_text_color.color|convert_rgb }},{{ module.style.statistic_text_color.opacity * 0.01 }});
+    }
+    #statistic_{{name}} .statistic__circle::after {
+      background-color: rgb({{ module.style.statistic_bg_color.color|convert_rgb }});
+    }
+  {% endif %}
+  #statistic_{{name}} .statistic__bar {
+    -webkit-transform: rotate({{ rotate }}deg);
+    -moz-transform: rotate({{ rotate }}deg);
+    -ms-transform: rotate({{ rotate }}deg);
+    -o-transform: rotate({{ rotate }}deg);
     transform: rotate({{ rotate }}deg);
-  }
-  #hs_cos_wrapper_{{name}} .statistic__info {
-    color: {{ module.statistic_text_color.color }};
-  }
-  #hs_cos_wrapper_{{name}} .statistic__circle::after {
-    background-color: {{ module.statistic_bg_color.color }};
   }
 </style>
 {% end_require_css %}

@@ -1,40 +1,71 @@
 [ {
-  "name" : "background_image",
-  "label" : "Background Image",
+  "id" : "blog_listing_banner_image",
+  "name" : "blog_listing_banner_image",
+  "label" : "Blog listing banner image",
   "responsive" : true,
   "resizable" : true,
   "type" : "image",
   "default" : {
     "size_type" : "auto",
     "src" : "",
-    "alt" : null
+    "alt" : ""
   }
 }, {
-  "name" : "blog_title",
-  "label" : "Blog Title",
-  "type" : "text",
-  "default" : "PERFECT SAVES TIME."
+  "id" : "blog_listing_banner_title",
+  "name" : "blog_listing_banner_title",
+  "label" : "Blog listing banner title",
+  "type" : "text"
 }, {
-  "name" : "blog_title_color",
-  "label" : "Blog Title Color",
+  "id" : "blog_listing_banner_subtitle",
+  "name" : "blog_listing_banner_subtitle",
+  "label" : "Blog listing banner subtitle",
+  "type" : "text"
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
   "required" : true,
-  "type" : "color",
-  "default" : {
-     "color" : "#ffffff",
-     "opacity" : 100
-  }
-}, {
-  "name" : "blog_subtitle",
-  "label" : "Blog Subtitle",
-  "type" : "text",
-  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
-}, {
-  "name" : "blog_subtitle_color",
-  "label" : "Blog Subtitle Color",
-  "required" : true,
-  "type" : "color",
-  "default" : {
-     "color" : "#ffffff",
-     "opacity" : 100
-  }
+  "type" : "group",
+  "children" : [ {
+    "id" : "style.override_default_style",
+    "name" : "override_default_style",
+    "label" : "Override default style",
+    "required" : true,
+    "type" : "boolean",
+    "default" : false
+  }, {
+      "id" : "style.blog_listing_banner_title_color",
+      "name" : "blog_listing_banner_title_color",
+      "label" : "Blog listing banner title color",
+      "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+         "color" : "#FFFFFF",
+         "opacity" : 100
+      }
+    }, {
+      "id" : "style.blog_listing_banner_subtitle_color",
+      "name" : "blog_listing_banner_subtitle_color",
+      "label" : "Blog listing banner subtitle color",
+      "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+         "color" : "#FFFFFF",
+         "opacity" : 100
+      }
+  } ]
 } ]

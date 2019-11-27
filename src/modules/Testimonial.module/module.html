@@ -1,18 +1,21 @@
-<div class="testimonial" id="{{ name }}">
+<section class="testimonial" id="testimonial_{{ name }}">
   <h3 class="testimonial__title">{{ module.testimonial_title }}</h3>
   <div class="testimonial__description">
     {{ module.testimonial_description }}
   </div>
-  <div class="testimonial__avatar" style="background-image: url('{{ module.testimonial_headshot.src }}')"></div>
+
+  <img class="testimonial__avatar" src="{{ module.testimonial_image.src }}" alt="{{ module.testimonial_image.alt }}">
   <div class="testimonial__name">
     {{ module.testimonial_name }}
   </div>
-</div>
+</section>
 
+{% if module.style.override_default_style %}
 {% require_css %}
 <style>
-#hs_cos_wrapper_{{name}} .testimonial:hover {
-  border-bottom: 15px solid {{ module.testimonial_hover_accent_color.color }};
-}
+  #testimonial_{{ name }}:hover {
+    border-color: rgba({{ module.style.testimonial_hover_accent_color.color|convert_rgb }},{{ module.style.testimonial_hover_accent_color.opacity * 0.01 }});
+  }
 </style>
 {% end_require_css %}
+{% endif %}
