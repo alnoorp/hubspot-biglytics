@@ -1,4 +1,4 @@
-<div class="social-links">
+<div class="social-links" id="social-links_{{ name }}">
 {% for item in module.social_link %}
   {% set href = item.link.url.href %}
   {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
@@ -13,3 +13,25 @@
   </a>
 {% endfor %}
 </div>
+
+{% if module.style.override_default_style %}
+  {% require_css %}
+    <style>
+      #social-links_{{ name }} {
+        border-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity }});
+      }
+      #social-links_{{ name }} .social-links__icon {
+        border-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity }});
+      }
+      #social-links_{{ name }} .social-links__icon:hover {
+        background-color: rgba({{ module.style.social_icon_bg_color.color|convert_rgb }},{{ module.style.social_icon_bg_color.opacity }});
+      }
+      #social-links_{{ name }} .social-links__icon svg {
+        fill: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity }});
+      }
+      #social-links_{{ name }} .social-links__icon:hover svg {
+        fill: rgba({{ module.style.social_icon_bg_color.color|convert_rgb }},{{ module.style.social_icon_bg_color.opacity }});
+      }
+    </style>
+  {% end_require_css %}
+{% endif %}
