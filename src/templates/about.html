@@ -19,7 +19,7 @@
       background_image={
         "backgroundPosition": "MIDDLE_CENTER",
         "backgroundSize": "cover",
-        'imageUrl': get_asset_url("../images/about-banner.jpg")
+        "imageUrl": get_asset_url("../images/about-banner.jpg")
       },
       vertical_alignment="MIDDLE"
     %}
@@ -30,7 +30,7 @@
           %}
           {% module_attribute "html" %}
             <div style="text-align: center">
-              <h1 style="color: #fff; margin-bottom: 0px;">About Our Company</h1>
+              <h1 style="color: #FFFFFF; margin-bottom: 0;">About Us</h1>
             </div>
           {% end_module_attribute %}
           {% end_dnd_module %}
@@ -45,8 +45,8 @@
                 {% dnd_module path="@hubspot/rich_text" %}
                     {% module_attribute "html" %}
                     <div>
-                        <p style="font-size: 1.2rem;">In id rhoncus arcu. Duis pretium interdum erat ut sodales. Etiam metus arcu, interdum vel neque a, mattis fermentum nisl. Nunc pulvinar lacinia eleifend. Morbi fermentum euismod lorem at vehicula. Mauris euismod erat nulla. Vestibulum dapibus imperdiet felis, nec sagittis arcu auctor quis. Donec id faucibus nunc.</p>
-                        <p style="font-size: 1.2rem;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus diam, dignissim non scelerisque eu, lobortis nec tellus. Suspendisse sed felis cursus, maximus metus at, pellentesque elit. Curabitur vel urna malesuada elit luctus volutpat. Etiam varius massa a ante vehicula gravida. Sed bibendum lacinia arcu. Duis quis velit ut lorem elementum tincidunt ut ut lacus. In pharetra eu felis eget pulvinar. Nullam fringilla felis at lectus posuere tempus.</p>
+                        <p style="font-size: 1.2rem;">Our company was started by our two founders 10 years ago. We started out with just two customers and a mission to help people grow their businesses with the power of automation.</p>
+                        <p style="font-size: 1.2rem;">We now proudly have well over 10,000 happy customers and are continuing to help more customers grow daily. Our team has grown from two people in a small office to 100 employees spread across the globe.</p>
                     </div>
                     {% end_module_attribute %}
                 {% end_dnd_module %}
@@ -86,8 +86,8 @@
             {% dnd_module path="@hubspot/rich_text" %}
               {% module_attribute "html" %}
                 <div>
-                  <h2 style="color: #fff;">Our Mission</h2>
-                  <p style="color: #fff;">Nunc ornare scelerisque mi et aliquet. Fusce in elit pharetra metus hendrerit maximus. Phasellus euismod felis ac orci egestas sodales. Vestibulum est dui, mattis sit amet faucibus ac, laoreet faucibus turpis. Sed semper mattis turpis, sit amet semper lorem lobortis eu. Vestibulum tempus id ligula a mollis. In dolor nulla, sodales et felis faucibus, fermentum ullamcorper lectus.</p>
+                  <h2 style="color: #FFFFFF;">Our Mission</h2>
+                  <p style="color: #FFFFFF;">Our mission is simple. We want to help as many customers grow their business as possible. We love helping push our customers to new limits that they didn't think possible. With our easy to use software and dedicated services team we will continue to focus on creating the best customer experience possible.</p>
                 </div>
               {% end_module_attribute %}
             {% end_dnd_module %}
@@ -106,7 +106,12 @@
               {% module_attribute "html" %}
                 <div>
                   <h2>Our Values</h2>
-                  <p>Suspendisse non porttitor lacus. Curabitur vitae tempor urna. Nulla a efficitur felis. Vivamus convallis commodo sapien ut dapibus. In vulputate mauris at metus commodo, et ullamcorper ipsum hendrerit. Integer rhoncus interdum felis at luctus. Fusce ipsum augue, sollicitudin vitae pulvinar eget, vestibulum sit amet ex. Vestibulum non dictum lectus, id laoreet quam. Aliquam malesuada luctus ullamcorper. Etiam faucibus vel nulla non maximus. Etiam aliquet luctus tellus. Cras dictum facilisis turpis ac aliquam. Quisque et odio id arcu lobortis pulvinar et non nulla.</p>
+                  <p>Our values are incredibly important to us. They help us build the right team to achieve our mission. Our core values are:</p>
+                  <ul>
+                    <li>Excellence</li>
+                    <li>Empathy</li>
+                    <li>Integrity</li>
+                  </ul>
                 </div>
               {% end_module_attribute %}
             {% end_dnd_module %}
@@ -161,8 +166,9 @@
             {% dnd_module path="@hubspot/rich_text" %}
               {% module_attribute "html" %}
                 <div>
-                  <h2 style="color: #fff;">Our Story</h2>
-                  <p style="color: #fff;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pulvinar pretium ipsum in venenatis. Morbi at rutrum est. Aenean tristique euismod egestas. Nullam tristique turpis vitae velit accumsan, a sagittis ex pulvinar. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec quis gravida magna. Etiam at risus quam. Pellentesque pellentesque felis sed ligula congue, id consequat leo blandit. Integer dignissim laoreet vulputate. Morbi non tortor vel lorem consequat volutpat. Nunc dui dui, rhoncus ut libero ac, sagittis sodales lacus. In eu diam sit amet sapien imperdiet suscipit. Etiam in euismod metus. Nulla felis justo, efficitur varius massa non, sodales aliquet neque.</p>
+                  <h2 style="color: #FFFFFF;">Our Story</h2>
+                  <p style="color: #FFFFFF;">Our company was started from a small coffee shop in Nashville, Tennessee. Our founders met at a local technology meetup and both shared a similar mission. One month later the company was created and we moved into our first office.</p>
+                  <p style="color: #FFFFFF;">Five years later, we have now grown our company to 100 incredible employees around the globe. We still have a small office in Nashville but the majority of our employees work remote.</p>
                 </div>
               {% end_module_attribute %}
             {% end_dnd_module %}
@@ -195,7 +201,8 @@
                 "alt": "Sarah Stevens"
             },
             team_member_name="Sarah Stevens",
-            team_member_position="CEO, Co-Founder"
+            team_member_position="CEO, Co-Founder",
+            team_member_bio="<p>Sarah is a renowned leader in the customer services industry. She has helped several large companies completely turnaround their service departments. Her passion for helping people is what lead her to start this company. In her spare time she loves surfing, hiking, and reading.</p>"
           %}
           {% end_dnd_module %}
           {% dnd_module
@@ -208,7 +215,8 @@
                 "alt": "Joshua Beck"
             },
             team_member_name="Joshua Beck",
-            team_member_position="CMO, Co-Founder"
+            team_member_position="CTO, Co-Founder",
+            team_member_bio="<p>Joshua has over 20 years of experience in the tech industry. He helped start this company in 2014 with the mission of helping people grow. In his spare time he loves hanging out with his kids, going to the beach, and cooking.</p>"
           %}
           {% end_dnd_module %}
           {% dnd_module
@@ -221,7 +229,8 @@
                 "alt": "Gene Maxwell"
             },
             team_member_name="Gene Maxwell",
-            team_member_position="CFO"
+            team_member_position="CFO",
+            team_member_bio="<p>Gene has been a CFO at several medium sized businesses and has a strong background in finance. He loved the mission of the company, so he joined shortly after it was created. In his spare time Gene loves hanging out with his dog, rock climbing, and yoga.</p>"
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}

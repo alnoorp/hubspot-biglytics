@@ -4,6 +4,8 @@
 -->
 <header class="header">
   <div class="header__container">
+
+    {# Logo #}
     <div class="header__logo">
       {% module "header_logo"
         path="@hubspot/logo",
@@ -16,6 +18,8 @@
         }
       %}
     </div>
+
+    {# Main Navigation #}
     <div class="header__menu">
         <input type="checkbox" id="nav-toggle">
         <label class="header__navigation-toggle" for="nav-toggle">
@@ -28,6 +32,8 @@
           %}
         </div>
     </div>
+
+    {# Language Toggle #}
     {% if content.translated_content|length %}
       <div class="header__language-switcher">
         <div class="header__language-switcher-label">
@@ -36,5 +42,6 @@
         </div>
       </div>
     {% endif %}
+
   </div>
 </header>
