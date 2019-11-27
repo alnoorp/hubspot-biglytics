@@ -47,3 +47,30 @@ img {
 .statistic__info {
     color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }
+
+/* Accordion */
+.accordion__item button {
+    color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
+}
+
+.accordion__icon {
+    background-color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
+}
+
+.accordion__icon:before,
+.accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] button {
+    color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon:before,
+.accordion__item[aria-expanded=true] .accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon {
+    background-color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
+}

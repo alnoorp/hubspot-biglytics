@@ -34,6 +34,11 @@
     padding: 50px 0;
 }
 
+.blog-index-header__title,
+.blog-index-header__subtitle {
+    color: #FFFFFF;
+}
+
 .blog-post-header__back-button {
     background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
     font-size: 20px;
@@ -227,6 +232,14 @@
     -ms-flex-pack: justify;
         justify-content: space-between;
     padding: 20px 20px 40px;
+}
+
+.blog-related-posts {
+    margin-top: 20px;
+}
+
+.blog-related-posts__title {
+    text-align: center;
 }
 
 /* Blog Pagination */

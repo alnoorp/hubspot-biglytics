@@ -14,24 +14,29 @@
   {% endfor %}
 </div>
 
+{% if module.style.override_default_style %}
 {% require_css %}
 <style>
   #accordion_{{name}} .accordion__item button {
-    color: rgba({{ module.style.faq_color.color|convert_rgb }},{{ module.style.faq_color.opacity }});
+    color: rgba({{ module.style.accordion_color.color|convert_rgb }},{{ module.style.accordion_color.opacity * 0.01 }});
   }
   #accordion_{{name}} .accordion__icon {
-    background-color: rgba({{ module.style.faq_color.color|convert_rgb }},{{ module.style.faq_color.opacity }});
+    background-color: rgba({{ module.style.accordion_color.color|convert_rgb }},{{ module.style.accordion_color.opacity * 0.01 }});
   }
   #accordion_{{name}} .accordion__icon:before,
   #accordion_{{name}} .accordion__icon:after {
-    background-color: rgba({{ module.style.faq_icon_color.color|convert_rgb }},{{ module.style.faq_icon_color.opacity }});
+    background-color: rgba({{ module.style.accordion_icon_color.color|convert_rgb }},{{ module.style.accordion_icon_color.opacity * 0.01 }});
+  }
+  #accordion_{{name}} .accordion__item[aria-expanded=true] button {
+    color: rgba({{ module.style.accordion_open_color.color|convert_rgb }},{{ module.style.accordion_open_color.opacity * 0.01 }});
   }
   #accordion_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:before,
   #accordion_{{name}} .accordion__item[aria-expanded=true] .accordion__icon:after {
-    background-color: rgba({{ module.style.faq_icon_open_color.color|convert_rgb }},{{ module.style.faq_icon_open_color.opacity }});
+    background-color: rgba({{ module.style.accordion_icon_open_color.color|convert_rgb }},{{ module.style.accordion_icon_open_color.opacity * 0.01 }});
   }
   #accordion_{{name}} .accordion__item[aria-expanded=true] .accordion__icon {
-    background-color: rgba({{ module.style.faq_open_color.color|convert_rgb }},{{ module.style.faq_open_color.opacity }});
+    background-color: rgba({{ module.style.accordion_open_color.color|convert_rgb }},{{ module.style.accordion_open_color.opacity * 0.01 }});
   }
 </style>
 {% end_require_css %}
+{% endif %}

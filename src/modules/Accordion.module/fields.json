@@ -1,24 +1,31 @@
 [ {
+  "id" : "accordion",
   "name" : "accordion",
   "label" : "Accordion",
+  "required" : true,
   "occurrence" : {
     "min" : 1,
     "max" : null,
     "default" : 5
   },
   "children" : [ {
+    "id" : "accordion.accordion_content",
     "name" : "accordion_content",
-    "label" : "Accordion Content",
+    "label" : "Accordion content",
+    "required" : true,
     "type" : "richtext",
     "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
   }, {
+    "id" : "accordion.expanded",
     "name" : "expanded",
     "label" : "Expanded?",
     "type" : "boolean",
     "default" : false
   }, {
+    "id" : "accordion.accordion_header",
     "name" : "accordion_header",
-    "label" : "Accordion Header",
+    "label" : "Accordion header",
+    "required" : true,
     "validation_regex" : "",
     "allow_new_line" : false,
     "show_emoji_picker" : false,
@@ -36,20 +43,19 @@
   "id" : "style",
   "name" : "style",
   "label" : "Style options",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "type" : "group",
   "children" : [ {
     "id" : "style.override_default_style",
     "name" : "override_default_style",
     "label" : "Override default style",
     "required" : true,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {
-    "name" : "faq_color",
-    "label" : "FAQ Header Color",
+    "id" : "style.accordion_color",
+    "name" : "accordion_color",
+    "label" : "Accordion header color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -60,12 +66,13 @@
     },
     "type" : "color",
     "default" : {
-       "color" : "#c168c2",
+       "color" : "#C168C2",
        "opacity" : 100
     }
   }, {
-    "name" : "faq_icon_color",
-    "label" : "FAQ Icon Color",
+    "id" : "style.accordion_icon_color",
+    "name" : "accordion_icon_color",
+    "label" : "Accordion icon color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -76,12 +83,13 @@
     },
     "type" : "color",
     "default" : {
-       "color" : "#ffffff",
+       "color" : "#FFFFFF",
        "opacity" : 100
     }
   }, {
-    "name" : "faq_open_color",
-    "label" : "FAQ Header Open Color",
+    "id" : "style.accordion_open_color",
+    "name" : "accordion_open_color",
+    "label" : "Accordion header open color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -92,12 +100,13 @@
     },
     "type" : "color",
     "default" : {
-       "color" : "#e77de8",
+       "color" : "#E77DE8",
        "opacity" : 100
     }
   }, {
-    "name" : "faq_icon_open_color",
-    "label" : "FAQ Icon Open Color",
+    "id" : "style.accordion_icon_open_color",
+    "name" : "accordion_icon_open_color",
+    "label" : "Accordion icon open color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -108,7 +117,7 @@
     },
     "type" : "color",
     "default" : {
-       "color" : "#ffffff",
+       "color" : "#FFFFFF",
        "opacity" : 100
     }
   } ]

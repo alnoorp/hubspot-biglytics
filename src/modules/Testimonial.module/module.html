@@ -3,7 +3,8 @@
   <div class="testimonial__description">
     {{ module.testimonial_description }}
   </div>
-  <div class="testimonial__avatar" style="background-image: url('{{ module.testimonial_image.src }}')"></div>
+
+  <img class="testimonial__avatar" src="{{ module.testimonial_image.src }}" alt="{{ module.testimonial_image.alt }}">
   <div class="testimonial__name">
     {{ module.testimonial_name }}
   </div>

@@ -10,7 +10,7 @@
 }
 
 .testimonial:hover {
-    background-color: #fff;
+    background-color: #FFFFFF;
     border-bottom: 15px solid #34B5E5;
 }
 
@@ -22,8 +22,7 @@
 }
 
 .testimonial__avatar {
-    background-size: cover;
     border-radius: 50%;
-    height: 45px;
+    height: auto;
     width: 45px;
 }
