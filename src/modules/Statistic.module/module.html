@@ -7,37 +7,37 @@
       {{ module.statistic_number }}{% if module.statistic_unit %}<span class="statistic__unit">{{ module.statistic_unit }}</span>{% endif %}
     </div>
     <div class="statistic__slice {% if module.statistic_percentage > 50 %}statistic__slice--large{% endif %}">
-      <div class="statistic__bar" style="-webkit-transform: rotate({{ rotate }}deg); -moz-transform: rotate({{ rotate }}deg); -ms-transform: rotate({{ rotate }}deg); -o-transform: rotate({{ rotate }}deg); transform: rotate({{ rotate }}deg); border-color: {{ module.statistic_fill_color.color }};"></div>
-      <div class="statistic__fill {% if module.statistic_percentage > 50 %}statistic__fill--large{% endif %}" style="border-color: {{ module.statistic_fill_color.color }};"></div>
+      <div class="statistic__bar"></div>
+      <div class="statistic__fill {% if module.statistic_percentage > 50 %}statistic__fill--large{% endif %}"></div>
     </div>
   </div>
   <div class="statistic__description">{{ module.statistic_description }}</div>
 </div>
 
 {% require_css %}
-  <style>
-    {% if module.style.override_default_style %}
-      #statistic_{{name}} .statistic__circle {
-        background-color: rgba({{ module.style.statistic_bar_color.color|convert_rgb }},{{ module.style.statistic_bar_color.opacity }});
-      }
-      #statistic_{{name}} .statistic__bar,
-      #statistic_{{name}} .statistic__fill,
-      #statistic_{{name}} .statistic__fill {
-        border-color: rgba({{ module.style.statistic_fill_color.color|convert_rgb }},{{ module.style.statistic_fill_color.opacity }});
-      }
-      #statistic_{{name}} .statistic__info {
-        color: rgba({{ module.style.statistic_text_color.color|convert_rgb }},{{ module.style.statistic_text_color.opacity }});
-      }
-      #statistic_{{name}} .statistic__circle::after {
-        background-color: rgba({{ module.style.statistic_bg_color.color|convert_rgb }},{{ module.style.statistic_bg_color.opacity }});
-      }
-    {% endif %}
-    #statistic_{{name}} .statistic__bar {
-      -webkit-transform: rotate({{ rotate }}deg);
-      -moz-transform: rotate({{ rotate }}deg);
-      -ms-transform: rotate({{ rotate }}deg);
-      -o-transform: rotate({{ rotate }}deg);
-      transform: rotate({{ rotate }}deg);
-    }
-  </style>
+<style>
+{% if module.style.override_default_style %}
+  #statistic_{{name}} .statistic__circle {
+    background-color: rgba({{ module.style.statistic_bar_color.color|convert_rgb }},{{ module.style.statistic_bar_color.opacity * 0.01 }});
+  }
+  #statistic_{{name}} .statistic__bar,
+  #statistic_{{name}} .statistic__fill,
+  #statistic_{{name}} .statistic__fill {
+    border-color: rgba({{ module.style.statistic_fill_color.color|convert_rgb }},{{ module.style.statistic_fill_color.opacity * 0.01 }});
+  }
+  #statistic_{{name}} .statistic__info {
+    color: rgba({{ module.style.statistic_text_color.color|convert_rgb }},{{ module.style.statistic_text_color.opacity * 0.01 }});
+  }
+  #statistic_{{name}} .statistic__circle::after {
+    background-color: rgb({{ module.style.statistic_bg_color.color|convert_rgb }});
+  }
+{% endif %}
+#statistic_{{name}} .statistic__bar {
+  -webkit-transform: rotate({{ rotate }}deg);
+  -moz-transform: rotate({{ rotate }}deg);
+  -ms-transform: rotate({{ rotate }}deg);
+  -o-transform: rotate({{ rotate }}deg);
+  transform: rotate({{ rotate }}deg);
+}
+</style>
 {% end_require_css %}

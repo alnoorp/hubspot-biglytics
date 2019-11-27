@@ -2,6 +2,7 @@
   "id" : "icon_type",
   "name" : "icon_type",
   "label" : "Icon",
+  "required" : true,
   "type" : "icon",
   "default" : {
     "name" : "clock",

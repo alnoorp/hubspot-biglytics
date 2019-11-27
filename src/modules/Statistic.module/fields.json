@@ -1,20 +1,22 @@
 [ {
   "id" : "statistic_number",
   "name" : "statistic_number",
-  "label" : "Statistic Number",
+  "label" : "Statistic number",
   "required" : true,
   "type" : "text",
   "default" : "10"
 }, {
   "id" : "statistic_unit",
   "name" : "statistic_unit",
-  "label" : "Statistic Unit",
+  "label" : "Statistic unit",
+  "required" : true,
   "type" : "text",
   "default" : "k"
 }, {
   "id" : "statistic_percentage",
   "name" : "statistic_percentage",
-  "label" : "Statistic Percentage",
+  "label" : "Statistic percentage",
+  "required" : true,
   "display" : "text",
   "min" : 0,
   "max" : 100,
@@ -24,7 +26,7 @@
 }, {
   "id" : "statistic_description",
   "name" : "statistic_description",
-  "label" : "Statistic Description",
+  "label" : "Statistic description",
   "required" : true,
   "type" : "richtext",
   "default" : "<p>Customer satisfaction rating</p>"
@@ -32,21 +34,19 @@
   "id" : "style",
   "name" : "style",
   "label" : "Style options",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "type" : "group",
   "children" : [ {
     "id" : "style.override_default_style",
     "name" : "override_default_style",
     "label" : "Override default style",
     "required" : true,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {
     "id" : "style.statistic_bar_color",
     "name" : "statistic_bar_color",
-    "label" : "Statistic Bar Color",
+    "label" : "Statistic bar color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -63,7 +63,7 @@
   }, {
     "id" : "style.statistic_fill_color",
     "name" : "statistic_fill_color",
-    "label" : "Statistic Bar Fill Color",
+    "label" : "Statistic bar fill color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -80,7 +80,7 @@
   }, {
     "id" : "style.statistic_bg_color",
     "name" : "statistic_bg_color",
-    "label" : "Statistic Background Color",
+    "label" : "Statistic background color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
@@ -97,7 +97,7 @@
   }, {
     "id" : "style.statistic_text_color",
     "name" : "statistic_text_color",
-    "label" : "Statistic Text Color",
+    "label" : "Statistic text color",
     "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",

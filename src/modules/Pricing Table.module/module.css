@@ -1,104 +1,131 @@
 .pricing-block-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
+
 .price-block {
     margin-bottom: 30px;
 }
+
 .price-block--1 {
     width: 100%;
 }
+
 .price-block--2 {
     width: 47%;
 }
+
 .price-block--3 {
     width: 30%;
 }
+
 .price-block--4 {
     width: 23%;
 }
+
 .price-block--monthly {
     display: block;
 }
+
 .price-block--annual {
     display: none;
 }
+
 .billing-selectors {
     display: table;
     margin: 0 auto;
     margin-bottom: 40px;
 }
+
 .billing-selectors__pricing-option {
-    border: 1px solid #d0d0d0;
+    border: 1px solid #D0D0D0;
     display: table-cell;
+    min-width: 200px;
     padding: 10px 15px;
     transition: .4s;
-    min-width: 200px;
     text-align: center;
 }
+
 .billing-selectors__pricing-option--left {
-    border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
 }
+
 .billing-selectors__pricing-option--right {
-    border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     border-left: 0;
+    border-top-right-radius: 25px;
 }
+
 .billing-selectors__pricing-option input[type="radio"] {
-    visibility: hidden;
     position: absolute;
+    visibility: hidden;
 }
+
 .billing-selectors__pricing-option input[type="radio"] + label:before {
-    content: "";
-    height: 16px;
-    width: 16px;
-    margin-right: 5px;
     border: 1px solid rgba(0,0,0,0.4);
-    display: inline-block;
     border-radius: 50%;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    margin-right: 5px;
     vertical-align: sub;
+    width: 16px;
 }
+
 .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
     background-color: #FFFFFF;
     border: 6px solid #34B5E5
 }
+
 .price-block__header {
     background-color: #34B5E5;
     color: #FFFFFF;
     padding: 40px 10px;
     text-align: center;
 }
+
 .price-block__title {
     font-size: 1.3rem;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 0.2em;
+    text-transform: uppercase;
 }
+
 .price-block__price {
     position: relative;
 }
+
 .price-block__currency,
 .price-block__number {
     display: inline-block;
 }
+
 .price-block__currency {
     font-size: 1.4rem;
     line-height: 3rem;
     vertical-align: top;
 }
+
 .price-block__number {
     font-size: 4rem;
     font-weight: bold;
     line-height: 4rem;
     vertical-align: top;
 }
+
 .price-block__description-block {
     background-color: #FFFFFF;
-    padding: 20px 40px;
     border: 1px solid #D0D0D0;
+    padding: 20px 40px;
 }
+
 .price-block__cta {
     text-align: center;
 }

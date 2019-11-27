@@ -2,17 +2,16 @@
   "id" : "option_one",
   "name" : "option_one",
   "label" : "Pricing option 1",
-  "help_text" : "Add a Pricing Option",
   "children" : [ {
     "id" : "option_one.billing_option_one_title",
     "name" : "billing_option_one_title",
-    "label" : "Billing option 1 title",
+    "label" : "Pricing option 1 title",
     "type" : "text",
     "default" : "Monthly Billing"
   }, {
     "id" : "option_one.option_one_table",
     "name" : "option_one_table",
-    "label" : "Option 1 Table",
+    "label" : "Option 1 table",
     "occurrence" : {
       "min" : 1,
       "max" : 4,
@@ -21,19 +20,19 @@
     "children" : [ {
       "id" : "option_one.option_one_table.option_one_title",
       "name" : "option_one_title",
-      "label" : "Option 1 Title",
+      "label" : "Option 1 title",
       "type" : "text",
       "default" : "Starter"
     }, {
       "id" : "option_one.option_one_table.option_one_currency",
       "name" : "option_one_currency",
-      "label" : "Option 1 Currency",
+      "label" : "Option 1 currency",
       "type" : "text",
       "default" : "$"
     }, {
       "id" : "option_one.option_one_table.option_one_price",
       "name" : "option_one_price",
-      "label" : "Option 1 Price",
+      "label" : "Option 1 price",
       "display" : "text",
       "step" : 1,
       "type" : "number",
@@ -41,13 +40,13 @@
     }, {
       "id" : "option_one.option_one_table.option_one_text",
       "name" : "option_one_button_text",
-      "label" : "Option 1 Button Text",
+      "label" : "Option 1 button text",
       "type" : "text",
       "default" : "Sign Up"
     }, {
       "id" : "option_one.option_one_table.option_one_link",
       "name" : "option_one_button_link",
-      "label" : "Option 1 Button Link",
+      "label" : "Option 1 button link",
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
       "type" : "link",
       "default" : {
@@ -62,7 +61,7 @@
     }, {
       "id" : "option_one.option_one_table.option_one_description",
       "name" : "option_one_description",
-      "label" : "Option 1 Description",
+      "label" : "Option 1 description",
       "type" : "richtext",
       "default" : "<p><strong>Free Unlimited</strong> Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
       } ],
@@ -103,17 +102,16 @@
 }, {
   "id" : "option_two",
   "name" : "option_two",
-  "label" : "Pricing Option 2",
-  "help_text" : "Add a Pricing Option",
+  "label" : "Pricing option 2",
   "children" : [ {
     "name" : "billing_option_two_title",
-    "label" : "Billing Option 2 Title",
+    "label" : "Pricing option 2 title",
     "type" : "text",
     "default" : "Annual Billing Save 15%"
   }, {
     "id" : "option_two.option_two_table",
     "name" : "option_two_table",
-    "label" : "Option 2 Table",
+    "label" : "Option 2 table",
     "occurrence" : {
       "min" : 1,
       "max" : 4,
@@ -122,20 +120,19 @@
     "children" : [ {
       "id" : "option_two.option_two_table.option_two_title",
       "name" : "option_two_title",
-      "label" : "Option 2 Title",
-      "help_text" : "Add a Price Title",
+      "label" : "Option 2 title",
       "type" : "text",
       "default" : "Standard"
     }, {
       "id" : "option_two.option_two_table.option_two_currency",
       "name" : "option_two_currency",
-      "label" : "Option 2 Currency",
+      "label" : "Option 2 currency",
       "type" : "text",
       "default" : "$"
     }, {
       "id" : "option_two.option_two_table.option_two_price",
       "name" : "option_two_price",
-      "label" : "Option 2 Price",
+      "label" : "Option 2 price",
       "display" : "text",
       "step" : 1,
       "type" : "number",
@@ -143,13 +140,13 @@
     }, {
       "id" : "option_two.option_two_table.option_two_text",
       "name" : "option_two_button_text",
-      "label" : "Option 2 Button Text",
+      "label" : "Option 2 button text",
       "type" : "text",
       "default" : "Sign Up"
     }, {
       "id" : "option_two.option_two_table.option_two_link",
       "name" : "option_two_button_link",
-      "label" : "Option 2 Button Link",
+      "label" : "Option 2 button link",
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
       "type" : "link",
       "default" : {
@@ -164,7 +161,7 @@
     }, {
       "id" : "option_two.option_two_table.option_two_description",
       "name" : "option_two_description",
-      "label" : "Year Description",
+      "label" : "Option 2 description",
       "type" : "richtext",
       "default" : "<p><strong>Free Unlimited</strong> Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
       } ],
@@ -218,9 +215,9 @@
       "type" : "boolean",
       "default" : false
     }, {
-      "id" : "style.price_table_header_bg_color",
-      "name" : "price_table_header_bg_color",
-      "label" : "Price Table Header Background Color",
+      "id" : "style.pricing_table_header_bg_color",
+      "name" : "pricing_table_header_bg_color",
+      "label" : "Pricing table header background color",
       "required" : true,
       "visibility" : {
         "controlling_field" : "style.override_default_style",
@@ -236,9 +233,9 @@
       }
     },
     {
-      "id" : "style.price_table_header_color",
-      "name" : "price_table_header_color",
-      "label" : "Price Table Header Color",
+      "id" : "style.pricing_table_header_color",
+      "name" : "pricing_table_header_color",
+      "label" : "Pricing table header color",
       "required" : true,
       "visibility" : {
         "controlling_field" : "style.override_default_style",

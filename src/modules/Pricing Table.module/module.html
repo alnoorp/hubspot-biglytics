@@ -79,15 +79,15 @@
 </section>
 
 {% if module.style.override_default_style %}
-    {% require_css %}
-        <style>
-            pricing-table_{{ name }} .price-block__header {
-                background-color: rgba({{ module.style.price_table_header_bg_color.color|convert_rgb }},{{ module.style.price_table_header_bg_color.opacity }});
-                color: rgba({{ module.style.price_table_header_color.color|convert_rgb }},{{ module.style.price_table_header_color.opacity }});
-            }
-            pricing-table_{{ name }} .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
-                border-color: rgba({{ module.style.price_table_header_bg_color.color|convert_rgb }},{{ module.style.price_table_header_bg_color.opacity }});
-            }
-        </style>
-    {% end_require_css %}
+{% require_css %}
+<style>
+    #pricing-table_{{ name }} .price-block__header {
+        background-color: rgba({{ module.style.pricing_table_header_bg_color.color|convert_rgb }},{{ module.style.pricing_table_header_bg_color.opacity * 0.01 }});
+        color: rgba({{ module.style.pricing_table_header_color.color|convert_rgb }},{{ module.style.pricing_table_header_color.opacity * 0.01 }});
+    }
+    #pricing-table_{{ name }} .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
+        border-color: rgba({{ module.style.pricing_table_header_bg_color.color|convert_rgb }},{{ module.style.pricing_table_header_bg_color.opacity * 0.01 }});
+    }
+</style>
+{% end_require_css %}
 {% endif %}
