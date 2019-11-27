@@ -1,4 +1,5 @@
 /* Footer Container */
+
 .footer {
   background-color: {{ get_theme_style_setting('footer_group.footer.footer_bg_color.color') }};
 }
@@ -34,11 +35,13 @@
 }
 
 /* Footer Logo */
+
 .footer__logo {
   margin-bottom: 60px;
 }
 
 /* Footer Social Follow */
+
 .footer__follow-me .social-links {
   border-color: {{ get_theme_style_setting('footer_group.footer.footer_content_color.color') }};
 }
@@ -60,6 +63,7 @@
 }
 
 /* Footer Menus */
+
 .footer,
 .footer h4,
 .footer a {

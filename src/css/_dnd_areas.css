@@ -1,4 +1,5 @@
 /* Drag and Drop Section */
+
 .dnd-section {
   padding-bottom: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
   padding-left: 20px;

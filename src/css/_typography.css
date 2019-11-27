@@ -10,6 +10,7 @@ body {
 }
 
 /* Paragraphs */
+
 p {
   font-size: 1rem;
   margin: 0 0 1.4rem;
@@ -20,6 +21,7 @@ strong {
 }
 
 /* Links */
+
 a {
   color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
   cursor: pointer;
@@ -34,6 +36,7 @@ a:active {
 }
 
 /* Headings */
+
 h1,
 h2,
 h3,
@@ -107,6 +110,7 @@ h6 {
 }
 
 /* Lists */
+
 ul,
 ol {
   list-style-position: inside;
@@ -129,11 +133,13 @@ ol ol {
 }
 
 /* Code Blocks */
+
 code {
   vertical-align: bottom;
 }
 
 /* Blockquotes */
+
 blockquote {
   border-left-color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   border-left-style: solid;
@@ -146,14 +152,16 @@ blockquote {
 }
 
 /* Horizontal Rules */
+
 hr {
-  background-color: #d0d0d0;
+  background-color: #D0D0D0;
   border: none;
-  color: #d0d0d0;
+  color: #D0D0D0;
   height: 1px;
 }
 
 /* Subscripts and Superscripts */
+
 sup,
 sub {
   font-size: 75%;
