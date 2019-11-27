@@ -1,4 +1,4 @@
-<div class="pricing-table" id="{{ name }}">
+<section class="pricing-table" id="pricing-table_{{ name }}">
 
     {# Pricing Filters #}
     <div class="billing-selectors">
@@ -9,9 +9,9 @@
     {# Pricing Table Blocks #}
     <div class="pricing-block-section">
 
-        {# Monthly Block #}   
-        {% for option in module.option_one.option_one_table %} 
-            <div class="price-block price-block--monthly price-block--{{ loop.length }}">
+        {# Monthly Block #}
+        {% for option in module.option_one.option_one_table %}
+            <section class="price-block price-block--monthly price-block--{{ loop.length }}">
                 <div class="price-block__header">
                     <div class="price-block__title">{{ option.option_one_title }}</div>
                     <div class="price-block__price">
@@ -38,13 +38,13 @@
                         {{ option.option_one_button_text }}
                         </a>
                     </div>
-                </div>   
-            </div>
+                </div>
+            </section>
         {% endfor %}
-        
+
         {# Yearly Block #}
         {% for option in module.option_two.option_two_table %}
-            <div class="price-block price-block--annual price-block--{{ loop.length }}">
+            <section class="price-block price-block--annual price-block--{{ loop.length }}">
                 <div class="price-block__header">
                     <div class="price-block__title">{{ option.option_two_title }}</div>
                     <div class="price-block__price">
@@ -72,20 +72,22 @@
                         </a>
                     </div>
                 </div>
-            </div> 
+            </section>
         {% endfor %}
 
     </div>
-</div>
+</section>
 
-{% require_css %}
-<style>
-    #hs_cos_wrapper_{{name}} .price-block__header {
-        background-color: {{ module.price_table_header_bg_color.color }}; 
-        color: {{ module.price_table_header_color.color }};
-    }
-    #hs_cos_wrapper_{{name}} .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
-        border: 6px solid {{ module.price_table_header_bg_color.color }};
-    }
-</style>
-{% end_require_css %}
+{% if module.style.override_default_style %}
+    {% require_css %}
+        <style>
+            pricing-table_{{ name }} .price-block__header {
+                background-color: rgba({{ module.style.price_table_header_bg_color.color|convert_rgb }},{{ module.style.price_table_header_bg_color.opacity }});
+                color: rgba({{ module.style.price_table_header_color.color|convert_rgb }},{{ module.style.price_table_header_color.opacity }});
+            }
+            pricing-table_{{ name }} .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
+                border-color: rgba({{ module.style.price_table_header_bg_color.color|convert_rgb }},{{ module.style.price_table_header_bg_color.opacity }});
+            }
+        </style>
+    {% end_require_css %}
+{% endif %}

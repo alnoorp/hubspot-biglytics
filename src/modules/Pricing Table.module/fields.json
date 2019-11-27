@@ -1,13 +1,16 @@
 [ {
+  "id" : "option_one",
   "name" : "option_one",
-  "label" : "Pricing Option 1",
+  "label" : "Pricing option 1",
   "help_text" : "Add a Pricing Option",
   "children" : [ {
+    "id" : "option_one.billing_option_one_title",
     "name" : "billing_option_one_title",
-    "label" : "Billing Option 1 Title",
+    "label" : "Billing option 1 title",
     "type" : "text",
     "default" : "Monthly Billing"
   }, {
+    "id" : "option_one.option_one_table",
     "name" : "option_one_table",
     "label" : "Option 1 Table",
     "occurrence" : {
@@ -16,16 +19,19 @@
       "default" : 3
     },
     "children" : [ {
+      "id" : "option_one.option_one_table.option_one_title",
       "name" : "option_one_title",
       "label" : "Option 1 Title",
       "type" : "text",
       "default" : "Starter"
     }, {
+      "id" : "option_one.option_one_table.option_one_currency",
       "name" : "option_one_currency",
       "label" : "Option 1 Currency",
       "type" : "text",
       "default" : "$"
     }, {
+      "id" : "option_one.option_one_table.option_one_price",
       "name" : "option_one_price",
       "label" : "Option 1 Price",
       "display" : "text",
@@ -33,11 +39,13 @@
       "type" : "number",
       "default" : 25
     }, {
+      "id" : "option_one.option_one_table.option_one_text",
       "name" : "option_one_button_text",
       "label" : "Option 1 Button Text",
       "type" : "text",
       "default" : "Sign Up"
     }, {
+      "id" : "option_one.option_one_table.option_one_link",
       "name" : "option_one_button_link",
       "label" : "Option 1 Button Link",
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
@@ -52,6 +60,7 @@
            "no_follow" : false
       }
     }, {
+      "id" : "option_one.option_one_table.option_one_description",
       "name" : "option_one_description",
       "label" : "Option 1 Description",
       "type" : "richtext",
@@ -92,6 +101,7 @@
       } ]
     }
 }, {
+  "id" : "option_two",
   "name" : "option_two",
   "label" : "Pricing Option 2",
   "help_text" : "Add a Pricing Option",
@@ -101,6 +111,7 @@
     "type" : "text",
     "default" : "Annual Billing Save 15%"
   }, {
+    "id" : "option_two.option_two_table",
     "name" : "option_two_table",
     "label" : "Option 2 Table",
     "occurrence" : {
@@ -109,17 +120,20 @@
       "default" : 3
     },
     "children" : [ {
+      "id" : "option_two.option_two_table.option_two_title",
       "name" : "option_two_title",
       "label" : "Option 2 Title",
       "help_text" : "Add a Price Title",
       "type" : "text",
       "default" : "Standard"
     }, {
+      "id" : "option_two.option_two_table.option_two_currency",
       "name" : "option_two_currency",
       "label" : "Option 2 Currency",
       "type" : "text",
       "default" : "$"
     }, {
+      "id" : "option_two.option_two_table.option_two_price",
       "name" : "option_two_price",
       "label" : "Option 2 Price",
       "display" : "text",
@@ -127,11 +141,13 @@
       "type" : "number",
       "default" : 25
     }, {
+      "id" : "option_two.option_two_table.option_two_text",
       "name" : "option_two_button_text",
       "label" : "Option 2 Button Text",
       "type" : "text",
       "default" : "Sign Up"
     }, {
+      "id" : "option_two.option_two_table.option_two_link",
       "name" : "option_two_button_link",
       "label" : "Option 2 Button Link",
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
@@ -146,6 +162,7 @@
            "no_follow" : false
       }
     }, {
+      "id" : "option_two.option_two_table.option_two_description",
       "name" : "option_two_description",
       "label" : "Year Description",
       "type" : "richtext",
@@ -185,24 +202,55 @@
         "option_two_description" : "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
       } ]
     }
-  },
-  {
-    "name" : "price_table_header_bg_color",
-    "label" : "Price Table Header Background Color",
-    "required" : true,
-    "type" : "color",
-    "default" : {
-       "color" : "#34b5e5",
-       "opacity" : 100
-    }
-  },
-  {
-    "name" : "price_table_header_color",
-    "label" : "Price Table Header Color",
-    "required" : true,
-    "type" : "color",
-    "default" : {
-       "color" : "#ffffff",
-       "opacity" : 100
-    }
-  } ]
+  }, {
+    "id" : "style",
+    "name" : "style",
+    "label" : "Style options",
+    "required" : false,
+    "locked" : false,
+    "type" : "group",
+    "children" : [ {
+      "id" : "style.override_default_style",
+      "name" : "override_default_style",
+      "label" : "Override default style",
+      "required" : true,
+      "locked" : false,
+      "type" : "boolean",
+      "default" : false
+    }, {
+      "id" : "style.price_table_header_bg_color",
+      "name" : "price_table_header_bg_color",
+      "label" : "Price Table Header Background Color",
+      "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+         "color" : "#34B5E5",
+         "opacity" : 100
+      }
+    },
+    {
+      "id" : "style.price_table_header_color",
+      "name" : "price_table_header_color",
+      "label" : "Price Table Header Color",
+      "required" : true,
+      "visibility" : {
+        "controlling_field" : "style.override_default_style",
+        "controlling_value_regex" : "true",
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "type" : "color",
+      "default" : {
+         "color" : "#FFFFFF",
+         "opacity" : 100
+      }
+    } ]
+} ]
