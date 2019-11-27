@@ -31,7 +31,7 @@
           {% module_attribute "html" %}
             <div style="text-align: center">
               <h1>Perfect Saves Time.</h1>
-              <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+              <p>Leverage the intuitive super awesome software that saves you time and will help grow your business.</p>
             </div>
           {% end_module_attribute %}
           {% end_dnd_module %}
@@ -39,7 +39,7 @@
         {% dnd_row %}
           {% dnd_module path="../modules/Button",
             flexbox_positioning="MIDDLE_CENTER",
-            link="#",
+            button_link="#",
             button_text="Free Trial"
           %}
           {% end_dnd_module %}
@@ -61,7 +61,7 @@
           {% dnd_module path="@hubspot/header",
             flexbox_positioning="MIDDLE_CENTER",
             header_tag="h2",
-            value="Headlines and Mission Statements for Days"
+            value="Get More Leads For Your Business Today"
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
@@ -81,10 +81,10 @@
               {% dnd_module
                 path="../modules/Icon",
                 flexbox_positioning="MIDDLE_CENTER",
-                icon={
+                icon_type={
                     "name": "clock",
-                    "type": "REGULAR",
-                    "unicode": "f017"
+                    "unicode": "f017",
+                    "type": "REGULAR"
                 }
               %}
               {% end_dnd_module %}
@@ -94,7 +94,7 @@
                   {% module_attribute "html" %}
                   <div style="text-align: center;">
                       <h3>Quick and Simple</h3>
-                      <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+                      <p>Our product is incredibly easy to get set up and with our self-paced training you can get started in under 5 minutes.</p>
                   </div>
                   {% end_module_attribute %}
               {% end_dnd_module %}
@@ -108,10 +108,10 @@
               {% dnd_module
                 path="../modules/Icon",
                 flexbox_positioning="MIDDLE_CENTER",
-                icon={
-                    "name": "cloud",
+                icon_type={
+                    "name": "book",
                     "type": "SOLID",
-                    "unicode": "foc2"
+                    "unicode": "f02d"
                 }
               %}
               {% end_dnd_module %}
@@ -120,8 +120,8 @@
               {% dnd_module path="@hubspot/rich_text" %}
                   {% module_attribute "html" %}
                   <div style="text-align: center;">
-                      <h3>Library of Assets</h3>
-                      <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+                      <h3>Customizable Templates</h3>
+                      <p>We've created an entire library of easy to use templates so you can find the best fit for your company.</p>
                   </div>
                   {% end_module_attribute %}
               {% end_dnd_module %}
@@ -135,10 +135,10 @@
               {% dnd_module
                 path='../modules/Icon',
                 flexbox_positioning="MIDDLE_CENTER",
-                icon={
-                    "name": "mobile-alt",
+                icon_type={
+                    "name": "user",
                     "type": "SOLID",
-                    "unicode": "f3cd"
+                    "unicode": "f007"
                 }
               %}
               {% end_dnd_module %}
@@ -147,8 +147,8 @@
               {% dnd_module path="@hubspot/rich_text" %}
                   {% module_attribute "html" %}
                   <div style="text-align: center;">
-                      <h3>Responsive Design</h3>
-                      <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+                      <h3>24/7 Support</h3>
+                      <p>We have someone available at all hours to help answer your questions so that you never get stuck.</p>
                   </div>
                   {% end_module_attribute %}
               {% end_dnd_module %}
@@ -190,12 +190,12 @@
             {% dnd_module path="@hubspot/rich_text" %}
               {% module_attribute "html" %}
                 <div>
-                  <h2 style="color: #fff;">Full Control</h2>
-                  <p style="color: #fff;">Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
-                  <ul style="color: #fff;">
-                    <li>Something awesome here</li>
-                    <li>Something awesome here</li>
-                    <li>Something awesome here</li>
+                  <h2 style="color: #FFFFFF;">How It Works</h2>
+                  <p style="color: #FFFFFF;">We have plenty of resources to help you get learn about our products and services including:</p>
+                  <ul style="color: #FFFFFF;">
+                    <li>Our blog</li>
+                    <li>Our webinars</li>
+                    <li>A free 15 day trial</li>
                   </ul>
                 </div>
               {% end_module_attribute %}
@@ -205,8 +205,8 @@
             {% dnd_module
               path="../modules/Button",
               flexbox_positioning='MIDDLE_LEFT',
-              link="#",
-              button_text="Free Trial"
+              button_link="#",
+              button_text="Learn More"
             %}
             {% end_dnd_module %}
           {% end_dnd_row %}
@@ -229,8 +229,8 @@
             %}
               {% module_attribute "html" %}
                 <div style="text-align: center">
-                  <h2>All the Stats</h2>
-                  <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+                  <h2>Service That Stands Out</h2>
+                  <p>We strive towards always providing our customers with the best customer service possible</p>
                 </div>
               {% end_module_attribute %}
             {% end_dnd_module %}
@@ -244,7 +244,7 @@
               statistic_number="10",
               statistic_unit="k",
               statistic_percentage="50",
-              statistic_description="<p>Awards won for excellence</p>"
+              statistic_description="<p>Happy customers</p>"
             %}
             {% end_dnd_module %}
             {% dnd_module
@@ -263,9 +263,10 @@
               offset=6,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
-              statistic_number="1,211",
-              statistic_percentage="75",
-              statistic_description="<p>Custom configurations</p>"
+              statistic_number="54",
+              statistic_unit="k",
+              statistic_percentage="72",
+              statistic_description="<p>Solved support tickets</p>"
             %}
             {% end_dnd_module %}
             {% dnd_module
@@ -273,10 +274,10 @@
               offset=9,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
-              statistic_number="36",
-              statistic_unit="m",
-              statistic_percentage="100",
-              statistic_description="<p>Downloads of Perfect in 2018</p>"
+              statistic_number="85",
+              statistic_unit="",
+              statistic_percentage="85",
+              statistic_description="<p>Average customer score</p>"
             %}
             {% end_dnd_module %}
           {% end_dnd_row %}
@@ -306,7 +307,7 @@
           %}
             {% module_attribute "html" %}
               <div style="text-align: center;">
-                <h2 style="color: #ffffff;">What People Are Saying ...</h2>
+                <h2 style="color: #FFFFFF;">What People Are Saying</h2>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
@@ -317,9 +318,11 @@
             offset=0,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
+            testimonial_title="Wow, this is amazing!",
+            testimonial_name="Jim Robbins"
             testimonial_image={
-                "src": get_asset_url("../images/alan.png"),
-                "alt": "Alan Dixon"
+                "src": get_asset_url("../images/jim.png"),
+                "alt": "Jim Robbins"
             }
           %}
           {% end_dnd_module %}
@@ -328,9 +331,11 @@
             offset=4,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
+            testimonial_title="Awesome product!",
+            testimonial_name="Dawn Doe"
             testimonial_image={
-                "src": get_asset_url("../images/alan.png"),
-                "alt": "Alan Dixon"
+                "src": get_asset_url("../images/dawn.png"),
+                "alt": "Dawn Doe"
             }
           %}
           {% end_dnd_module %}
@@ -339,6 +344,8 @@
             offset=8,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
+            testimonial_title="Incredible support!",
+            testimonial_name="Alan Dixon"
             testimonial_image={
                 "src": get_asset_url("../images/alan.png"),
                 "alt": "Alan Dixon"
@@ -372,7 +379,7 @@
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
-          "alt": "Sample logo",
+          "alt": "HubSpot logo",
           "size_type": "auto"
         }
       %}
@@ -385,7 +392,7 @@
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
-          "alt": "Sample logo",
+          "alt": "HubSpot logo",
           "size_type": "auto"
         }
       %}
@@ -398,7 +405,7 @@
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
-          "alt": "Sample logo",
+          "alt": "HubSpot logo",
           "size_type": "auto"
         }
       %}
@@ -411,7 +418,7 @@
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
-          "alt": "Sample logo",
+          "alt": "HubSpot logo",
           "size_type": "auto"
         }
       %}
@@ -424,7 +431,7 @@
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
-          "alt": "Sample logo",
+          "alt": "HubSpot logo",
           "size_type": "auto"
         }
       %}
@@ -447,8 +454,8 @@
           %}
           {% module_attribute "html" %}
             <div style="text-align: center;">
-              <h2 style="color: #ffffff;">Easy and Simple to Use for All Levels.</h2>
-              <p style="color: #ffffff;">Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+              <h2 style="color: #FFFFFF;">Easy and Simple to Use for All Levels.</h2>
+              <p style="color: #FFFFFF;">Leverage the intuitive super awesome software that saves you time and will help grow your business.</p>
             </div>
           {% end_module_attribute %}
           {% end_dnd_module %}
@@ -456,7 +463,7 @@
         {% dnd_row %}
           {% dnd_module path="../modules/Button",
             flexbox_positioning="MIDDLE_CENTER",
-            link="#",
+            button_link="#",
             button_text="Free Trial"
           %}
           {% end_dnd_module %}
