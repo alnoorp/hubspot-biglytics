@@ -2,16 +2,19 @@
   "id" : "option_one",
   "name" : "option_one",
   "label" : "Pricing option 1",
+  "required" : true,
   "children" : [ {
     "id" : "option_one.billing_option_one_title",
     "name" : "billing_option_one_title",
     "label" : "Pricing option 1 title",
+    "required" : true,
     "type" : "text",
     "default" : "Monthly Billing"
   }, {
     "id" : "option_one.option_one_table",
     "name" : "option_one_table",
     "label" : "Option 1 table",
+    "required" : true,
     "occurrence" : {
       "min" : 1,
       "max" : 4,
@@ -21,18 +24,21 @@
       "id" : "option_one.option_one_table.option_one_title",
       "name" : "option_one_title",
       "label" : "Option 1 title",
+      "required" : true,
       "type" : "text",
       "default" : "Starter"
     }, {
       "id" : "option_one.option_one_table.option_one_currency",
       "name" : "option_one_currency",
       "label" : "Option 1 currency",
+      "required" : true,
       "type" : "text",
       "default" : "$"
     }, {
       "id" : "option_one.option_one_table.option_one_price",
       "name" : "option_one_price",
       "label" : "Option 1 price",
+      "required" : true,
       "display" : "text",
       "step" : 1,
       "type" : "number",
@@ -41,12 +47,14 @@
       "id" : "option_one.option_one_table.option_one_text",
       "name" : "option_one_button_text",
       "label" : "Option 1 button text",
+      "required" : true,
       "type" : "text",
       "default" : "Sign Up"
     }, {
       "id" : "option_one.option_one_table.option_one_link",
       "name" : "option_one_button_link",
       "label" : "Option 1 button link",
+      "required" : true,
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
       "type" : "link",
       "default" : {
@@ -62,6 +70,7 @@
       "id" : "option_one.option_one_table.option_one_description",
       "name" : "option_one_description",
       "label" : "Option 1 description",
+      "required" : true,
       "type" : "richtext",
       "default" : "<p><strong>Free Unlimited</strong> Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
       } ],
@@ -103,15 +112,19 @@
   "id" : "option_two",
   "name" : "option_two",
   "label" : "Pricing option 2",
+  "required" : true,
   "children" : [ {
+    "id" : "option_two.billing_option_two_title",
     "name" : "billing_option_two_title",
     "label" : "Pricing option 2 title",
+    "required" : true,
     "type" : "text",
     "default" : "Annual Billing Save 15%"
   }, {
     "id" : "option_two.option_two_table",
     "name" : "option_two_table",
     "label" : "Option 2 table",
+    "required" : true,
     "occurrence" : {
       "min" : 1,
       "max" : 4,
@@ -121,18 +134,21 @@
       "id" : "option_two.option_two_table.option_two_title",
       "name" : "option_two_title",
       "label" : "Option 2 title",
+      "required" : true,
       "type" : "text",
       "default" : "Standard"
     }, {
       "id" : "option_two.option_two_table.option_two_currency",
       "name" : "option_two_currency",
       "label" : "Option 2 currency",
+      "required" : true,
       "type" : "text",
       "default" : "$"
     }, {
       "id" : "option_two.option_two_table.option_two_price",
       "name" : "option_two_price",
       "label" : "Option 2 price",
+      "required" : true,
       "display" : "text",
       "step" : 1,
       "type" : "number",
@@ -141,12 +157,14 @@
       "id" : "option_two.option_two_table.option_two_text",
       "name" : "option_two_button_text",
       "label" : "Option 2 button text",
+      "required" : true,
       "type" : "text",
       "default" : "Sign Up"
     }, {
       "id" : "option_two.option_two_table.option_two_link",
       "name" : "option_two_button_link",
       "label" : "Option 2 button link",
+      "required" : true,
       "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
       "type" : "link",
       "default" : {
@@ -162,6 +180,7 @@
       "id" : "option_two.option_two_table.option_two_description",
       "name" : "option_two_description",
       "label" : "Option 2 description",
+      "required" : true,
       "type" : "richtext",
       "default" : "<p><strong>Free Unlimited</strong> Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
       } ],
@@ -203,15 +222,13 @@
     "id" : "style",
     "name" : "style",
     "label" : "Style options",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "type" : "group",
     "children" : [ {
       "id" : "style.override_default_style",
       "name" : "override_default_style",
       "label" : "Override default style",
       "required" : true,
-      "locked" : false,
       "type" : "boolean",
       "default" : false
     }, {

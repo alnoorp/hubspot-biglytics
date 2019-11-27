@@ -6,15 +6,15 @@
 
 {# Appends a navigation item to the pillar menu #}
 {% require_js %}
-  <script>
-    (function() {
-      var navMenu = document.getElementById("pillar-navigation__menu-items");
-      if (navMenu) {
-        var navChild = document.createElement("li");
-        navChild.className = "pillar-navigation__menu-item";
-        navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.pillar_section_title|escape }}</a>';
-        navMenu.appendChild(navChild);
-      }
-    })();
-  </script>
+<script>
+  (function() {
+    var navMenu = document.getElementById("pillar-navigation__menu-items");
+    if (navMenu) {
+      var navChild = document.createElement("li");
+      navChild.className = "pillar-navigation__menu-item";
+      navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.pillar_section_title|escape }}</a>';
+      navMenu.appendChild(navChild);
+    }
+  })();
+</script>
 {% end_require_js %}
