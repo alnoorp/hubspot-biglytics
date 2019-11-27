@@ -1,4 +1,5 @@
 /* Error Pages */
+
 .error-page {
   padding: 10rem 0;
   position: relative;
@@ -32,6 +33,7 @@
 }
 
 /* System Pages */
+
 .systems-page {
   padding: 3rem 20px;
 }
@@ -56,12 +58,13 @@
 }
 
 /* Search Pages */
+
 .hs-search-field__bar {
   position: relative;
 }
 
 .hs-search-field__suggestions {
-  background-color: #fff;
+  background-color: #FFFFFF;
   max-width: 360px;
   position: absolute;
   right: 0;

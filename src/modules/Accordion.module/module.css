@@ -3,6 +3,9 @@
 }
 
 .accordion__item button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     background-color: transparent;
     border: 0 none;
     border-bottom: 1px solid #D0D0D0;
@@ -14,7 +17,6 @@
     padding: 1.5em 3em 1.5em 1em;
     position: relative;
     text-align: left;
-    -webkit-appearance: none;
     width: 100%;
 }
 

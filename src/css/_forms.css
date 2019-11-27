@@ -1,17 +1,19 @@
 /* Form */
+
 form {
   background-color: {{ get_theme_style_setting('forms_group.forms.form_bg_color.color') }};
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
   border-color: {{ get_theme_style_setting('forms_group.forms.form_border_color.color') }};
   border-style: solid;
   border-width: 1px;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
   font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
   max-width: 500px;
   padding: 2.6rem;
 }
 
 /* Form Title */
+
 h3.form-title {
   background-color: {{ get_theme_style_setting('forms_group.forms.form_header_bg_color.color') }};
   border-top-left-radius: 4px;
@@ -24,6 +26,7 @@ h3.form-title {
 }
 
 /* Form Button */
+
 .hs-button,
 .button__primary {
   background-color: {{ get_theme_style_setting('buttons_group.buttons.button_bg_color.color') }};
@@ -67,29 +70,33 @@ form .hs-button {
 }
 
 /* Form Labels */
+
 .hs-form label {
-  font-size: 1rem;
   color: {{ get_theme_style_setting('forms_group.forms.form_label_color.color') }};
   display: block;
   float: none;
-  width: auto;
-  text-align: left;
-  padding-top: 0;
+  font-size: 1rem;
   margin-bottom: 4px;
+  padding-top: 0;
+  text-align: left;
+  width: auto;
 }
 
 /* Form Help Text */
+
 .hs-form legend {
   color: {{ get_theme_style_setting('forms_group.forms.form_help_text_color.color') }};
 }
 
 /* Form Error Messages */
+
 .hs-error-msgs label {
+  color: #EF6B51;
   margin-top: 0.5rem;
-  color: #ef6b51;
 }
 
 /* Form Fields */
+
 form .input {
   position: relative;
 }
@@ -97,10 +104,10 @@ form .input {
 form input,
 form select,
 form textarea {
-  border-width: 1px;
-  border-style: solid;
+  background-color: #FFFFFF;
   border-color: {{ get_theme_style_setting('forms_group.forms.form_field_border_color.color') }};
-  background-color: #fff;
+  border-style: solid;
+  border-width: 1px;
   color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   display: inline-block;
   padding: 0.75rem;
@@ -110,56 +117,50 @@ form textarea {
 form input:focus,
 form select:focus,
 form textarea:focus {
-  outline: none;
   border-color: {{ get_theme_style_setting('forms_group.forms.form_field_focus_border_color.color') }};
   border-width: 1px;
+  outline: none;
 }
 
 input[type=checkbox],
 input[type=radio] {
-  cursor: pointer;
-  width: auto;
-  height: auto;
-  padding: 0;
-  margin: 3px 5px 3px 0px;
-  line-height: normal;
   border: none;
+  cursor: pointer;
+  height: auto;
+  line-height: normal;
+  margin: 3px 5px 3px 0;
+  padding: 0;
+  width: auto;
 }
 
 input[type=file] {
   background-color: transparent;
-  border: 0px;
-  padding: initial;
   border: initial;
-  line-height: initial;
   box-shadow: none;
+  line-height: initial;
+  padding: initial;
 }
 
 .hs-dropdown .input:after {
   content: "\25BE";
-  position: absolute;
-  top: 50%;
-  right: 15px;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   pointer-events: none;
-  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
 }
 
 .hs-date_picker .input .hs-dateinput:before {
+  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   content:"\01F4C5";
   position: absolute;
-  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
   right: 10px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
 }
 
 .fn-date-picker .pika-table thead th {
@@ -167,17 +168,17 @@ input[type=file] {
 }
 
 .fn-date-picker td.is-today .pika-button {
-  color: #34b5e5;
+  color: #34B5E5;
 }
 
 .fn-date-picker td.is-selected .pika-button {
-  background: #34b5e5;
-  box-shadow: none;
+  background: #34B5E5;
   border-radius: 0;
+  box-shadow: none;
 }
 
 .fn-date-picker td .pika-button:hover {
-  background-color: #c168c2 !important;
+  background-color: #C168C2 !important;
   border-radius: 0 !important;
 }
 
@@ -204,7 +205,6 @@ select[multiple].hs-input {
   height: inherit;
 }
 
-/* Force single column fields to full width inside of fieldsets */
 fieldset.form-columns-1 .hs-input:not([type=radio]):not([type=checkbox]) {
   width: 100% !important;
 }
@@ -215,15 +215,16 @@ div.field.error textarea,
 div.field.error .chzn-choices,
 textarea.hs-input.error,
 select.hs-input.error {
-  border-color: #ef6b51;
+  border-color: #EF6b51;
 }
+
 input.hs-input.error:focus,
 div.field.error input:focus,
 div.field.error textarea:focus,
 div.field.error .chzn-choices:focus,
 textarea.hs-input.error:focus,
 select.hs-input.error:focus {
-  border-color: #ef6b51;
+  border-color: #EF6b51;
 }
 
 .actions {
@@ -232,25 +233,26 @@ select.hs-input.error:focus {
 
 .inputs-list {
   margin: 0 0 5px;
-  width: 100%;
   padding-left: 0;
+  width: 100%;
 }
+
 .inputs-list > li {
   display: block;
   padding: 0;
-  width: 100%;
   padding-top: 0;
+  width: 100%;
 }
 
 .inputs-list label {
   display: block;
   float: none;
-  width: auto;
-  padding: 0;
+  font-weight: normal;
   line-height: 18px;
+  padding: 0;
   text-align: left;
   white-space: normal;
-  font-weight: normal;
+  width: auto;
 }
 
 .inputs-list:first-child {
@@ -276,7 +278,7 @@ ul.no-list {
 
 .hs-field-desc {
   color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
-  margin: 0px 0px 6px;
+  margin: 0 0 6px;
   font-size: 14px;
 }
 
@@ -285,15 +287,15 @@ ul.no-list {
 }
 
 .hs-richtext {
-  margin-bottom: 3px;
-  line-height: 1.2;
-  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
   color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
+  line-height: 1.2;
+  margin-bottom: 3px;
 }
 
 .hs-richtext hr {
-  text-align: left;
   margin-left: 0;
+  text-align: left;
   width: 91%;
 }
 
@@ -302,8 +304,8 @@ ul.no-list {
 }
 
 .email-correction, .email-validation {
-  padding-top: 3px;
   font-size: 12px;
+  padding-top: 3px;
 }
 
 .email-correction a,
@@ -350,7 +352,6 @@ ul.no-list {
 .hs-form-field select {
   -webkit-appearance: none;
   -moz-appearance: none;
-  -o-appearance: none;
   appearance: none;
 }
 

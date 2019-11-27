@@ -1,54 +1,5 @@
-/* Image Module */
-img {
-    max-width: 100%;
-}
-
-/* Blog CTA Module */
-.cta-banner {
-    background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
-}
-
-.cta-banner__content-column * {
-    color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
-}
-
-/* Social Follow Me and Social Sharing */
-.social-links {
-    border: 2px solid #000;
-    border-radius: 4px;
-    display: inline-block;
-}
-.social-links__icon {
-    border-right: 2px solid #000;
-    box-sizing: border-box;
-    float: left;
-    height: 40px;
-    padding: 10px;
-    text-align: center;
-    width: 42px;
-}
-.social-links__icon:last-child {
-    width: 40px;
-    border-right: 0px;
-}
-.social-links__icon svg {
-    fill: #000;
-    height: 15px;
-    width: auto;
-}
-.social-links__icon:hover {
-    background-color: #000;
-}
-.social-links__icon:hover svg {
-    fill: #fff;
-}
-
-/* Statististic */
-.statistic__info {
-    color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
-}
-
 /* Accordion */
+
 .accordion__item button {
     color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
 }
@@ -73,4 +24,63 @@ img {
 
 .accordion__item[aria-expanded=true] .accordion__icon {
     background-color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
+}
+
+/* Blog CTA Module */
+
+.cta-banner {
+    background-color: {{ get_theme_style_setting('blog_group.blog.blog_cta_bg_color.color') }};
+}
+
+.cta-banner__content-column * {
+    color: {{ get_theme_style_setting('blog_group.blog.blog_cta_text_color.color') }};
+}
+
+/* Image Module */
+
+img {
+    max-width: 100%;
+}
+
+/* Social Follow Me and Social Sharing */
+
+.social-links {
+    border: 2px solid #000000;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.social-links__icon {
+    border-right: 2px solid #000000;
+    box-sizing: border-box;
+    float: left;
+    height: 40px;
+    padding: 10px;
+    text-align: center;
+    width: 42px;
+}
+
+.social-links__icon:last-child {
+    border-right: 0px;
+    width: 40px;
+}
+
+.social-links__icon svg {
+    fill: #000000;
+    height: 15px;
+    width: auto;
+}
+
+.social-links__icon:hover {
+    background-color: #000000;
+}
+
+.social-links__icon:hover svg {
+    fill: #FFFFFF;
+}
+
+/* Statististic */
+
+.statistic__info {
+    color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
 }

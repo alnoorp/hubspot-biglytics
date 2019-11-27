@@ -1,4 +1,5 @@
 /* Table */
+
 table {
   border-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
   border-style: solid;
@@ -13,6 +14,7 @@ tbody + tbody {
 }
 
 /* Table Cells */
+
 th,
 td {
   background-color: {{ get_theme_style_setting('tables_group.tables.table_body_bg_color.color') }};
@@ -25,6 +27,7 @@ td {
 }
 
 /* Table Header */
+
 thead th,
 thead td {
   background-color: {{ get_theme_style_setting('tables_group.tables.table_header_bg_color.color') }};
@@ -33,6 +36,7 @@ thead td {
 }
 
 /* Table Footer */
+
 tfoot td {
   background-color: {{ get_theme_style_setting('tables_group.tables.table_footer_bg_color.color') }};
   color: {{ get_theme_style_setting('tables_group.tables.table_footer_text_color.color') }};
