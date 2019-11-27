@@ -7,8 +7,10 @@
     <div class="footer__top-section">
       <div class="row-fluid span12">
           <div class="column span4">
+
+            {# Logo #}
             <div class="footer__logo">
-              {% module "footer_logo" 
+              {% module "footer_logo"
                 path="@hubspot/logo",
                 img={
                   "override_inherited_src": true,
@@ -19,10 +21,12 @@
                 }
               %}
             </div>
+
+            {# Social Follow #}
             <div class="footer__follow-me">
-              {% module "footer_social" 
+              {% module "footer_social"
                 path="../../modules/Social Follow",
-                social_link=[
+                social_links=[
                   {"social_account": "facebook-f"},
                   {"social_account": "linkedin-in"},
                   {"social_account": "twitter"},
@@ -30,51 +34,66 @@
                 ]
               %}
             </div>
+
           </div>
+
+          {# Footer Navigation Column One #}
           <div class="footer__navigation column span2">
-            {% module "footer_menu_header_one" path="@hubspot/header" header_tag='h4', overrideable=True, value='Menu Title', label='Menu Title Column 1' %}
+            {% module "footer_menu_header_one" path="@hubspot/header" header_tag='h4', overrideable=True, value='About Us', label='Menu Title Column 1' %}
             {% module_block module "footer_menu_one" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 1'  %}
-              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Story", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Team", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Mission", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Vision", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
             {% end_module_block %}
           </div>
+
+          {# Footer Navigation Column Two #}
           <div class="footer__navigation column span2">
-            {% module "footer_menu_header_two" path="@hubspot/header", header_tag='h4', overrideable=True, value='Menu Title', label='Menu Title Column 2' %}
+            {% module "footer_menu_header_two" path="@hubspot/header", header_tag='h4', overrideable=True, value='Work With Us', label='Menu Title Column 2' %}
             {% module_block module "footer_menu_two" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 2'  %}
-              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Products", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Services", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Trainings", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Free Trial", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
             {% end_module_block %}
           </div>
+
+          {# Footer Navigation Column Three #}
           <div class="footer__navigation column span2">
-            {% module "footer_menu_header_three" path="@hubspot/header", header_tag='h4', overrideable=True, value='Menu Title', label='Menu Title Column 3' %}
+            {% module "footer_menu_header_three" path="@hubspot/header", header_tag='h4', overrideable=True, value='Support', label='Menu Title Column 3' %}
             {% module_block module "footer_menu_three" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 3'  %}
-              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Help Center", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Community", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Contact Support", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Live Chat", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
             {% end_module_block %}
           </div>
+
+          {# Footer Navigation Column Four #}
           <div class="footer__navigation column span2">
-            {% module "footer_menu_header_four" path="@hubspot/header", header_tag='h4', overrideable=True, value='Menu Title', label='Menu Title Column 4' %}
+            {% module "footer_menu_header_four" path="@hubspot/header", header_tag='h4', overrideable=True, value='Resources', label='Menu Title Column 4' %}
             {% module_block module "footer_menu_four" path="@hubspot/simple_menu" overrideable=True, orientation='vertical', label='Menu Column 4'  %}
-              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Linked Page", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
+              {% module_attribute "menu_tree" is_json=True %}[{"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Blog", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Webinars", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Podcast", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}, {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "eBooks", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]{% end_module_attribute %}
             {% end_module_block %}
           </div>
+
       </div>
     </div>
     <div class="footer__bottom-section">
       <div class="row-fluid span12">
         <div class="column span3">
-          {% module "footer_copyright" 
+
+          {# Copyright #}
+          {% module "footer_copyright"
             path="@hubspot/text",
             label="Copyright",
             value="Copyright © {{ year }}, {{ site_settings.company_name }}"
           %}
+
         </div>
         <div class="column span9">
+
+          {# Legal Information #}
           {% module_block module "footer_legal_information" path="@hubspot/rich_text" label="Legal Information" %}
             {% module_attribute "html" %}
               <a href="#">Privacy Policy</a> &nbsp;| &nbsp;<a href="#">Terms of Use</a>
             {% end_module_attribute %}
           {% end_module_block %}
+
         </div>
       </div>
     </div>
   </div>
 </footer>
-  
