@@ -13,7 +13,7 @@
 {% require_css %}
 <style>
   #testimonial_{{ name }}:hover {
-    border-color: rgba({{ module.style.testimonial_hover_accent_color.color|convert_rgb }},{{ module.style.testimonial_hover_accent_color.opacity }});
+    border-color: rgba({{ module.style.testimonial_hover_accent_color.color|convert_rgb }},{{ module.style.testimonial_hover_accent_color.opacity * 0.01 }});
   }
 </style>
 {% end_require_css %}

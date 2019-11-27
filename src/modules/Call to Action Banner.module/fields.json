@@ -1,7 +1,8 @@
 [ {
   "id" : "cta_image",
-  "name" : "cta_image",
-  "label" : "Call to action image",
+  "name" : "cta_banner_image",
+  "label" : "Call to action banner image",
+  "required" : true,
   "responsive" : true,
   "resizable" : true,
   "type" : "image",
@@ -12,22 +13,23 @@
   }
 }, {
   "id" : "cta_content",
-  "name" : "cta_content",
-  "label" : "Call to action content",
+  "name" : "cta_banner_content",
+  "label" : "Call to action banner content",
+  "required" : true,
   "type" : "richtext",
   "default" : null
 }, {
-  "id" : "cta",
-  "name" : "cta",
-  "label" : "Call to action",
+  "id" : "cta_button",
+  "name" : "cta_button",
+  "label" : "Call to action button",
+  "required" : true,
   "type" : "cta",
   "default" : null
 }, {
   "id" : "style",
   "name" : "style",
   "label" : "Style options",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "type" : "group",
   "children" : [ {
     "id" : "style.override_default_style",
@@ -39,10 +41,9 @@
     "default" : false
   }, {
     "id" : "style.cta_background_color",
-    "name" : "cta_bg_color",
-    "label" : "Call to action background color",
-    "required" : false,
-    "locked" : false,
+    "name" : "cta_banner_bg_color",
+    "label" : "Call to action banner background color",
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",
@@ -57,10 +58,9 @@
     }
   }, {
     "id" : "style.cta_text_color",
-    "name" : "cta_text_color",
-    "label" : "Call to action text color",
-    "required" : false,
-    "locked" : false,
+    "name" : "cta_banner_text_color",
+    "label" : "Call to action banner text color",
+    "required" : true,
     "visibility" : {
       "controlling_field" : "style.override_default_style",
       "controlling_value_regex" : "true",

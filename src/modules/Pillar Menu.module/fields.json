@@ -3,15 +3,14 @@
     "id" : "pillar_menu_title",
     "name" : "pillar_menu_title",
     "label" : "Pillar menu title",
-    "required" : false,
+    "required" : true,
     "type" : "text",
     "default" : "Table of Contents"
   }, {
     "id" : "style",
     "name" : "style",
     "label" : "Style options",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "type" : "group",
     "children" : [ {
       "id" : "style.override_default_style",
@@ -25,8 +24,7 @@
       "id" : "style.pillar_menu_border_color",
       "name" : "pillar_menu_border_color",
       "label" : "Pillar menu border color",
-      "required" : false,
-      "locked" : false,
+      "required" : true,
       "visibility" : {
         "controlling_field" : "style.override_default_style",
         "controlling_value_regex" : "true",
