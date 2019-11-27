@@ -11,8 +11,8 @@
 <main class="body-container-wrapper">
   {% dnd_area "dnd_area" class="body-container body-container-landing-page", label="Main section" %}
 
-    {# Top Section #}
-    {% dnd_section 
+    {# Top Offer Section #}
+    {% dnd_section
       padding={
         "top": 40,
         "bottom": 40,
@@ -34,25 +34,25 @@
             "right": 0
           }
         %}
-          {% dnd_module path="@hubspot/logo", 
+          {% dnd_module path="@hubspot/logo",
             flexbox_positioning="MIDDLE_CENTER"
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/linked_image",
             offset=0,
             width=4,
             flexbox_positioning="TOP_CENTER",
             img={
               "src": get_asset_url("../images/ebook.png"),
-              "alt": "Ebook",
+              "alt": "Ebook cover",
               "size_type": "auto"
             }
           %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
             offset=4,
             width=4,
@@ -60,13 +60,13 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <h4>Subheader About Ebook</h4>
-                <h2>Title of Ebook Content</h2>
-                <p>Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.</p>
+                <h4>Increase Your Productivity</h4>
+                <h2>10 Things to Save Time</h2>
+                <p>Learn how you can save time and increase productivity by automating your simple daily tasks.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/form",
             offset=8,
             width=4,
@@ -78,65 +78,65 @@
       {% end_dnd_column %}
     {% end_dnd_section %}
 
-    {# Bottom Section #}
+    {# Bottom Offer Description Section #}
     {% dnd_section
       background_color={
         r: 52,
         g: 181,
         b: 229,
-        a: 1.0 
+        a: 1.0
       }
     %}
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module path="@hubspot/rich_text" %}
             {% module_attribute "html" %}
-              <h2 style="color: #fff;">What's Inside?</h2>
+              <h2 style="color: #FFFFFF;">What's Inside?</h2>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
             offset=0,
             width=4
           %}
             {% module_attribute "html" %}
               <div>
-                <ul style="color: #fff;">
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <ul style="color: #FFFFFF;">
+                  <li>A free copy of our extensive eBook guide with tips on how you can increase your productivity by automating your daily tasks.</li>
+                  <li>An exclusive link to our online community so that you can discuss what you learn with a group of like-minded individuals.</li>
                 </ul>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
             offset=4,
             width=4
           %}
             {% module_attribute "html" %}
               <div>
-                <ul style="color: #fff;">
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <ul style="color: #FFFFFF;">
+                  <li>An extended free trial of our software so that you can immediately put some of these tips into action.</li>
+                  <li>Access to our online support chat so that you can ask any questions that you may have after reading through the eBook.</li>
                 </ul>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
-          {% dnd_module 
+          {% dnd_module
             path="@hubspot/rich_text",
             offset=8,
             width=4
           %}
             {% module_attribute "html" %}
               <div>
-                <ul style="color: #fff;">
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <ul style="color: #FFFFFF;">
+                  <li>Links to all of our open resources so that you can continue to learn after reading through this eBook.</li>
+                  <li>A free calendar browser extension so that you can track your progress as you begin to automate your tasks.</li>
                 </ul>
               </div>
-            {% end_module_attribute %} 
+            {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
