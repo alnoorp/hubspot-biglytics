@@ -3,7 +3,9 @@
     border-radius: 4px;
     display: inline-block;
 }
+
 .social-links__icon {
+    background-color: transparent;
     border-right: 2px solid #000;
     box-sizing: border-box;
     float: left;
@@ -12,18 +14,22 @@
     text-align: center;
     width: 42px;
 }
+
 .social-links__icon:last-child {
     border-right: 0;
     width: 40px;
 }
+
 .social-links__icon svg {
     fill: #000;
     height: 15px;
     width: auto;
 }
+
 .social-links__icon:hover {
     background-color: #000;
 }
+
 .social-links__icon:hover svg {
     fill: #fff;
 }

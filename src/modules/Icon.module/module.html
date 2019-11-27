@@ -1,28 +1,23 @@
 <div class="icon" id="icon_{{ name }}">
   <span class="icon__wrapper">
     {% icon
-      name="{{ module.icon.name }}"
-      style="{{ module.icon.type }}"
-      unicode="{{ module.icon.unicode }}"
+      name="{{ module.icon_type.name }}"
+      style="{{ module.icon_type.type }}"
+      unicode="{{ module.icon_type.unicode }}"
     %}
+  </span>
 </div>
 
 {% if module.style.override_default_style %}
-  {% require_css %}
-    <style>
-      #icon_{{ name }} .icon__wrapper {
-          background-color: rgba({{ module.style.icon_bg_color.color|convert_rgb }},{{ module.style.icon_bg_color.opacity }});
-          border-color: rgba({{ module.style.icon_border_color.color|convert_rgb }},{{ module.style.icon_border_color.opacity }});
-      }
-      #icon_{{ name }} .icon__wrapper:hover {
-          background-color: rgba({{ module.style.icon_color.color|convert_rgb }},{{ module.style.icon_color.opacity }});
-      }
-      #icon_{{ name }} svg {
-          fill: rgba({{ module.style.icon_color.color|convert_rgb }},{{ module.style.icon_color.opacity }});
-      }
-      #icon_{{ name }} .icon__wrapper:hover svg {
-          fill: rgba({{ module.style.icon_bg_color.color|convert_rgb }},{{ module.style.icon_bg_color.opacity }});
-      }
-    </style>
-  {% end_require_css %}
+{% require_css %}
+<style>
+  #icon_{{ name }} .icon__wrapper {
+      background-color: rgba({{ module.style.icon_bg_color.color|convert_rgb }},{{ module.style.icon_bg_color.opacity * 0.01 }});
+      border-color: rgba({{ module.style.icon_border_color.color|convert_rgb }},{{ module.style.icon_border_color.opacity * 0.01 }});
+  }
+  #icon_{{ name }} svg {
+      fill: rgba({{ module.style.icon_color.color|convert_rgb }},{{ module.style.icon_color.opacity * 0.01 }});
+  }
+</style>
+{% end_require_css %}
 {% endif %}

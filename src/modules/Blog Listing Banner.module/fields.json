@@ -8,33 +8,29 @@
   "default" : {
     "size_type" : "auto",
     "src" : "",
-    "alt" : null
+    "alt" : ""
   }
 }, {
   "id" : "blog_listing_banner_title",
   "name" : "blog_listing_banner_title",
   "label" : "Blog listing banner title",
-  "type" : "text",
-  "default" : "Perfect Saves Time."
+  "type" : "text"
 }, {
   "id" : "blog_listing_banner_subtitle",
   "name" : "blog_listing_banner_subtitle",
   "label" : "Blog listing banner subtitle",
-  "type" : "text",
-  "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+  "type" : "text"
 }, {
   "id" : "style",
   "name" : "style",
   "label" : "Style options",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "type" : "group",
   "children" : [ {
     "id" : "style.override_default_style",
     "name" : "override_default_style",
     "label" : "Override default style",
     "required" : true,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {

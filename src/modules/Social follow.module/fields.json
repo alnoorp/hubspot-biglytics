@@ -20,9 +20,9 @@
         "default" : "facebook-f"
       },
       {
-        "id" : "social_links.link",
-        "name" : "link",
-        "label" : "Link",
+        "id" : "social_links.social_link",
+        "name" : "social_link",
+        "label" : "Social link",
         "required" : true,
         "supported_types" : ["EXTERNAL", "EMAIL_ADDRESS"],
         "type" : "link",
@@ -77,23 +77,20 @@
     "id" : "style",
     "name" : "style",
     "label" : "Style options",
-    "required" : false,
-    "locked" : false,
+    "required" : true,
     "type" : "group",
     "children" : [ {
       "id" : "style.override_default_style",
       "name" : "override_default_style",
       "label" : "Override default style",
       "required" : true,
-      "locked" : false,
       "type" : "boolean",
       "default" : false
     }, {
       "id" : "style.social_icon_color",
       "name" : "social_icon_color",
-      "label" : "Social Icon Color",
-      "required" : false,
-      "locked" : false,
+      "label" : "Social icon color",
+      "required" : true,
       "visibility" : {
         "controlling_field" : "style.override_default_style",
         "controlling_value_regex" : "true",
@@ -109,9 +106,8 @@
     }, {
       "id" : "style.social_icon_bg_color",
       "name" : "social_icon_bg_color",
-      "label" : "Social Icon Background Color",
-      "required" : false,
-      "locked" : false,
+      "label" : "Social icon background color",
+      "required" : true,
       "visibility" : {
         "controlling_field" : "style.override_default_style",
         "controlling_value_regex" : "true",

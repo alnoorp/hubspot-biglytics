@@ -1,5 +1,5 @@
 .icon {
-    padding: 0px 20px;
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -9,15 +9,8 @@
     border-radius: 100%;
     display: block;
     height: 100px;
-    margin: 0px auto 20px;
-    -webkit-transition: all 0.15s linear;
-    -o-transition: all 0.15s linear;
-    transition: all 0.15s linear;
+    margin: 0 auto 20px;
     width: 100px;
-}
-
-.icon__wrapper:hover {
-    background-color: #34B5E5;
 }
 
 .icon svg {
@@ -25,12 +18,5 @@
     fill: #34B5E5;
     height: 100px;
     padding: 20px;
-    -webkit-transition: all 0.15s linear;
-    -o-transition: all 0.15s linear;
-    transition: all 0.15s linear;
     width: 100px;
-}
-
-.icon__wrapper:hover svg {
-    fill: #FFFFFF;
 }

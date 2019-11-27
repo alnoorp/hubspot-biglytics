@@ -1,6 +1,6 @@
 [ {
-  "id" : "icon",
-  "name" : "icon",
+  "id" : "icon_type",
+  "name" : "icon_type",
   "label" : "Icon",
   "type" : "icon",
   "default" : {
@@ -12,15 +12,13 @@
   "id" : "style",
   "name" : "style",
   "label" : "Style options",
-  "required" : false,
-  "locked" : false,
+  "required" : true,
   "type" : "group",
   "children" : [ {
     "id" : "style.override_default_style",
     "name" : "override_default_style",
     "label" : "Override default style",
     "required" : true,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {

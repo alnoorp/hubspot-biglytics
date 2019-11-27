@@ -1,4 +1,4 @@
-<div class="blog-index-header" id="blog-index-header_{{ name }}" style="background-image: url('{{ module.blog_listing_banner_image.src }}');">
+<section class="blog-index-header" id="blog-index-header_{{ name }}" style="background-image: url('{{ module.blog_listing_banner_image.src }}');">
   <div class="blog-index-header__inner">
     {% if module.blog_listing_banner_title %}
       <h1 class="blog-index-header__title">{{ module.blog_listing_banner_title }}</h1>
@@ -11,15 +11,17 @@
       <p class="blog-index-header__subtitle">{{ group.description }}</p>
     {% endif %}
   </div>
-</div>
+</section>
 
 {% if module.style.override_default_style %}
+{% require_css %}
 <style>
   #blog-index-header_{{ name }} .blog-index-header__title {
-    color: rgba({{ module.style.blog_listing_banner_title_color.color|convert_rgb }},{{ module.style.blog_listing_banner_title_color.opacity }});
+    color: rgba({{ module.style.blog_listing_banner_title_color.color|convert_rgb }},{{ module.style.blog_listing_banner_title_color.opacity * 0.01 }});
   }
   #blog-index-header_{{ name }} .blog-index-header__subtitle {
-    color: rgba({{ module.style.blog_listing_banner_subtitle_color.color|convert_rgb }},{{ module.style.blog_listing_banner_subtitle_color.opacity }});"
+    color: rgba({{ module.style.blog_listing_banner_subtitle_color.color|convert_rgb }},{{ module.style.blog_listing_banner_subtitle_color.opacity * 0.01 }});"
   }
 </style>
+{% end_require_css %}
 {% endif %}

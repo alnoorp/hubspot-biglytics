@@ -36,7 +36,6 @@
     "name" : "override_default_style",
     "label" : "Override default style",
     "required" : true,
-    "locked" : false,
     "type" : "boolean",
     "default" : false
   }, {
