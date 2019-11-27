@@ -19,7 +19,7 @@
       background_image={
         "backgroundPosition": "MIDDLE_CENTER",
         "backgroundSize": "cover",
-        'imageUrl': get_asset_url("../images/pillar-banner.jpg")
+        "imageUrl": get_asset_url("../images/pillar-banner.jpg")
       },
       vertical_alignment="MIDDLE"
     %}
@@ -30,7 +30,7 @@
           %}
           {% module_attribute "html" %}
             <div style="text-align: center">
-              <h1 style="color: #fff; margin-bottom: 0px;">Pillar Topic</h1>
+              <h1 style="color: #FFFFFF; margin-bottom: 0;">How Automation Can Help Your Business</h1>
             </div>
           {% end_module_attribute %}
           {% end_dnd_module %}
@@ -50,8 +50,8 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <h2>Learn About This Topic</h2>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
+                <h2>Learn All About Automation</h2>
+                <p>Automation can be an incredible tool that can help increase your productivity. Not having to worry about the small things allows you to focus on the bigger and more important things.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
@@ -80,11 +80,9 @@
       {# First Pillar Chapter #}
         {% dnd_row %}
           {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT"
+            flexbox_positioning="MIDDLE_LEFT",
+            pillar_section_title="What Can I Automate?"
           %}
-          {% module_attribute "section_title" %}
-            First Section Title
-          {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
@@ -93,22 +91,26 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
+                <p>One of the first things that we recommend doing is taking notes of the tasks that you're doing on a daily basis over the course of a week. Anything that you find yourself doing more than three times in a week mark with a star.</p>
+                <p>Not everything that is done more than once can be automated but you should identify what things in your list can be automated.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
 
       {# Second Pillar Chapter #}
-        {% dnd_row %}
+        {% dnd_row
+          padding={
+            "top": 80,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        %}
           {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT"
+            flexbox_positioning="MIDDLE_LEFT",
+            pillar_section_title="What Shouldn't I Automate?"
           %}
-          {% module_attribute "section_title" %}
-            Second Section Title
-          {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
@@ -117,22 +119,26 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
+                <p>It is important to keep in mind that not everything should be automated. Just because you can automate it doesn't mean that you should.</p>
+                <p>Anything that requires a higher level of focus or attention we recommend keeping off of your automation list. For example, communication with your co-workers and customers we don't recommend automating.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
 
       {# Third Pillar Chapter #}
-        {% dnd_row %}
+        {% dnd_row
+          padding={
+            "top": 80,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        %}
           {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT"
+            flexbox_positioning="MIDDLE_LEFT",
+            pillar_section_title="How Can I Automate It?"
           %}
-          {% module_attribute "section_title" %}
-            Third Section Title
-          {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
@@ -141,22 +147,26 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
+                <p>Once you know what you can automate and what you should automate, you'll want to look into how you can automate it. There is a lot of software out there that can help with this.</p>
+                <p>We'd recommend giving our software a try. Contact us today for a free extended trial.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
 
       {# Fourth Pillar Chapter #}
-        {% dnd_row %}
+        {% dnd_row
+          padding={
+            "top": 80,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        %}
           {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT"
+            flexbox_positioning="MIDDLE_LEFT",
+            pillar_section_title="How Do I Track Results?"
           %}
-          {% module_attribute "section_title" %}
-            Fourth Section Title
-          {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
@@ -165,33 +175,8 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-
-      {# Fifth Pillar Chapter #}
-        {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT"
-          %}
-          {% module_attribute "section_title" %}
-            Fifth Section Title
-          {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path="@hubspot/rich_text",
-          %}
-            {% module_attribute "html" %}
-              <div>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
-                <p>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO. A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</p>
+                <p>Now that you've started to automate your daily tasks it is important to keep track of what you're automating so that you can see how much time you're saving.</p>
+                <p>There are several softwares out there that can help you with this. We recommend giving our free browser extension a try so that you can start tracking your automation for free today!</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
@@ -200,7 +185,7 @@
       {% end_dnd_column %}
     {% end_dnd_section %}
 
-    {# Bottom Section #}
+    {# Bottom Offer Section #}
     {% dnd_section
       background_color={
         r: 52,
@@ -213,7 +198,7 @@
         {% dnd_row %}
           {% dnd_module path="@hubspot/rich_text" %}
             {% module_attribute "html" %}
-              <h2 style="color: #fff;">What's Inside?</h2>
+              <h2 style="color: #FFFFFF;">Download Our Free Ebook</h2>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
@@ -225,9 +210,11 @@
           %}
             {% module_attribute "html" %}
               <div>
-                <ul style="color: #fff;">
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
-                  <li>A free copy of our extensive marketing ebook guide. This ebook will help you learn everything you need to know about optimizing your blog SEO.</li>
+                <p style="color: #FFFFFF;">Discover 10 ways that you can use automation to help increase your productivity. This includes:</p>
+                <ul style="color: #FFFFFF;">
+                  <li>A free copy of our extensive eBook guide with tips on how you can increase your productivity by automating your daily tasks.</li>
+                  <li>An exclusive link to our online community so that you can discuss what you learn with a group of like-minded individuals.</li>
+                  <li>An extended free trial of our software so that you can immediately put some of these tips into action.</li>
                 </ul>
               </div>
             {% end_module_attribute %}
