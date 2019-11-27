@@ -14,7 +14,7 @@
     "label" : "Accordion content",
     "required" : true,
     "type" : "richtext",
-    "default" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise."
+    "default" : "Leverage the intuitive super awesome software that saves you time and will help grow your business."
   }, {
     "id" : "accordion.expanded",
     "name" : "expanded",
@@ -35,7 +35,7 @@
   "tab" : "CONTENT",
   "type" : "group",
   "default" : [ {
-    "accordion_content" : "Leverage the intuitive super awesome software that saves you time and will rescue your business. Promise.",
+    "accordion_content" : "Leverage the intuitive super awesome software that saves you time and will help grow your business.",
     "expanded" : false,
     "accordion_header" : "What does our pricing include?"
   } ]
