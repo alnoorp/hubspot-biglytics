@@ -1,12 +1,19 @@
 (function() {
-
   // Variables
   var langToggle = document.querySelector('.header__language-switcher');
   var navToggle = document.querySelector('#nav-toggle');
-  var blogCommentsButtons = document.querySelector('.blog-post__comments-buttons');
-  var blogShowCommentsButton = document.querySelector('.blog-post__show-comments');
-  var blogHideCommentsButton = document.querySelector('.blog-post__hide-comments');
-  var blogCommentsListing = document.querySelector('.blog-post__comments-listing');
+  var blogCommentsButtons = document.querySelector(
+    '.blog-post__comments-buttons'
+  );
+  var blogShowCommentsButton = document.querySelector(
+    '.blog-post__show-comments'
+  );
+  var blogHideCommentsButton = document.querySelector(
+    '.blog-post__hide-comments'
+  );
+  var blogCommentsListing = document.querySelector(
+    '.blog-post__comments-listing'
+  );
 
   // Functions
   function domReady(callback) {

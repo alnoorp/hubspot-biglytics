@@ -1,6 +1,6 @@
 {
-    "name":"sass_theme",
-    "label":"Sass Theme",
-    "preview_path":"./templates/home-page.html",
-    "image_url": "./images/theme-preview.png"
- }
+  "name": "sass_theme",
+  "label": "Sass Theme",
+  "preview_path": "./templates/home-page.html",
+  "image_url": "./images/theme-preview.png"
+}

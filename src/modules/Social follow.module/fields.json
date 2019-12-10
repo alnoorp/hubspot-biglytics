@@ -1,124 +1,129 @@
 [
   {
-    "id" : "social_links",
+    "id": "social_links",
     "name": "social_links",
-    "label" : "Social links",
-    "children" : [
+    "label": "Social links",
+    "children": [
       {
-        "id" : "social_links.social_account",
-        "name" : "social_account",
-        "label" : "Social account",
-        "required" : true,
-        "choices" : [
+        "id": "social_links.social_account",
+        "name": "social_account",
+        "label": "Social account",
+        "required": true,
+        "choices": [
           ["facebook-f", "Facebook"],
           ["twitter", "Twitter"],
           ["linkedin-in", "Linkedin"],
           ["instagram", "Instagram"]
         ],
-        "display" : "select",
-        "type" : "choice",
-        "default" : "facebook-f"
+        "display": "select",
+        "type": "choice",
+        "default": "facebook-f"
       },
       {
-        "id" : "social_links.social_link",
-        "name" : "social_link",
-        "label" : "Social link",
-        "required" : true,
-        "supported_types" : ["EXTERNAL", "EMAIL_ADDRESS"],
-        "type" : "link",
-        "default" : {
-          "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
-          "open_in_new_tab" : true,
-          "no_follow" : false
+        "id": "social_links.social_link",
+        "name": "social_link",
+        "label": "Social link",
+        "required": true,
+        "supported_types": ["EXTERNAL", "EMAIL_ADDRESS"],
+        "type": "link",
+        "default": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "open_in_new_tab": true,
+          "no_follow": false
         }
       }
     ],
-    "default" : [
+    "default": [
       {
-        "social_account" : "facebook-f",
-        "link" : {
-          "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
-          "open_in_new_tab" : true,
-          "no_follow" : false
+        "social_account": "facebook-f",
+        "link": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "open_in_new_tab": true,
+          "no_follow": false
         }
       },
       {
-        "social_account" : "facebook-f",
-        "link" : {
-          "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
-          "open_in_new_tab" : true,
-          "no_follow" : false
+        "social_account": "facebook-f",
+        "link": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "open_in_new_tab": true,
+          "no_follow": false
         }
       },
       {
-        "social_account" : "facebook-f",
-        "link" : {
-          "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
-          "open_in_new_tab" : true,
-          "no_follow" : false
+        "social_account": "facebook-f",
+        "link": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "open_in_new_tab": true,
+          "no_follow": false
         }
       },
       {
-        "social_account" : "facebook-f",
-        "link" : {
-          "url" : { "content_id" : null, "type" : "EXTERNAL", "href" : "" },
-          "open_in_new_tab" : true,
-          "no_follow" : false
+        "social_account": "facebook-f",
+        "link": {
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "open_in_new_tab": true,
+          "no_follow": false
         }
       }
     ],
-    "type" : "group",
-    "occurrence" : {
-      "default" : 4,
-      "min" : 1
+    "type": "group",
+    "occurrence": {
+      "default": 4,
+      "min": 1
     }
   },
   {
-    "id" : "style",
-    "name" : "style",
-    "label" : "Style options",
-    "required" : true,
-    "type" : "group",
-    "children" : [ {
-      "id" : "style.override_default_style",
-      "name" : "override_default_style",
-      "label" : "Override default style",
-      "required" : true,
-      "type" : "boolean",
-      "default" : false
-    }, {
-      "id" : "style.social_icon_color",
-      "name" : "social_icon_color",
-      "label" : "Social icon color",
-      "required" : true,
-      "visibility" : {
-        "controlling_field" : "style.override_default_style",
-        "controlling_value_regex" : "true",
-        "operator" : "EQUAL",
-        "access" : null,
-        "hidden_subfields" : null
+    "id": "style",
+    "name": "style",
+    "label": "Style options",
+    "required": true,
+    "type": "group",
+    "children": [
+      {
+        "id": "style.override_default_style",
+        "name": "override_default_style",
+        "label": "Override default style",
+        "required": true,
+        "type": "boolean",
+        "default": false
       },
-      "type" : "color",
-      "default" : {
-        "color" : "#FFFFFF",
-        "opacity" : 100
-      }
-    }, {
-      "id" : "style.social_icon_bg_color",
-      "name" : "social_icon_bg_color",
-      "label" : "Social icon background color",
-      "required" : true,
-      "visibility" : {
-        "controlling_field" : "style.override_default_style",
-        "controlling_value_regex" : "true",
-        "operator" : "EQUAL",
-        "access" : null,
-        "hidden_subfields" : null
+      {
+        "id": "style.social_icon_color",
+        "name": "social_icon_color",
+        "label": "Social icon color",
+        "required": true,
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "color",
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        }
       },
-      "type" : "color",
-      "default" : {
-        "color" : "#1E2B33",
-        "opacity" : 0
+      {
+        "id": "style.social_icon_bg_color",
+        "name": "social_icon_bg_color",
+        "label": "Social icon background color",
+        "required": true,
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "color",
+        "default": {
+          "color": "#1E2B33",
+          "opacity": 0
+        }
       }
-  } ]
-} ]
+    ]
+  }
+]

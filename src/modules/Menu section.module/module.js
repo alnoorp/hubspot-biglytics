@@ -1,8 +1,9 @@
 (function() {
-
   // Variables
   var menuLinks = document.querySelectorAll('.submenu > li .menu-link');
-  var firstSubmenuItems = document.querySelectorAll('.submenu.level-2 > *:nth-child(2)');
+  var firstSubmenuItems = document.querySelectorAll(
+    '.submenu.level-2 > *:nth-child(2)'
+  );
 
   // Functions
   menuLinks.forEach(function(link) {
@@ -33,5 +34,4 @@
       });
     }
   });
-
 })();

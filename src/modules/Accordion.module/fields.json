@@ -1,124 +1,139 @@
-[ {
-  "id" : "accordion",
-  "name" : "accordion",
-  "label" : "Accordion",
-  "required" : true,
-  "occurrence" : {
-    "min" : 1,
-    "max" : null,
-    "default" : 5
+[
+  {
+    "id": "accordion",
+    "name": "accordion",
+    "label": "Accordion",
+    "required": true,
+    "occurrence": {
+      "min": 1,
+      "max": null,
+      "default": 5
+    },
+    "children": [
+      {
+        "id": "accordion.accordion_content",
+        "name": "accordion_content",
+        "label": "Accordion content",
+        "required": true,
+        "type": "richtext",
+        "default": "Leverage the intuitive super awesome software that saves you time and will help grow your business."
+      },
+      {
+        "id": "accordion.expanded",
+        "name": "expanded",
+        "label": "Expanded?",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "id": "accordion.accordion_header",
+        "name": "accordion_header",
+        "label": "Accordion header",
+        "required": true,
+        "validation_regex": "",
+        "allow_new_line": false,
+        "show_emoji_picker": false,
+        "type": "text",
+        "default": "How do I make an awesome template?"
+      }
+    ],
+    "tab": "CONTENT",
+    "type": "group",
+    "default": [
+      {
+        "accordion_content": "Leverage the intuitive super awesome software that saves you time and will help grow your business.",
+        "expanded": false,
+        "accordion_header": "What does our pricing include?"
+      }
+    ]
   },
-  "children" : [ {
-    "id" : "accordion.accordion_content",
-    "name" : "accordion_content",
-    "label" : "Accordion content",
-    "required" : true,
-    "type" : "richtext",
-    "default" : "Leverage the intuitive super awesome software that saves you time and will help grow your business."
-  }, {
-    "id" : "accordion.expanded",
-    "name" : "expanded",
-    "label" : "Expanded?",
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "accordion.accordion_header",
-    "name" : "accordion_header",
-    "label" : "Accordion header",
-    "required" : true,
-    "validation_regex" : "",
-    "allow_new_line" : false,
-    "show_emoji_picker" : false,
-    "type" : "text",
-    "default" : "How do I make an awesome template?"
-  } ],
-  "tab" : "CONTENT",
-  "type" : "group",
-  "default" : [ {
-    "accordion_content" : "Leverage the intuitive super awesome software that saves you time and will help grow your business.",
-    "expanded" : false,
-    "accordion_header" : "What does our pricing include?"
-  } ]
-}, {
-  "id" : "style",
-  "name" : "style",
-  "label" : "Style options",
-  "required" : true,
-  "type" : "group",
-  "children" : [ {
-    "id" : "style.override_default_style",
-    "name" : "override_default_style",
-    "label" : "Override default style",
-    "required" : true,
-    "type" : "boolean",
-    "default" : false
-  }, {
-    "id" : "style.accordion_color",
-    "name" : "accordion_color",
-    "label" : "Accordion header color",
-    "required" : true,
-    "visibility" : {
-      "controlling_field" : "style.override_default_style",
-      "controlling_value_regex" : "true",
-      "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
-    },
-    "type" : "color",
-    "default" : {
-       "color" : "#C168C2",
-       "opacity" : 100
-    }
-  }, {
-    "id" : "style.accordion_icon_color",
-    "name" : "accordion_icon_color",
-    "label" : "Accordion icon color",
-    "required" : true,
-    "visibility" : {
-      "controlling_field" : "style.override_default_style",
-      "controlling_value_regex" : "true",
-      "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
-    },
-    "type" : "color",
-    "default" : {
-       "color" : "#FFFFFF",
-       "opacity" : 100
-    }
-  }, {
-    "id" : "style.accordion_open_color",
-    "name" : "accordion_open_color",
-    "label" : "Accordion header open color",
-    "required" : true,
-    "visibility" : {
-      "controlling_field" : "style.override_default_style",
-      "controlling_value_regex" : "true",
-      "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
-    },
-    "type" : "color",
-    "default" : {
-       "color" : "#E77DE8",
-       "opacity" : 100
-    }
-  }, {
-    "id" : "style.accordion_icon_open_color",
-    "name" : "accordion_icon_open_color",
-    "label" : "Accordion icon open color",
-    "required" : true,
-    "visibility" : {
-      "controlling_field" : "style.override_default_style",
-      "controlling_value_regex" : "true",
-      "operator" : "EQUAL",
-      "access" : null,
-      "hidden_subfields" : null
-    },
-    "type" : "color",
-    "default" : {
-       "color" : "#FFFFFF",
-       "opacity" : 100
-    }
-  } ]
-} ]
+  {
+    "id": "style",
+    "name": "style",
+    "label": "Style options",
+    "required": true,
+    "type": "group",
+    "children": [
+      {
+        "id": "style.override_default_style",
+        "name": "override_default_style",
+        "label": "Override default style",
+        "required": true,
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "id": "style.accordion_color",
+        "name": "accordion_color",
+        "label": "Accordion header color",
+        "required": true,
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "color",
+        "default": {
+          "color": "#C168C2",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "style.accordion_icon_color",
+        "name": "accordion_icon_color",
+        "label": "Accordion icon color",
+        "required": true,
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "color",
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "style.accordion_open_color",
+        "name": "accordion_open_color",
+        "label": "Accordion header open color",
+        "required": true,
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "color",
+        "default": {
+          "color": "#E77DE8",
+          "opacity": 100
+        }
+      },
+      {
+        "id": "style.accordion_icon_open_color",
+        "name": "accordion_icon_open_color",
+        "label": "Accordion icon open color",
+        "required": true,
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        },
+        "type": "color",
+        "default": {
+          "color": "#FFFFFF",
+          "opacity": 100
+        }
+      }
+    ]
+  }
+]

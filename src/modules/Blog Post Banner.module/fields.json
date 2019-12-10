@@ -1,23 +1,29 @@
-[ {
-  "id" : "banner_image_select",
-  "name" : "banner_image_select",
-  "label" : "Which banner image would you like to use?",
-  "required" : true,
-  "display" : "select",
-  "choices" : [ [ "featured_image", "Featured Image" ], [ "custom_image", "Custom Image" ] ],
-  "type" : "choice",
-  "default" : "featured_image"
-}, {
-  "id" : "custom_bg_image",
-  "name" : "custom_bg_image",
-  "label" : "Background image",
-  "required" : true,
-  "responsive" : false,
-  "resizable" : false,
-  "type" : "image",
-  "visibility": {
-    "controlling_field": "banner_image_select",
-    "operator": "EQUAL",
-    "controlling_value_regex": "custom_image"
+[
+  {
+    "id": "banner_image_select",
+    "name": "banner_image_select",
+    "label": "Which banner image would you like to use?",
+    "required": true,
+    "display": "select",
+    "choices": [
+      ["featured_image", "Featured Image"],
+      ["custom_image", "Custom Image"]
+    ],
+    "type": "choice",
+    "default": "featured_image"
+  },
+  {
+    "id": "custom_bg_image",
+    "name": "custom_bg_image",
+    "label": "Background image",
+    "required": true,
+    "responsive": false,
+    "resizable": false,
+    "type": "image",
+    "visibility": {
+      "controlling_field": "banner_image_select",
+      "operator": "EQUAL",
+      "controlling_value_regex": "custom_image"
+    }
   }
-} ]
+]
