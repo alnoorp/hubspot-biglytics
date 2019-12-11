@@ -1,7 +1,3 @@
-buildDeps:
-  - hs-build-tools
-  - node-8.9.3
-
 buildpack:
   host: git.hubteam.com
   organization: HubSpot
@@ -9,14 +5,6 @@ buildpack:
   branch: master
 
 before:
-  - description: Install dependencies
-    commands:
-      - curl --silent https://hubspot-3rdparty-packages.s3.amazonaws.com/prod/bpx/bpx-blazar-0.1.10.tgz | tar xz -C /opt/build-deps/hs-build-tools/bin
-
-  - description: Lint the files
-    commands:
-      - /opt/build-deps/hs-build-tools/bin/prod-lint
-
   - description: Copies assets in the src directory to an @hubspot/sprout directory
     commands:
       - mkdir -p @hubspot/sprout
