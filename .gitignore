@@ -123,3 +123,4 @@ typings/
 # HubSpot configs
 hubspot.config.yaml
 hubspot.config.yml
+*~

@@ -1,3 +1,7 @@
+buildDeps:
+  - hs-build-tools
+  - node-8.9.3
+
 buildpack:
   host: git.hubteam.com
   organization: HubSpot
@@ -5,6 +9,10 @@ buildpack:
   branch: master
 
 before:
+  - description: Lint the files
+    commands:
+      - prod-lint
+
   - description: Copies assets in the src directory to an @hubspot/sprout directory
     commands:
       - mkdir -p @hubspot/sprout
