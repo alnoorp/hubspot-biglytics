@@ -15,7 +15,7 @@ before:
 
   - description: Lint the files
     commands:
-      - prod-lint
+      - /opt/build-deps/hs-build-tools/bin/prod-lint
 
   - description: Copies assets in the src directory to an @hubspot/sprout directory
     commands:
