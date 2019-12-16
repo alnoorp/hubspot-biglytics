@@ -1,0 +1,26 @@
+name: sprout-theme
+
+team: hs-content-assets
+
+contributors:
+  - hs-cms-assets-io@hubinfra.com
+
+type: static_deployed_pointer
+
+description: Vast 2.0 AKA Sprout Theme
+
+artifactBuildMetadata:
+  repository: cms-website-theme
+  module: sprout-theme
+
+slack:
+  - channelName: "#cms-assets-io-notif"
+    all:
+      preDeploy: MUTE
+      success: MUTE
+      failure: NOTIFY
+      notifyForBlockerEvents: MUTE
+      deployedNotRun: MUTE
+
+qaAutoDeployedBranches:
+- master
