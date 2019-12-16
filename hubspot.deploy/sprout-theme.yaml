@@ -1,9 +1,9 @@
 name: sprout-theme
 
-team: hs-cms-assets-io
+team: hs-content-assets
 
 contributors:
-  - hs-content-assets@hubinfra.com
+  - hs-cms-assets-io@hubinfra.com
 
 type: static_deployed_pointer
 
