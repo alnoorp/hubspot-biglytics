@@ -1,4 +1,4 @@
-name: cms-website-theme
+name: sprout-theme
 
 team: hs-content-assets
 
@@ -11,7 +11,7 @@ description: Vast 2.0 AKA Sprout Theme
 
 artifactBuildMetadata:
   repository: cms-website-theme
-  module: sprout-theme
+  module: cms-website-theme
 
 slack:
   - channelName: "#cms-assets-io-notif"
