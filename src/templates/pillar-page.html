@@ -87,7 +87,20 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
+            path="@hubspot/linked_image",
+            offset=0,
+            width=4,
+            img={
+              "src": get_asset_url("../images/pillar-one.jpg"),
+              "alt": "Woman typing on computer",
+              "size_type": "auto"
+            }
+          %}
+          {% end_dnd_module %}
+          {% dnd_module
             path="@hubspot/rich_text",
+            offset=4,
+            width=8
           %}
             {% module_attribute "html" %}
               <div>
@@ -107,7 +120,8 @@
             "right": 0
           }
         %}
-          {% dnd_module path="../modules/Pillar Section Title",
+          {% dnd_module
+            path="../modules/Pillar Section Title",
             flexbox_positioning="MIDDLE_LEFT",
             pillar_section_title="What Shouldn't I Automate?"
           %}
@@ -116,6 +130,8 @@
         {% dnd_row %}
           {% dnd_module
             path="@hubspot/rich_text",
+            offset=0,
+            width=8
           %}
             {% module_attribute "html" %}
               <div>
@@ -123,6 +139,17 @@
                 <p>Anything that requires a higher level of focus or attention we recommend keeping off of your automation list. For example, communication with your co-workers and customers we don't recommend automating.</p>
               </div>
             {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% dnd_module
+            path="@hubspot/linked_image",
+            offset=8,
+            width=4,
+            img={
+              "src": get_asset_url("../images/pillar-two.jpg"),
+              "alt": "Computer and phone",
+              "size_type": "auto"
+            }
+          %}
           {% end_dnd_module %}
         {% end_dnd_row %}
 
@@ -143,7 +170,20 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
+            path="@hubspot/linked_image",
+            offset=0,
+            width=4,
+            img={
+              "src": get_asset_url("../images/pillar-three.jpg"),
+              "alt": "Woman typing on computer",
+              "size_type": "auto"
+            }
+          %}
+          {% end_dnd_module %}
+          {% dnd_module
             path="@hubspot/rich_text",
+            offset=4,
+            width=8
           %}
             {% module_attribute "html" %}
               <div>
@@ -172,6 +212,8 @@
         {% dnd_row %}
           {% dnd_module
             path="@hubspot/rich_text",
+            offset=0,
+            width=8
           %}
             {% module_attribute "html" %}
               <div>
@@ -179,6 +221,17 @@
                 <p>There are several softwares out there that can help you with this. We recommend giving our free browser extension a try so that you can start tracking your automation for free today!</p>
               </div>
             {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% dnd_module
+            path="@hubspot/linked_image",
+            offset=8,
+            width=4,
+            img={
+              "src": get_asset_url("../images/pillar-four.jpg"),
+              "alt": "Computer and phone",
+              "size_type": "auto"
+            }
+          %}
           {% end_dnd_module %}
         {% end_dnd_row %}
 
