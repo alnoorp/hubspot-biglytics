@@ -1,7 +1,6 @@
 .pillar-navigation__menu {
-    border: 1px solid #D0D0D0;
     border-radius: 4px;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .pillar-navigation__menu-items {
@@ -10,8 +9,8 @@
 }
 
 .pillar-navigation__menu-item {
-    border-bottom: 1px solid #D0D0D0;
-    padding: 10px;
+    font-weight: 600;
+    padding: 10px 0;
 }
 
 .pillar-navigation__menu-item:last-child {

@@ -70,171 +70,203 @@
       {% end_dnd_column %}
     {% end_dnd_section %}
 
-    {# Pillar Content Section #}
+    {# First Pillar Chapter #}
+    {% dnd_section
+      background_color={
+        r: 241,
+        g: 241,
+        b: 241,
+        a: 1.0
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+        {% dnd_column
+            offset=0,
+            width=4
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path="@hubspot/linked_image",
+                img={
+                  "src": get_asset_url("../images/pillar-one.jpg"),
+                  "alt": "Woman typing on computer",
+                  "size_type": "auto"
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
+            offset=4,
+            width=8
+          %}
+            {% dnd_row %}
+              {% dnd_module path="../modules/Pillar Section Title",
+                flexbox_positioning="MIDDLE_LEFT",
+                pillar_section_title="What Can I Automate?"
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                {% module_attribute "html" %}
+                  <div>
+                    <p>One of the first things that we recommend doing is taking notes of the tasks that you're doing on a daily basis over the course of a week. Anything that you find yourself doing more than three times in a week mark with a star.</p>
+                    <p>Not everything that is done more than once can be automated but you should identify what things in your list can be automated.</p>
+                  </div>
+                {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# Second Pillar Chapter #}
     {% dnd_section %}
-      {% dnd_column
-        offset=0,
-        width=12
-      %}
-
-      {# First Pillar Chapter #}
+      {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT",
-            pillar_section_title="What Can I Automate?"
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path="@hubspot/linked_image",
+          {% dnd_column
             offset=0,
-            width=4,
-            img={
-              "src": get_asset_url("../images/pillar-one.jpg"),
-              "alt": "Woman typing on computer",
-              "size_type": "auto"
-            }
+            width=8
           %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path="@hubspot/rich_text",
+            {% dnd_row %}
+                {% dnd_module
+                  path="../modules/Pillar Section Title",
+                  flexbox_positioning="MIDDLE_LEFT",
+                  pillar_section_title="What Shouldn't I Automate?"
+                %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                {% module_attribute "html" %}
+                  <div>
+                    <p>It is important to keep in mind that not everything should be automated. Just because you can automate it doesn't mean that you should.</p>
+                    <p>Anything that requires a higher level of focus or attention we recommend keeping off of your automation list. For example, communication with your co-workers and customers we don't recommend automating.</p>
+                  </div>
+                {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
+            offset=8,
+            width=4
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path="@hubspot/linked_image",
+                img={
+                  "src": get_asset_url("../images/pillar-two.jpg"),
+                  "alt": "Notebook with to do list",
+                  "size_type": "auto"
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# Third Pillar Chapter #}
+    {% dnd_section
+      background_color={
+        r: 241,
+        g: 241,
+        b: 241,
+        a: 1.0
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+        {% dnd_column
+            offset=0,
+            width=4
+          %}
+            {% dnd_row %}
+              {% dnd_module
+                path="@hubspot/linked_image",
+                img={
+                  "src": get_asset_url("../images/pillar-three.jpg"),
+                  "alt": "Two women working on a project on a computer",
+                  "size_type": "auto"
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
             offset=4,
             width=8
           %}
-            {% module_attribute "html" %}
-              <div>
-                <p>One of the first things that we recommend doing is taking notes of the tasks that you're doing on a daily basis over the course of a week. Anything that you find yourself doing more than three times in a week mark with a star.</p>
-                <p>Not everything that is done more than once can be automated but you should identify what things in your list can be automated.</p>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
+            {% dnd_row %}
+              {% dnd_module path="../modules/Pillar Section Title",
+                flexbox_positioning="MIDDLE_LEFT",
+                pillar_section_title="How Can I Automate It?"
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                {% module_attribute "html" %}
+                  <div>
+                    <p>Once you know what you can automate and what you should automate, you'll want to look into how you can automate it. There is a lot of software out there that can help with this.</p>
+                    <p>We'd recommend giving our software a try. Contact us today for a free extended trial.</p>
+                  </div>
+                {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
         {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
 
-      {# Second Pillar Chapter #}
-        {% dnd_row
-          padding={
-            "top": 80,
-            "bottom": 0,
-            "left": 0,
-            "right": 0
-          }
-        %}
-          {% dnd_module
-            path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT",
-            pillar_section_title="What Shouldn't I Automate?"
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
+    {# Fourth Pillar Chapter #}
+    {% dnd_section %}
+      {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module
-            path="@hubspot/rich_text",
+          {% dnd_column
             offset=0,
             width=8
           %}
-            {% module_attribute "html" %}
-              <div>
-                <p>It is important to keep in mind that not everything should be automated. Just because you can automate it doesn't mean that you should.</p>
-                <p>Anything that requires a higher level of focus or attention we recommend keeping off of your automation list. For example, communication with your co-workers and customers we don't recommend automating.</p>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path="@hubspot/linked_image",
+            {% dnd_row %}
+                {% dnd_module
+                  path="../modules/Pillar Section Title",
+                  flexbox_positioning="MIDDLE_LEFT",
+                  pillar_section_title="How Do I Track Results?"
+                %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+            {% dnd_row %}
+              {% dnd_module path="@hubspot/rich_text" %}
+                {% module_attribute "html" %}
+                  <div>
+                    <p>Now that you've started to automate your daily tasks it is important to keep track of what you're automating so that you can see how much time you're saving.</p>
+                    <p>There are several softwares out there that can help you with this. We recommend giving our free browser extension a try so that you can start tracking your automation for free today!</p>
+                  </div>
+                {% end_module_attribute %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% dnd_column
             offset=8,
-            width=4,
-            img={
-              "src": get_asset_url("../images/pillar-two.jpg"),
-              "alt": "Notebook with to do list",
-              "size_type": "auto"
-            }
+            width=4
           %}
-          {% end_dnd_module %}
+            {% dnd_row %}
+              {% dnd_module
+                path="@hubspot/linked_image",
+                img={
+                  "src": get_asset_url("../images/pillar-four.jpg"),
+                  "alt": "A paper with charts and graphs",
+                  "size_type": "auto"
+                }
+              %}
+              {% end_dnd_module %}
+            {% end_dnd_row %}
+          {% end_dnd_column %}
         {% end_dnd_row %}
-
-      {# Third Pillar Chapter #}
-        {% dnd_row
-          padding={
-            "top": 80,
-            "bottom": 0,
-            "left": 0,
-            "right": 0
-          }
-        %}
-          {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT",
-            pillar_section_title="How Can I Automate It?"
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path="@hubspot/linked_image",
-            offset=0,
-            width=4,
-            img={
-              "src": get_asset_url("../images/pillar-three.jpg"),
-              "alt": "Two women working on a project on a computer",
-              "size_type": "auto"
-            }
-          %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path="@hubspot/rich_text",
-            offset=4,
-            width=8
-          %}
-            {% module_attribute "html" %}
-              <div>
-                <p>Once you know what you can automate and what you should automate, you'll want to look into how you can automate it. There is a lot of software out there that can help with this.</p>
-                <p>We'd recommend giving our software a try. Contact us today for a free extended trial.</p>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-
-      {# Fourth Pillar Chapter #}
-        {% dnd_row
-          padding={
-            "top": 80,
-            "bottom": 0,
-            "left": 0,
-            "right": 0
-          }
-        %}
-          {% dnd_module path="../modules/Pillar Section Title",
-            flexbox_positioning="MIDDLE_LEFT",
-            pillar_section_title="How Do I Track Results?"
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path="@hubspot/rich_text",
-            offset=0,
-            width=8
-          %}
-            {% module_attribute "html" %}
-              <div>
-                <p>Now that you've started to automate your daily tasks it is important to keep track of what you're automating so that you can see how much time you're saving.</p>
-                <p>There are several softwares out there that can help you with this. We recommend giving our free browser extension a try so that you can start tracking your automation for free today!</p>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path="@hubspot/linked_image",
-            offset=8,
-            width=4,
-            img={
-              "src": get_asset_url("../images/pillar-four.jpg"),
-              "alt": "A paper with charts and graphs",
-              "size_type": "auto"
-            }
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-
       {% end_dnd_column %}
     {% end_dnd_section %}
 
@@ -259,7 +291,7 @@
           {% dnd_module
             path="@hubspot/rich_text",
             offset=0,
-            width=8
+            width=6
           %}
             {% module_attribute "html" %}
               <div>
@@ -274,8 +306,8 @@
           {% end_dnd_module %}
           {% dnd_module
             path="@hubspot/form",
-            offset=8,
-            width=4,
+            offset=6,
+            width=6,
             flexbox_positioning="TOP_CENTER"
           %}
           {% end_dnd_module %}
