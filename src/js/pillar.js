@@ -55,7 +55,6 @@ window.onload = function(){
             return false;
           }
           else {
-            targetScrollElement.setAttribute('tabindex','-1');
             targetScrollElement.focus();
           };
           if (supportsNativeSmoothScroll) {

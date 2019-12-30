@@ -1,8 +1,6 @@
 {% set section_anchor = module.pillar_section_title|lower|regex_replace("[^a-zA-Z]", "")%}
 
-<div class="pillar-section-title" id="{{ section_anchor }}">
-  <h2 class="pillar-section-title__header">{{ module.pillar_section_title }}</h2>
-</div>
+<h2 class="pillar-section-title__header" id="{{ section_anchor }}" tabindex="-1">{{ module.pillar_section_title }}</h2>
 
 {# Appends a navigation item to the pillar menu #}
 {% require_js %}
