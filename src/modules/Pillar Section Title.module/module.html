@@ -7,8 +7,8 @@
 <script>
   (function() {
     // Adds menu items to the pillar menu
-    var navMenu = document.getElementById("pillar-navigation__menu-items");
-    if (navMenu) {
+    var pillarMenu = document.getElementById("pillar-navigation__menu-items");
+    if (pillarMenu) {
       var navChild = document.createElement("li");
       navChild.className = "pillar-navigation__menu-item";
       navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.pillar_section_title|escape }}</a>';

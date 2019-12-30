@@ -1,5 +1,5 @@
 window.onload = function(){
-    // Detect support for the behavior property in ScrollOptions
+    // Detect support for the behavior property in click event listener
     var supportsNativeSmoothScroll = 'scrollBehavior' in document.documentElement.style;
     var pillarMenu = document.querySelector('.pillar-navigation__menu-items');
 
