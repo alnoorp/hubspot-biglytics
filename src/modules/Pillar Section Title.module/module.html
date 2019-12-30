@@ -8,6 +8,7 @@
 {% require_js %}
 <script>
   (function() {
+    // Adds menu items to the pillar menu
     var navMenu = document.getElementById("pillar-navigation__menu-items");
     if (navMenu) {
       var navChild = document.createElement("li");
@@ -16,5 +17,6 @@
       navMenu.appendChild(navChild);
     }
   })();
+
 </script>
 {% end_require_js %}
