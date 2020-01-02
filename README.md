@@ -19,7 +19,7 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 * CMS:Themes
 * CMS:Themes:GlobalSettings
 * CMS:Themes:Settings
-* ContentEditorUI:GlobalPartialAccess
+* ContentEditorUI:GlobalPartialsAccess
 * CMS:GlobalContentEditor
 * cos_renderer_global_content_rendering
 * DesignManager:RawAssets
