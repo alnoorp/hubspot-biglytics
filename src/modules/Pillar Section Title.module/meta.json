@@ -6,7 +6,7 @@
   "icon": "",
   "js_assets" : [
     {
-      "path": "/boilerplate-theme/js/pillar.js",
+      "path": "../../js/pillar.js",
       "name": "pillar.js",
       "autoload": true
     }
