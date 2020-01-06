@@ -1,0 +1,18 @@
+{
+  "css_assets" : [],
+  "external_js" : [],
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "icon": "",
+  "js_assets" : [
+    {
+      "path": "/boilerplate-theme/js/pillar.js",
+      "name": "pillar.js",
+      "autoload": true
+    }
+  ],
+  "other_assets" : [],
+  "smart_type" : "NOT_SMART",
+  "tags": [],
+  "is_available_for_new_content" : true
+}

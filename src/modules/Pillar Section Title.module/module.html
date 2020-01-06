@@ -1,0 +1,20 @@
+{% set section_anchor = module.pillar_section_title|lower|regex_replace("[^a-zA-Z]", "")%}
+
+<h2 class="pillar-section-title__header" id="{{ section_anchor }}" tabindex="-1">{{ module.pillar_section_title }}</h2>
+
+{# Appends a navigation item to the pillar menu #}
+{% require_js %}
+<script>
+  (function() {
+    // Adds menu items to the pillar menu
+    var pillarMenu = document.getElementById("pillar-navigation__menu-items");
+    if (pillarMenu) {
+      var navChild = document.createElement("li");
+      navChild.className = "pillar-navigation__menu-item";
+      navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.pillar_section_title|escape }}</a>';
+      pillarMenu.appendChild(navChild);
+    }
+  })();
+
+</script>
+{% end_require_js %}
