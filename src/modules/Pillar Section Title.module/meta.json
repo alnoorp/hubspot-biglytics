@@ -4,13 +4,7 @@
   "global" : false,
   "host_template_types" : [ "PAGE" ],
   "icon": "",
-  "js_assets" : [
-    {
-      "path": "../../js/pillar.js",
-      "name": "pillar.js",
-      "autoload": true
-    }
-  ],
+  "js_assets" : [],
   "other_assets" : [],
   "smart_type" : "NOT_SMART",
   "tags": [],
