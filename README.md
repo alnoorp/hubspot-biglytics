@@ -1,7 +1,7 @@
 Sprout Theme
 ========================
 
-A website theme built off of the [Sprout theme](https://github.com/HubSpot/cms-sprout-theme)
+A website theme built off of the [CMS boilerplate](https://github.com/HubSpot/cms-theme-boilerplate)
 
 ## Getting Started
 
