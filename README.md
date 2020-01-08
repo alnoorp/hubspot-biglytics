@@ -22,7 +22,7 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 * ContentEditorUI:GlobalPartialsAccess
 * CMS:GlobalContentEditor
 * cos_renderer_global_content_rendering
-* DesignManager:RawAssets
+* CMS:Themes:HotReloading
 * ContentEditorUI:BaymaxEditor
 * ContentRendering:WidgetTagFullInterpret
 
