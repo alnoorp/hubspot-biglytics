@@ -1,6 +1,5 @@
 {
-  "name": "sprout_theme",
   "label": "Sprout Theme",
   "preview_path": "./templates/home-page.html",
-  "image_url": "./images/theme-preview.png"
+  "thumbnail_path": "./images/theme-preview.png"
 }
