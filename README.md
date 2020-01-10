@@ -28,7 +28,7 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 
 ### Downloading the Theme Project Folder
 
-1.) Download this repository to your computer by either clicking on "Clone or download" in the top right hand corner of the repository and clicking on "Download ZIP" in the dropdown or by cloning the repository via the CLI using `git clone git@git.hubteam.com:HubSpot/cms-sprout-theme.git`.
+1.) Download this repository to your computer by either clicking on "Clone or download" in the top right hand corner of the repository and clicking on "Download ZIP" in the dropdown or by cloning the repository via the CLI using `git clone git@git.hubteam.com:HubSpot/cms-website-theme.git`.
 
 ### Uploading the Theme Project Folder to Your Portal
 
