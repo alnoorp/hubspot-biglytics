@@ -1,4 +1,4 @@
-CMS Website Theme
+Sprout Theme
 ========================
 
 A website theme built off of the [CMS boilerplate](https://github.com/HubSpot/cms-theme-boilerplate)
@@ -28,7 +28,7 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 
 ### Downloading the Theme Project Folder
 
-1.) Download this repository to your computer by either clicking on "Clone or download" in the top right hand corner of the repository and clicking on "Download ZIP" in the dropdown or by cloning the repository via the CLI using `git clone git@git.hubteam.com:HubSpot/cms-website-theme.git`.
+1.) Download this repository to your computer by either clicking on "Clone or download" in the top right hand corner of the repository and clicking on "Download ZIP" in the dropdown or by cloning the repository via the CLI using `git clone git@git.hubteam.com:HubSpot/cms-sprout-theme.git`.
 
 ### Uploading the Theme Project Folder to Your Portal
 
@@ -38,4 +38,4 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 
 3.) In the CLI, navigate to the directory where the repository was downloaded.
 
-4.) Run `npx hs watch --portal=<portal> src <directory>` to upload all the files in the cms-website-project and [watch for changes](https://designers.hubspot.com/docs/tools/local-development-reference#watch) to files in the `src` directory.
+4.) Run `npx hs watch --portal=<portal> src <directory>` to upload all the files in the cms-sprout-theme and [watch for changes](https://designers.hubspot.com/docs/tools/local-development-reference#watch) to files in the `src` directory.
