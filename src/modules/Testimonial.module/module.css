@@ -1,28 +1,30 @@
 .testimonial {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-bottom: 15px solid transparent;
-    margin-top: 20px;
-    padding: 45px 40px 30px;
-    text-align: center;
-    -webkit-transition: all 0.15s linear;
-    -o-transition: all 0.15s linear;
-    transition: all 0.15s linear;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
-.testimonial:hover {
-    background-color: #FFFFFF;
-    border-bottom: 15px solid #34B5E5;
+.testimonial__description {
+    flex: 0 1 400px;
+    color: #f5f5f5;
+    margin: 0 20px 0 20px;
 }
 
-.testimonial__avatar,
-.testimonial__name {
-    display: inline-block;
-    margin: 20px 0 0;
-    vertical-align: middle;
+.testimonial__description * {
+    font-family: 'Klinic Slab';
+    font-size: 26px;
+    font-weight: 300;
+}
+
+.testimonial__profile {
+    height: 200px;
+    width: 200px;
+    flex: 0 1 200px;
 }
 
 .testimonial__avatar {
     border-radius: 50%;
     height: auto;
-    width: 45px;
+    width: 200px;
 }

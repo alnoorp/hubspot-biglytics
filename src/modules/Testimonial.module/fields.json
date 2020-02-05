@@ -1,19 +1,11 @@
 [
   {
-    "id": "testimonial_title",
-    "name": "testimonial_title",
-    "label": "Testimonial title",
-    "required": true,
-    "type": "text",
-    "default": "Wow, this is amazing!"
-  },
-  {
     "id": "testimonial_description",
     "name": "testimonial_description",
     "label": "Testimonial description",
     "required": true,
     "type": "richtext",
-    "default": "The service was incredibly easy to use. The support team did a fantastic job assisting with all of my questions. I can't wait to tell all of my friends!"
+    "default": "<p>The service was incredibly easy to use. The support team did a fantastic job assisting with all of my questions. I can't wait to tell all of my friends!</p>"
   },
   {
     "id": "testimonial_image",
@@ -51,6 +43,19 @@
         "required": true,
         "type": "boolean",
         "default": false
+      },
+      {
+        "id": "style.background_image",
+        "name": "background_image",
+        "label": "Background image",
+        "required": true,
+        "responsive": false,
+        "resizable": true,
+        "type": "image",
+        "default": {
+          "src": "",
+          "alt": ""
+        }
       },
       {
         "id": "style.testimonial_hover_accent_color",
