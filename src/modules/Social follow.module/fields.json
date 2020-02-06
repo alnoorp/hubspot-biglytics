@@ -77,14 +77,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -92,7 +90,6 @@
         "id": "style.social_icon_color",
         "name": "social_icon_color",
         "label": "Social icon color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -110,7 +107,6 @@
         "id": "style.social_icon_bg_color",
         "name": "social_icon_bg_color",
         "label": "Social icon background color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",

@@ -31,14 +31,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -46,7 +44,6 @@
         "id": "style.button_bg_color",
         "name": "button_bg_color",
         "label": "Button background color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -64,7 +61,6 @@
         "id": "style.button_text_color",
         "name": "button_text_color",
         "label": "Button text color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -82,7 +78,6 @@
         "id": "style.button_border_width",
         "name": "button_border_width",
         "label": "Button border width",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -101,7 +96,6 @@
         "id": "style.button_border_color",
         "name": "button_border_color",
         "label": "Button border color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -119,7 +113,6 @@
         "id": "style.button_corner_radius",
         "name": "button_corner_radius",
         "label": "Button corner radius",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -138,7 +131,6 @@
         "id": "style.button_bg_hover_color",
         "name": "button_bg_hover_color",
         "label": "Button background hover color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -156,7 +148,6 @@
         "id": "style.button_text_hover_color",
         "name": "button_text_hover_color",
         "label": "Button text hover color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -174,7 +165,6 @@
         "id": "style.button_border_hover_color",
         "name": "button_border_hover_color",
         "label": "Button border hover color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -192,7 +182,6 @@
         "id": "style.button_horizontal_padding",
         "name": "button_horizontal_padding",
         "label": "Button horizontal padding",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -211,7 +200,6 @@
         "id": "style.button_vertical_padding",
         "name": "button_vertical_padding",
         "label": "Button vertical padding",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",

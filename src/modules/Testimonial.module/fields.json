@@ -40,7 +40,6 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": false,
     "locked": false,
     "type": "group",
     "children": [
@@ -48,7 +47,6 @@
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -56,7 +54,6 @@
         "id": "style.testimonial_hover_accent_color",
         "name": "testimonial_hover_accent_color",
         "label": "Testimonial hover accent color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
