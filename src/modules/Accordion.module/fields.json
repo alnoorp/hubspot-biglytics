@@ -51,14 +51,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -66,7 +64,6 @@
         "id": "style.accordion_color",
         "name": "accordion_color",
         "label": "Accordion header color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -84,7 +81,6 @@
         "id": "style.accordion_icon_color",
         "name": "accordion_icon_color",
         "label": "Accordion icon color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -102,7 +98,6 @@
         "id": "style.accordion_open_color",
         "name": "accordion_open_color",
         "label": "Accordion header open color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -120,7 +115,6 @@
         "id": "style.accordion_icon_open_color",
         "name": "accordion_icon_open_color",
         "label": "Accordion icon open color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",

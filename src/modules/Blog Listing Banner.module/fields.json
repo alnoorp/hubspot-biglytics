@@ -3,6 +3,7 @@
     "id": "blog_listing_banner_image",
     "name": "blog_listing_banner_image",
     "label": "Blog listing banner image",
+    "required": true,
     "responsive": true,
     "resizable": true,
     "type": "image",
@@ -28,14 +29,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -43,7 +42,6 @@
         "id": "style.blog_listing_banner_title_color",
         "name": "blog_listing_banner_title_color",
         "label": "Blog listing banner title color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -61,7 +59,6 @@
         "id": "style.blog_listing_banner_subtitle_color",
         "name": "blog_listing_banner_subtitle_color",
         "label": "Blog listing banner subtitle color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",

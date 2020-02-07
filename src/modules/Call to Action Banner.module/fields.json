@@ -33,14 +33,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -48,7 +46,6 @@
         "id": "style.cta_background_color",
         "name": "cta_banner_bg_color",
         "label": "Call to action banner background color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -66,7 +63,6 @@
         "id": "style.cta_text_color",
         "name": "cta_banner_text_color",
         "label": "Call to action banner text color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",

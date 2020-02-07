@@ -15,14 +15,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -30,7 +28,6 @@
         "id": "style.icon_color",
         "name": "icon_color",
         "label": "Icon color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -48,7 +45,6 @@
         "id": "style.icon_bg_color",
         "name": "icon_bg_color",
         "label": "Icon background color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -66,7 +62,6 @@
         "id": "style.icon_border_color",
         "name": "icon_border_color",
         "label": "Icon border color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",

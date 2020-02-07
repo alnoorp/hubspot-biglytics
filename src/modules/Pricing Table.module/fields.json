@@ -273,14 +273,12 @@
     "id": "style",
     "name": "style",
     "label": "Style options",
-    "required": true,
     "type": "group",
     "children": [
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
-        "required": true,
         "type": "boolean",
         "default": false
       },
@@ -288,7 +286,6 @@
         "id": "style.pricing_table_header_bg_color",
         "name": "pricing_table_header_bg_color",
         "label": "Pricing table header background color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -306,7 +303,6 @@
         "id": "style.pricing_table_header_color",
         "name": "pricing_table_header_color",
         "label": "Pricing table header color",
-        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
