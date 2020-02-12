@@ -1,5 +1,5 @@
 {
   "label": "Sprout",
   "preview_path": "./templates/home-page.html",
-  "thumbnail_path": "https://cdn2.hubspotqa.net/hubfs/100606404/raw_assets/public/@hubspot/sprout/images/template-previews/home-page.png"
+  "screenshot_path": "./images/template-previews/home-page.png"
 }
