@@ -4,7 +4,9 @@
     {{ module.testimonial_description }}
   </div>
 
-  <img class="testimonial__avatar" src="{{ module.testimonial_image.src }}" alt="{{ module.testimonial_image.alt }}">
+  {% if module.testimonial_image.src %}
+    <img class="testimonial__avatar" src="{{ module.testimonial_image.src }}" alt="{{ module.testimonial_image.alt }}">
+  {% endif %}
   <div class="testimonial__name">
     {{ module.testimonial_name }}
   </div>
