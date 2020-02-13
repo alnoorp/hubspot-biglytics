@@ -19,7 +19,6 @@
     "id": "testimonial_image",
     "name": "testimonial_image",
     "label": "Testimonial image",
-    "required": true,
     "responsive": false,
     "resizable": true,
     "type": "image",

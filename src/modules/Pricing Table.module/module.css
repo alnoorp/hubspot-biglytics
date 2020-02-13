@@ -10,6 +10,7 @@
 }
 
 .price-block {
+    border: 1px solid #D0D0D0;
     margin-bottom: 30px;
 }
 
@@ -122,7 +123,6 @@
 
 .price-block__description-block {
     background-color: #FFFFFF;
-    border: 1px solid #D0D0D0;
     padding: 20px 40px;
 }
 
