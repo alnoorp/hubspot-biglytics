@@ -95,17 +95,23 @@
         "default": [
           {
             "option_one_title": "Starter",
-            "option_one_price": 0,
-            "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
-          },
-          {
-            "option_one_title": "Standard",
+            "option_one_currency": "$",
             "option_one_price": 25,
+            "option_one_button_text": "Sign Up",
             "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
           },
           {
-            "option_one_title": "Super",
-            "option_one_price": 50,
+            "option_one_title": "Starter",
+            "option_one_currency": "$",
+            "option_one_price": 25,
+            "option_one_button_text": "Sign Up",
+            "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+          },
+          {
+            "option_one_title": "Starter",
+            "option_one_currency": "$",
+            "option_one_price": 25,
+            "option_one_button_text": "Sign Up",
             "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
           }
         ]
@@ -118,17 +124,23 @@
       "option_one_table": [
         {
           "option_one_title": "Starter",
-          "option_one_price": 0,
-          "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
-        },
-        {
-          "option_one_title": "Standard",
+          "option_one_currency": "$",
           "option_one_price": 25,
+          "option_one_button_text": "Sign Up",
           "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
         },
         {
-          "option_one_title": "Super",
-          "option_one_price": 50,
+          "option_one_title": "Starter",
+          "option_one_currency": "$",
+          "option_one_price": 25,
+          "option_one_button_text": "Sign Up",
+          "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
+        },
+        {
+          "option_one_title": "Starter",
+          "option_one_currency": "$",
+          "option_one_price": 25,
+          "option_one_button_text": "Sign Up",
           "option_one_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
         }
       ]
@@ -230,17 +242,23 @@
         "default": [
           {
             "option_two_title": "Annual Price",
+            "option_two_currency": "$",
             "option_two_price": 25,
+            "option_two_button_text": "Starter",
             "option_two_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
           },
           {
             "option_two_title": "Annual Price",
+            "option_two_currency": "$",
             "option_two_price": 25,
+            "option_two_button_text": "Starter",
             "option_two_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
           },
           {
             "option_two_title": "Annual Price",
+            "option_two_currency": "$",
             "option_two_price": 25,
+            "option_two_button_text": "Starter",
             "option_two_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
           }
         ]
@@ -253,17 +271,23 @@
       "option_two_table": [
         {
           "option_two_title": "Annual Price",
+          "option_two_currency": "$",
           "option_two_price": 25,
+          "option_two_button_text": "Sign Up",
           "option_two_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
         },
         {
           "option_two_title": "Annual Price",
+          "option_two_currency": "$",
           "option_two_price": 25,
+          "option_two_button_text": "Sign Up",
           "option_two_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
         },
         {
           "option_two_title": "Annual Price",
+          "option_two_currency": "$",
           "option_two_price": 25,
+          "option_two_button_text": "Sign Up",
           "option_two_description": "<p>Free Unlimited Downloads of whatever this this is, plus more stuff!</p>\n<ul>\n<li>25 MB max file size</li>\n<li>2 GB bandwidth drop/day</li>\n<li>15 sec Screen recording</li>\n<li>15 sec Webcam video recording</li>\n<li>CloudApp branding</li>\n<li>Unlimited annotations</li>\n<li>Unlimited files Send files to anyone</li>\n<li>Desktop app Integrations</li>\n</ul>"
         }
       ]
