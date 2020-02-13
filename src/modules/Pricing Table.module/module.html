@@ -14,10 +14,16 @@
             <section class="price-block price-block--monthly price-block--{{ loop.length }}">
                 <div class="price-block__header">
                     <div class="price-block__title">{{ option.option_one_title }}</div>
-                    <div class="price-block__price">
-                        <div class="price-block__currency">{{ option.option_one_currency }}</div>
-                        <div class="price-block__number">{{ option.option_one_price }}</div>
-                    </div>
+                    {% if option.option_one_currency or option.option_one_price %}
+                        <div class="price-block__price">
+                            {% if option.option_one_currency %}
+                                <div class="price-block__currency">{{ option.option_one_currency }}</div>
+                            {% endif %}
+                            {% if option.option_one_price %}
+                                <div class="price-block__number">{{ option.option_one_price }}</div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="price-block__description-block">
                     <div class="price-block__description">{{ option.option_one_description }}</div>
@@ -47,10 +53,16 @@
             <section class="price-block price-block--annual price-block--{{ loop.length }}">
                 <div class="price-block__header">
                     <div class="price-block__title">{{ option.option_two_title }}</div>
-                    <div class="price-block__price">
-                        <div class="price-block__currency">{{ option.option_two_currency }}</div>
-                        <div class="price-block__number">{{ option.option_two_price }}</div>
-                    </div>
+                    {% if option.option_two_currency or option.option_two_price %}
+                        <div class="price-block__price">
+                            {% if option.option_two_currency %}
+                                <div class="price-block__currency">{{ option.option_two_currency }}</div>
+                            {% endif %}
+                            {% if option.option_two_price %}
+                                <div class="price-block__number">{{ option.option_two_price }}</div>
+                            {% endif %}
+                        </div>
+                    {% endif %}
                 </div>
                 <div class="price-block__description-block">
                     <div class="price-block__description">{{ option.option_two_description }}</div>

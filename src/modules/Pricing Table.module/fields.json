@@ -36,7 +36,6 @@
             "id": "option_one.option_one_table.option_one_currency",
             "name": "option_one_currency",
             "label": "Option 1 currency",
-            "required": true,
             "type": "text",
             "default": "$"
           },
@@ -44,7 +43,6 @@
             "id": "option_one.option_one_table.option_one_price",
             "name": "option_one_price",
             "label": "Option 1 price",
-            "required": true,
             "display": "text",
             "step": 1,
             "type": "number",
@@ -183,7 +181,6 @@
             "id": "option_two.option_two_table.option_two_currency",
             "name": "option_two_currency",
             "label": "Option 2 currency",
-            "required": true,
             "type": "text",
             "default": "$"
           },
@@ -191,7 +188,6 @@
             "id": "option_two.option_two_table.option_two_price",
             "name": "option_two_price",
             "label": "Option 2 price",
-            "required": true,
             "display": "text",
             "step": 1,
             "type": "number",
