@@ -2,7 +2,7 @@
   {
     "type": "group",
     "name": "header_group",
-    "label": "Header",
+    "label": "Website header",
     "children": [
       {
         "type": "group",
