@@ -1854,7 +1854,7 @@
             "type": "color",
             "inherited_value": {
               "property_value_paths": {
-                "color": "theme.color.primary.color"
+                "color": "theme.color.secondary.color"
               }
             },
             "default": {
@@ -1958,7 +1958,7 @@
                     "type": "color",
                     "inherited_value": {
                       "property_value_paths": {
-                        "color": "theme.color.primary.color"
+                        "color": "theme.color.secondary.color"
                       }
                     },
                     "default": {
@@ -1997,7 +1997,7 @@
                     "type": "color",
                     "inherited_value": {
                       "property_value_paths": {
-                        "color": "theme.color.primary.color"
+                        "color": "theme.color.secondary.color"
                       }
                     },
                     "default": {
