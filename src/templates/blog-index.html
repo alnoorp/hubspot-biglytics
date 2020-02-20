@@ -45,8 +45,8 @@
                 </div>
               </div>
               <div class="blog-card__body">
-                {% if content.featured_image %}
-                  <a class="blog-card__image" style="background-image: url('{{ content.featured_image }}')"; href="{{ content.absolute_url }}"></a>
+                {% if content.post_list_summary_featured_image %}
+                  <a class="blog-card__image" style="background-image: url('{{ content.post_list_summary_featured_image }}')"; href="{{ content.absolute_url }}"></a>
                 {% endif %}
                 <div class="blog-card__content">
                   {% if content.tag_list %}
@@ -57,7 +57,9 @@
                         {% endfor %}
                     </div>
                   {% endif %}
-                  {{ content.post_list_content|truncatehtml(170) }}
+                  {% if content_group.show_summary_in_listing %}
+                    {{ content.post_list_content|truncatehtml(170) }}
+                  {% endif %}
                 </div>
               </div>
               <div class="blog-card__footer">
