@@ -1,11 +1,11 @@
 html {
-  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
+  font-size: 16px;
 }
 
 body {
-  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.body_font.size.value', 'typography_group.typography.body_font.size.units') }};
+  background-color: #FFFFFF;
+  color: #1E2B33;
+  font-family: "Work Sans", sans-serif;
   line-height: 1.4;
 }
 
@@ -23,7 +23,7 @@ strong {
 /* Links */
 
 a {
-  color: {{ get_theme_style_setting('links_group.links.link_color.color') }};
+  color: #C168C2;
   cursor: pointer;
   text-decoration: none;
 }
@@ -31,8 +31,13 @@ a {
 a:hover,
 a:focus,
 a:active {
-  color: {{ get_theme_style_setting('links_group.links.link_hover_color.color') }};
+  color: #E77DE8;
   text-decoration: underline;
+}
+
+a.button:disabled {
+  background-color: #E6E6E6;
+  pointer-events: none;
 }
 
 /* Headings */
@@ -56,57 +61,34 @@ h5 {
 }
 
 h1 {
-  color: {{ get_theme_style_setting('typography_group.typography.heading_one.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.heading_one.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.heading_one.size.value', 'typography_group.typography.heading_one.size.units') }};
-  font-style: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.font-style') }};
-  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.font-weight') }};
-  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_one.styles.text-decoration') }};
+  font-size: 40px;
+  font-weight: 600;
 }
 
 h2 {
-  color: {{ get_theme_style_setting('typography_group.typography.heading_two.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.heading_two.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.heading_two.size.value', 'typography_group.typography.heading_two.size.units') }};
-  font-style: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.font-style') }};
-  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.font-weight') }};
-  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_two.styles.text-decoration') }};
+  font-size: 30px;
+  font-weight: 600;
 }
 
 h3 {
-  color: {{ get_theme_style_setting('typography_group.typography.heading_three.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.heading_three.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.heading_three.size.value', 'typography_group.typography.heading_three.size.units') }};
-  font-style: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.font-style') }};
-  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.font-weight') }};
-  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_three.styles.text-decoration') }};
+  font-size: 24px;
+  font-weight: 600;
 }
 
 h4 {
-  color: {{ get_theme_style_setting('typography_group.typography.heading_four.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.heading_four.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.heading_four.size.value', 'typography_group.typography.heading_four.size.units') }};
-  font-style: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.font-style') }};
-  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.font-weight') }};
-  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_four.styles.text-decoration') }};
+  font-size: 20px;
+  font-weight: 400;
 }
 
 h5 {
-  color: {{ get_theme_style_setting('typography_group.typography.heading_five.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.heading_five.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.heading_five.size.value', 'typography_group.typography.heading_five.size.units') }};
-  font-style: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.font-style') }};
-  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.font-weight') }};
-  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_five.styles.text-decoration') }};
+  color: #34B5E5;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 h6 {
-  color: {{ get_theme_style_setting('typography_group.typography.heading_six.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.heading_six.font') }};
-  font-size: {{ get_theme_style_setting('typography_group.typography.heading_six.size.value', 'typography_group.typography.heading_six.size.units') }};
-  font-style: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.font-style') }};
-  font-weight: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.font-weight') }};
-  text-decoration: {{ get_theme_style_setting('typography_group.typography.heading_six.styles.text-decoration') }};
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /* Lists */
@@ -120,7 +102,6 @@ ol {
 
 ul li,
 ol li {
-  font-size: 1rem;
   line-height: 2;
 }
 
@@ -141,14 +122,10 @@ code {
 /* Blockquotes */
 
 blockquote {
-  border-left-color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
-  border-left-style: solid;
-  border-left-width: 4px;
+  border-left: 4px solid #1E2B33;
   font-size: 1.4rem;
-  font-weight: 400;
-  letter-spacing: 0;
-  margin: 0;
-  padding: 1.4rem 2.8rem;
+  margin: 0 0 1.4rem;
+  padding-left: 1.4rem;
 }
 
 /* Horizontal Rules */

@@ -1,55 +1,55 @@
 /* Navigation Theme Styles */
 
 .navigation-primary a {
-    color: {{ get_theme_style_setting('header_group.header.header_menu_link_color.color') }};
+    color: #FFF;
 }
 
 .navigation-primary a:hover,
 .navigation-primary a:focus,
 .navigation-primary a:active {
-    color: {{ get_theme_style_setting('header_group.header.header_menu_link_hover_color.color') }};
+    color: #FFF;
 }
 
 .navigation-primary .submenu.level-1 > li > a.active-item:after {
-    background-color: {{ get_theme_style_setting('header_group.header.header_menu_link_color.color') }};
+    background-color: #FFF;
 }
 
 .submenu.level-2 {
-    background-color: {{ get_theme_style_setting('header_group.header.header_bg_color.color') }};
-    border-color: {{ get_theme_style_setting('header_group.header.header_child_menu_border_color.color') }};
+    background-color: #34B5E5;
+    border-color: #D0D0D0;
 }
 
 .submenu.level-2 > li {
-    border-bottom-color: {{ get_theme_style_setting('header_group.header.header_child_menu_border_color.color') }};
+    border-bottom-color: #D0D0D0;
 }
 
 .submenu.level-2 .menu-item .menu-link:hover,
 .submenu.level-2 .menu-item .menu-link:focus {
-    background-color: {{ get_theme_style_setting('header_group.header.header_child_menu_hover_bg_color.color') }};
-    color: {{ get_theme_style_setting('header_group.header.header_child_menu_hover_color.color') }};
+    background-color: #C168C2;
+    color: #FFF;
 }
 
 @media(max-width: 767px) {
     .header__navigation {
-        background-color: {{ get_theme_style_setting('header_group.header.header_bg_color.color') }};
+        background-color: #34B5E5;
     }
 
     .header__mobile-menu-icon,
     .header__mobile-menu-icon:after,
     .header__mobile-menu-icon:before {
-        background-color: {{ get_theme_style_setting('header_group.header.header_menu_link_color.color') }};
+        background-color: #FFF;
     }
 
     .menu-arrow-icon,
     .menu-arrow-icon:after {
-        background-color: {{ get_theme_style_setting('header_group.header.header_menu_link_color.color') }};
+        background-color: #FFF;
     }
 
     .submenu.level-1 > li {
-        border-top-color: {{ get_theme_style_setting('header_group.header.header_child_menu_border_color.color') }};
+        border-top-color: #D0D0D0;
     }
 
     .submenu.level-2 .menu-item {
-        border-top-color: {{ get_theme_style_setting('header_group.header.header_child_menu_border_color.color') }};
+        border-top-color: #D0D0D0;
     }
 }

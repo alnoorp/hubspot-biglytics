@@ -9,7 +9,7 @@
 .error-page:before {
   color: #F3F6F9;
   content: attr(data-error);
-  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
+  font-family: "Work Sans", sans-serif;
   font-size: 40vw;
   font-weight: bold;
   left: 50%;
@@ -81,8 +81,8 @@
 }
 
 .hs-search-results__title {
-  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
-  font-family: {{ get_theme_style_setting('typography_group.typography.body_font.font') }};
+  color: #1E2B33;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.25rem;
   margin-bottom: 0.25rem;
   text-decoration: underline;
@@ -101,5 +101,5 @@
 }
 
 .hs-search-results__pagination a {
-  color: {{ get_theme_style_setting('typography_group.typography.body_font.color') }};
+  color: #1E2B33;
 }

@@ -1,27 +1,21 @@
 /* Table */
 
 table {
-  border-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
-  border-style: solid;
-  border-width: 1px;
-  margin-bottom: 1rem;
+  background-color: #FFF;
+  border: 1px solid #D0D0D0;
+  color: #1E2B33;
+  margin-bottom: 1.4rem;
 }
 
 tbody + tbody {
-  border-top-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
-  border-top-style: solid;
-  border-top-width: 2px;
+  border-top: 2px solid #D0D0D0;
 }
 
 /* Table Cells */
 
 th,
 td {
-  background-color: {{ get_theme_style_setting('tables_group.tables.table_body_bg_color.color') }};
-  border-color: {{ get_theme_style_setting('tables_group.tables.table_border_color.color') }};
-  border-style: solid;
-  border-width: 1px;
-  color: {{ get_theme_style_setting('tables_group.tables.table_body_text_color.color') }};
+  border: 1px solid #D0D0D0;
   padding: 0.75rem;
   vertical-align: top;
 }
@@ -30,14 +24,15 @@ td {
 
 thead th,
 thead td {
-  background-color: {{ get_theme_style_setting('tables_group.tables.table_header_bg_color.color') }};
-  color: {{ get_theme_style_setting('tables_group.tables.table_header_text_color.color') }};
+  background-color: #34B5E5;
+  border: 2px solid #D0D0D0;
+  color: #FFF;
   vertical-align: bottom;
 }
 
 /* Table Footer */
 
 tfoot td {
-  background-color: {{ get_theme_style_setting('tables_group.tables.table_footer_bg_color.color') }};
-  color: {{ get_theme_style_setting('tables_group.tables.table_footer_text_color.color') }};
+  background-color: #FFF;
+  color: #1E2B33;
 }
