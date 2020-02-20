@@ -19,9 +19,6 @@ PROD: https://private.hubteam.com/atlas/hubs/my
 * CMS:Themes
 * CMS:Themes:GlobalSettings
 * CMS:Themes:Settings
-* ContentEditorUI:GlobalPartialsAccess
-* CMS:GlobalContentEditor
-* cos_renderer_global_content_rendering
 * CMS:Themes:HotReloading
 * ContentEditorUI:BaymaxEditor
 * ContentRendering:WidgetTagFullInterpret
