@@ -184,6 +184,10 @@
     padding: 40px 20px;
 }
 
+.blog-card__title a {
+  font-size: 30px;
+}
+
 .blog-card__title a,
 .blog-card__author-name,
 .blog-post__author-name {
@@ -318,7 +322,7 @@
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1;
     margin: 0 0.1rem;
     padding: 0.25rem 0.6rem;

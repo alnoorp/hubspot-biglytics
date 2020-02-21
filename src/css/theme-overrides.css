@@ -330,7 +330,7 @@ h6 {
   }
 
   h6 {
-    {{ theme.global.typography.h6font.style }};
+    {{ theme.global.typography.h6.font.style }};
     color: {{ theme.global.typography.h6.font.color }};
     font-size: {{ theme.global.typography.h6.font.size ~ theme.global.typography.h6.font.size_unit }};
     letter-spacing: {{ theme.global.typography.h6.letter_spacing ~ 'px' }};
@@ -756,7 +756,7 @@ tbody + tbody {
 }
 
 .footer__follow-me .social-links__icon:hover svg {
-  fill: {{ body_font.color }};
+  fill: {{ footer_bg_color }};
 }
 
 /* Footer Content */
@@ -768,7 +768,7 @@ tbody + tbody {
 {% if custom_heading_styles %}
 
   .footer h4 {
-      {{ theme.global.typography.h6font.style }};
+      {{ theme.global.typography.h6.font.style }};
       color: {{ theme.global.typography.h6.font.color }};
       font-size: {{ theme.global.typography.h6.font.size ~ theme.global.typography.h6.font.size_unit }};
       letter-spacing: {{ theme.global.typography.h6.letter_spacing ~ 'px' }};
@@ -802,73 +802,91 @@ tbody + tbody {
 {##############################   9. Blog   ################################}
 {###########################################################################}
 
-/* Blog Meta - Author/Avatar/Timestamp */
+/* Blog Meta - Author */
 
-.blog-meta__author {
+.blog-card__author-name,
+.blog-post__author-name {
   {{ body_font.style }};
+  color: {{ body_font.color }};
 }
 
-.blog-meta__timestamp {
-  {{ body_font.style }};
+/* Tags */
+
+.blog-card__tag-link,
+.blog-post__tag-link {
+  background-color: {{ secondary_color }};
 }
 
-/* Tags/Topics */
-
-.blog-tag {
-  {{ body_font.style }};
-  font-weight: 700;
+.blog-card__tags svg,
+.blog-post__tags svg {
+  fill: {{ secondary_color }};
 }
 
 /* Blog Listing */
 
-.blog-navigation .blog-navigation__text {
+.blog-card__title a {
   {{ headings_font.style }};
   color: {{ headings_font.color }};
+  text-transform: {{ theme.global.typography.headings.text_transform }};
+  letter-spacing: {{ theme.global.typography.headings.letter_spacing ~ 'px' }};
 }
 
-/* Blog Postcard */
+{% if custom_heading_styles %}
 
-.blog-postcard__post-details h2 {
-  color: {{ body_font.color }};
-  font-family: {{ body_font.font }};
-  font-weight: 700;
-}
+  .blog-card__title a {
+    {{ theme.global.typography.h2.font.style }};
+    color: {{ theme.global.typography.h2.font.color }};
+    font-size: {{ theme.global.typography.h2.font.size ~ theme.global.typography.h2.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h2.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h2.text_transform }};
+  }
+
+{% endif %}
 
 /* Blog Pagination */
 
 .blog-pagination__link {
-  {{ body_font.style }};
-  color: {{ body_font.color }};
+  color: {{ anchor_font.color }};
 }
 
-/* Blog Post */
-
-.blog-post__title {
-  {{ body_font.style }};
-  color: {{ body_font.color }};
-  font-weight: 700;
+.blog-pagination__link:hover {
+  color: {{ anchor_font_hover.color }};
 }
 
-.blog-post__body h1,
-.blog-post__body h2,
-.blog-post__body h3,
-.blog-post__body h4,
-.blog-post__body h5,
-.blog-post__body h6 {
-  color: {{ headings_font.color }};
-  font-family: {{ body_font.font}}, {{ body_font.fallback }};
-  font-weight: 700;
+.blog-pagination__link:hover svg,
+.blog-pagination__link:focus svg {
+  fill: {{ anchor_font_hover.color }};
 }
 
-/* Recent Posts */
+.blog-pagination__link:active {
+  color: {{ color_variant(anchor_font_hover.color, 80) }};
+}
 
-.blog-recent-posts .content-wrapper > h2 {
-  {{ body_font.style }};
-  font-weight: 700;
+.blog-pagination__link:active svg {
+  fill: {{ color_variant(anchor_font_hover.color, 80) }};
+}
+
+.blog-pagination__prev-link--disabled,
+.blog-pagination__next-link--disabled {
+  color: {{ gray }};
+}
+
+.blog-pagination__prev-link--disabled svg,
+.blog-pagination__next-link--disabled svg {
+  fill: {{ gray }};
+}
+
+.blog-pagination__link--active {
+  background-color: {{ secondary_color }};
+  color: #fff;
+}
+
+.blog-pagination__link--active:hover {
+  color: #fff;
 }
 
 {###########################################################################}
-{##########################   10. System Pages   ############################}
+{##########################   10. System Pages   ###########################}
 {###########################################################################}
 
 /* Error Pages - Global */
@@ -893,4 +911,58 @@ tbody + tbody {
 
 #email-prefs-form h3 {
   font-size: {{ theme.global.typography.h4.font.size ~ theme.global.typography.h4.font.size_unit }};
+}
+
+{###########################################################################}
+{############################   11. Modules   ##############################}
+{###########################################################################}
+
+/* Accordion */
+
+.accordion__item button {
+    color: {{ anchor_font.color }};
+}
+
+.accordion__icon {
+    background-color: {{ anchor_font.color }};
+}
+
+.accordion__icon:before,
+.accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] button {
+    color: {{ anchor_font_hover.color }};
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon:before,
+.accordion__item[aria-expanded=true] .accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon {
+    background-color: {{ anchor_font_hover.color }};
+}
+
+/* Blog CTA Module */
+
+.cta-banner {
+    background-color: {{ secondary_color }};
+}
+
+.cta-banner__content-column * {
+    color: #fff;
+}
+
+/* Image Module */
+
+img {
+    max-width: 100%;
+}
+
+/* Statististic */
+
+.statistic__info {
+    color: {{ body_font.color }};
 }
