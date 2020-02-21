@@ -51,10 +51,10 @@
 {% set primary_color = color(theme.color.primary) %}
 {% set secondary_color = color(theme.color.secondary) %}
 {% set body_color = color(theme.color.body) %}
-{% set light_gray = '#e6e6e6' %}
+{% set light_gray = '#f1f1f1' %}
 {% set gray = '#d0d0d0' %}
-{% set success = '#69a84f' %}
-{% set error = '#cc0201' %}
+{% set success = '#00db7c' %}
+{% set error = '#ef6b51' %}
 
 /* 1d. Typography */
 
@@ -519,24 +519,8 @@ form {
 
 .hs-form-field > label {
   {{ form_label_font.style }};
-  border-radius: {{ corner_radius }};
   color: {{ form_label_font.color }};
   font-size: {{ form_label_font.size ~ form_label_font.size_unit }};
-}
-
-form div.in-focus > label {
-  color: {{ body_font.color }};
-  padding: {{ form_label_padding }};
-}
-
-label.hs-form-radio-display,
-label.hs-form-checkbox-display {
-  font-family: {{ body_font }};
-}
-
-.hs-fieldtype-radio label,
-.hs-fieldtype-checkbox label {
-  color: {{ body_font.color }};
 }
 
 /* Help Text - Legends */
@@ -554,7 +538,6 @@ input[type=email],
 input[type=password],
 input[type=tel],
 input[type=number],
-input[type=file],
 select,
 textarea {
   {{ form_input_font.style }};
@@ -564,10 +547,6 @@ textarea {
   color: {{ form_input_font.color }};
   font-size: {{ form_input_font.size ~ form_input_font.size_unit }};
   padding: {{ form_input_padding }};
-}
-
-select {
-  color: transparent;
 }
 
 ::-webkit-input-placeholder {
@@ -590,42 +569,18 @@ select {
   color: {{ form_input_placeholder_color }};
 }
 
-form .in-focus select {
-  color: {{ body_font.color }};
-}
-
-
-/* Inputs - Checkbox/Radio */
-
-form ul.inputs-list li input + span:before {
-  border: {{ global_border }};
-  border-radius: {{ corner_radius }};
-}
-
-form .input ul.invalid.error > li input + span:before {
-  border-color: {{ primary_color }};
-}
-
-/* Inputs - Select */
-
-.hs-fieldtype-select .input:after {
-  border-left: {{ form_select_toggle_size }} solid transparent;
-  border-right: {{ form_select_toggle_size }} solid transparent;
-  border-top: {{ form_select_toggle_size }} solid {{ form_select_toggle_color }};
-}
-
 /* Inputs - Datepicker */
 
-.hs-datepicker button.pika-button:hover {
-  background-color: {{ primary_color }} !important;
+.fn-date-picker td.is-today .pika-button {
+  color: {{ secondary_color }};
 }
 
 .hs-datepicker .is-selected button.pika-button {
-  background-color: {{ color_variant(theme.color.primary.color, -30) }} !important;
+  background-color: {{ secondary_color }};
 }
 
-.hs-datepicker .is-today button.pika-button {
-  color: {{ color_variant(theme.color.primary.color, -30) }};
+.hs-datepicker button.pika-button:hover {
+  background-color: {{ primary_color }} !important;
 }
 
 /* Validation */
@@ -634,13 +589,8 @@ form .input ul.invalid.error > li input + span:before {
   border-color: {{ error }};
 }
 
-.hs-error-msgs li,
-.hs-error-msgs li label {
-  color: {{ error }} !important;
-}
-
-.hs-error-msgs li a {
-  {{ body_font.style }};
+.hs-error-msg {
+  color: {{ error }};
 }
 
 /* Submit */
@@ -651,20 +601,19 @@ form input[type=submit] {
   border: {{ form_submit_border }};
   border-radius: {{ form_submit_corner_radius }};
   color: {{ form_submit_font.color }};
-  cursor: pointer;
   font-size: {{ form_submit_font.size ~ form_submit_font.size_unit }};
   padding: {{ form_submit_padding }};
-  text-align: center;
 }
 
 form input[type=submit]:hover,
 form input[type=submit]:focus {
-  background-color: {{ color_variant(theme.forms.submit.bg_color.color, -15) }};
-  border-color: {{ color_variant(theme.forms.submit.border.color.color, -15) }};
+  background-color: {{ color_variant(theme.forms.submit.bg_color.color, 40) }};
+  border-color: {{ color_variant(theme.forms.submit.border.color.color, 40) }};
 }
 
 form input[type=submit]:active {
-  background-color: {{ color_variant(theme.forms.submit.bg_color.color, 8) }};
+  background-color: {{ color_variant(theme.forms.submit.bg_color.color, -40) }};
+  border-color: {{ color_variant(theme.forms.submit.border.color.color, -40) }};
 }
 
 {###########################################################################}

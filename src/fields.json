@@ -1408,7 +1408,7 @@
                 "type": "color",
                 "default": {
                   "color": "#FFFFFF",
-                  "opacity": 0
+                  "opacity": 100
                 }
               },
               {

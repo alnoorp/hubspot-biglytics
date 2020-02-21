@@ -37,14 +37,14 @@ button:hover,
 button:focus,
 .button:hover,
 .button:focus {
-  background-color: #E77DE8;
-  border-color: #E77DE8;
+  background-color: #99409a;
+  border-color: #99409a;
 }
 
 button:active,
 .button:active {
-  background-color: #E77DE8;
-  border-color: #E77DE8;
+  background-color: #e77de8;
+  border-color: #e77de8;
 }
 
 /* Secondary Button */

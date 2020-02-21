@@ -1,15 +1,20 @@
-/* Form */
+/* Base */
 
 form {
   background-color: #F1F1F1;
-  border-radius: 0 0 4px 4px;
   border: 1px solid #F1F1F1;
+  border-radius: 4px;
   padding: 2.8rem;
+}
+
+.hs-form-field {
+  position: relative;
+  margin-bottom: 1.4rem;
 }
 
 /* Form Title */
 
-h3.form-title {
+.form-title {
   background-color: #34B5E5;
   border-radius: 4px 4px 0 0;
   color: #FFF;
@@ -18,90 +23,102 @@ h3.form-title {
   text-transform: uppercase;
 }
 
-/* Form Button */
-
-form input[type=submit] {
-  background-color: #C168C2;
-  border: 1px solid #C168C2;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  margin: 0;
-  padding: 13px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  -webkit-transition: all 0.15s linear;
-  -o-transition: all 0.15s linear;
-  transition: all 0.15s linear;
+.form-title ~ div > form {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-top: none;
 }
 
-form input[type=submit]:hover,
-form input[type=submit]:focus {
-  background-color: #E77DE8;
-  border-color: #E77DE8;
-}
+/* Labels */
 
-form input[type=submit]:active {
-  background-color: #E77DE8;
-  border-color: #E77DE8;
-}
-
-form .hs-button {
-  width: 100%;
-}
-
-/* Form Labels */
-
-.hs-form label {
+.hs-form-field > label {
   color: #1E2B33;
   display: block;
-  float: none;
-  font-size: 1rem;
-  margin-bottom: 4px;
+  margin-bottom: 0.35rem;
   padding-top: 0;
   text-align: left;
   width: auto;
 }
 
-/* Form Help Text */
+/* Help Text - Legends */
 
-.hs-form legend {
+.hs-form-field legend {
   color: #1E2B33;
+  font-size: 0.875rem;
 }
 
-/* Form Error Messages */
+/* Inputs */
 
-.hs-error-msgs label {
-  color: #EF6B51;
-  margin-top: 0.5rem;
-}
-
-/* Form Fields */
-
-form .input {
+.input {
   position: relative;
 }
 
-form input,
-form select,
-form textarea {
-  background-color: #FFF;
-  border: 1px solid #D0D0D0;
-  color: #1E2B33;
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=number],
+input[type=file],
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  color: #1e2b33;
   display: inline-block;
   padding: 0.75rem;
-  width: 100%;
+  width: 100% !important;
 }
 
-form input:focus,
-form select:focus,
-form textarea:focus {
-  border: 1px solid #D0D0D0;
-  outline: none;
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus,
+input[type=tel]:focus,
+input[type=number]:focus,
+input[type=file]:focus,
+select:focus,
+textarea:focus {
+  outline-color: #c168c2;
+}
+
+fieldset {
+  max-width: 100% !important;
+}
+
+::-webkit-input-placeholder {
+  color: #d0d0d0;
+}
+
+::-moz-placeholder {
+  color: #d0d0d0;
+}
+
+:-ms-input-placeholder {
+  color: #d0d0d0;
+}
+
+:-moz-placeholder {
+  color: #d0d0d0;
+}
+
+::placeholder {
+  color: #d0d0d0;
+}
+
+/* Inputs - Checkbox/Radio */
+
+form .inputs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.inputs-list > li {
+  display: block;
+  margin: 0.7rem 0 0.7rem 0.7rem;
 }
 
 input[type=checkbox],
@@ -110,18 +127,19 @@ input[type=radio] {
   cursor: pointer;
   height: auto;
   line-height: normal;
-  margin: 3px 5px 3px 0;
+  margin-right: 0.35rem;
   padding: 0;
   width: auto;
 }
 
-input[type=file] {
-  background-color: transparent;
-  border: initial;
-  box-shadow: none;
-  line-height: initial;
-  padding: initial;
+.inputs-list > li {
+  display: block;
+  padding: 0;
+  padding-top: 0;
+  width: 100%;
 }
+
+/* Inputs - Select */
 
 .hs-dropdown .input:after {
   content: "\25BE";
@@ -133,6 +151,8 @@ input[type=file] {
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
+/* Inputs - Datepicker */
 
 .hs-date_picker .input .hs-dateinput:before {
   color: #1E2B33;
@@ -164,178 +184,97 @@ input[type=file] {
   border-radius: 0 !important;
 }
 
-.hs-input:-moz-placeholder {
+/* Inputs - File Picker */
+
+input[type=file] {
+  background-color: transparent;
+  border: initial;
+  box-shadow: none;
+  line-height: initial;
+  padding: initial;
+}
+
+/* Headings and Text */
+
+form .hs-richtext,
+form .hs-richtext p {
   color: #1E2B33;
+  font-size: 0.875rem;
+  margin: 0 0 1.4rem;
 }
 
-.hs-input::-webkit-input-placeholder {
-  color: #1E2B33;
+form .hs-richtext img {
+  max-width: 100% !important;
 }
 
-.hs-input input,
-.hs-input textarea {
-  -webkit-transition: border 0.2s linear;
-  -o-transition: border 0.2s linear;
-  transition: border 0.2s linear;
+form .header {
+  background-color: transparent;
+  border: none;
 }
 
-textarea.hs-input {
-  height: auto;
+/* GDPR */
+
+.legal-consent-container .hs-form-booleancheckbox-display > span,
+.legal-consent-container .hs-form-booleancheckbox-display > span p {
+  font-size: 0.875rem;
+  margin-left: 1rem !important;
 }
 
-select[multiple].hs-input {
-  height: inherit;
+/* Validation */
+
+.hs-input.invalid.error {
+  border-color: #ef6b51;
 }
 
-fieldset.form-columns-1 .hs-input:not([type=radio]):not([type=checkbox]) {
-  width: 100% !important;
+.hs-error-msg {
+  color: #ef6b51;
+  margin-top: 0.35rem;
 }
 
-input.hs-input.error,
-div.field.error input,
-div.field.error textarea,
-div.field.error .chzn-choices,
-textarea.hs-input.error,
-select.hs-input.error {
-  border-color: #EF6b51;
-}
+/* Submit */
 
-input.hs-input.error:focus,
-div.field.error input:focus,
-div.field.error textarea:focus,
-div.field.error .chzn-choices:focus,
-textarea.hs-input.error:focus,
-select.hs-input.error:focus {
-  border-color: #EF6b51;
-}
-
-.actions {
-  padding: 0;
-}
-
-.inputs-list {
-  margin: 0 0 5px;
-  padding-left: 0;
-  width: 100%;
-}
-
-.inputs-list > li {
-  display: block;
-  padding: 0;
-  padding-top: 0;
-  width: 100%;
-}
-
-.inputs-list label {
-  display: block;
-  float: none;
-  font-weight: normal;
-  line-height: 18px;
-  padding: 0;
-  text-align: left;
-  white-space: normal;
-  width: auto;
-}
-
-.inputs-list:first-child {
-  padding-top: 6px;
-}
-
-.inputs-list > li + li {
-  padding-top: 2px;
-}
-
-.inputs-list label > input,
-.inputs-list label > span {
-  vertical-align: middle;
-}
-
-ul.no-list {
-  list-style: none;
-}
-
-.field {
-  margin-bottom: 18px;
-}
-
-.hs-field-desc {
-  color: #1E2B33;
-  margin: 0 0 6px;
-  font-size: 14px;
-}
-
-.hs-form-required {
-  color: red;
-}
-
-.hs-richtext {
-  color: #1E2B33;
+form input[type=submit] {
+  background-color: #c168c2;
+  border: 1px solid #c168c2;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
   font-size: 1rem;
-  margin-bottom: 3px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+  white-space: normal;
+  width: 100%;
 }
 
-.hs-richtext hr {
-  margin-left: 0;
-  text-align: left;
-  width: 91%;
+form input[type=submit]:hover,
+form input[type=submit]:focus {
+  background-color: #99409a;
+  border-color: #99409a;
 }
+
+form input[type=submit]:active {
+  background-color: #e77de8;
+  border-color: #e77de8;
+}
+
+/* Captcha */
 
 .grecaptcha-badge {
   margin: 0 auto;
 }
 
-.email-correction, .email-validation {
-  font-size: 12px;
-  padding-top: 3px;
-}
+/* Inline Thank You Message */
 
-.email-correction a,
-.email-validation a {
-  cursor: pointer;
-}
-
-@media (max-width: 400px),
-(min-device-width: 320px) and (max-device-width: 480px) {
-  .email-correction form .form-columns-2 .hs-form-field,
-  .email-correction form .form-columns-3 .hs-form-field,
-  .email-validation form .form-columns-2 .hs-form-field,
-  .email-validation form .form-columns-3 .hs-form-field {
-    float: none;
-    width: 100%;
-  }
-  .email-correction form .form-columns-2 .hs-form-field .hs-input,
-  .email-correction form .form-columns-3 .hs-form-field .hs-input,
-  .email-validation form .form-columns-2 .hs-form-field .hs-input,
-  .email-validation form .form-columns-3 .hs-form-field .hs-input {
-    width: 90%;
-  }
-  .email-correction form .form-columns-2 .hs-form-field input[type=checkbox],
-  .email-correction form .form-columns-2 .hs-form-field input[type=radio],
-  .email-correction form .form-columns-3 .hs-form-field input[type=checkbox],
-  .email-correction form .form-columns-3 .hs-form-field input[type=radio],
-  .email-validation form .form-columns-2 .hs-form-field input[type=checkbox],
-  .email-validation form .form-columns-2 .hs-form-field input[type=radio],
-  .email-validation form .form-columns-3 .hs-form-field input[type=checkbox],
-  .email-validation form .form-columns-3 .hs-form-field input[type=radio] {
-    width: 24px;
-  }
-}
-
-.hs-button,
-.button__primary,
-.hs-form-field input[type=text],
-.hs-form-field input[type=email],
-.hs-form-field input[type=phone],
-.hs-form-field input[type=number],
-.hs-form-field input[type=tel],
-.hs-form-field input[type=date],
-.hs-form-field textarea,
-.hs-form-field select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
-.hs-form-field select::-ms-expand {
-  display: none;
+.submitted-message {
+  background-color: #f1f1f1;
+  border-color: 1px solid #f1f1f1;
+  padding: 2.8rem;
 }
