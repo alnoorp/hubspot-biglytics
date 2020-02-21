@@ -1,21 +1,21 @@
 /* Table */
 
 table {
-  background-color: #FFF;
-  border: 1px solid #D0D0D0;
-  color: #1E2B33;
+  border: 1px solid #d0d0d0;
+  border-collapse: collapse;
+  color: #1e2b33;
   margin-bottom: 1.4rem;
 }
 
 tbody + tbody {
-  border-top: 2px solid #D0D0D0;
+  border-top: 2px solid #d0d0d0;
 }
 
 /* Table Cells */
 
 th,
 td {
-  border: 1px solid #D0D0D0;
+  border: 1px solid #d0d0d0;
   padding: 0.75rem;
   vertical-align: top;
 }
@@ -24,15 +24,15 @@ td {
 
 thead th,
 thead td {
-  background-color: #34B5E5;
-  border: 2px solid #D0D0D0;
-  color: #FFF;
+  background-color: #34b5e5;
+  border: 2px solid #d0d0d0;
+  color: #fff;
   vertical-align: bottom;
 }
 
 /* Table Footer */
 
 tfoot td {
-  background-color: #FFF;
-  color: #1E2B33;
+  background-color: #fff;
+  color: #1e2b33;
 }

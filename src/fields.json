@@ -1770,8 +1770,8 @@
                 "type": "color",
                 "inherited_value": {
                   "property_value_paths": {
-                    "color": "theme.global.tables.bg_color.color",
-                    "opacity": "theme.global.tables.bg_color.opacity"
+                    "color": "theme.color.secondary.color",
+                    "opacity": "theme.color.secondary.opacity"
                   }
                 }
               },
