@@ -2068,6 +2068,15 @@
             ]
           },
           {
+            "label": "Content Color",
+            "name": "content_color",
+            "type": "color",
+            "default": {
+              "color": "#ffffff",
+              "opacity": 100
+            }
+          },
+          {
             "label": "Menu",
             "name": "menu",
             "type": "group",

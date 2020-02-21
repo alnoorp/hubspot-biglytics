@@ -7,7 +7,7 @@
 .footer__container {
   margin: 0 auto;
   max-width: 1340px;
-  padding: 40px 40px 0 40px;
+  padding: 2.8rem 2.8rem 0 2.8rem;
 }
 
 .footer__top-section {
@@ -16,7 +16,7 @@
 
 @media (max-width: 767px) {
   .footer__top-section {
-    padding-bottom: 40px;
+    padding-bottom: 2.8rem;
   }
 }
 
@@ -62,22 +62,23 @@
 
 /* Footer Menus */
 
-.footer,
-.footer h4,
-.footer a {
+.footer * {
   color: #FFF;
 }
 
 .footer h4 {
   font-size: 15px;
   font-weight: 600;
-  letter-spacing: normal;
-  line-height: 1.125rem;
   text-transform: uppercase;
 }
 
 .footer__navigation ul {
   list-style: none;
+  padding-left: 0;
+}
+
+.footer__navigation li {
+  margin: 0.7rem 0;
 }
 
 @media (max-width: 767px) {
