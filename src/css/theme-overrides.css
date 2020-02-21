@@ -1,0 +1,968 @@
+{% import './tools/_macros.css' %}
+
+{## Table of contents
+
+  1. Variables
+    1a. Containers
+    1b. Breakpoints
+    1c. Colors
+    1d. Typography
+    1e. Borders
+    1f. Corner Radius
+    1g. Lists
+    1h. Horizontal Rule
+    1i. Blockquote
+    1j. Buttons
+    1k. Forms
+    1l. Tables
+    1m. Site Header
+    1n. Site Footer
+  2. Containers / Grid / DnD Areas
+  3. Typography
+  4. Buttons
+  5. Forms
+  6. Tables
+  7. Site Header
+  8. Site Footer
+  9. Blog
+  10. System Pages
+  11. Modules
+
+##}
+
+{###########################################################################}
+{############################   1. Variables   #############################}
+{###########################################################################}
+
+/* 1a. Containers */
+
+{% set container_width = theme.content_width ~ 'px' %}
+{% set dnd_section_padding = theme.vertical_spacing ~ 'px ' ~ '20px' %}
+
+/* 1b. Breakpoints */
+
+{% set bp_small = '768px' %}
+{% set bp_medium = '980px' %}
+{% set bp_large = '1024px' %}
+{% set bp_xlarge = '1340px' %}
+
+/* 1c. Colors */
+
+{% set primary_color = color(theme.color.primary) %}
+{% set secondary_color = color(theme.color.secondary) %}
+{% set body_color = color(theme.color.body) %}
+{% set light_gray = '#f1f1f1' %}
+{% set gray = '#d0d0d0' %}
+{% set success = '#00db7c' %}
+{% set error = '#ef6b51' %}
+
+/* 1d. Typography */
+
+{% set primary_font = theme.typography.primary %}
+{% set secondary_font = theme.typography.secondary %}
+{% set base_font_size = theme.global.typography.body.size %}
+{% set body_font = theme.global.typography.body %}
+{% set headings_font = theme.global.typography.headings.font %}
+{% set custom_heading_styles = theme.global.typography.headings.heading_toggle %}
+{% set anchor_font = theme.global.typography.links.font %}
+{% set anchor_font_hover = theme.global.typography.links.hover %}
+{% set lead_paragraph_size = '1.25rem' %}
+
+/* 1e. Border */
+
+{% set global_border = theme.border.width ~ 'px ' ~ theme.border.style ~ color(theme.border.color) %}
+
+/* 1f. Corner Radius */
+
+{% set corner_radius = theme.corner_radius ~ 'px' %}
+
+/* 1g. Lists */
+
+{% set list_padding = '1.4rem' %}
+{% set list_margin = '1.4rem 0' %};
+{% set list_li_margin = '0.7rem' %}
+{% set list_nested_margin = '1.4rem' %}
+{% if !theme.global.typography.lists.bullets.src %}
+  {% set unordered_list_style = 'disc' %}
+{% else %}
+  {% set unordered_list_style = 'none' %}
+  {% set unordered_list_image = 'url("{{ theme.global.typography.lists.bullets.src }}")' %}
+{% endif %}
+
+/* 1h. Horizontal Rule */
+
+{% set hr_color = gray %}
+
+/* 1i. Blockquote */
+
+{% set blockquote_padding = '1.4rem' %}
+{% set blockquote_border = '16px solid {{ primary_color }}' %}
+
+/* 1j. Buttons */
+
+{% set button_small_font_size = theme.global.buttons.size.small.font_size ~ 'px' %}
+{% set button_small_spacing = theme.global.buttons.size.small.vertical_spacing ~ 'px' ~ ' ' ~ theme.global.buttons.size.small.horizontal_spacing ~ 'px' %}
+
+{% set button_regular_spacing = theme.global.buttons.size.regular.vertical_spacing ~ 'px' ~ ' ' ~ theme.global.buttons.size.regular.horizontal_spacing ~ 'px' %}
+
+{% set button_large_font_size = theme.global.buttons.size.large.font_size ~ 'px' %}
+{% set button_small_spacing = theme.global.buttons.size.large.vertical_spacing ~ 'px' ~ ' ' ~ theme.global.buttons.size.large.horizontal_spacing ~ 'px' %}
+
+{% set button_primary_font = theme.global.buttons.primary.font %}
+{% set button_primary_bg_color = color(theme.global.buttons.primary.bg_color) %}
+{% set button_primary_border = theme.global.buttons.primary.border.width ~ 'px' ~ ' ' ~ theme.global.buttons.primary.border.style ~ ' ' ~ theme.global.buttons.primary.border.color.color %}
+{% set button_primary_corner_radius = theme.global.buttons.primary.corner_radius ~ 'px' %}
+
+{% set button_primary_font_hover = theme.global.buttons.primary.hover.font %}
+{% set button_primary_bg_color_hover = color(theme.global.buttons.primary.hover.bg_color) %}
+{% set button_primary_border_hover = theme.global.buttons.primary.hover.border.width ~ 'px' ~ ' ' ~ theme.global.buttons.primary.hover.border.style ~ ' ' ~ theme.global.buttons.primary.hover.border.color.color %}
+
+{% set button_secondary_font = theme.global.buttons.secondary.font %}
+{% set button_secondary_bg_color = color(theme.global.buttons.secondary.bg_color) %}
+{% set button_secondary_border = theme.global.buttons.secondary.border.width ~ 'px' ~ ' ' ~ theme.global.buttons.secondary.border.style ~ ' ' ~ theme.global.buttons.secondary.border.color.color %}
+{% set button_secondary_corner_radius = theme.global.buttons.secondary.corner_radius ~ 'px' %}
+
+{% set button_secondary_font_hover = theme.global.buttons.secondary.hover.font %}
+{% set button_secondary_bg_color_hover = color(theme.global.buttons.secondary.hover.bg_color) %}
+{% set button_secondary_border_hover = theme.global.buttons.secondary.hover.border.width ~ 'px' ~ ' ' ~ theme.global.buttons.secondary.hover.border.style ~ ' ' ~ theme.global.buttons.secondary.hover.border.color.color %}
+
+{% set button_disabled_bg_color = gray %}
+{% set button_disabled_color = light_gray %}
+
+/* 1k. Forms */
+
+{% set form_bg_color = color(theme.global.forms.bg_color) %}
+{% set form_padding = theme.global.forms.spacing.padding.vertical ~ 'px' ~ ' ' ~ theme.global.forms.spacing.padding.horizontal ~ 'px' %}
+{% set form_border = theme.global.forms.border.width ~ 'px' ~ ' ' ~ theme.global.forms.border.style ~ ' ' ~ theme.global.forms.border.color.color %}
+{% set form_corner_radius = theme.global.forms.border.corner_radius ~ 'px' %}
+{% set form_field_spacing = theme.global.forms.spacing.spacing %}
+
+{% set form_fieldset_border = '' %}
+{% set form_fieldset_padding = '' %}
+{% set form_fieldset_margin = '' %}
+
+{% set form_legend_padding = '' %}
+{% set form_legend_margin = '' %}
+
+{% set form_label_font = theme.global.forms.labels.font %}
+{% set form_label_padding = theme.global.forms.labels.padding.vertical ~ 'px' ~ ' ' ~ theme.global.forms.labels.padding.horizontal ~ 'px' %}
+
+{% set form_title_bg_color = color(theme.global.forms.title.bg_color) %}
+{% set form_title_font = theme.global.forms.title.font %}
+{% set form_title_padding = theme.global.forms.title.padding.vertical ~ 'px' ~ ' ' ~ theme.global.forms.title.padding.horizontal ~ 'px' %}
+{% set form_title_border = theme.global.forms.title.border.width ~ 'px' ~ ' ' ~ theme.global.forms.title.border.style ~ ' ' ~ theme.global.forms.title.border.color.color %}
+{% set form_title_corner_radius = theme.global.forms.title.border.corner_radius ~ 'px' %}
+
+{% set form_help_text_font = theme.global.help_text %}
+
+{% set form_input_font = theme.global.forms.inputs.font %}
+{% set form_input_bg_color = color(theme.global.forms.inputs.bg_color) %}
+{% set form_input_placeholder_color = color(theme.global.forms.inputs.placeholder_color) %}
+{% set form_input_border = theme.global.forms.inputs.border.width ~ 'px' ~ ' ' ~ theme.global.forms.inputs.border.style ~ ' ' ~ theme.global.forms.inputs.border.color.color %}
+{% set form_input_corner_radius = theme.global.forms.inputs.border.corner_radius ~ 'px' %}
+{% set form_input_padding = theme.global.forms.inputs.padding.vertical ~ 'px' ~ ' ' ~ theme.global.forms.inputs.padding.horizontal ~ 'px' %}
+{% set form_input_disabled_bg_color = light_gray %}
+{% set form_input_disabled_border = gray %}
+
+{% set form_select_toggle_color = primary_color %}
+{% set form_select_toggle_size = '6px' %}
+
+{% set form_submit_border = theme.global.forms.submit.border.width ~ 'px' ~ ' ' ~ theme.global.forms.submit.border.style ~ ' ' ~ theme.global.forms.submit.border.color.color %}
+{% set form_submit_corner_radius = theme.global.forms.submit.border.corner_radius ~ 'px' %}
+{% set form_submit_bg_color = color(theme.global.forms.submit.bg_color) %}
+{% set form_submit_padding = theme.global.forms.submit.padding.vertical ~ 'px' ~ ' ' ~ theme.global.forms.submit.padding.horizontal ~ 'px' %}
+{% set form_submit_font = theme.global.forms.submit.font %}
+
+/* 1l. Tables */
+
+{% set table_bg_color = color(theme.global.tables.bg_color) %}
+{% set table_border = theme.global.tables.border.width ~ 'px' ~ ' ' ~ theme.global.tables.border.style ~ ' ' ~ theme.global.tables.border.color.color %}
+{% set table_corner_radius = theme.global.tables.border.corner_radius ~ 'px' %}
+{% set table_padding = theme.global.tables.padding.vertical ~ 'px' ~ ' ' ~ theme.global.tables.padding.horizontal ~ 'px' %}
+{% set table_font_color = color(theme.global.tables.font.color) %}
+
+{% set table_head_bg_color = color(theme.global.tables.head.bg_color) %}
+{% set table_head_border = theme.global.tables.head.border.width ~ 'px' ~ ' ' ~ theme.global.tables.head.border.style ~ ' ' ~ theme.global.tables.head.border.color.color %}
+{% set table_head_corner_radius = theme.global.tables.head.border.corner_radius ~ 'px' %}
+{% set table_head_padding = theme.global.tables.head.padding.vertical ~ 'px' ~ ' ' ~ theme.global.tables.head.padding.horizontal ~ 'px' %}
+{% set table_head_font_color = color(theme.global.tables.head.font.color) %}
+
+/* 1m. Site Header */
+
+{% set header_bg_color = color(theme.global.header.bg_color) %}
+{% set header_border = theme.global.header.border.width ~ 'px' ~ ' ' ~ theme.global.header.border.style ~ ' ' ~ theme.global.header.border.color.color %}
+
+{% set header_primary_nav_font = theme.global.header.menu.font %}
+{% set header_primary_nav_font_hover = theme.global.header.menu.hover.font %}
+{% set header_primary_nav_bg_color_hover = color(theme.global.header.menu.hover.bg_color) %}
+{% set header_primary_nav_font_active = theme.global.header.menu.active.font %}
+{% set header_primary_nav_bg_color_active = color(theme.global.header.menu.active.bg_color) %}
+
+/* 1n. Site Footer */
+
+{% set footer_bg_color = color(theme.global.footer.bg_color) %}
+{% set footer_border = theme.global.footer.border.width ~ 'px' ~ ' ' ~ theme.global.footer.border.style ~ ' ' ~ theme.global.footer.border.color.color %}
+{% set footer_content_color = color(theme.global.footer.content_color) %}
+
+{% set footer_primary_nav_font = theme.global.footer.menu.font %}
+{% set footer_primary_nav_font_hover = theme.global.footer.menu.hover.font %}
+{% set footer_primary_nav_bg_color_hover = color(theme.global.footer.menu.hover.bg_color) %}
+{% set footer_primary_nav_font_active = theme.global.footer.menu.active.font %}
+{% set footer_primary_nav_bg_color_active = color(theme.global.footer.menu.active.bg_color) %}
+
+{###########################################################################}
+{##################   2. Containers / Grid / DnD Areas   ###################}
+{###########################################################################}
+
+.content-wrapper {
+  max-width: {{ container_width }};
+}
+
+@media screen and (min-width: {{ bp_xlarge }}) {
+  .content-wrapper {
+    padding: 0;
+  }
+}
+
+.dnd-section {
+  padding: {{ dnd_section_padding }};
+}
+
+.dnd-section > .row-fluid {
+  max-width: {{ container_width }};
+}
+
+{###########################################################################}
+{###########################   3. Typography   #############################}
+{###########################################################################}
+
+html {
+  font-size: {{ base_font_size ~ 'px' }};
+}
+
+body {
+  {{ body_font.style }};
+  background-color: {{ body_color }};
+  color: {{ body_font.color }};
+  font-size: {{ body_font.size ~ body_font.size_unit }};
+}
+
+p.lead,
+p.intro {
+  font-size: {{ lead_paragraph_size }};
+}
+
+/* Anchors */
+
+a {
+  {{ anchor_font.style }};
+  color: {{ anchor_font.color }};
+  font-size: {{ anchor_font.size ~ anchor_font.size_unit }};
+}
+
+a:hover, a:focus {
+  {{ anchor_font_hover.style }};
+  color: {{ anchor_font_hover.color }};
+}
+
+a:active {
+  color: {{ color_variant(anchor_font_hover.color, 80) }};
+}
+
+a.button:disabled {
+  background-color: {{ button_disabled_color }};
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  {{ headings_font.style }};
+  color: {{ headings_font.color }};
+  text-transform: {{ theme.global.typography.headings.text_transform }};
+  letter-spacing: {{ theme.global.typography.headings.letter_spacing ~ 'px' }};
+}
+
+{% if custom_heading_styles %}
+
+  h1 {
+    {{ theme.global.typography.h1.font.style }};
+    color: {{ theme.global.typography.h1.font.color }};
+    font-size: {{ theme.global.typography.h1.font.size ~ theme.global.typography.h1.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h1.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h1.text_transform }};
+  }
+
+  h2 {
+    {{ theme.global.typography.h2.font.style }};
+    color: {{ theme.global.typography.h2.font.color }};
+    font-size: {{ theme.global.typography.h2.font.size ~ theme.global.typography.h2.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h2.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h2.text_transform }};
+  }
+
+  h3 {
+    {{ theme.global.typography.h3.font.style }};
+    color: {{ theme.global.typography.h3.font.color }};
+    font-size: {{ theme.global.typography.h3.font.size ~ theme.global.typography.h3.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h3.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h3.text_transform }};
+  }
+
+  h4 {
+    {{ theme.global.typography.h4.font.style }};
+    color: {{ theme.global.typography.h4.font.color }};
+    font-size: {{ theme.global.typography.h4.font.size ~ theme.global.typography.h4.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h4.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h4.text_transform }};
+  }
+
+  h5 {
+    {{ theme.global.typography.h5.font.style }};
+    color: {{ theme.global.typography.h5.font.color }};
+    font-size: {{ theme.global.typography.h5.font.size ~ theme.global.typography.h5.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h5.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h5.text_transform }};
+  }
+
+  h6 {
+    {{ theme.global.typography.h6.font.style }};
+    color: {{ theme.global.typography.h6.font.color }};
+    font-size: {{ theme.global.typography.h6.font.size ~ theme.global.typography.h6.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h6.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h6.text_transform }};
+  }
+
+{% endif %}
+
+/* Lists */
+
+ul {
+  list-style-type: {{ unordered_list_style }};
+}
+
+{% if unordered_list_image %}
+
+  ul li {
+    min-height: {{ theme.global.typography.lists.bullets.height ~ 'px' }};
+    padding-left: {{ theme.global.typography.lists.bullets.width + 10 ~ 'px' }};
+    position: relative;
+  }
+
+
+  ul li:before {
+    background-image: {{ unordered_list_image }};
+    background-repeat: no-repeat;
+    background-size: {{ theme.global.typography.lists.bullets.width ~ 'px' }} {{ theme.global.typography.lists.bullets.height ~ 'px' }};
+    content: '';
+    display: inline-block;
+    height: {{ theme.global.typography.lists.bullets.height ~ 'px' }};
+    left: 0;
+    position: absolute;
+    top: 4px;
+    vertical-align: middle;
+    width: {{ theme.global.typography.lists.bullets.width ~ 'px' }};
+  }
+
+{% endif %}
+
+ul,
+ol {
+  margin: {{ list_margin }};
+  padding-left: {{ list_padding }};
+}
+
+ul li,
+ol li {
+  margin: {{ list_li_margin }};
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: {{ list_nested_margin }};
+}
+
+/* Blockquote */
+
+blockquote {
+  border-left: {{ blockquote_border }};
+  padding-left: {{ blockquote_padding }};
+}
+
+/* Horizontal Rules */
+
+hr {
+  background-color: {{ hr_color }};
+  color: {{ hr_color }};
+}
+
+{###########################################################################}
+{############################   4. Buttons   ###############################}
+{###########################################################################}
+
+/* Primary Button */
+
+button,
+.button {
+  {{ button_primary_font.style }};
+  background-color: {{ button_primary_bg_color }};
+  border: {{ button_primary_border }};
+  border-radius: {{ button_primary_corner_radius }};
+  color: {{ button_primary_font.color }};
+  fill: {{ button_primary_font.color }};
+  font-size: {{ button_primary_font.size ~ button_primary_font.size_unit }};
+  padding: {{ button_regular_spacing }};
+}
+
+button:disabled,
+.button:disabled {
+  background-color: {{ button_disabled_bg_color }};
+  color: {{ button_disabled_color }};
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+button:active,
+.button:active {
+  {{ button_primary_font_hover.style }};
+  background-color: {{ button_primary_bg_color_hover }};
+  border: {{ button_primary_border_hover }};
+  color: {{ button_primary_font_hover.color }};
+  font-size: {{ button_primary_font_hover.size ~ 'px' }};
+}
+
+button:active,
+.button:active {
+  background-color: {{ color_variant(theme.global.buttons.primary.hover.bg_color.color, 80) }};;
+  border-color: {{ color_variant(theme.global.buttons.primary.hover.border.color.color, 80) }};
+}
+
+/* Secondary Buttons */
+
+.button.button--secondary {
+  {{ button_secondary_font.style }};
+  background-color: {{ button_secondary_bg_color }};
+  border: {{ button_secondary_border }};
+  border-radius: {{ button_secondary_corner_radius }};
+  color: {{ button_secondary_font.color }};
+  fill: {{ button_secondary_font.color }};
+  font-size: {{ button_secondary_font.size ~ button_secondary_font.size_unit }};
+  padding: {{ button_regular_spacing }};
+}
+
+.button.button--secondary:hover,
+.button.button--secondary:focus,
+.button.button--secondary:active {
+  {{ button_secondary_font_hover.style }};
+  background-color: {{ button_secondary_bg_color_hover }};
+  border: {{ button_secondary_border_hover }};
+  color: {{ button_secondary_font_hover.color }};
+  fill: {{ button_secondary_font_hover.color }};
+  font-size: {{ button_secondary_font_hover.size ~ 'px' }};
+}
+
+.button.button--secondary:active {
+  background-color: {{ color_variant(theme.global.buttons.secondary.hover.bg_color.color, 80) }};
+  border-color: {{ color_variant(theme.global.buttons.secondary.hover.border.color.color, 80) }};
+  color: {{ color_variant(button_secondary_font_hover.color, 80) }};
+  fill: {{ color_variant(button_secondary_font_hover.color, 80) }};
+}
+
+/* Button Sizing */
+
+.button.button--small {
+  font-size: {{ button_small_font_size }};
+  padding: {{ button_small_spacing }};
+}
+
+.button.button--large {
+  font-size: {{ button_large_font_size }};
+  padding: {{ button_large_spacing }};
+}
+
+{###########################################################################}
+{##############################   5. Forms   ###############################}
+{###########################################################################}
+
+form {
+  background-color: {{ form_bg_color }};
+  border: {{ form_border }};
+  border-radius: {{ form_corner_radius }};
+  padding: {{ form_padding }};
+}
+
+.hs-form-field {
+  margin-bottom: {{ form_field_spacing ~ 'px' }};
+}
+
+/* Form Title */
+
+.form-title {
+  {{ form_title_font.style }};
+  background-color: {{ form_title_bg_color }};
+  border: {{ form_title_border }};
+  border-top-left-radius: {{ form_title_corner_radius }};
+  border-top-right-radius: {{ form_title_corner_radius }};
+  color: {{ form_title_font.color }};
+  font-size: {{ form_title_font.size ~ form_title_font.size_unit }};
+  padding: {{ form_title_padding }};
+}
+
+/* Labels */
+
+.hs-form-field > label {
+  {{ form_label_font.style }};
+  color: {{ form_label_font.color }};
+  font-size: {{ form_label_font.size ~ form_label_font.size_unit }};
+}
+
+/* Help Text - Legends */
+
+.hs-form-field legend {
+  {{ form_help_text_font.style }};
+  color: {{ form_help_text_font.color }};
+  font-size: {{ form_help_text_font.size ~ form_help_text_font.size_unit }};
+}
+
+/* Inputs */
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=tel],
+input[type=number],
+select,
+textarea {
+  {{ form_input_font.style }};
+  background-color: {{ form_input_bg_color }};
+  border: {{ form_input_border }};
+  border-radius: {{ form_input_corner_radius }};
+  color: {{ form_input_font.color }};
+  font-size: {{ form_input_font.size ~ form_input_font.size_unit }};
+  padding: {{ form_input_padding }};
+}
+
+::-webkit-input-placeholder {
+  color: {{ form_input_placeholder_color }};
+}
+
+::-moz-placeholder {
+  color: {{ form_input_placeholder_color }};
+}
+
+:-ms-input-placeholder {
+  color: {{ form_input_placeholder_color }};
+}
+
+:-moz-placeholder {
+  color: {{ form_input_placeholder_color }};
+}
+
+::placeholder {
+  color: {{ form_input_placeholder_color }};
+}
+
+/* Inputs - Datepicker */
+
+.fn-date-picker td.is-today .pika-button {
+  color: {{ secondary_color }};
+}
+
+.hs-datepicker .is-selected button.pika-button {
+  background-color: {{ secondary_color }};
+}
+
+.hs-datepicker button.pika-button:hover {
+  background-color: {{ primary_color }} !important;
+}
+
+/* Validation */
+
+.hs-input.invalid.error {
+  border-color: {{ error }};
+}
+
+.hs-error-msg {
+  color: {{ error }};
+}
+
+/* Submit */
+
+form input[type=submit] {
+  {{ form_submit_font.style }};
+  background-color: {{ form_submit_bg_color }};
+  border: {{ form_submit_border }};
+  border-radius: {{ form_submit_corner_radius }};
+  color: {{ form_submit_font.color }};
+  font-size: {{ form_submit_font.size ~ form_submit_font.size_unit }};
+  padding: {{ form_submit_padding }};
+}
+
+form input[type=submit]:hover,
+form input[type=submit]:focus {
+  background-color: {{ color_variant(theme.forms.submit.bg_color.color, 40) }};
+  border-color: {{ color_variant(theme.forms.submit.border.color.color, 40) }};
+}
+
+form input[type=submit]:active {
+  background-color: {{ color_variant(theme.forms.submit.bg_color.color, -40) }};
+  border-color: {{ color_variant(theme.forms.submit.border.color.color, -40) }};
+}
+
+{###########################################################################}
+{#############################   6. Tables   ###############################}
+{###########################################################################}
+
+table {
+  background-color: {{ table_bg_color }};
+  border: {{ table_border }};
+}
+
+th,
+td {
+  border: {{ table_border }};
+  color: {{ table_font_color }};
+  padding: {{ table_padding }};
+}
+
+thead th,
+thead td {
+  background-color: {{ table_head_bg_color }};
+  border: {{ table_head_border }};
+  color: {{ table_head_font_color }};
+}
+
+thead th {
+  border-bottom: {{ table_head_border }};
+}
+
+tbody + tbody {
+  border-top: {{ table_head_border }};
+}
+
+
+{###########################################################################}
+{###########################   7. Site Header   ############################}
+{###########################################################################}
+
+.header {
+  background-color: {{ header_bg_color }};
+  border-bottom: {{ header_border }};
+}
+
+.header__container {
+  max-width: {{ container_width }};
+}
+
+/* Logo */
+
+.header__logo .logo-company-name {
+  color: {{ body_color }};
+}
+
+/* Navigation Menu */
+
+.navigation-primary a {
+  color: {{ theme.global.header.menu.font.color }};
+}
+
+.navigation-primary a:hover,
+.navigation-primary a:focus,
+.navigation-primary a:active {
+  color: {{ theme.global.header.menu.font.color }};
+}
+
+.submenu.level-2 {
+  background-color: {{ header_bg_color }};
+  border: {{ global_border }};
+}
+
+.submenu.level-2 > li {
+  border-bottom-color: {{ theme.border.color.color }};
+}
+
+.submenu.level-2 .menu-item .menu-link:hover,
+.submenu.level-2 .menu-item .menu-link:focus {
+  background-color: {{ header_primary_nav_bg_color_hover }};
+  color: {{ header_primary_nav_font_hover }};
+}
+
+@media (max-width: {{ bp_small }}) {
+  .header__navigation {
+    background-color: {{ header_bg_color }};
+  }
+
+  .header__mobile-menu-icon,
+  .header__mobile-menu-icon:after,
+  .header__mobile-menu-icon:before,
+  .menu-arrow-icon,
+  .menu-arrow-icon:after {
+      background-color: {{ theme.global.header.menu.font.color }};
+  }
+
+  .submenu.level-1 > li,
+  .submenu.level-2 .menu-item {
+    border-top-color: {{ theme.border.color.color }};
+  }
+}
+
+/* Language Switcher */
+
+.header__language-switcher .lang_list_class {
+  background-color: {{ header_bg_color }};
+  border: {{ global_border }};
+}
+
+.header__language-switcher .lang_list_class li:hover {
+  background-color: {{ primary_color }}
+}
+
+{###########################################################################}
+{###########################   8. Site Footer   ############################}
+{###########################################################################}
+
+.footer {
+  background-color: {{ footer_bg_color }};
+}
+
+.footer__container {
+  max-width: {{ container_width }};
+}
+
+/* Footer Social Follow */
+
+.footer__follow-me .social-links {
+  border-color: {{ footer_content_color }};
+}
+
+.footer__follow-me .social-links__icon {
+  border-right-color: {{ footer_content_color }};
+}
+
+.footer__follow-me .social-links__icon svg {
+  fill: {{ footer_content_color }};
+}
+
+.footer__follow-me .social-links__icon:hover {
+  background-color: {{ footer_content_color }};
+}
+
+.footer__follow-me .social-links__icon:hover svg {
+  fill: {{ footer_bg_color }};
+}
+
+/* Footer Content */
+
+.footer * {
+  color: {{ footer_content_color }};
+}
+
+{% if custom_heading_styles %}
+
+  .footer h4 {
+      {{ theme.global.typography.h6.font.style }};
+      color: {{ theme.global.typography.h6.font.color }};
+      font-size: {{ theme.global.typography.h6.font.size ~ theme.global.typography.h6.font.size_unit }};
+      letter-spacing: {{ theme.global.typography.h6.letter_spacing ~ 'px' }};
+      text-transform: {{ theme.global.typography.h6.text_transform }};
+  }
+
+{% endif %}
+
+/* Footer Menu */
+
+.footer__main-bar__menu a {
+  {{ footer_primary_nav_font.style }};
+  color: {{ footer_primary_nav_font.color }};
+  font-size: {{ footer_primary_nav_font.size ~ footer_primary_nav_font.size_unit }};
+}
+
+.footer__main-bar__menu a:hover,
+.footer__main-bar__menu a:focus {
+  {{ footer_primary_nav_font_hover.style }};
+  background-color: {{ color(footer_primary_nav_bg_color_hover) }};
+  color: {{ footer_primary_nav_font_hover.color }};
+}
+
+.footer__main-bar__menu a:active {
+  {{ footer_primary_nav_font_active.style }};
+  background-color: {{ color(footer_primary_nav_bg_color_active) }};
+  color: {{ footer_primary_nav_font_active.color }};
+}
+
+{###########################################################################}
+{##############################   9. Blog   ################################}
+{###########################################################################}
+
+/* Blog Meta - Author */
+
+.blog-card__author-name,
+.blog-post__author-name {
+  {{ body_font.style }};
+  color: {{ body_font.color }};
+}
+
+/* Tags */
+
+.blog-card__tag-link,
+.blog-post__tag-link {
+  background-color: {{ secondary_color }};
+}
+
+.blog-card__tags svg,
+.blog-post__tags svg {
+  fill: {{ secondary_color }};
+}
+
+/* Blog Listing */
+
+.blog-card__title a {
+  {{ headings_font.style }};
+  color: {{ headings_font.color }};
+  text-transform: {{ theme.global.typography.headings.text_transform }};
+  letter-spacing: {{ theme.global.typography.headings.letter_spacing ~ 'px' }};
+}
+
+{% if custom_heading_styles %}
+
+  .blog-card__title a {
+    {{ theme.global.typography.h2.font.style }};
+    color: {{ theme.global.typography.h2.font.color }};
+    font-size: {{ theme.global.typography.h2.font.size ~ theme.global.typography.h2.font.size_unit }};
+    letter-spacing: {{ theme.global.typography.h2.letter_spacing ~ 'px' }};
+    text-transform: {{ theme.global.typography.h2.text_transform }};
+  }
+
+{% endif %}
+
+/* Blog Pagination */
+
+.blog-pagination__link {
+  color: {{ anchor_font.color }};
+}
+
+.blog-pagination__link:hover {
+  color: {{ anchor_font_hover.color }};
+}
+
+.blog-pagination__link:hover svg,
+.blog-pagination__link:focus svg {
+  fill: {{ anchor_font_hover.color }};
+}
+
+.blog-pagination__link:active {
+  color: {{ color_variant(anchor_font_hover.color, 80) }};
+}
+
+.blog-pagination__link:active svg {
+  fill: {{ color_variant(anchor_font_hover.color, 80) }};
+}
+
+.blog-pagination__prev-link--disabled,
+.blog-pagination__next-link--disabled {
+  color: {{ gray }};
+}
+
+.blog-pagination__prev-link--disabled svg,
+.blog-pagination__next-link--disabled svg {
+  fill: {{ gray }};
+}
+
+.blog-pagination__link--active {
+  background-color: {{ secondary_color }};
+  color: #fff;
+}
+
+.blog-pagination__link--active:hover {
+  color: #fff;
+}
+
+{###########################################################################}
+{##########################   10. System Pages   ###########################}
+{###########################################################################}
+
+/* Error Pages - Global */
+
+.error-page:before {
+  {{ primary_font.style }};
+  color: {{ gray }};
+}
+
+/* System Pages - Global */
+
+.hs-search-results__title {
+  {{ headings_font.style }};
+  color: {{ headings_font.color }};
+}
+
+.hs-search-results__title:hover {
+  {{ headings_font.style }};
+}
+
+/* Forms in System Pages */
+
+#email-prefs-form h3 {
+  font-size: {{ theme.global.typography.h4.font.size ~ theme.global.typography.h4.font.size_unit }};
+}
+
+{###########################################################################}
+{############################   11. Modules   ##############################}
+{###########################################################################}
+
+/* Accordion */
+
+.accordion__item button {
+    color: {{ anchor_font.color }};
+}
+
+.accordion__icon {
+    background-color: {{ anchor_font.color }};
+}
+
+.accordion__icon:before,
+.accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] button {
+    color: {{ anchor_font_hover.color }};
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon:before,
+.accordion__item[aria-expanded=true] .accordion__icon:after {
+    background-color: #FFFFFF;
+}
+
+.accordion__item[aria-expanded=true] .accordion__icon {
+    background-color: {{ anchor_font_hover.color }};
+}
+
+/* Blog CTA Module */
+
+.cta-banner {
+    background-color: {{ secondary_color }};
+}
+
+.cta-banner__content-column * {
+    color: #fff;
+}
+
+/* Image Module */
+
+img {
+    max-width: 100%;
+}
+
+/* Statististic */
+
+.statistic__info {
+    color: {{ body_font.color }};
+}

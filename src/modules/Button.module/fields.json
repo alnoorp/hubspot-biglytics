@@ -1,11 +1,51 @@
 [
   {
+    "id": "button_text",
+    "name": "button_text",
+    "label": "Button text",
+    "required": true,
+    "allow_new_line": false,
+    "show_emoji_picker": false,
+    "type": "text",
+    "default": "Add a button link here"
+  },
+  {
+    "label": "Button options",
+    "name": "button_options",
+    "type": "group",
+    "children": [
+      {
+        "id": "button_link_toggle",
+        "name": "button_link_toggle",
+        "label": "Use as link",
+        "required": false,
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "id": "button_icon_toggle",
+        "name": "button_icon_toggle",
+        "label": "Add icon",
+        "required": false,
+        "type": "boolean",
+        "default": false
+      }
+    ]
+  },
+  {
     "id": "button_link",
     "name": "button_link",
     "label": "Button link",
-    "required": true,
-    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS"],
+    "required": false,
+    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
     "type": "link",
+    "visibility": {
+      "controlling_field": "button_link_toggle",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL",
+      "access": null,
+      "hidden_subfields": null
+    },
     "default": {
       "url": {
         "type": "EXTERNAL",
@@ -17,26 +57,70 @@
     }
   },
   {
-    "id": "button_text",
-    "name": "button_text",
-    "label": "Button text",
-    "required": true,
-    "validation_regex": "",
-    "allow_new_line": false,
-    "show_emoji_picker": false,
-    "type": "text",
-    "default": "Add a button link here"
+    "label": "Icon",
+    "name": "button_icon",
+    "type": "group",
+    "children": [
+      {
+        "name": "icon",
+        "label": "",
+        "type": "icon",
+        "required": false,
+        "visibility": {
+          "controlling_field": "button_icon_toggle",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        }
+      },
+      {
+        "label": "Position",
+        "name": "icon_position",
+        "type": "choice",
+        "required": false,
+        "sortable": false,
+        "display": "select",
+        "choices": [["left", "Left"], ["right", "Right"]],
+        "default": "left",
+        "visibility": {
+          "controlling_field": "button_icon_toggle",
+          "controlling_value_regex": "true",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        }
+      }
+    ]
   },
   {
     "id": "style",
     "name": "style",
     "label": "Style options",
+    "required": false,
     "type": "group",
     "children": [
+      {
+        "label": "Button Style",
+        "name": "button_type",
+        "type": "choice",
+        "display": "radio",
+        "choices": [["primary", "Primary"], ["secondary", "Secondary"]],
+        "required": true,
+        "default": "primary",
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "false",
+          "operator": "EQUAL",
+          "access": null,
+          "hidden_subfields": null
+        }
+      },
       {
         "id": "style.override_default_style",
         "name": "override_default_style",
         "label": "Override default style",
+        "required": false,
         "type": "boolean",
         "default": false
       },
@@ -44,6 +128,7 @@
         "id": "style.button_bg_color",
         "name": "button_bg_color",
         "label": "Button background color",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -61,6 +146,7 @@
         "id": "style.button_text_color",
         "name": "button_text_color",
         "label": "Button text color",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -78,6 +164,7 @@
         "id": "style.button_border_width",
         "name": "button_border_width",
         "label": "Button border width",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -96,6 +183,7 @@
         "id": "style.button_border_color",
         "name": "button_border_color",
         "label": "Button border color",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -113,6 +201,7 @@
         "id": "style.button_corner_radius",
         "name": "button_corner_radius",
         "label": "Button corner radius",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -131,6 +220,7 @@
         "id": "style.button_bg_hover_color",
         "name": "button_bg_hover_color",
         "label": "Button background hover color",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -148,6 +238,7 @@
         "id": "style.button_text_hover_color",
         "name": "button_text_hover_color",
         "label": "Button text hover color",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -165,6 +256,7 @@
         "id": "style.button_border_hover_color",
         "name": "button_border_hover_color",
         "label": "Button border hover color",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -182,6 +274,7 @@
         "id": "style.button_horizontal_padding",
         "name": "button_horizontal_padding",
         "label": "Button horizontal padding",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -194,12 +287,13 @@
         "max": 100,
         "step": 1,
         "type": "number",
-        "default": 13
+        "default": 36
       },
       {
         "id": "style.button_vertical_padding",
         "name": "button_vertical_padding",
         "label": "Button vertical padding",
+        "required": true,
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
@@ -212,7 +306,7 @@
         "max": 100,
         "step": 1,
         "type": "number",
-        "default": 13
+        "default": 12
       }
     ]
   }

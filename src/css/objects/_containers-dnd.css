@@ -1,16 +1,27 @@
-/* Drag and Drop Section */
+.content-wrapper {
+  margin: 0 auto;
+  max-width: 1340px;
+  padding: 0px 25px;
+}
+
+.content-wrapper--narrow {
+  max-width: 760px;
+}
+
+@media screen and (min-width: 1024px) {
+  .content-wrapper {
+    padding: 0;
+  }
+}
 
 .dnd-section {
-  padding-bottom: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: {{ get_theme_style_setting('spacing_group.spacing.vertical_spacing', 'px') }};
 }
 
 .dnd-section > .row-fluid {
   margin-left: auto;
   margin-right: auto;
-  max-width: {{ get_theme_style_setting('spacing_group.spacing.max_width', 'px') }};
 }
 
 .dnd-section .widget-type-cell {

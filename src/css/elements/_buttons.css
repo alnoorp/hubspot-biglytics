@@ -1,0 +1,100 @@
+/* Primary Button */
+
+button,
+.button {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #C168C2;
+  border: 1px solid #C168C2;
+  border-radius: 4px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  fill: #FFFFFF;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  margin: 0;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-transition: all 0.15s linear;
+  -o-transition: all 0.15s linear;
+  transition: all 0.15s linear;
+}
+
+button:disabled,
+.button:disabled {
+  background-color: #d0d0d0;
+  color: #e6e6e6;
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus {
+  background-color: #99409a;
+  border-color: #99409a;
+}
+
+button:active,
+.button:active {
+  background-color: #e77de8;
+  border-color: #e77de8;
+}
+
+/* Secondary Button */
+
+.button.button--secondary {
+  background-color: transparent;
+  border: 1px solid #c168c2;
+  color: #c168c2;
+  fill: #c168c2;
+}
+
+.button.button--secondary:hover,
+.button.button--secondary:focus {
+  background-color: transparent;
+  border-color: #99409a;
+  color: #99409a;
+  fill: #99409a;
+}
+
+.button.button--secondary:active {
+  background-color: transparent;
+  border-color: #e77de8;
+  color: #e77de8;
+  fill: #e77de8;
+}
+
+/* Button Sizing */
+
+.button.button--small {
+  font-size: 0.875rem;
+}
+
+.button.button--large {
+  font-size: 1.125rem;
+}
+
+/* Button Icons */
+
+.button .button__icon svg {
+  fill: inherit;
+  display: block;
+  height: 1.25rem;
+  margin-right: 1rem;
+}
+
+.button.button--icon-right .button__icon {
+  order: 1;
+}
+
+.button.button--icon-right .button__icon svg {
+  margin-right: 0;
+  margin-left: 1rem
+}
