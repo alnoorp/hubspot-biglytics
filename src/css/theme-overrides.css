@@ -43,7 +43,7 @@
 {% set bp_small = '768px' %}
 {% set bp_medium = '980px' %}
 {% set bp_large = '1024px' %}
-{% set bp_xlarge = '1200px' %}
+{% set bp_xlarge = '1340px' %}
 
 /* 1c. Colors */
 
@@ -54,8 +54,8 @@
 {% set light_gray = '#e6e6e6' %}
 {% set gray = '#d0d0d0' %}
 {% set dark_gray = '#8a8a8a' %}
-{% set success = '#69A84F' %}
-{% set error = '#CC0201' %}
+{% set success = '#69a84f' %}
+{% set error = '#cc0201' %}
 
 /* 1d. Typography */
 
