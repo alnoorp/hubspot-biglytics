@@ -265,7 +265,7 @@ a:hover, a:focus {
 }
 
 a:active {
-  color: {{ color_variant(anchor_font_hover.color, -80) }};
+  color: {{ color_variant(anchor_font_hover.color, 80) }};
 }
 
 a.button:disabled {
@@ -428,7 +428,9 @@ button:disabled,
 button:hover,
 button:focus,
 .button:hover,
-.button:focus {
+.button:focus,
+button:active,
+.button:active {
   {{ button_primary_font_hover.style }};
   background-color: {{ button_primary_bg_color_hover }};
   border: {{ button_primary_border_hover }};
@@ -438,7 +440,8 @@ button:focus,
 
 button:active,
 .button:active {
-  background-color: {{ color_variant(button_primary_bg_color.color, 8) }};
+  background-color: {{ color_variant(theme.global.buttons.primary.hover.bg_color.color, 80) }};;
+  border-color: {{ color_variant(theme.global.buttons.primary.hover.border.color.color, 80) }};
 }
 
 /* Secondary Buttons */
@@ -463,6 +466,13 @@ button:active,
   color: {{ button_secondary_font_hover.color }};
   fill: {{ button_secondary_font_hover.color }};
   font-size: {{ button_secondary_font_hover.size ~ 'px' }};
+}
+
+.button.button--secondary:active {
+  background-color: {{ color_variant(theme.global.buttons.secondary.hover.bg_color.color, 80) }};
+  border-color: {{ color_variant(theme.global.buttons.secondary.hover.border.color.color, 80) }};
+  color: {{ color_variant(button_secondary_font_hover.color, 80) }};
+  fill: {{ color_variant(button_secondary_font_hover.color, 80) }};
 }
 
 /* Button Sizing */

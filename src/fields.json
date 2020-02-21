@@ -234,7 +234,7 @@
                   }
                 },
                 "default": {
-                  "color": "#E77DE8",
+                  "color": "#99409a",
                   "styles": {
                     "text-decoration": "underline"
                   }
@@ -897,7 +897,7 @@
                     "name": "bg_color",
                     "type": "color",
                     "default": {
-                      "color": "#E77DE8",
+                      "color": "#99409a",
                       "opacity": 100
                     }
                   },
@@ -1072,7 +1072,7 @@
                       }
                     },
                     "default": {
-                      "color": "#E77DE8",
+                      "color": "#99409a",
                       "size_unit": "px"
                     }
                   },
@@ -1126,7 +1126,7 @@
                         "name": "color",
                         "type": "color",
                         "default": {
-                          "color": "#E77DE8",
+                          "color": "#99409a",
                           "opacity": 100
                         }
                       }

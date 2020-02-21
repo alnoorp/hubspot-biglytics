@@ -13,6 +13,7 @@ button,
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  fill: #FFFFFF;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.2em;
@@ -49,11 +50,25 @@ button:active,
 /* Secondary Button */
 
 .button.button--secondary {
+  background-color: transparent;
+  border: 1px solid #c168c2;
+  color: #c168c2;
+  fill: #c168c2;
 }
 
 .button.button--secondary:hover,
-.button.button--secondary:focus,
+.button.button--secondary:focus {
+  background-color: transparent;
+  border-color: #99409a;
+  color: #99409a;
+  fill: #99409a;
+}
+
 .button.button--secondary:active {
+  background-color: transparent;
+  border-color: #e77de8;
+  color: #e77de8;
+  fill: #e77de8;
 }
 
 /* Button Sizing */
