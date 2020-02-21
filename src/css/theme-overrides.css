@@ -50,10 +50,8 @@
 {% set primary_color = color(theme.color.primary) %}
 {% set secondary_color = color(theme.color.secondary) %}
 {% set body_color = color(theme.color.body) %}
-{% set lighter_gray = '#f1f1f1' %}
 {% set light_gray = '#e6e6e6' %}
 {% set gray = '#d0d0d0' %}
-{% set dark_gray = '#8a8a8a' %}
 {% set success = '#69a84f' %}
 {% set error = '#cc0201' %}
 
@@ -79,9 +77,9 @@
 
 /* 1g. Lists */
 
-{% set list_padding = '2.5rem' %}
-{% set list_margin = '1.5rem 0' %};
-{% set list_li_margin = '0.5rem' %}
+{% set list_padding = '0' %}
+{% set list_margin = '1.4rem 0' %};
+{% set list_li_margin = '0.7rem' %}
 {% set list_nested_margin = '0' %}
 {% if !theme.global.typography.lists.bullets.src %}
   {% set unordered_list_style = 'disc' %}
@@ -96,8 +94,8 @@
 
 /* 1i. Blockquote */
 
-{% set blockquote_padding = '0.9375rem' %}
-{% set blockquote_border = '7px solid {{ primary_color }}' %}
+{% set blockquote_padding = '1.4rem' %}
+{% set blockquote_border = '4px solid {{ primary_color }}' %}
 
 /* 1j. Buttons */
 
@@ -225,8 +223,7 @@
 }
 
 .dnd-section {
-  padding-bottom: {{ dnd_section_padding }};
-  padding-top: {{ dnd_section_padding }};
+  padding: {{ dnd_section_padding }};
 }
 
 .dnd-section > .row-fluid {
@@ -747,20 +744,10 @@ tbody + tbody {
 }
 
 .footer__right {
-  background-color: {{ lighter_gray }};
   border-left: {{ global_border }};
   border-right: {{ global_border }};
 }
 
-.footer__copyright-bar {
-  {{ body_font.style }};
-  border-top: {{ global_border }};
-  color: {{ dark_gray }};
-}
-
-.footer__copyright-bar__secondary-links a:not(:last-of-type) {
-  border-right: 1px solid {{ dark_gray }};
-}
 
 @media screen and (min-width: {{ bp_small }}) {
   .footer__main-bar__menu a,
