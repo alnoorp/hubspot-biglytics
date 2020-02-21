@@ -11,7 +11,7 @@
   <div class="body-container body-container-blog-index">
 
     {% module "blog_listing_banner"
-      path="../modules/Blog Listing Banner",
+      path="../modules/blog-listing-banner",
       blog_listing_banner_image={
         "src": get_asset_url("../images/blog-banner.png")
       }
@@ -21,7 +21,7 @@
       <div class="content-wrapper">
         <div class="row-fluid span12">
           <div class="blog-navigation__tag-filter column span6">
-            {% module "blog_tag_filter" path="../modules/Blog Tag Filter" %}
+            {% module "blog_tag_filter" path="../modules/blog-tag-filter" %}
           </div>
           <div class="blog-navigation__search column span6">
             {% module "blog_search" path="@hubspot/search_input", label="Blog Search" %}
