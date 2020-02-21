@@ -8,7 +8,6 @@
 {% include './elements/_tables.css' %}
 {% include './components/_header.css' %}
 {% include './components/_footer.css' %}
-{% include './components/_menus.css' %}
 {% include './components/_modules.css' %}
 {% include './templates/_blog.css' %}
 {% include './templates/_system-pages.css' %}

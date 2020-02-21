@@ -661,22 +661,68 @@ tbody + tbody {
   max-width: {{ container_width }};
 }
 
-/* Site Navigation */
+/* Logo */
+
+.header__logo .logo-company-name {
+  color: /* Add body color */
+}
+
+/* Navigation Menu */
+
+.navigation-primary a {
+  color: {{ theme.global.header.menu.font.color }};
+}
+
+.navigation-primary a:hover,
+.navigation-primary a:focus,
+.navigation-primary a:active {
+  color: {{ theme.global.header.menu.font.color }};
+}
+
+.submenu.level-2 {
+  background-color: {{ header_bg_color }};
+  border: {{ global_border }};
+}
+
+.submenu.level-2 > li {
+  border-bottom-color: {{ theme.border.color.color }};
+}
+
+.submenu.level-2 .menu-item .menu-link:hover,
+.submenu.level-2 .menu-item .menu-link:focus {
+  background-color: {{ header_primary_nav_bg_color_hover }};
+  color: {{ header_primary_nav_font_hover }};
+}
+
+@media (max-width: {{ bp_small }}) {
+  .header__navigation {
+    background-color: {{ header_bg_color }};
+  }
+
+  .header__mobile-menu-icon,
+  .header__mobile-menu-icon:after,
+  .header__mobile-menu-icon:before,
+  .menu-arrow-icon,
+  .menu-arrow-icon:after {
+      background-color: {{ theme.global.header.menu.font.color }};
+  }
+
+  .submenu.level-1 > li,
+  .submenu.level-2 .menu-item {
+    border-top-color: {{ theme.border.color.color }};
+  }
+}
+
+/* Language Switcher */
 
 .header__language-switcher .lang_list_class {
-  {{ body_font.style }};
-  color: {{ body_font.color }};
+  background-color: {{ header_bg_color }};
+  border: {{ global_border }};
 }
 
-.header__language-switcher .lang_list_class li a {
-  {{ body_font.style }};
-  color: {{ body_font.color }};
+.header__language-switcher .lang_list_class li:hover {
+  background-color: {{ primary_color }}
 }
-
-.header__language-switcher .lang_list_class li a:hover {
-  color: {{ body_font.color }};
-}
-
 
 {###########################################################################}
 {###########################   8. Site Footer   ############################}
