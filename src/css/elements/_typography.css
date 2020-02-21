@@ -29,9 +29,13 @@ a {
 }
 
 a:hover,
-a:focus,
+a:focus {
+  color: #99409a;
+  text-decoration: underline;
+}
+
 a:active {
-  color: #E77DE8;
+  color: #e990ea;
   text-decoration: underline;
 }
 
@@ -48,6 +52,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 600;
   letter-spacing: 0.05em;
   margin: 0 0 1.4rem;
   word-break: break-word;
@@ -62,17 +67,14 @@ h5 {
 
 h1 {
   font-size: 40px;
-  font-weight: 600;
 }
 
 h2 {
   font-size: 30px;
-  font-weight: 600;
 }
 
 h3 {
   font-size: 24px;
-  font-weight: 600;
 }
 
 h4 {
@@ -83,21 +85,18 @@ h4 {
 h5 {
   color: #34B5E5;
   font-size: 18px;
-  font-weight: 600;
 }
 
 h6 {
   font-size: 15px;
-  font-weight: 600;
 }
 
 /* Lists */
 
 ul,
 ol {
-  list-style-position: inside;
   margin: 1.4rem 0;
-  padding-left: 0;
+  padding-left: 1rem;
 }
 
 ul li,
@@ -109,8 +108,7 @@ ul ul,
 ol ul,
 ul ol,
 ol ol {
-  margin: 0;
-  padding-left: 2.8rem;
+  margin: 1.4rem;
 }
 
 /* Code Blocks */
@@ -122,7 +120,7 @@ code {
 /* Blockquotes */
 
 blockquote {
-  border-left: 4px solid #34B5E5;
+  border-left: 1.4rem solid #34B5E5;
   font-size: 1.4rem;
   margin: 0 0 1.4rem;
   padding-left: 1.4rem;
@@ -134,7 +132,7 @@ hr {
   background-color: #D0D0D0;
   border: none;
   color: #D0D0D0;
-  height: 1px;
+  height: 2px;
 }
 
 /* Subscripts and Superscripts */

@@ -26,6 +26,7 @@
   8. Site Footer
   9. Blog
   10. System Pages
+  11. Modules
 
 ##}
 
@@ -77,10 +78,10 @@
 
 /* 1g. Lists */
 
-{% set list_padding = '0' %}
+{% set list_padding = '1.4rem' %}
 {% set list_margin = '1.4rem 0' %};
 {% set list_li_margin = '0.7rem' %}
-{% set list_nested_margin = '0' %}
+{% set list_nested_margin = '1.4rem' %}
 {% if !theme.global.typography.lists.bullets.src %}
   {% set unordered_list_style = 'disc' %}
 {% else %}
@@ -95,7 +96,7 @@
 /* 1i. Blockquote */
 
 {% set blockquote_padding = '1.4rem' %}
-{% set blockquote_border = '4px solid {{ primary_color }}' %}
+{% set blockquote_border = '16px solid {{ primary_color }}' %}
 
 /* 1j. Buttons */
 
@@ -263,11 +264,27 @@ a:hover, a:focus {
   color: {{ anchor_font_hover.color }};
 }
 
+a:active {
+  color: {{ color_variant(anchor_font_hover.color, -80) }};
+}
+
 a.button:disabled {
   background-color: {{ button_disabled_color }};
 }
 
 /* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  {{ headings_font.style }};
+  color: {{ headings_font.color }};
+  text-transform: {{ theme.global.typography.headings.text_transform }};
+  letter-spacing: {{ theme.global.typography.headings.letter_spacing ~ 'px' }};
+}
 
 {% if custom_heading_styles %}
 
