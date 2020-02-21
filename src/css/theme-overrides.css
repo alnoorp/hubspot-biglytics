@@ -875,6 +875,7 @@ tbody + tbody {
 
 .error-page:before {
   {{ primary_font.style }};
+  color: {{ gray }};
 }
 
 /* System Pages - Global */
