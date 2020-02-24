@@ -3,11 +3,11 @@
   isAvailableForNewContent: true
   label: Thank you
 -->
-{% extends "./layouts/base.html" %}
+{% extends './layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class='body-container body-container--thank-you', label='Main section' %}
+  {% dnd_area 'dnd_area' class='body-container body-container--thank-you', label='Main section' %}
 
     {# Banner Section #}
     {% dnd_section
@@ -41,7 +41,6 @@
     {% end_dnd_section %}
     {# End Banner Section #}
 
-
     {# Content Section #}
     {% dnd_section %}
       {% dnd_column %}
@@ -66,7 +65,7 @@
         {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
-    {# End Content #}
+    {# End Content Section #}
 
   {% end_dnd_area %}
 </main>
