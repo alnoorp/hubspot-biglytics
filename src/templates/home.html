@@ -1,14 +1,14 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Home Page
+  label: Home
   screenshotPath: ../images/template-previews/home-page.png
 -->
 {% extends "./layouts/base.html" %}
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class="body-container body-container-homepage", label="Main section" %}
+  {% dnd_area "dnd_area" class="body-container body-container-home", label="Main section" %}
 
     {# Banner Section #}
     {% dnd_section max_width=760,
@@ -81,7 +81,7 @@
           %}
             {% dnd_row %}
               {% dnd_module
-                path="../modules/Icon",
+                path="../modules/icon",
                 flexbox_positioning="MIDDLE_CENTER",
                 icon_type={
                     "name": "clock",
@@ -108,7 +108,7 @@
           %}
             {% dnd_row %}
               {% dnd_module
-                path="../modules/Icon",
+                path="../modules/icon",
                 flexbox_positioning="MIDDLE_CENTER",
                 icon_type={
                     "name": "book",
@@ -135,7 +135,7 @@
           %}
             {% dnd_row %}
               {% dnd_module
-                path='../modules/Icon',
+                path='../modules/icon',
                 flexbox_positioning="MIDDLE_CENTER",
                 icon_type={
                     "name": "user",
@@ -239,7 +239,7 @@
           {% end_dnd_row %}
           {% dnd_row %}
             {% dnd_module
-              path="../modules/Statistic",
+              path="../modules/statistic",
               offset=0,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
@@ -250,7 +250,7 @@
             %}
             {% end_dnd_module %}
             {% dnd_module
-              path="../modules/Statistic",
+              path="../modules/statistic",
               offset=3,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
@@ -261,7 +261,7 @@
             %}
             {% end_dnd_module %}
             {% dnd_module
-              path="../modules/Statistic",
+              path="../modules/statistic",
               offset=6,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
@@ -272,7 +272,7 @@
             %}
             {% end_dnd_module %}
             {% dnd_module
-              path="../modules/Statistic",
+              path="../modules/statistic",
               offset=9,
               width=3,
               flexbox_positioning="MIDDLE_CENTER",
@@ -316,7 +316,7 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
-            path="../modules/Testimonial",
+            path="../modules/testimonial",
             offset=0,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
@@ -329,7 +329,7 @@
           %}
           {% end_dnd_module %}
           {% dnd_module
-            path="../modules/Testimonial",
+            path="../modules/testimonial",
             offset=4,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",
@@ -342,7 +342,7 @@
           %}
           {% end_dnd_module %}
           {% dnd_module
-            path="../modules/Testimonial",
+            path="../modules/testimonial",
             offset=8,
             width=4,
             flexbox_positioning="MIDDLE_CENTER",

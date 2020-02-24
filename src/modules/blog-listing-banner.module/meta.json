@@ -1,4 +1,5 @@
 {
+  "label": "Blog listing banner",
   "css_assets": [],
   "external_js": [],
   "global": false,
@@ -9,5 +10,5 @@
   "smart_type": "NOT_SMART",
   "tags": [],
   "is_available_for_new_content": true,
-  "module_id": 23668820189
+  "module_id": 23668982779
 }

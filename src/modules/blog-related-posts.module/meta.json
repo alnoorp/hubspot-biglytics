@@ -1,13 +1,14 @@
 {
+  "label": "Blog related posts",
   "css_assets": [],
   "external_js": [],
   "global": false,
-  "host_template_types": ["PAGE", "BLOG_POST", "BLOG_LISTING"],
+  "host_template_types": ["BLOG_POST", "BLOG_LISTING"],
   "icon": "",
   "js_assets": [],
   "other_assets": [],
   "smart_type": "NOT_SMART",
   "tags": [],
-  "is_available_for_new_content": false,
-  "module_id": 23670651384
+  "is_available_for_new_content": true,
+  "module_id": 23668820189
 }

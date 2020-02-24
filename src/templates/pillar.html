@@ -1,14 +1,14 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: Pillar Page
+  label: Pillar
   screenshotPath: ../images/template-previews/pillar-page.png
 -->
 {% extends "./layouts/base.html" %}
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class="body-container body-container-pillar-page", label="Main section" %}
+  {% dnd_area "dnd_area" class="body-container body-container-pillar", label="Main section" %}
 
     {# Banner Section #}
     {% dnd_section max_width=760,
@@ -64,7 +64,7 @@
         width=4
       %}
         {% dnd_row %}
-          {% dnd_module path="../modules/Pillar Menu",
+          {% dnd_module path="../modules/pillar-menu",
             flexbox_positioning="MIDDLE_LEFT",
           %}
           {% end_dnd_module %}
@@ -104,7 +104,7 @@
             width=8
           %}
             {% dnd_row %}
-              {% dnd_module path="../modules/Pillar Section Title",
+              {% dnd_module path="../modules/pillar-section-title",
                 flexbox_positioning="MIDDLE_LEFT",
                 pillar_section_title="What Can I Automate?"
               %}
