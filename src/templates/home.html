@@ -2,7 +2,7 @@
   templateType: page
   isAvailableForNewContent: true
   label: Home
-  screenshotPath: ../images/template-previews/home-page.png
+  screenshotPath: ../images/template-previews/home.png
 -->
 {% extends "./layouts/base.html" %}
 
@@ -12,6 +12,11 @@
 
     {# Banner Section #}
     {% dnd_section max_width=760,
+      background_image={
+        "backgroundPosition": "TOP_CENTER",
+        "backgroundSize": "cover",
+        "imageUrl": get_asset_url("../images/home-banner.png")
+      },
       padding={
         "top": 210,
         "bottom": 210,
