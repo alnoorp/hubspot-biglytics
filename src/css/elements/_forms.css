@@ -119,6 +119,8 @@ form .inputs-list {
 .inputs-list > li {
   display: block;
   margin: 0.7rem 0 0.7rem 0.7rem;
+  padding: 0;
+  width: 100%;
 }
 
 input[type=checkbox],
@@ -132,16 +134,9 @@ input[type=radio] {
   width: auto;
 }
 
-.inputs-list > li {
-  display: block;
-  padding: 0;
-  padding-top: 0;
-  width: 100%;
-}
-
 /* Inputs - Select */
 
-.hs-dropdown .input:after {
+.hs-fieldtype-select .input:after {
   content: "\25BE";
   pointer-events: none;
   position: absolute;
@@ -154,7 +149,7 @@ input[type=radio] {
 
 /* Inputs - Datepicker */
 
-.hs-date_picker .input .hs-dateinput:before {
+.hs-fieldtype-date .input .hs-dateinput:before {
   color: #1E2B33;
   content:"\01F4C5";
   position: absolute;
