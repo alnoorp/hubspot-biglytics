@@ -18,17 +18,12 @@
         "left": 20,
         "right": 20
       },
-      background_image={
-        "backgroundPosition": "TOP_CENTER",
-        "backgroundSize": "cover",
-        "imageUrl": get_asset_url("../images/home-banner.png")
-      },
       vertical_alignment="MIDDLE"
     %}
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module path="@hubspot/rich_text",
-            horizontal_alignment="TOP_CENTER"
+            horizontal_alignment="CENTER"
           %}
           {% module_attribute "html" %}
             <div style="text-align: center">
@@ -40,7 +35,7 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module path="../modules/button",
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             button_link="#",
             button_text="Free Trial"
           %}
@@ -61,7 +56,7 @@
           }
         %}
           {% dnd_module path="@hubspot/header",
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             header_tag="h2",
             value="Get More Leads For Your Business Today"
           %}
@@ -82,7 +77,7 @@
             {% dnd_row %}
               {% dnd_module
                 path="../modules/icon",
-                horizontal_alignment="TOP_CENTER",
+                horizontal_alignment="CENTER",
                 icon_type={
                     "name": "clock",
                     "unicode": "f017",
@@ -109,7 +104,7 @@
             {% dnd_row %}
               {% dnd_module
                 path="../modules/icon",
-                horizontal_alignment="TOP_CENTER",
+                horizontal_alignment="CENTER",
                 icon_type={
                     "name": "book",
                     "type": "SOLID",
@@ -136,7 +131,7 @@
             {% dnd_row %}
               {% dnd_module
                 path='../modules/icon',
-                horizontal_alignment="TOP_CENTER",
+                horizontal_alignment="CENTER",
                 icon_type={
                     "name": "user",
                     "type": "SOLID",
@@ -206,7 +201,7 @@
           {% dnd_row %}
             {% dnd_module
               path="../modules/button",
-              horizontal_alignment='TOP_LEFT',
+              horizontal_alignment='LEFT',
               button_link="#",
               button_text="Learn More"
             %}
@@ -227,7 +222,7 @@
             }
           %}
             {% dnd_module path="@hubspot/rich_text",
-              horizontal_alignment="TOP_CENTER"
+              horizontal_alignment="CENTER"
             %}
               {% module_attribute "html" %}
                 <div style="text-align: center">
@@ -242,7 +237,7 @@
               path="../modules/statistic",
               offset=0,
               width=3,
-              horizontal_alignment="TOP_CENTER",
+              horizontal_alignment="CENTER",
               statistic_number="10",
               statistic_unit="k",
               statistic_percentage="50",
@@ -253,7 +248,7 @@
               path="../modules/statistic",
               offset=3,
               width=3,
-              horizontal_alignment="TOP_CENTER",
+              horizontal_alignment="CENTER",
               statistic_number="98",
               statistic_unit="%",
               statistic_percentage="98",
@@ -264,7 +259,7 @@
               path="../modules/statistic",
               offset=6,
               width=3,
-              horizontal_alignment="TOP_CENTER",
+              horizontal_alignment="CENTER",
               statistic_number="54",
               statistic_unit="k",
               statistic_percentage="72",
@@ -275,7 +270,7 @@
               path="../modules/statistic",
               offset=9,
               width=3,
-              horizontal_alignment="TOP_CENTER",
+              horizontal_alignment="CENTER",
               statistic_number="85",
               statistic_unit="",
               statistic_percentage="85",
@@ -305,7 +300,7 @@
           }
          %}
           {% dnd_module path="@hubspot/rich_text",
-            horizontal_alignment="TOP_CENTER"
+            horizontal_alignment="CENTER"
           %}
             {% module_attribute "html" %}
               <div style="text-align: center;">
@@ -319,7 +314,7 @@
             path="../modules/testimonial",
             offset=0,
             width=4,
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             testimonial_title="Wow, this is amazing!",
             testimonial_name="Jim Robbins"
             testimonial_image={
@@ -332,7 +327,7 @@
             path="../modules/testimonial",
             offset=4,
             width=4,
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             testimonial_title="Awesome product!",
             testimonial_name="Dawn Doe"
             testimonial_image={
@@ -345,7 +340,7 @@
             path="../modules/testimonial",
             offset=8,
             width=4,
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             testimonial_title="Incredible support!",
             testimonial_name="Alan Dixon"
             testimonial_image={
@@ -364,7 +359,7 @@
         path="@hubspot/linked_image",
         offset=0,
         width=2,
-        horizontal_alignment="TOP_CENTER",
+        horizontal_alignment="CENTER",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -377,7 +372,7 @@
         path="@hubspot/linked_image",
         offset=2,
         width=2,
-        horizontal_alignment="TOP_CENTER",
+        horizontal_alignment="CENTER",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -390,7 +385,7 @@
         path="@hubspot/linked_image",
         offset=4,
         width=2,
-        horizontal_alignment="TOP_CENTER",
+        horizontal_alignment="CENTER",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -403,7 +398,7 @@
         path="@hubspot/linked_image",
         offset=6,
         width=2,
-        horizontal_alignment="TOP_CENTER",
+        horizontal_alignment="CENTER",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -416,7 +411,7 @@
         path="@hubspot/linked_image",
         offset=8,
         width=2,
-        horizontal_alignment="TOP_CENTER",
+        horizontal_alignment="CENTER",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -429,7 +424,7 @@
         path="@hubspot/linked_image",
         offset=10,
         width=2,
-        horizontal_alignment="TOP_CENTER",
+        horizontal_alignment="CENTER",
         img={
           "src": get_asset_url("../images/hubspot-logo.png"),
           "width": "151",
@@ -452,7 +447,7 @@
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module path="@hubspot/rich_text",
-            horizontal_alignment="TOP_CENTER"
+            horizontal_alignment="CENTER"
           %}
           {% module_attribute "html" %}
             <div style="text-align: center;">
@@ -464,7 +459,7 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module path="../modules/button",
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             button_link="#",
             button_text="Free Trial"
           %}

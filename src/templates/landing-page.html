@@ -37,7 +37,7 @@
           }
         %}
           {% dnd_module path="@hubspot/logo",
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             img={
               "override_inherited_src": true,
               "src": get_asset_url("../images/sprout-theme-logo.png"),
@@ -53,7 +53,7 @@
             path="@hubspot/linked_image",
             offset=0,
             width=4,
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             img={
               "src": get_asset_url("../images/ebook.png"),
               "alt": "Ebook cover",
@@ -65,7 +65,7 @@
             path="@hubspot/rich_text",
             offset=4,
             width=4,
-            horizontal_alignment="TOP_LEFT"
+            horizontal_alignment="LEFT"
           %}
             {% module_attribute "html" %}
               <div>
@@ -79,7 +79,7 @@
             path="@hubspot/form",
             offset=8,
             width=4,
-            horizontal_alignment="TOP_CENTER",
+            horizontal_alignment="CENTER",
             title="Yes! Send Me the Ebook!"
           %}
           {% end_dnd_module %}
