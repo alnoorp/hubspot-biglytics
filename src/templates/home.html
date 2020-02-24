@@ -4,11 +4,11 @@
   label: Home
   screenshotPath: ../images/template-previews/home.png
 -->
-{% extends "./layouts/base.html" %}
+{% extends './layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class="body-container body-container--home", label="Main section" %}
+  {% dnd_area 'dnd_area' class='body-container body-container--home', label='Main section' %}
 
     {# Banner Section #}
     {% dnd_section
@@ -346,7 +346,7 @@
           {% dnd_module
             path='../modules/testimonial',
             horizontal_alignment='CENTER',
-            offset=4,
+            offset=8,
             testimonial_image={
               'src': get_asset_url('../images/alan.png'),
               'alt': 'Alan Dixon'
