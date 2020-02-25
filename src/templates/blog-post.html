@@ -4,85 +4,111 @@
   label: Sprout - blog post
   screenshotPath: ../images/template-previews/blog-post.png
 -->
-{% extends "./layouts/base.html" %}
+{% extends './layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
   <div class="body-container body-container--blog-post">
 
-    {% module "blog_post_banner"
-      path="../modules/blog-post-banner",
+    {# Blog Post Banner #}
+    {% module 'blog_post_banner'
+      path='../modules/blog-post-banner',
       custom_bg_image={
-        "src": get_asset_url("../images/blog-post-banner.png")
+        'src': get_asset_url('../images/blog-post-banner.png')
       }
     %}
+    {# End Blog Post Banner #}
 
-    <div class="content-wrapper">
+    {# Blog Post Content #}
+    <div class="content-wrapper content-wrapper--narrow">
       <article class="blog-post">
-        <div class="blog-post__header">
-            <h2 class="blog-post__title">{{ content.name }}</h2>
-            {% if content.blog_author.avatar %}
-              <div class="blog-post__author-image" style="background-image: url('{{ content.blog_author.avatar }}');"></div>
-            {% endif %}
-            <div class="blog-post__meta">
-                <a class="blog-post__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
-                <span class="blog-post__date">{{ content.publish_date_localized }}</span>
-            </div>
-            {% if content.tag_list %}
-              <div class="blog-post__tags">
-                  {% icon name="tag" style="SOLID" %}
-                  {% for tag in content.tag_list %}
-                    <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
-                  {% endfor %}
-              </div>
-            {% endif %}
+        <header class="blog-post__header">
+          <h2 class="blog-post__title">{{ content.name }}</h2>
+          {% if content.blog_author.avatar %}
+            <span class="author__avatar">
+              <img src="{{ content.blog_author.avatar }}" alt="Picture of {{ content.blog_author.display_name }}">
+            </span>
+          {% endif %}
+          <div class="blog-post__meta">
+            <a class="blog-post__author-name" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a>
+            <span class="blog-post__date">{{ content.publish_date_localized }}</span>
           </div>
+          {% if content.tag_list %}
+            <div class="blog-post__tags">
+              {% icon
+                name='tag',
+                purpose='decorative',
+                style='SOLID'
+              %}
+              {% for tag in content.tag_list %}
+                <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+        </header>
         <div class="blog-post__body">
           {{ content.post_body }}
         </div>
-        <div class="blog-post__footer">
+        <footer class="blog-post__footer">
           <div class="blog-post__footer__row-one">
             <div class="blog-post__comments-buttons">
-                <button class="blog-post__show-comments button button__primary">View Comments</button>
-                <button class="blog-post__hide-comments hide-button button button__primary">Hide Comments</button>
+              <button class="blog-post__show-comments button">View Comments</button>
+              <button class="blog-post__hide-comments hide-button button">Hide Comments</button>
             </div>
             <div class="blog-post__social-sharing">
               <div class="social-links">
                 <a href="https://twitter.com/intent/tweet?original_referer={{ content.absolute_url }}" target="_blank" class="social-links__icon">
-                  {% icon name="twitter", style="solid" %}
+                  {% icon
+                    name='twitter',
+                    purpose='semantic',
+                    style='solid',
+                    title='Share this blog post on Twitter'
+                  %}
                 </a>
                 <a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" class="social-links__icon">
-                  {% icon name="facebook-f", style="solid" %}
+                  {% icon
+                    name='facebook-f',
+                    purpose='semantic',
+                    style='solid',
+                    title='Share this blog post on Facebook'
+                  %}
                 </a>
                 <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}" target="_blank" class="social-links__icon">
-                  {% icon name="linkedin-in", style="solid" %}
+                  {% icon
+                    name='linkedin-in',
+                    purpose='semantic',
+                    style='solid',
+                    title='Share this blog post on LinkedIn'
+                  %}
                 </a>
                 <a href="mailto:?subject=Check out {{ content.absolute_url }} &body=Check out {{ content.absolute_url }}&media={{ content.featured_image }}" target="_blank" class="social-links__icon">
-                  {% icon name="envelope", style="solid" %}
+                  {% icon
+                    name='envelope',
+                    purpose='semantic',
+                    style='solid',
+                    title='Share this blog post via email'
+                  %}
                 </a>
               </div>
             </div>
           </div>
           <div class="blog-post__footer__row-two">
             <div class="blog-post__comments-listing hide-comments">
-                {% module "blog_comments" path="@hubspot/blog_comments" %}
+              {% module 'blog_comments'
+                path='@hubspot/blog_comments'
+              %}
             </div>
           </div>
-        </div>
+        </footer>
       </article>
     </div>
+    {# End Blog Post Content #}
 
-    {% module "blog_cta"
-      path="../modules/call-to-action-banner",
-      cta_banner_image={
-        "src": get_asset_url("../images/phone.png"),
-        "alt": "Mobile phone"
-      },
-      cta_banner_content="<h2>Download Sprout Today!</h2><p>Leverage the intuitive super awesome software that saves you time and will help grow your business.</p>",
-      cta_button="782d9df3-4dc5-44dc-81ad-a0efffcf0cb2"
+    {# Blog Related Posts #}
+    {% module 'blog_related_posts'
+      path='../modules/blog-related-posts'
     %}
-
-    {% module "blog_related_posts" path="../modules/blog-related-posts" %}
+    {# End Blog Related Posts #}
 
   </div>
 </main>
