@@ -25,7 +25,7 @@
         <header class="blog-post__header">
           <h2 class="blog-post__title">{{ content.name }}</h2>
           {% if content.blog_author.avatar %}
-            <span class="author__avatar">
+            <span class="blog-post__author-image">
               <img src="{{ content.blog_author.avatar }}" alt="Picture of {{ content.blog_author.display_name }}">
             </span>
           {% endif %}
