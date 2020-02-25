@@ -7,17 +7,18 @@
 
     {# Logo #}
     <div class="header__logo">
-      {% module "header_logo"
-        path="@hubspot/logo",
+      {% module 'header_logo'
+        path='@hubspot/logo',
         img={
-          "override_inherited_src": true,
-          "src": get_asset_url("../../images/sprout-theme-logo.png"),
-          "alt": "Sprout Logo",
-          "width": "205",
-          "height": "82"
+          'alt': 'Sprout logo',
+          'height': '82',
+          'override_inherited_src': true,
+          'src': get_asset_url('../../images/sprout-theme-logo.png'),
+          'width': '205'
         }
       %}
     </div>
+    {# End Logo #}
 
     {# Main Navigation #}
     <div class="header__menu">
@@ -26,22 +27,28 @@
           <span class="header__mobile-menu-icon"></span>
         </label>
         <div class="header__navigation">
-          {% module "header_navigation_primary"
-            path="../../modules/menu-section",
-            label="Primary Navigation"
+          {% module 'header_navigation_primary'
+            label='Primary navigation',
+            path='../../modules/menu-section'
           %}
         </div>
     </div>
+    {# End Main Navigation #}
 
     {# Language Toggle #}
     {% if content.translated_content|length %}
       <div class="header__language-switcher">
         <div class="header__language-switcher-label">
-          {% module "language-switcher" path="@hubspot/language_switcher", display_mode='localized', label="Language Switcher" %}
+          {% module 'language-switcher'
+            label='Language switcher',
+            path='@hubspot/language_switcher',
+            display_mode='localized'
+          %}
           <div class="header__language-switcher-label-current"> {{ locale_name(locale) }}</div>
         </div>
       </div>
     {% endif %}
+    {# End Language Toggle #}
 
   </div>
 </header>
