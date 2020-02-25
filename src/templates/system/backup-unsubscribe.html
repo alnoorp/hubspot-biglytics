@@ -3,12 +3,16 @@
   isAvailableForNewContent: true
   label: Sprout - email backup unsubscribe
 -->
-{% extends "../layouts/base.html" %}
+{% extends '../layouts/base.html' %}
 
 {% block body %}
-<div class="content-wrapper">
-  <div class="systems-page">
-    {% module "backup_unsubscribe" path="@hubspot/email_simple_subscription" %}
-  </div>
-</div>
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="systems-page">
+      {% module 'backup_unsubscribe'
+        path='@hubspot/email_simple_subscription'
+      %}
+    </div>
+  </section>
+</main>
 {% endblock body %}

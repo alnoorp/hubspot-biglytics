@@ -3,16 +3,15 @@
   isAvailableForNewContent: true
   label: Sprout - 404 error
 -->
-{% extends "../layouts/base.html" %}
-
+{% extends '../layouts/base.html' %}
 
 {% block body %}
-<div class="content-wrapper">
-  <div class="error-page" data-error="404">
-    <h1 class="error-page__heading">
-      Page not found.
-    </h1>
-    <a class="button button__primary" href="/">Go Home</a>
-  </div>
-</div>
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="error-page" data-error="404">
+      <h1 class="error-page__heading">Page not found.</h1>
+      <a class="button" href="/">Go Home</a>
+    </div>
+  </section>
+</main>
 {% endblock body %}

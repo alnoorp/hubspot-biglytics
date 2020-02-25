@@ -3,12 +3,16 @@
   isAvailableForNewContent: true
   label: Sprout - email subscription preferences
 -->
-{% extends "../layouts/base.html" %}
+{% extends '../layouts/base.html' %}
 
 {% block body %}
-<div class="content-wrapper">
-  <div class="systems-page">
-    {% module "subscription_preferences" path="@hubspot/email_subscriptions" %}
-  </div>
-</div>
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="systems-page">
+      {% module 'subscription_preferences'
+        path='@hubspot/email_subscriptions'
+      %}
+    </div>
+  </section>
+</main>
 {% endblock body %}
