@@ -1,20 +1,20 @@
 [
   {
-    "id": "banner_image_select",
+    "label": "Which type of banner would you like to use?",
     "name": "banner_image_select",
-    "label": "Which banner image would you like to use?",
+    "id": "banner_image_select",
     "required": true,
     "display": "select",
     "choices": [
       ["featured_image", "Featured Image"],
-      ["custom_image", "Custom Image"]
+      ["custom_bg_image", "Custom Background Image"],
+      ["custom_bg_color", "Custom Background Color"]
     ],
     "type": "choice",
     "default": "featured_image"
   },
   {
-    "id": "custom_bg_image",
-    "name": "custom_bg_image",
+    "name": "bg_image",
     "label": "Background image",
     "required": true,
     "responsive": false,
@@ -23,7 +23,22 @@
     "visibility": {
       "controlling_field": "banner_image_select",
       "operator": "EQUAL",
-      "controlling_value_regex": "custom_image"
+      "controlling_value_regex": "custom_bg_image"
+    }
+  },
+  {
+    "name": "bg_color",
+    "label": "Background color",
+    "type": "color",
+    "visibility": {
+      "controlling_field": "banner_image_select",
+      "operator": "EQUAL",
+      "controlling_value_regex": "custom_bg_color"
+    },
+    "required": true,
+    "default": {
+      "color": "#cccccc",
+      "opacity": 100
     }
   }
 ]
