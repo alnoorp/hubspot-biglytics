@@ -920,49 +920,59 @@ tbody + tbody {
 /* Accordion */
 
 .accordion__item button {
-    color: {{ anchor_font.color }};
+  color: {{ anchor_font.color }};
 }
 
 .accordion__icon {
-    background-color: {{ anchor_font.color }};
+  background-color: {{ anchor_font.color }};
 }
 
 .accordion__icon:before,
 .accordion__icon:after {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .accordion__item[aria-expanded=true] button {
-    color: {{ anchor_font_hover.color }};
+  color: {{ anchor_font_hover.color }};
 }
 
 .accordion__item[aria-expanded=true] .accordion__icon:before,
 .accordion__item[aria-expanded=true] .accordion__icon:after {
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 .accordion__item[aria-expanded=true] .accordion__icon {
-    background-color: {{ anchor_font_hover.color }};
+  background-color: {{ anchor_font_hover.color }};
 }
 
 /* Blog CTA Module */
 
 .cta-banner {
-    background-color: {{ secondary_color }};
+  background-color: {{ secondary_color }};
 }
 
 .cta-banner__content-column * {
-    color: #fff;
+  color: #fff;
+}
+
+/* Icon */
+
+body .icon {
+  border: {{ global_border }};
+}
+
+body .icon svg {
+  fill: {{ secondary_color }};
 }
 
 /* Image Module */
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
 /* Statististic */
 
 .statistic__info {
-    color: {{ body_font.color }};
+  color: {{ body_font.color }};
 }

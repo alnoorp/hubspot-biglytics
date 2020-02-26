@@ -1,21 +1,16 @@
 .icon {
-    padding: 0 20px;
-    text-align: center;
-}
-
-.icon__wrapper {
-    background-color: #FFFFFF;
-    border: 1px solid #D0D0D0;
-    border-radius: 100%;
+    background-color: #fff;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
     display: block;
     height: 100px;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.4rem;
     width: 100px;
 }
 
 .icon svg {
     box-sizing: border-box;
-    fill: #34B5E5;
+    fill: #34b5e5;
     height: 100px;
     padding: 20px;
     width: 100px;
