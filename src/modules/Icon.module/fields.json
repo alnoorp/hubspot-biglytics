@@ -1,10 +1,9 @@
 [
   {
-    "id": "icon_type",
-    "name": "icon_type",
     "label": "Icon",
-    "required": true,
+    "name": "icon",
     "type": "icon",
+    "required": true,
     "default": {
       "name": "clock",
       "unicode": "f017",
@@ -12,66 +11,84 @@
     }
   },
   {
-    "id": "style",
-    "name": "style",
-    "label": "Style options",
+    "label": "Accessibility options",
+    "name": "accessibility",
     "type": "group",
     "children": [
       {
-        "id": "style.override_default_style",
-        "name": "override_default_style",
+        "label": "Purpose",
+        "name": "purpose",
+        "id": "purpose",
+        "type": "choice",
+        "choices" : [ [ "decorative", "Ignored by screen reader" ], [ "semantic", "Read by screen reader" ] ],
+        "required" : true,
+        "default" : "decorative"
+      },
+      {
+        "label": "Title",
+        "name": "title",
+        "type": "text",
+        "visibility": {
+          "controlling_field": "purpose",
+          "controlling_value_regex": "semantic",
+          "operator": "EQUAL"
+        },
+        "required" : true,
+        "default": "Icon title"
+      }
+    ]
+  },
+  {
+    "label": "Style options",
+    "name": "style",
+    "type": "group",
+    "children": [
+      {
         "label": "Override default style",
+        "name": "override_default_style",
+        "id": "style.override_default_style",
         "type": "boolean",
         "default": false
       },
       {
-        "id": "style.icon_color",
-        "name": "icon_color",
-        "label": "Icon color",
+        "label": "Color",
+        "name": "color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
         "default": {
-          "color": "#34B5E5",
+          "color": "#34b5e5",
           "opacity": 100
         }
       },
       {
-        "id": "style.icon_bg_color",
-        "name": "icon_bg_color",
-        "label": "Icon background color",
+        "label": "Background color",
+        "name": "bg_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
         "default": {
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "opacity": 100
         }
       },
       {
-        "id": "style.icon_border_color",
-        "name": "icon_border_color",
-        "label": "Icon border color",
+        "label": "Border color",
+        "name": "border_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
         "default": {
-          "color": "#D0D0D0",
+          "color": "#d0d0d0",
           "opacity": 100
         }
       }
