@@ -4,70 +4,51 @@
   label: Landing page
   screenshotPath: ../images/template-previews/landing-page.png
 -->
-{% extends "./layouts/base.html" %}
+{% extends './layouts/base.html' %}
 
 {% block header %}
+  {% global_partial path='./partials/header-no-navigation.html' %}
 {% endblock header %}
 
 {% block body %}
 <main class="body-container-wrapper">
-  {% dnd_area "dnd_area" class="body-container body-container--landing-page", label="Main section" %}
+  {% dnd_area 'dnd_area' class='body-container body-container--landing-page', label='Main section' %}
 
     {# Top Offer Section #}
     {% dnd_section
-      padding={
-        "top": 40,
-        "bottom": 40,
-        "left": 0,
-        "right": 0
-      },
       background_image={
-        "backgroundPosition": "TOP_CENTER",
-        "backgroundSize": "cover",
-        "imageUrl": get_asset_url("../images/landing-page-banner.png")
+        'backgroundPosition': 'TOP_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': get_asset_url('../images/landing-page-banner.png')
+      },
+      padding={
+        'top': 45,
+        'right': 0,
+        'bottom': 45,
+        'left': 0
       }
     %}
       {% dnd_column %}
-        {% dnd_row
-          padding={
-            "top": 0,
-            "bottom": 80,
-            "left": 0,
-            "right": 0
-          }
-        %}
-          {% dnd_module path="@hubspot/logo",
-            horizontal_alignment="TOP_CENTER",
-            img={
-              "override_inherited_src": true,
-              "src": get_asset_url("../images/sprout-theme-logo.png"),
-              "alt": "Sprout Logo",
-              "width": "205",
-              "height": "82"
-            }
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
-            path="@hubspot/linked_image",
-            offset=0,
-            width=4,
-            horizontal_alignment="TOP_CENTER",
+            path='@hubspot/linked_image',
+            horizontal_alignment='CENTER',
             img={
-              "src": get_asset_url("../images/ebook.png"),
-              "alt": "Ebook cover",
-              "size_type": "auto"
-            }
+              'src': get_asset_url('../images/ebook.png'),
+              'alt': 'Ebook cover',
+              'size_type': 'auto'
+            },
+            offset=0,
+            width=4
           %}
           {% end_dnd_module %}
           {% dnd_module
-            path="@hubspot/rich_text",
+            path='@hubspot/rich_text',
+            horizontal_alignment='LEFT',
             offset=4,
-            width=4,
-            horizontal_alignment="TOP_LEFT"
+            width=4
           %}
-            {% module_attribute "html" %}
+            {% module_attribute 'html' %}
               <div>
                 <h4>Increase Your Productivity</h4>
                 <h2>10 Things to Save Time</h2>
@@ -76,43 +57,41 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module
-            path="@hubspot/form",
+            path='@hubspot/form',
+            horizontal_alignment='CENTER',
             offset=8,
-            width=4,
-            horizontal_alignment="TOP_CENTER",
-            title="Yes! Send Me the Ebook!"
+            title='Yes! Send Me the Ebook!',
+            width=4
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
+    {# End Top Offer Section #}
 
     {# Bottom Offer Description Section #}
     {% dnd_section
-      background_color={
-        r: 52,
-        g: 181,
-        b: 229,
-        a: 1.0
-      }
+      background_color={{ theme.color.secondary.color }}
     %}
       {% dnd_column %}
         {% dnd_row %}
-          {% dnd_module path="@hubspot/rich_text" %}
-            {% module_attribute "html" %}
-              <h2 style="color: #FFFFFF;">What's Inside?</h2>
+          {% dnd_module
+            path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <h2 style="color: #fff;">What's Inside?</h2>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
-            path="@hubspot/rich_text",
+            path='@hubspot/rich_text',
             offset=0,
             width=4
           %}
-            {% module_attribute "html" %}
+            {% module_attribute 'html' %}
               <div>
-                <ul style="color: #FFFFFF;">
+                <ul style="color: #fff;">
                   <li>A free copy of our extensive eBook guide with tips on how you can increase your productivity by automating your daily tasks.</li>
                   <li>An exclusive link to our online community so that you can discuss what you learn with a group of like-minded individuals.</li>
                 </ul>
@@ -120,13 +99,13 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module
-            path="@hubspot/rich_text",
+            path='@hubspot/rich_text',
             offset=4,
             width=4
           %}
-            {% module_attribute "html" %}
+            {% module_attribute 'html' %}
               <div>
-                <ul style="color: #FFFFFF;">
+                <ul style="color: #fff;">
                   <li>An extended free trial of our software so that you can immediately put some of these tips into action.</li>
                   <li>Access to our online support chat so that you can ask any questions that you may have after reading through the eBook.</li>
                 </ul>
@@ -134,13 +113,13 @@
             {% end_module_attribute %}
           {% end_dnd_module %}
           {% dnd_module
-            path="@hubspot/rich_text",
+            path='@hubspot/rich_text',
             offset=8,
             width=4
           %}
-            {% module_attribute "html" %}
+            {% module_attribute 'html' %}
               <div>
-                <ul style="color: #FFFFFF;">
+                <ul style="color: #fff;">
                   <li>Links to all of our open resources so that you can continue to learn after reading through this eBook.</li>
                   <li>A free calendar browser extension so that you can track your progress as you begin to automate your tasks.</li>
                 </ul>
@@ -155,3 +134,7 @@
   {% end_dnd_area %}
 </main>
 {% endblock body %}
+
+{% block footer %}
+  {% global_partial path='./partials/footer-no-navigation.html' %}
+{% endblock footer %}

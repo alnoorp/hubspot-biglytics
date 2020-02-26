@@ -3,13 +3,17 @@
   isAvailableForNewContent: true
   label: Sprout - search results
 -->
-{% extends "../layouts/base.html" %}
+{% extends '../layouts/base.html' %}
 
 {% block body %}
-<div class="content-wrapper">
-  <div class="systems-page">
-    <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
-    {% module "search_results" path="@hubspot/search_results" %}
-  </div>
-</div>
+<main class="body-container-wrapper">
+  <section class="content-wrapper">
+    <div class="systems-page">
+      <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
+      {% module 'search_results'
+        path='@hubspot/search_results'
+      %}
+    </div>
+  </section>
+</main>
 {% endblock body %}
