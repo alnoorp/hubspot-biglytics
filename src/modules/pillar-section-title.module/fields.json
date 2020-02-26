@@ -1,11 +1,38 @@
 [
   {
-    "id" : "pillar_section_title",
-    "name" : "pillar_section_title",
-    "label" : "Pillar section title",
+    "label" : "Title",
+    "name" : "title",
+    "type" : "text",
     "help_text" : "Your section title should describe your section and should be unique from the other section titles on the page.",
     "required" : true,
-    "type" : "text",
     "default" : "Section Title"
-    }
+  },
+  {
+    "label" : "Override default style",
+    "name" : "override_default_style",
+    "id" : "override_default_style",
+    "type" : "boolean",
+    "default" : false
+  },
+  {
+    "label" : "Style options",
+    "name" : "style",
+    "type" : "group",
+    "visibility": {
+      "controlling_field": "override_default_style",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
+    "children" : [
+      {
+        "label" : "Color",
+        "name" : "color",
+        "type" : "color",
+        "default" : {
+          "color" : "#1e2b33",
+          "opacity" : 100
+        }
+      }
+    ]
+  }
 ]
