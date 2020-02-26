@@ -971,6 +971,12 @@ img {
   max-width: 100%;
 }
 
+/* Pillar Menu */
+
+body .pillar-navigation__menu-item {
+  border-bottom: {{ global_border }}
+}
+
 /* Statististic */
 
 .statistic__info {

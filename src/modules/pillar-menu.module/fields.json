@@ -1,38 +1,35 @@
 [
   {
-    "id" : "pillar_menu_title",
-    "name" : "pillar_menu_title",
     "label" : "Pillar menu title",
-    "required" : true,
+    "name" : "pillar_menu_title",
     "type" : "text",
+    "required" : true,
     "default" : "Table of Contents"
   },
   {
-    "id" : "style",
-    "name" : "style",
+    "label" : "Override default style",
+    "name" : "override_default_style",
+    "id" : "override_default_style",
+    "type" : "boolean",
+    "default" : false
+  },
+  {
     "label" : "Style options",
+    "name" : "style",
+    "id" : "style",
     "type" : "group",
+    "visibility": {
+      "controlling_field": "override_default_style",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
     "children" : [
       {
-        "id" : "style.override_default_style",
-        "name" : "override_default_style",
-        "label" : "Override default style",
-        "type" : "boolean",
-        "default" : false
-      }, {
-        "id" : "style.pillar_menu_border_color",
-        "name" : "pillar_menu_border_color",
-        "label" : "Pillar menu border color",
-        "visibility" : {
-          "controlling_field" : "style.override_default_style",
-          "controlling_value_regex" : "true",
-          "operator" : "EQUAL",
-          "access" : null,
-          "hidden_subfields" : null
-        },
+        "label" : "Menu item border color",
+        "name" : "menu_item_border_color",
         "type" : "color",
         "default" : {
-          "color" : "#D0D0D0",
+          "color" : "#d0d0d0",
           "opacity" : 100
         }
       }
