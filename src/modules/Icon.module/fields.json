@@ -39,26 +39,26 @@
     ]
   },
   {
+    "label": "Override default style",
+    "name": "override_default_style",
+    "id": "override_default_style",
+    "type": "boolean",
+    "default": false
+  },
+  {
     "label": "Style options",
     "name": "style",
     "type": "group",
+    "visibility": {
+      "controlling_field": "override_default_style",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
     "children": [
-      {
-        "label": "Override default style",
-        "name": "override_default_style",
-        "id": "style.override_default_style",
-        "type": "boolean",
-        "default": false
-      },
       {
         "label": "Color",
         "name": "color",
         "type": "color",
-        "visibility": {
-          "controlling_field": "style.override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL"
-        },
         "default": {
           "color": "#34b5e5",
           "opacity": 100
@@ -68,11 +68,6 @@
         "label": "Background color",
         "name": "bg_color",
         "type": "color",
-        "visibility": {
-          "controlling_field": "style.override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL"
-        },
         "default": {
           "color": "#ffffff",
           "opacity": 100
@@ -82,11 +77,6 @@
         "label": "Border color",
         "name": "border_color",
         "type": "color",
-        "visibility": {
-          "controlling_field": "style.override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL"
-        },
         "default": {
           "color": "#d0d0d0",
           "opacity": 100

@@ -1,17 +1,17 @@
 .icon {
-    background-color: #fff;
-    border: 1px solid #d0d0d0;
-    border-radius: 50%;
-    display: block;
-    height: 100px;
-    margin: 0 auto 1.4rem;
-    width: 100px;
+  background-color: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 50%;
+  display: block;
+  height: 100px;
+  margin: 0 auto 1.4rem;
+  width: 100px;
 }
 
 .icon svg {
-    box-sizing: border-box;
-    fill: #34b5e5;
-    height: 100px;
-    padding: 20px;
-    width: 100px;
+  box-sizing: border-box;
+  fill: #34b5e5;
+  height: 100px;
+  padding: 20px;
+  width: 100px;
 }
