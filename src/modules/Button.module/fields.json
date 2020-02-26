@@ -1,12 +1,9 @@
 [
   {
-    "id": "button_text",
-    "name": "button_text",
     "label": "Button text",
-    "required": true,
-    "allow_new_line": false,
-    "show_emoji_picker": false,
+    "name": "button_text",
     "type": "text",
+    "required": true,
     "default": "Add a button link here"
   },
   {
@@ -15,45 +12,39 @@
     "type": "group",
     "children": [
       {
-        "id": "button_link_toggle",
-        "name": "button_link_toggle",
         "label": "Use as link",
-        "required": false,
+        "name": "button_link_toggle",
+        "id": "button_link_toggle",
         "type": "boolean",
         "default": false
       },
       {
-        "id": "button_icon_toggle",
-        "name": "button_icon_toggle",
         "label": "Add icon",
-        "required": false,
+        "name": "button_icon_toggle",
+        "id": "button_icon_toggle",
         "type": "boolean",
         "default": false
       }
     ]
   },
   {
-    "id": "button_link",
-    "name": "button_link",
     "label": "Button link",
-    "required": false,
-    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
+    "name": "button_link",
     "type": "link",
     "visibility": {
       "controlling_field": "button_link_toggle",
       "controlling_value_regex": "true",
-      "operator": "EQUAL",
-      "access": null,
-      "hidden_subfields": null
+      "operator": "EQUAL"
     },
+    "no_follow": false,
+    "open_in_new_tab": false,
+    "supported_types": ["EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG"],
     "default": {
       "url": {
         "type": "EXTERNAL",
         "href": "www.hubspot.com",
         "content_id": null
-      },
-      "open_in_new_tab": false,
-      "no_follow": false
+      }
     }
   },
   {
@@ -62,251 +53,223 @@
     "type": "group",
     "children": [
       {
-        "name": "icon",
         "label": "",
+        "name": "icon",
         "type": "icon",
-        "required": false,
         "visibility": {
           "controlling_field": "button_icon_toggle",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         }
       },
       {
         "label": "Position",
         "name": "icon_position",
         "type": "choice",
-        "required": false,
-        "sortable": false,
-        "display": "select",
-        "choices": [["left", "Left"], ["right", "Right"]],
-        "default": "left",
         "visibility": {
           "controlling_field": "button_icon_toggle",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
-        }
+          "operator": "EQUAL"
+        },
+        "choices": [["left", "Left"], ["right", "Right"]],
+        "display": "select",
+        "default": "left"
       }
     ]
   },
   {
-    "id": "style",
-    "name": "style",
     "label": "Style options",
-    "required": false,
+    "name": "style",
     "type": "group",
     "children": [
       {
         "label": "Button Style",
         "name": "button_type",
         "type": "choice",
-        "display": "radio",
-        "choices": [["primary", "Primary"], ["secondary", "Secondary"]],
-        "required": true,
-        "default": "primary",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "false",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
-        }
+          "operator": "EQUAL"
+        },
+        "choices": [["primary", "Primary"], ["secondary", "Secondary"], ["simple", "Simple"]],
+        "display": "radio",
+        "required": true,
+        "default": "primary"
       },
       {
-        "id": "style.override_default_style",
-        "name": "override_default_style",
+        "label": "Button Size",
+        "name": "button_size",
+        "type": "choice",
+        "visibility": {
+          "controlling_field": "style.override_default_style",
+          "controlling_value_regex": "false",
+          "operator": "EQUAL"
+        },
+        "choices": [["small", "Small"], ["regular", "Regular"], ["large", "Large"]],
+        "display": "radio",
+        "required": true,
+        "default": "regular"
+      },
+      {
         "label": "Override default style",
-        "required": false,
+        "name": "override_default_style",
+        "id": "style.override_default_style",
         "type": "boolean",
         "default": false
       },
       {
-        "id": "style.button_bg_color",
-        "name": "button_bg_color",
         "label": "Button background color",
-        "required": true,
+        "name": "button_bg_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
+        "required": true,
         "default": {
-          "color": "#000000",
+          "color": "#c168c2",
           "opacity": 100
         }
       },
       {
-        "id": "style.button_text_color",
-        "name": "button_text_color",
         "label": "Button text color",
-        "required": true,
+        "name": "button_text_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
+        "required": true,
         "default": {
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "opacity": 100
         }
       },
       {
-        "id": "style.button_border_width",
         "name": "button_border_width",
         "label": "Button border width",
-        "required": true,
+        "type": "number",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
         "display": "slider",
-        "min": 0,
         "max": 20,
+        "min": 0,
+        "required": true,
         "step": 1,
-        "type": "number",
         "default": 1
       },
       {
-        "id": "style.button_border_color",
-        "name": "button_border_color",
         "label": "Button border color",
-        "required": true,
+        "name": "button_border_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
+        "required": true,
         "default": {
-          "color": "#000000",
+          "color": "#c168c2",
           "opacity": 100
         }
       },
       {
-        "id": "style.button_corner_radius",
-        "name": "button_corner_radius",
         "label": "Button corner radius",
-        "required": true,
+        "name": "button_corner_radius",
+        "type": "number",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
         "display": "slider",
-        "min": 0,
         "max": 100,
+        "min": 0,
+        "required": true,
         "step": 1,
-        "type": "number",
         "default": 4
       },
       {
-        "id": "style.button_bg_hover_color",
-        "name": "button_bg_hover_color",
         "label": "Button background hover color",
-        "required": true,
+        "name": "button_bg_hover_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
+        "required": true,
         "default": {
-          "color": "#CCCCCC",
+          "color": "#99409a",
           "opacity": 100
         }
       },
       {
-        "id": "style.button_text_hover_color",
-        "name": "button_text_hover_color",
         "label": "Button text hover color",
-        "required": true,
+        "name": "button_text_hover_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
+        "required": true,
         "default": {
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "opacity": 100
         }
       },
       {
-        "id": "style.button_border_hover_color",
-        "name": "button_border_hover_color",
         "label": "Button border hover color",
-        "required": true,
+        "name": "button_border_hover_color",
+        "type": "color",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
-        "type": "color",
+        "required": true,
         "default": {
-          "color": "#CCCCCC",
+          "color": "#99409a",
           "opacity": 100
         }
       },
       {
-        "id": "style.button_horizontal_padding",
-        "name": "button_horizontal_padding",
         "label": "Button horizontal padding",
-        "required": true,
+        "name": "button_horizontal_padding",
+        "type": "number",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
         "display": "slider",
-        "min": 0,
         "max": 100,
+        "min": 0,
+        "required": true,
         "step": 1,
-        "type": "number",
-        "default": 36
+        "default": 13
       },
       {
-        "id": "style.button_vertical_padding",
-        "name": "button_vertical_padding",
         "label": "Button vertical padding",
-        "required": true,
+        "name": "button_vertical_padding",
+        "type": "number",
         "visibility": {
           "controlling_field": "style.override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
         "display": "slider",
-        "min": 0,
         "max": 100,
+        "min": 0,
+        "required": true,
         "step": 1,
-        "type": "number",
-        "default": 12
+        "default": 13
       }
     ]
   }
