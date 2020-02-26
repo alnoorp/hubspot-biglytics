@@ -11,7 +11,7 @@
 .icon svg {
     box-sizing: border-box;
     fill: #34b5e5;
-    height: auto;
+    height: 100px;
     padding: 20px;
     width: 100px;
 }
