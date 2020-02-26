@@ -21,7 +21,7 @@
     if (pillarMenu) {
       var navChild = document.createElement("li");
       navChild.className = "pillar-navigation__menu-item";
-      navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.pillar_section_title|escape }}</a>';
+      navChild.innerHTML = '<a href="#{{ section_anchor }}">{{ module.title|escape }}</a>';
       pillarMenu.appendChild(navChild);
     }
   })();
