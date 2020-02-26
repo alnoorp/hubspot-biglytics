@@ -105,9 +105,11 @@
     {# End Blog Post Content #}
 
     {# Blog Related Posts #}
-    {% module 'blog_related_posts'
-      path='../modules/blog-related-posts'
-    %}
+    <div class="content-wrapper">
+      {% module 'blog_related_posts'
+        path='../modules/blog-related-posts'
+      %}
+    </div>
     {# End Blog Related Posts #}
 
   </div>
