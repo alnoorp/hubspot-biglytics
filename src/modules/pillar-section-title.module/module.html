@@ -1,6 +1,16 @@
-{% set section_anchor = module.pillar_section_title|lower|regex_replace("[^a-zA-Z]", "")%}
+{% set section_anchor = module.title|lower|regex_replace('[^a-zA-Z]', '')%}
 
-<h2 class="pillar-section-title__header" id="{{ section_anchor }}" tabindex="-1">{{ module.pillar_section_title }}</h2>
+<h2 class="pillar-section-title" id="{{ section_anchor }}" tabindex="-1">{{ module.title }}</h2>
+
+{% if module.override_default_style %}
+{% require_css %}
+<style>
+  #hs_cos_wrapper_{{ name }} .pillar-section-title {
+    color: rgba({{ module.style.color.color|convert_rgb }},{{ module.style.color.opacity * 0.01 }});
+  }
+</style>
+{% end_require_css %}
+{% endif %}
 
 {# Appends a navigation item to the pillar menu #}
 {% require_js %}
@@ -15,6 +25,5 @@
       pillarMenu.appendChild(navChild);
     }
   })();
-
 </script>
 {% end_require_js %}
