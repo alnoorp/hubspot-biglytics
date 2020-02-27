@@ -10,11 +10,11 @@
 {% if module.override_default_style %}
 {% require_css %}
 <style>
-  #hs_cos_wrapper_{{name}} .icon {
+  #hs_cos_wrapper_{{ name }} .icon {
     background-color: rgba({{ module.style.bg_color.color|convert_rgb }},{{ module.style.bg_color.opacity / 100 }});
     border-color: rgba({{ module.style.border_color.color|convert_rgb }},{{ module.style.border_color.opacity / 100 }});
   }
-  #hs_cos_wrapper_{{name}} svg {
+  #hs_cos_wrapper_{{ name }} svg {
     fill: rgba({{ module.style.color.color|convert_rgb }},{{ module.style.color.opacity / 100 }});
   }
 </style>

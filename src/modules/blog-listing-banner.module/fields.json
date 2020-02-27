@@ -1,12 +1,11 @@
 [
   {
-    "id": "blog_listing_banner_image",
-    "name": "blog_listing_banner_image",
-    "label": "Blog listing banner image",
-    "required": true,
-    "responsive": true,
-    "resizable": true,
+    "label": "Banner image",
+    "name": "banner_image",
     "type": "image",
+    "resizable": true,
+    "responsive": true,
+    "required": true,
     "default": {
       "size_type": "auto",
       "src": "",
@@ -14,16 +13,21 @@
     }
   },
   {
-    "id": "blog_listing_banner_title",
-    "name": "blog_listing_banner_title",
-    "label": "Blog listing banner title",
+    "label": "Title",
+    "name": "title",
     "type": "text"
   },
   {
-    "id": "blog_listing_banner_subtitle",
-    "name": "blog_listing_banner_subtitle",
-    "label": "Blog listing banner subtitle",
+    "label": "Subtitle",
+    "name": "subtitle",
     "type": "text"
+  },
+  {
+    "label": "Override default style",
+    "name": "override_default_style",
+    "id": "override_default_style",
+    "type": "boolean",
+    "default": false
   },
   {
     "id": "style",
@@ -32,43 +36,30 @@
     "type": "group",
     "children": [
       {
-        "id": "style.override_default_style",
-        "name": "override_default_style",
-        "label": "Override default style",
-        "type": "boolean",
-        "default": false
-      },
-      {
-        "id": "style.blog_listing_banner_title_color",
-        "name": "blog_listing_banner_title_color",
-        "label": "Blog listing banner title color",
+        "label": "Title color",
+        "name": "title_color",
         "visibility": {
-          "controlling_field": "style.override_default_style",
+          "controlling_field": "override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
         "type": "color",
         "default": {
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "opacity": 100
         }
       },
       {
-        "id": "style.blog_listing_banner_subtitle_color",
-        "name": "blog_listing_banner_subtitle_color",
-        "label": "Blog listing banner subtitle color",
+        "label": "Subtitle color",
+        "name": "subtitle_color",
         "visibility": {
-          "controlling_field": "style.override_default_style",
+          "controlling_field": "override_default_style",
           "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
+          "operator": "EQUAL"
         },
         "type": "color",
         "default": {
-          "color": "#FFFFFF",
+          "color": "#ffffff",
           "opacity": 100
         }
       }

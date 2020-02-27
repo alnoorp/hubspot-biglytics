@@ -1,17 +1,28 @@
-{% macro banner_image() -%}
-  {% if module.banner_image_select == "featured_image" and content.featured_image %}
+{% macro banner() -%}
+  {% if module.banner_image_select == 'featured_image' and content.featured_image %}
     background-image: url('{{ content.featured_image }}');
-  {% elif module.banner_image_select == "custom_image" %}
-    background-image: url('{{ module.custom_bg_image.src }}');
+  {% elif module.banner_image_select == 'custom_bg_image' %}
+    background-image: url('{{ module.bg_image.src }}');
+  {% elif module.banner_image_select == 'custom_bg_color' %}
+    background-color: rgba({{ module.bg_color.color|convert_rgb }},{{ module.bg_color.opacity / 100 }});
   {% else %}
-    background-color: #CCCCCC;
+    background-color: #cccccc;
   {% endif %}
 {%- endmacro %}
 
-<div class="blog-post-header" style="{{ banner_image()|trim }};">
+<div class="blog-post-header" style="{{ banner()|trim }};">
   <div class="blog-post-header__inner">
     <div class="blog-post-header__back-button">
-      <a href="{{ group.absolute_url }}">{% icon name="chevron-left" style="SOLID", width="13", no_wrapper=True %} Back to Blog</a>
+      <a href="{{ group.absolute_url }}">
+        {% icon
+          name='chevron-left',
+          no_wrapper=True,
+          purpose='decorative',
+          style='SOLID',
+          width='13'
+        %}
+        Back to Blog
+      </a>
     </div>
   </div>
 </div>

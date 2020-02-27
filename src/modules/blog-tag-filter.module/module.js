@@ -1,8 +1,6 @@
 (function() {
   // Variables
-  var blogTagSelect = document.querySelector(
-    '.blog-tag-filter__dropdown select'
-  );
+  var blogTagSelect = document.querySelector('#tag-select');
 
   // Functions
   blogTagSelect.addEventListener('change', function() {

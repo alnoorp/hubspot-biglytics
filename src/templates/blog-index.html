@@ -13,7 +13,7 @@
     {# Blog Listing Banner #}
     {% module 'blog_listing_banner'
       path='../modules/blog-listing-banner',
-      blog_listing_banner_image={
+      banner_image={
         'src': get_asset_url('../images/blog-banner.png')
       }
     %}
@@ -48,7 +48,7 @@
             <header class="blog-card__header">
               <h2 class="blog-card__title"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h2>
               {% if content.blog_author.avatar %}
-                <span class="blog-post__author-image">
+                <span class="blog-card__author-image">
                   <img src="{{ content.blog_author.avatar }}" alt="Picture of {{ content.blog_author.display_name }}">
                 </span>
               {% endif %}
@@ -58,8 +58,8 @@
               </div>
             </header>
             <div class="blog-card__body">
-              {% if content.featured_image and content_group.use_featured_image_in_summary %}
-                <a class="blog-card__image" style="background-image: url('{{ content.featured_image }}')"; href="{{ content.absolute_url }}"></a>
+              {% if content.featured_image and group.use_featured_image_in_summary %}
+                <img class="blog-card__image" src="{{ content.featured_image }}" alt="{{ content.name }}">
               {% endif %}
               <div class="blog-card__content">
                 {% if content.tag_list %}
