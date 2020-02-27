@@ -1,122 +1,154 @@
 [
   {
-    "id": "social_links",
-    "name": "social_links",
     "label": "Social links",
+    "name": "social_links",
+    "type": "group",
+    "occurrence": {
+      "default": 4,
+      "min": 1
+    },
     "children": [
       {
-        "id": "social_links.social_account",
-        "name": "social_account",
         "label": "Social account",
-        "required": true,
+        "name": "social_account",
+        "id": "social_account",
+        "type": "choice",
         "choices": [
           ["facebook-f", "Facebook"],
           ["twitter", "Twitter"],
-          ["linkedin-in", "Linkedin"],
-          ["instagram", "Instagram"]
+          ["instagram", "Instagram"],
+          ["linkedin-in", "LinkedIn"],
+          ["youtube", "YouTube"],
+          ["pinterest-p", "Pinterest"],
+          ["envelope", "Email"],
+          ["link", "Website"],
+          ["whatsapp", "Whatsapp"],
+          ["custom_icon", "Custom icon"]
         ],
         "display": "select",
-        "type": "choice",
+        "required": true,
         "default": "facebook-f"
       },
       {
-        "id": "social_links.social_link",
-        "name": "social_link",
+        "label": "Custom icon",
+        "name": "custom_icon",
+        "type": "icon",
+        "visibility": {
+          "controlling_field": "social_account",
+          "controlling_value_regex": "custom_icon",
+          "operator": "EQUAL"
+        },
+        "required": true,
+        "default": {
+          "name": "hubspot"
+        }
+      },
+      {
         "label": "Social link",
+        "name": "social_link",
+        "type": "link",
         "required": true,
         "supported_types": ["EXTERNAL", "EMAIL_ADDRESS"],
-        "type": "link",
         "default": {
-          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "no_follow": false,
           "open_in_new_tab": true,
-          "no_follow": false
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
         }
+      },
+      {
+        "label": "Accessibility options",
+        "name": "accessibility",
+        "type": "group",
+        "children": [
+          {
+            "label": "Title",
+            "name": "title",
+            "type": "text",
+            "required" : true,
+            "default": "Follow us on Facebook"
+          }
+        ]
       }
     ],
     "default": [
       {
         "social_account": "facebook-f",
         "link": {
-          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "no_follow": false,
           "open_in_new_tab": true,
-          "no_follow": false
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
+        },
+        "accessibility": {
+          "title": "Follow us on Facebook"
         }
       },
       {
-        "social_account": "facebook-f",
+        "social_account": "linkedin-in",
         "link": {
-          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "no_follow": false,
           "open_in_new_tab": true,
-          "no_follow": false
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
+        },
+        "accessibility": {
+          "title": "Follow us on LinkedIn"
         }
       },
       {
-        "social_account": "facebook-f",
+        "social_account": "twitter",
         "link": {
-          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "no_follow": false,
           "open_in_new_tab": true,
-          "no_follow": false
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
+        },
+        "accessibility": {
+          "title": "Follow us on Twitter"
         }
       },
       {
-        "social_account": "facebook-f",
+        "social_account": "instagram",
         "link": {
-          "url": { "content_id": null, "type": "EXTERNAL", "href": "" },
+          "no_follow": false,
           "open_in_new_tab": true,
-          "no_follow": false
+          "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
+        },
+        "accessibility": {
+          "title": "Follow us on Instagram"
         }
       }
-    ],
-    "type": "group",
-    "occurrence": {
-      "default": 4,
-      "min": 1
-    }
+    ]
   },
   {
-    "id": "style",
-    "name": "style",
+    "label": "Override default style",
+    "name": "override_default_style",
+    "id": "override_default_style",
+    "type": "boolean",
+    "default": false
+  },
+  {
     "label": "Style options",
+    "name": "style",
     "type": "group",
+    "visibility": {
+      "controlling_field": "override_default_style",
+      "controlling_value_regex": "true",
+      "operator": "EQUAL"
+    },
     "children": [
       {
-        "id": "style.override_default_style",
-        "name": "override_default_style",
-        "label": "Override default style",
-        "type": "boolean",
-        "default": false
-      },
-      {
-        "id": "style.social_icon_color",
-        "name": "social_icon_color",
         "label": "Social icon color",
-        "visibility": {
-          "controlling_field": "style.override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
-        },
+        "name": "social_icon_color",
         "type": "color",
         "default": {
-          "color": "#FFFFFF",
+          "color": "#1e2b33",
           "opacity": 100
         }
       },
       {
-        "id": "style.social_icon_bg_color",
-        "name": "social_icon_bg_color",
         "label": "Social icon background color",
-        "visibility": {
-          "controlling_field": "style.override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL",
-          "access": null,
-          "hidden_subfields": null
-        },
+        "name": "social_icon_bg_color",
         "type": "color",
         "default": {
-          "color": "#1E2B33",
+          "color": "#ffffff",
           "opacity": 0
         }
       }

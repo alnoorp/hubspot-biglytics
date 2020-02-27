@@ -977,6 +977,24 @@ body .pillar-navigation__menu-item {
   border-bottom: {{ global_border }}
 }
 
+/* Social Follow */
+
+body .social-links {
+  border-color: {{ body_font.color }};
+}
+
+body .social-links__icon {
+  border-right-color: {{ body_font.color }};
+}
+
+body .social-links__icon svg {
+  fill: {{ body_font.color }};
+}
+
+body .social-links__icon:hover {
+  background-color: {{ body_font.color }};
+}
+
 /* Statististic */
 
 .statistic__info {
