@@ -1,7 +1,8 @@
 /* Header Container */
 
 .header {
-  background-color: #34B5E5;
+  position: absolute;
+  width: 100%;
 }
 
 .header__container {

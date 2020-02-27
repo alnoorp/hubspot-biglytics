@@ -1851,13 +1851,9 @@
             "label": "Background Color",
             "name": "bg_color",
             "type": "color",
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.color.secondary.color"
-              }
-            },
             "default": {
-              "opacity": 100
+              "color": "#000000",
+              "opacity": 20
             }
           },
           {
