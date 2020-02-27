@@ -29,15 +29,49 @@
 
             {# Social Follow #}
             <div class="footer__follow-me">
-              {% module 'footer_social'
+              {% module_block module 'footer_social'
                 path='../../modules/social-follow',
+                override_default_style=true,
                 social_links=[
-                  {'social_account': 'facebook-f'},
-                  {'social_account': 'linkedin-in'},
-                  {'social_account': 'twitter'},
-                  {'social_account': 'instagram'}
+                  {
+                    'social_account': 'facebook-f',
+                    'accessibility': {
+                      'title': 'Follow us on Facebook'
+                    }
+                  },
+                  {
+                    'social_account': 'linkedin-in',
+                    'accessibility': {
+                      'title': 'Follow us on LinkedIn'
+                    }
+                  },
+                  {
+                    'social_account': 'twitter',
+                    'accessibility': {
+                      'title': 'Follow us on Twitter'
+                    }
+                  },
+                  {
+                    'social_account': 'instagram',
+                    'accessibility': {
+                      'title': 'Follow us on Instagram'
+                    }
+                  }
                 ]
               %}
+                {% module_attribute 'style' is_json=True %}
+                  {
+                    "social_icon_color": {
+                      "color": "#ffffff",
+                      "opacity": "100"
+                    },
+                    "social_icon_bg_color": {
+                      "color": "#1e2b33",
+                      "opacity": "0"
+                    }
+                  }
+                {% end_module_attribute %}
+              {% end_module_block %}
             </div>
             {# End Social Follow #}
 

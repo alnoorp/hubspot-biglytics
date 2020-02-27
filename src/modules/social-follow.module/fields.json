@@ -78,10 +78,9 @@
           "open_in_new_tab": true,
           "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
         },
-        "accessibility":
-          {
-            "title": "Follow us on Facebook"
-          }
+        "accessibility": {
+          "title": "Follow us on Facebook"
+        }
       },
       {
         "social_account": "linkedin-in",
@@ -90,11 +89,9 @@
           "open_in_new_tab": true,
           "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
         },
-        "accessibility": [
-          {
-            "title": "Follow us on LinkedIn"
-          }
-        ]
+        "accessibility": {
+          "title": "Follow us on LinkedIn"
+        }
       },
       {
         "social_account": "twitter",
@@ -103,11 +100,9 @@
           "open_in_new_tab": true,
           "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
         },
-        "accessibility": [
-          {
-            "title": "Follow us on Twitter"
-          }
-        ]
+        "accessibility": {
+          "title": "Follow us on Twitter"
+        }
       },
       {
         "social_account": "instagram",
@@ -116,11 +111,9 @@
           "open_in_new_tab": true,
           "url": { "content_id": null, "type": "EXTERNAL", "href": "" }
         },
-        "accessibility": [
-          {
-            "title": "Follow us on Instagram"
-          }
-        ]
+        "accessibility": {
+          "title": "Follow us on Instagram"
+        }
       }
     ]
   },
@@ -146,7 +139,7 @@
         "name": "social_icon_color",
         "type": "color",
         "default": {
-          "color": "#ffffff",
+          "color": "#1e2b33",
           "opacity": 100
         }
       },
@@ -155,7 +148,7 @@
         "name": "social_icon_bg_color",
         "type": "color",
         "default": {
-          "color": "#1e2b33",
+          "color": "#ffffff",
           "opacity": 0
         }
       }
