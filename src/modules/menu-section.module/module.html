@@ -1,7 +1,7 @@
 {% macro defaultItemClasses() %}
  {{
  {
-   "class": "no-submenu menu-item"
+   'class': 'no-submenu menu-item'
  }|xmlattr
  }}
 {% endmacro %}
@@ -9,15 +9,15 @@
 {% macro childClasses() %}
  {{
  {
-   "class": "has-submenu menu-item"
+   'class': 'has-submenu menu-item'
  }|xmlattr
  }}
 {% endmacro %}
 
 {% macro activeNode() %}
  {{
- {"class": "menu-link active-item",
- "aria-current": "page"}|xmlattr
+ {'class': 'menu-link active-item',
+ 'aria-current': 'page'}|xmlattr
 
  }}
 {% endmacro %}

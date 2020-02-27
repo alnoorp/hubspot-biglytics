@@ -327,42 +327,41 @@
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
-            path='../modules/testimonial',
-            horizontal_alignment='CENTER',
-            offset=0,
-            testimonial_image={
-              'src': get_asset_url('../images/jim.png'),
-              'alt': 'Jim Robbins'
-            },
-            testimonial_name='Jim Robbins',
-            testimonial_title='Wow, this is amazing!',
-            width=4
-          %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path='../modules/testimonial',
-            horizontal_alignment='CENTER',
-            offset=4,
-            testimonial_image={
-              'src': get_asset_url('../images/dawn.png'),
-              'alt': 'Dawn Doe'
-            },
-            testimonial_name='Dawn Doe',
-            testimonial_title='Awesome product!',
-            width=4
-          %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path='../modules/testimonial',
-            horizontal_alignment='CENTER',
-            offset=8,
-            testimonial_image={
-              'src': get_asset_url('../images/alan.png'),
-              'alt': 'Alan Dixon'
-            },
-            testimonial_name='Alan Dixon',
-            testimonial_title='Incredible support!',
-            width=4
+            path='../modules/testimonial-slider',
+            offset=0
+            testimonial_slider = [
+              {
+                "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
+                "author": {
+                  "author_name": "Jim Robbins",
+                  "author_image": {
+                    "src": get_asset_url("../images/jim.png"),
+                    "alt": "Jim Robbins"
+                  }
+                }
+              },
+              {
+                "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
+                "author": {
+                  "author_name": "Dawn Doe",
+                  "author_image": {
+                    "src": get_asset_url("../images/dawn.png"),
+                    "alt": "Dawn Doe"
+                  }
+                }
+              },
+              {
+                "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
+                "author": {
+                  "author_name": "Alan Dixon",
+                  "author_image": {
+                    "src": get_asset_url("../images/alan.png"),
+                    "alt": "Alan Dixon"
+                  }
+                }
+              }
+            ]
+            width=12
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
