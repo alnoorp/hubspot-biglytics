@@ -1,9 +1,7 @@
 (function() {
   // Variables
   var i;
-  var pricingSelector = document.querySelectorAll(
-    '.billing-selectors__pricing-option input'
-  );
+  var pricingSelector = document.querySelectorAll('.billing-selectors__pricing-option input');
 
   // Event Listeners
   for (i = 0; i < pricingSelector.length; i++) {
