@@ -9,7 +9,7 @@
 }
 
 .statistic__circle {
-  background-color: #D0D0D0;
+  background-color: #d0d0d0;
   border-radius: 50%;
   float: none;
   font-size: 150px;
@@ -22,7 +22,7 @@
 .statistic__bar,
 .statistic__fill,
 .statistic__fill {
-  border-color: #34B5E5;
+  border-color: #34b5e5;
 }
 
 .statistic__info {
@@ -68,12 +68,12 @@
 
 .statistic__fill {
   -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-      transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .statistic__circle::after {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 50%;
   content: " ";
   display: block;
