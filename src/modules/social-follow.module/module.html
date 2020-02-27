@@ -1,37 +1,47 @@
-<div class="social-links" id="social-links_{{ name }}">
-{% for item in module.social_links %}
-  {% set href = item.social_link.url.href %}
-  {% if item.social_link.url.type is equalto "EMAIL_ADDRESS" %}
-    {% set href = "mailto:" + href %}
-  {% endif %}
-  <a href="{{ href }}"
-      class="social-links__icon"
-     {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
-     {% if item.social_link.no_follow %}rel="nofollow"{% endif %}
-     >
-    {% icon name={{ item.social_account }}, style="solid" %}
-  </a>
-{% endfor %}
+<div class="social-links">
+  {% for item in module.social_links %}
+    {% if item.social_account != 'custom_icon' %}
+      {% set social_icon = item.social_account %}
+    {% else %}
+      {% set social_icon = item.custom_icon.name %}
+    {% endif %}
+    {% set href = item.social_link.url.href %}
+    {% if item.social_link.url.type is equalto 'EMAIL_ADDRESS' %}
+      {% set href = 'mailto:' + href %}
+    {% endif %}
+    <a href="{{ href }}"
+        class="social-links__icon"
+      {% if item.social_link.open_in_new_tab %}target="_blank"{% endif %}
+      {% if item.social_link.no_follow %}rel="nofollow"{% endif %}
+      >
+      {% icon
+        name='{{ social_icon }}',
+        purpose='semantic',
+        style='SOLID',
+        title='{{ item.accessibility.title }}'
+      %}
+    </a>
+  {% endfor %}
 </div>
 
 {% if module.style.override_default_style %}
 {% require_css %}
 <style>
-  #social-links_{{ name }} {
-    border-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity * 0.01 }});
+  #hs_cos_wrapper_{{ name }} .social-links {
+    border-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity / 100 }});
   }
-  #social-links_{{ name }} .social-links__icon {
-    background-color: rgba({{ module.style.social_icon_bg_color.color|convert_rgb }},{{ module.style.social_icon_bg_color.opacity * 0.01 }});
-    border-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity * 0.01 }});
+  #hs_cos_wrapper_{{ name }} .social-links__icon {
+    background-color: rgba({{ module.style.social_icon_bg_color.color|convert_rgb }},{{ module.style.social_icon_bg_color.opacity / 100 }});
+    border-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity / 100 }});
   }
-  #social-links_{{ name }} .social-links__icon:hover {
-    background-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity * 0.01 }});
+  #hs_cos_wrapper_{{ name }} .social-links__icon:hover {
+    background-color: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity / 100 }});
   }
-  #social-links_{{ name }} .social-links__icon svg {
-    fill: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity * 0.01 }});
+  #hs_cos_wrapper_{{ name }} .social-links__icon svg {
+    fill: rgba({{ module.style.social_icon_color.color|convert_rgb }},{{ module.style.social_icon_color.opacity / 100 }});
   }
-  #social-links_{{ name }} .social-links__icon:hover svg {
-    fill: rgba({{ module.style.social_icon_bg_color.color|convert_rgb }},{{ module.style.social_icon_bg_color.opacity * 0.01 }});
+  #hs_cos_wrapper_{{ name }} .social-links__icon:hover svg {
+    fill: rgba({{ module.style.social_icon_bg_color.color|convert_rgb }},{{ module.style.social_icon_bg_color.opacity / 100 }});
   }
 </style>
 {% end_require_css %}
