@@ -1,146 +1,148 @@
 .pricing-block-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .price-block {
-    border: 1px solid #D0D0D0;
-    margin-bottom: 30px;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  margin-bottom: 1.4rem;
 }
 
 .price-block--1 {
-    width: 100%;
+  width: 100%;
 }
 
 .price-block--2 {
-    width: 47%;
+  width: 47%;
 }
 
 .price-block--3 {
-    width: 30%;
+  width: 30%;
 }
 
 .price-block--4 {
-    width: 23%;
+  width: 23%;
+}
+
+@media (max-width: 1000px) {
+  .price-block--3,
+  .price-block--4 {
+      width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-block--2,
+  .price-block--3,
+  .price-block--4 {
+      width: 100%;
+  }
 }
 
 .price-block--monthly {
-    display: block;
+  display: block;
 }
 
 .price-block--annual {
-    display: none;
+  display: none;
 }
 
 .billing-selectors {
-    display: table;
-    margin: 0 auto;
-    margin-bottom: 40px;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 1.4rem;
+  padding: 0;
 }
 
 .billing-selectors__pricing-option {
-    border: 1px solid #D0D0D0;
-    display: table-cell;
-    min-width: 200px;
-    padding: 10px 15px;
-    transition: .4s;
-    text-align: center;
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
 }
 
 .billing-selectors__pricing-option--left {
-    border-bottom-left-radius: 25px;
-    border-top-left-radius: 25px;
-}
-
-.billing-selectors__pricing-option--right {
-    border-bottom-right-radius: 25px;
-    border-left: 0;
-    border-top-right-radius: 25px;
+  border-right: 1px solid #d0d0d0;
 }
 
 .billing-selectors__pricing-option input[type="radio"] {
-    position: absolute;
-    visibility: hidden;
+  position: absolute;
+  visibility: hidden;
 }
 
 .billing-selectors__pricing-option input[type="radio"] + label:before {
-    border: 1px solid rgba(0,0,0,0.4);
-    border-radius: 50%;
-    content: "";
-    display: inline-block;
-    height: 16px;
-    margin-right: 5px;
-    vertical-align: sub;
-    width: 16px;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  height: 16px;
+  margin-right: 5px;
+  vertical-align: sub;
+  width: 16px;
 }
 
 .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
-    background-color: #FFFFFF;
-    border: 6px solid #34B5E5
+  background-color: #fff;
+  border: 6px solid #34b5e5;
+}
+
+.billing-selectors__pricing-option label {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .price-block__header {
-    background-color: #34B5E5;
-    color: #FFFFFF;
-    padding: 40px 10px;
-    text-align: center;
+  background-color: #34b5e5;
+  color: #fff;
+  padding: 2.1rem 0.7rem;
+  text-align: center;
 }
 
 .price-block__title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-}
-
-.price-block__price {
-    position: relative;
+  color: #fff;
+  letter-spacing: 0.2em;
 }
 
 .price-block__currency,
 .price-block__number {
-    display: inline-block;
+  display: inline-block;
 }
 
 .price-block__currency {
-    font-size: 1.4rem;
-    line-height: 3rem;
-    vertical-align: top;
+  font-size: 1.4rem;
+  line-height: 3rem;
+  vertical-align: top;
 }
 
 .price-block__number {
-    font-size: 4rem;
-    font-weight: bold;
-    line-height: 4rem;
-    vertical-align: top;
+  font-size: 4rem;
+  font-weight: bold;
+  line-height: 4rem;
+  vertical-align: top;
 }
 
 .price-block__description-block {
-    background-color: #FFFFFF;
-    padding: 20px 40px;
+  background-color: #fff;
+  padding: 1.4rem 2.8rem;
 }
 
-.price-block__cta {
-    text-align: center;
-}
-
-@media (max-width: 1000px) {
-    .price-block--3,
-    .price-block--4 {
-        width: 45%;
-    }
-}
-
-@media (max-width: 768px) {
-    .price-block--2,
-    .price-block--3,
-    .price-block--4 {
-        width: 100%;
-    }
+.price-block__button {
+  margin-bottom: 0;
+  text-align: center;
 }
