@@ -1,4 +1,4 @@
-<div class="accordion" aria-expanded="{% if module.open_by_default %}true{% endif %}">
+<div class="accordion" aria-expanded="{% if module.open_by_default %}true{% else %}false{% endif %}">
   <button>
     {{ module.accordion_header }}
     <span class="accordion__icon"></span>
