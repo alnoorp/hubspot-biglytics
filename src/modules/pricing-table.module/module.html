@@ -96,11 +96,14 @@
   </div>
 </section>
 
-{% if module.style.override_default_style %}
+{% if module.override_default_style %}
 {% require_css %}
 <style>
   #hs_cos_wrapper_{{ name }} .price-block__header {
     background-color: rgba({{ module.style.header_bg_color.color|convert_rgb }},{{ module.style.header_bg_color.opacity / 100 }});
+  }
+  #hs_cos_wrapper_{{ name }} .price-block__header,
+  #hs_cos_wrapper_{{ name }} .price-block__title {
     color: rgba({{ module.style.header_color.color|convert_rgb }},{{ module.style.header_color.opacity / 100 }});
   }
   #hs_cos_wrapper_{{ name }} .billing-selectors__pricing-option input[type="radio"]:checked + label:before {
