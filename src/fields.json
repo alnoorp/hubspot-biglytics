@@ -49,8 +49,8 @@
           }
         },
         "default": {
-          "color": "#1E2B33",
-          "font": "Work Sans",
+          "color": "#4a4a4a",
+          "font": "Proxima Nova",
           "fallback": "sans-serif",
           "variant": "regular",
           "font_set": "GOOGLE",
@@ -70,10 +70,9 @@
           }
         },
         "default": {
-          "color": "#1E2B33",
-          "font": "Work Sans",
+          "color": "#4a4a4a",
+          "font": "Proxima Nova",
           "fallback": "sans-serif",
-          "variant": "600",
           "font_set": "GOOGLE",
           "styles": {
             "text-decoration": "none"
