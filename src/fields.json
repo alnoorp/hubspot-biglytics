@@ -50,7 +50,7 @@
         },
         "default": {
           "color": "#4a4a4a",
-          "font": "Proxima Nova",
+          "font": "Montserrat",
           "fallback": "sans-serif",
           "variant": "regular",
           "font_set": "GOOGLE",
@@ -71,7 +71,7 @@
         },
         "default": {
           "color": "#4a4a4a",
-          "font": "Proxima Nova",
+          "font": "Montserrat",
           "fallback": "sans-serif",
           "font_set": "GOOGLE",
           "styles": {
