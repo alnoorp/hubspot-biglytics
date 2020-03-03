@@ -7,16 +7,20 @@
 
     {# Logo #}
     <div class="header__logo">
+      {% set link = request.scheme ~ "://" ~ request.domain ~ "/biglytics-home" %}
       {% module 'header_logo'
         path='@hubspot/logo',
+        link={{ link }},
         img={
-          'alt': 'Sprout logo',
+          'alt': 'Biglytics',
           'height': '82',
           'override_inherited_src': true,
           'src': get_asset_url('../../images/biglytics-logo.png'),
           'width': '205'
         }
       %}
+    </div>
+    <div>
     </div>
     {# End Logo #}
 
