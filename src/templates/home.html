@@ -100,205 +100,8 @@
     {# End Two Column With Image Left Section #}
 
     {# Three Column Feature Section #}
-    {% dnd_section %}
-      {% dnd_column %}
-        {% dnd_row
-          padding={
-            'top': 0,
-            'right': 0,
-            'bottom': 45,
-            'left': 0
-          }
-        %}
-          {% dnd_module
-            path='@hubspot/rich_text'
-          %}
-            {% module_attribute 'html' %}
-              <div style="text-align: center;">
-                <h2>Get More Leads For Your Business Today</h2>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_column
-            offset=0,
-            width=4
-          %}
-            {% dnd_row %}
-              {% dnd_module
-                path='../modules/icon',
-                horizontal_alignment='CENTER',
-                icon={
-                  'name': 'clock',
-                  'type': 'REGULAR'
-                },
-                accessibility={
-                  'purpose': 'decorative'
-                }
-              %}
-              {% end_dnd_module %}
-            {% end_dnd_row %}
-            {% dnd_row %}
-              {% dnd_module
-                path='@hubspot/rich_text'
-              %}
-                {% module_attribute 'html' %}
-                  <div style="text-align: center;">
-                      <h3>Quick and Simple</h3>
-                      <p>Our product is incredibly easy to get set up and with our self-paced training you can get started in under 5 minutes.</p>
-                  </div>
-                {% end_module_attribute %}
-              {% end_dnd_module %}
-            {% end_dnd_row %}
-          {% end_dnd_column %}
-          {% dnd_column
-            offset=4,
-            width=4
-          %}
-            {% dnd_row %}
-              {% dnd_module
-                path='../modules/icon',
-                horizontal_alignment='CENTER',
-                icon={
-                  'name': 'book',
-                  'type': 'SOLID'
-                },
-                accessibility={
-                  'purpose': 'decorative'
-                }
-              %}
-              {% end_dnd_module %}
-            {% end_dnd_row %}
-            {% dnd_row %}
-              {% dnd_module
-                path='@hubspot/rich_text'
-              %}
-                {% module_attribute 'html' %}
-                  <div style="text-align: center;">
-                      <h3>Customizable Templates</h3>
-                      <p>We've created an entire library of easy to use templates so you can find the best fit for your company.</p>
-                  </div>
-                {% end_module_attribute %}
-              {% end_dnd_module %}
-            {% end_dnd_row %}
-          {% end_dnd_column %}
-          {% dnd_column
-            offset=8,
-            width=4
-          %}
-            {% dnd_row %}
-              {% dnd_module
-                path='../modules/icon',
-                horizontal_alignment='CENTER',
-                icon={
-                  'name': 'user',
-                  'type': 'SOLID'
-                },
-                accessibility={
-                  'purpose': 'decorative'
-                }
-              %}
-              {% end_dnd_module %}
-            {% end_dnd_row %}
-            {% dnd_row %}
-              {% dnd_module
-                path='@hubspot/rich_text'
-              %}
-                {% module_attribute 'html' %}
-                  <div style="text-align: center;">
-                      <h3>24/7 Support</h3>
-                      <p>We have someone available at all hours to help answer your questions so that you never get stuck.</p>
-                  </div>
-                {% end_module_attribute %}
-              {% end_dnd_module %}
-            {% end_dnd_row %}
-          {% end_dnd_column %}
-        {% end_dnd_row %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
-    {# End Three Column Feature Section #}
-
-
-    {# Statistics Section #}
-    {% dnd_section %}
-      {% dnd_column %}
-        {% dnd_row
-          padding={
-            'top': 0,
-            'right': 0,
-            'bottom': 45,
-            'left': 0
-          }
-        %}
-          {% dnd_module
-            path='@hubspot/rich_text'
-          %}
-            {% module_attribute 'html' %}
-              <div style="text-align: center">
-                <h2>Service That Stands Out</h2>
-                <p>We strive towards always providing our customers with the best customer service possible</p>
-              </div>
-            {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path='../modules/statistic',
-            horizontal_alignment='CENTER',
-            offset=0,
-            statistic_description='<p>Happy customers</p>',
-            statistic_number='10',
-            statistic_percentage='50',
-            statistic_unit='k',
-            width=3
-          %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path='../modules/statistic',
-            horizontal_alignment='CENTER',
-            offset=3,
-            statistic_description='<p>Customer satisfaction rating</p>',
-            statistic_number='98',
-            statistic_percentage='98',
-            statistic_unit='%',
-            width=3
-          %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path='../modules/statistic',
-            horizontal_alignment='CENTER',
-            offset=6,
-            statistic_description='<p>Solved support tickets</p>',
-            statistic_number='54',
-            statistic_percentage='72',
-            statistic_unit='k',
-            width=3
-          %}
-          {% end_dnd_module %}
-          {% dnd_module
-            path='../modules/statistic',
-            horizontal_alignment='CENTER',
-            offset=9,
-            statistic_description='<p>Average customer score</p>',
-            statistic_number='85',
-            statistic_percentage='85',
-            statistic_unit='',
-            width=3
-          %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-      {% end_dnd_column %}
-    {% end_dnd_section %}
-    {# End Statistics Section #}
-
-    {# Testimonial Section #}
     {% dnd_section
-      background_image={
-        'backgroundPosition': 'TOP_CENTER',
-        'backgroundSize': 'cover',
-        'imageUrl': get_asset_url('../images/testimonials-banner.png')
-      }
+      max_width=1024
     %}
       {% dnd_column %}
         {% dnd_row
@@ -308,55 +111,60 @@
             'bottom': 45,
             'left': 0
           }
-         %}
+        %}
           {% dnd_module
             path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <div style="text-align: center;">
+                <p>In today’s dynamic environment, data driven decisions are everything.</p>
+                <h2>But how do you make the right decision?</h2>
+                <p>Biglytics helps you analyze your data, compare it with over twenty industries and derive actionable insights. For the first time, the power of big data is at the fingertips of the mid-market.</p>
+              </div>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    {# End Three Column Feature Section #}
+
+
+    {# Testimonial Section #}
+    {% dnd_section
+      padding={
+        'right': 0,
+        'bottom': 0,
+        'left': 0
+      },
+      background_image={
+        'backgroundPosition': 'TOP_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': get_asset_url('../images/ebook-background.jpg')
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row
+          padding={
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          }
+         %}
+          {% dnd_module
+            path='@hubspot/linked_image',
+            horizontal_alignment='LEFT',
+            offset=0,
+            img={
+              'src': get_asset_url('../images/whitepaper.png'),
+              'size_type': 'auto'
+            }
           %}
             {% module_attribute 'html' %}
               <div style="text-align: center;">
                 <h2 style="color: #fff;">What People Are Saying</h2>
               </div>
             {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path='../modules/testimonial-slider',
-            offset=0
-            testimonial_slider = [
-              {
-                "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
-                "author": {
-                  "author_name": "Jim Robbins",
-                  "author_image": {
-                    "src": get_asset_url("../images/jim.png"),
-                    "alt": "Jim Robbins"
-                  }
-                }
-              },
-              {
-                "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
-                "author": {
-                  "author_name": "Dawn Doe",
-                  "author_image": {
-                    "src": get_asset_url("../images/dawn.png"),
-                    "alt": "Dawn Doe"
-                  }
-                }
-              },
-              {
-                "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
-                "author": {
-                  "author_name": "Alan Dixon",
-                  "author_image": {
-                    "src": get_asset_url("../images/alan.png"),
-                    "alt": "Alan Dixon"
-                  }
-                }
-              }
-            ]
-            width=12
-          %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
