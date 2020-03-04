@@ -129,11 +129,15 @@
     {# End Three Column Feature Section #}
 
 
-    {# Testimonial Section #}
+    {# Whitepaper Section #}
     {% dnd_section
+      full_width=true,
       padding={
         'right': 0,
         'bottom': 0,
+        'left': 0
+      },
+      margin={
         'left': 0
       },
       background_image={
@@ -149,10 +153,13 @@
             'right': 0,
             'bottom': 0,
             'left': 0
-          }
-         %}
+          },
+          margin={
+            'left': 0
+          },
+        %}
           {% dnd_module
-            path='@hubspot/linked_image',
+            path='@hubspot/image',
             horizontal_alignment='LEFT',
             offset=0,
             img={
@@ -176,11 +183,11 @@
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=0,
+        offset=1,
         img={
           'alt': 'Sample logo',
           'size_type': 'auto',
-          'src': get_asset_url('../images/hubspot-logo.png'),
+          'src': get_asset_url('../images/logos/aiming-technologies.png'),
           'width': '151'
         },
         width=2
@@ -189,11 +196,11 @@
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=2,
+        offset=3,
         img={
           'alt': 'Sample logo',
           'size_type': 'auto',
-          'src': get_asset_url('../images/hubspot-logo.png'),
+          'src': get_asset_url('../images/logos/cross.png'),
           'width': '151'
         },
         width=2
@@ -202,11 +209,11 @@
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=4,
+        offset=5,
         img={
           'alt': 'Sample logo',
           'size_type': 'auto',
-          'src': get_asset_url('../images/hubspot-logo.png'),
+          'src': get_asset_url('../images/logos/infiniteflame.png'),
           'width': '151'
         },
         width=2
@@ -215,11 +222,11 @@
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=6,
+        offset=7,
         img={
           'alt': 'Sample logo',
           'size_type': 'auto',
-          'src': get_asset_url('../images/hubspot-logo.png'),
+          'src': get_asset_url('../images/logos/magento.png'),
           'width': '151'
         },
         width=2
@@ -228,24 +235,11 @@
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=8,
+        offset=9,
         img={
           'alt': 'Sample logo',
           'size_type': 'auto',
-          'src': get_asset_url('../images/hubspot-logo.png'),
-          'width': '151'
-        },
-        width=2
-      %}
-      {% end_dnd_module %}
-      {% dnd_module
-        path='@hubspot/linked_image',
-        horizontal_alignment='CENTER',
-        offset=10,
-        img={
-          'alt': 'Sample logo',
-          'size_type': 'auto',
-          'src': get_asset_url('../images/hubspot-logo.png'),
+          'src': get_asset_url('../images/logos/setra.png'),
           'width': '151'
         },
         width=2
