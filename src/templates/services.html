@@ -1,7 +1,7 @@
 <!--
   templateType: page
   isAvailableForNewContent: true
-  label: About
+  label: Services
   screenshotPath: ../images/template-previews/about.png
 -->
 {% extends './layouts/base.html' %}
@@ -15,7 +15,7 @@
       background_image={
         'backgroundPosition': 'MIDDLE_CENTER',
         'backgroundSize': 'cover',
-        'imageUrl': get_asset_url('../images/about-banner.png')
+        'imageUrl': get_asset_url('../images/hero-bg-desktop.png')
       },
       max_width=760,
       padding={
@@ -33,7 +33,7 @@
           %}
             {% module_attribute 'html' %}
               <div style="text-align: center">
-                <h1 style="color: #fff; margin-bottom: 0;">About</h1>
+                <h1 style="color: #fff; margin-bottom: 0;">Services</h1>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
