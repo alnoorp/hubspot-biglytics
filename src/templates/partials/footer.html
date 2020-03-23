@@ -10,23 +10,36 @@
       <div class="row-fluid span12">
 
           {# Logo and Social Follow Column #}
-          <div class="column span4">
+          <div class="column span12">
 
             {# Logo #}
             <div class="footer__logo">
               {% module 'footer_logo'
                 path='@hubspot/logo',
                 img={
-                  'alt': 'Sprout logo',
+                  'alt': 'Biglytics logo',
                   'height': '82',
                   'override_inherited_src': true,
-                  'src': get_asset_url('../../images/sprout-theme-logo.png'),
+                  'src': get_asset_url('../../images/biglytics-logo.png'),
                   'width': '205'
                 }
               %}
             </div>
             {# End Logo #}
+          </div>
+      </div>
 
+      <div class="row-fluid span12">
+        <div class="footer__nav-section">
+          {% module 'header_navigation_primary'
+            label='Primary navigation',
+            path='../../modules/menu-section'
+          %}
+        </div>
+      </div>
+
+      <div class="row-fluid span12">
+          <div class="column span12">
             {# Social Follow #}
             <div class="footer__follow-me">
               {% module_block module 'footer_social'
@@ -78,105 +91,6 @@
           </div>
           {# End Logo and Social Follow Column #}
 
-          {# Navigation Column One #}
-          <div class="footer__navigation column span2">
-            {% module 'footer_menu_header_one'
-              label='Menu title column one',
-              path='@hubspot/header',
-              header_tag='h4',
-              value='About Us'
-            %}
-            {% module_block module 'footer_menu_one'
-              label='Menu column one',
-              path='@hubspot/simple_menu',
-              orientation='vertical'
-            %}
-              {% module_attribute 'menu_tree' is_json=True %}
-                [
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Story", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Team", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Mission", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Our Vision", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}
-                ]
-              {% end_module_attribute %}
-            {% end_module_block %}
-          </div>
-          {# End Navigation Column One #}
-
-          {# Navigation Column Two #}
-          <div class="footer__navigation column span2">
-            {% module 'footer_menu_header_two'
-              label='Menu title column two',
-              path='@hubspot/header',
-              header_tag='h4',
-              value='Work With Us'
-            %}
-            {% module_block module 'footer_menu_two'
-              label='Menu column two',
-              path='@hubspot/simple_menu',
-              orientation='vertical'
-            %}
-              {% module_attribute 'menu_tree' is_json=True %}
-                [
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Products", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Services", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Trainings", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Free Trial", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}
-                ]
-              {% end_module_attribute %}
-            {% end_module_block %}
-          </div>
-          {# End Navigation Column Two #}
-
-          {# Navigation Column Three #}
-          <div class="footer__navigation column span2">
-            {% module 'footer_menu_header_three'
-              label='Menu title column three',
-              path='@hubspot/header',
-              header_tag='h4',
-              value='Support'
-            %}
-            {% module_block module 'footer_menu_three'
-              label='Menu column three',
-              path='@hubspot/simple_menu',
-              orientation='vertical'
-            %}
-              {% module_attribute 'menu_tree' is_json=True %}
-                [
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Help Center", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Community", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Contact Support", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Live Chat", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}]
-              {% end_module_attribute %}
-            {% end_module_block %}
-          </div>
-          {# End Navigation Column Three #}
-
-          {# Footer Navigation Column Four #}
-          <div class="footer__navigation column span2">
-            {% module 'footer_menu_header_four'
-              label='Menu title column four',
-              path='@hubspot/header',
-              header_tag='h4',
-              value='Resources'
-            %}
-            {% module_block module 'footer_menu_four'
-              label='Menu column four',
-              path='@hubspot/simple_menu',
-              orientation='vertical'
-            %}
-              {% module_attribute 'menu_tree' is_json=True %}
-                [
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Blog", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Webinars", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "Podcast", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false},
-                  {"contentType": null, "subCategory": null, "pageLinkName": null, "pageLinkId": null, "isPublished": false, "categoryId": null, "linkParams": null, "linkLabel": "eBooks", "linkTarget": null, "linkUrl": "#", "children": [], "isDeleted": false}
-                ]
-              {% end_module_attribute %}
-            {% end_module_block %}
-          </div>
-          {# End Footer Navigation Column Four #}
-
       </div>
     </div>
     {# End Footer Top Section #}
@@ -184,38 +98,23 @@
     {# Footer Bottom Section #}
     <div class="footer__bottom-section">
       <div class="row-fluid span12">
-
-        {# Copyright Column #}
-        <div class="column span3">
+        <div class="column span3"></div>
+        <div class="column span6">
 
           {# Copyright #}
           {% module 'footer_copyright'
             label='Copyright',
             path='@hubspot/text',
-            value='Copyright © {{ year }}, {{ site_settings.company_name }}'
+            value='Copyright © {{ year }}, HubSpot, Inc.'
           %}
           {# End Copyright #}
 
+          <div>
+            Biglytics is a fictional company used for demo and training purposes by HubSpot.
+            You shouldn't rely on the information on this site.
+            Use of this site is subject to HubSpot's <a href="#">Privacy Policy</a> and <a href="#">Terms of Use</a>.
+          </div>
         </div>
-        {# End Copyright Column #}
-
-        {# Legal Information Column #}
-        <div class="column span9">
-
-          {# Legal Information #}
-          {% module_block module 'footer_legal_information'
-            label='Legal Information',
-            path='@hubspot/rich_text'
-          %}
-            {% module_attribute 'html' %}
-              <a href="#">Privacy Policy</a> &nbsp;| &nbsp;<a href="#">Terms of Use</a>
-            {% end_module_attribute %}
-          {% end_module_block %}
-          {# End Legal Information #}
-
-        </div>
-        {# End Legal Information Column #}
-
       </div>
     </div>
     {# End Footer Bottom Section #}

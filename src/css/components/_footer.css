@@ -8,10 +8,18 @@
   margin: 0 auto;
   max-width: 1340px;
   padding: 2.8rem 2.8rem 0 2.8rem;
+  text-align: center;
 }
 
-.footer__top-section {
-  margin-bottom: 80px;
+.footer__nav-section {
+  text-align: center;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  padding: 10px 0;
+}
+
+.footer__nav-section nav {
+  float: none;
 }
 
 @media (max-width: 767px) {
@@ -21,8 +29,7 @@
 }
 
 .footer__bottom-section {
-  border-top: 1px solid #FFF;
-  padding: 20px 0;
+  padding: 0 0 20px 0;
 }
 
 @media (max-width: 767px) {
@@ -35,17 +42,13 @@
 /* Footer Logo */
 
 .footer__logo {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 /* Footer Social Follow */
 
-.footer__follow-me .social-links {
-  border-color: #FFF;
-}
-
-.footer__follow-me .social-links__icon {
-  border-right-color: #FFF
+.footer__follow-me {
+  padding: 20px 0;
 }
 
 .footer__follow-me .social-links__icon svg {
