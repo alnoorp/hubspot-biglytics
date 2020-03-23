@@ -14,6 +14,15 @@
         }
       },
       {
+        "label": "Body Background Secondary Color",
+        "name": "body_secondary",
+        "type": "color",
+        "default": {
+          "color": "#4e4e4e",
+          "opacity": 100
+        }
+      },
+      {
         "label": "Primary",
         "name": "primary",
         "type": "color",
@@ -1147,7 +1156,7 @@
             "name": "bg_color",
             "type": "color",
             "default": {
-              "color": "#F1F1F1",
+              "color": "#aaaaaa",
               "opacity": 100
             }
           },
@@ -1297,7 +1306,7 @@
                 "name": "bg_color",
                 "type": "color",
                 "default": {
-                  "color": "#34B5E5",
+                  "color": "#aaaaaa",
                   "opacity": 100
                 }
               },

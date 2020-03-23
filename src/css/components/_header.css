@@ -5,6 +5,11 @@
   width: 100%;
 }
 
+.header.header--no-navigation {
+  position: static;
+  background-color: {{ get_theme_style_setting('color.body_secondary.color') }};
+}
+
 .header__container {
   -webkit-box-align: center;
   -ms-flex-align: center;
