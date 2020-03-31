@@ -1,102 +1,121 @@
-[
-  {
-    "label": "Testimonials",
-    "name": "testimonial_slider",
-    "type": "group",
-    "occurrence": {
-      "default": 3,
-      "max": null,
-      "min": 3
-    },
-    "children": [
-      {
-        "label": "Testimonial text",
-        "name": "content",
-        "type": "richtext",
-        "required": true,
-        "default": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>"
-      },
-      {
-        "label": "Author",
-        "name": "author",
-        "type": "group",
-        "children": [
-          {
-            "label": "Author's name",
-            "name": "author_name",
-            "type": "text",
-            "default": "Alan Dixon"
-          },
-          {
-            "label": "Author's image",
-            "name": "author_image",
-            "type": "image",
-            "resizable": true,
-            "responsive": false,
-            "default": {
-              "src": "",
-              "alt": ""
-            }
-          }
-        ]
-      }
-    ],
-    "default": [
-      {
-        "content": "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
-        "author": {
-          "author_name": "Jim Robbins"
-        }
-      },
-      {
-        "content": "<h3>Awesome Product!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
-        "author": {
-          "author_name": "Dawn Doe"
-        }
-      },
-      {
-        "content": "<h3>Incredible Support!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
-        "author": {
-          "author_name": "Alan Dixon"
-        }
-      }
-    ]
+[ {
+  "id" : "testimonial_slider",
+  "name" : "testimonial_slider",
+  "label" : "Testimonials",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : 3,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 3
   },
-  {
-    "id": "override_default_style",
-    "name": "override_default_style",
-    "label": "Override default style",
-    "type": "boolean",
-    "default": false
-  },
-  {
-    "label": "Style options",
-    "name": "style",
-    "type": "group",
-    "visibility": {
-      "controlling_field": "override_default_style",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    },
-    "children": [
-      {
-        "label": "Navigation color",
-        "name": "navigation_color",
-        "type": "color",
-        "default": {
-          "color": "#d2d8df",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Navigation active color",
-        "name": "navigation_active_color",
-        "type": "color",
-        "default": {
-          "color": "#e73335",
-          "opacity": 100
-        }
+  "children" : [ {
+    "id" : "testimonial_slider.content",
+    "name" : "content",
+    "label" : "Testimonial text",
+    "required" : true,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>"
+  }, {
+    "id" : "testimonial_slider.author",
+    "name" : "author",
+    "label" : "Author",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "testimonial_slider.author.author_name",
+      "name" : "author_name",
+      "label" : "Author's name",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Alan Dixon"
+    }, {
+      "id" : "testimonial_slider.author.author_image",
+      "name" : "author_image",
+      "label" : "Author's image",
+      "required" : false,
+      "locked" : false,
+      "responsive" : false,
+      "resizable" : true,
+      "type" : "image",
+      "default" : {
+        "src" : "",
+        "alt" : ""
       }
-    ]
-  }
-]
+    } ],
+    "tab" : "CONTENT",
+    "type" : "group",
+    "default" : null
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : [ {
+    "content" : "<h3>Wow, This Is Amazing!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
+    "author" : {
+      "author_name" : "Jim Robbins"
+    }
+  }, {
+    "content" : "<h3>Awesome Product!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
+    "author" : {
+      "author_name" : "Dawn Doe"
+    }
+  }, {
+    "content" : "<h3>Incredible Support!</h3><p>The Rally team treated our business like it was their own. They tackled the issue with grit, knowledge, and empathy. I HIGHLY recommend them to anyone.</p>",
+    "author" : {
+      "author_name" : "Alan Dixon"
+    }
+  } ]
+}, {
+  "id" : "override_default_style",
+  "name" : "override_default_style",
+  "label" : "Override default style",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "override_default_style",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "style.navigation_color",
+    "name" : "navigation_color",
+    "label" : "Navigation color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#d2d8df",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.navigation_active_color",
+    "name" : "navigation_active_color",
+    "label" : "Navigation active color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#e73335",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : null
+} ]

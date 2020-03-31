@@ -8,6 +8,7 @@
 
 {% block body %}
 <main class="body-container-wrapper">
+
   {% dnd_area 'dnd_area' class='body-container body-container--home', label='Main section' %}
 
     {# Banner Section #}
@@ -21,7 +22,7 @@
       padding={
         'top': 200,
         'right': 20,
-        'bottom': 200,
+        'bottom': 400,
         'left': 20
       },
       vertical_alignment='MIDDLE'
@@ -32,20 +33,19 @@
             path='@hubspot/rich_text'
           %}
             {% module_attribute 'html' %}
-              <div style="text-align: center; color: #fff;">
-                <h1 style="color: #fff">Smart Decisions</h1>
-                <h2 style="color: #fff">start with</h2>
-                <h1 style="color: #fff">Smart Data</h1>
-                <p>Our experts do the analysis. You make the decisions.</p>
+              <div style="text-align: center; color: #ffffff; line-height: 1;">
+                <h1 style="font-size: 72px; font-weight: bold; color: #ffffff;">Smart Decisions</h1>
+                <h2 style="font-size: 36px; color: #ffffff;">start with</h2>
+                <h1 style="font-size: 72px; font-weight: bold; color: #ffffff;">Smart Data</h1>
+                <p style="font-size: 24px; line-height: 1.5;">&nbsp;</p>
+                <p style="font-size: 24px; line-height: 1.5; color: #ffffff;">Our experts do the analysis.<br>You make the decisions.</p>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
         {% dnd_row %}
           {% dnd_module
-            path='../modules/button',
-            button_link='#',
-            button_text='Get Started',
+            path='@hubspot/cta',
             horizontal_alignment='CENTER'
           %}
           {% end_dnd_module %}
@@ -117,9 +117,9 @@
           %}
             {% module_attribute 'html' %}
               <div style="text-align: center;">
-                <p>In today’s dynamic environment, data driven decisions are everything.</p>
-                <h2>But how do you make the right decision?</h2>
-                <p>Biglytics helps you analyze your data, compare it with over twenty industries and derive actionable insights. For the first time, the power of big data is at the fingertips of the mid-market.</p>
+                <h3>In today’s dynamic environment, data driven decisions are everything.</h3>
+                <h1 style="font-weight: bold;">But how do you make the right decision?</h1>
+                <h3>Biglytics helps you analyze your data, compare it with over twenty industries and derive actionable insights. For the first time, the power of big data is at the fingertips of the mid-market.</h3>
               </div>
             {% end_module_attribute %}
           {% end_dnd_module %}
@@ -248,34 +248,23 @@
     {% end_dnd_section %}
     {# End Logo Section #}
 
-    {# Call to Action Section #}
-    {% dnd_section
-      background_color={{ theme.color.secondary.color }}
-    %}
+    {# Form section #}
+    {% dnd_section %}
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module
-            path='@hubspot/rich_text'
+            path='@hubspot/form',
+            horizontal_alignment='CENTER',
+            title='Download our FREE eBook to get started with Big Data decisions today!'
           %}
-          {% module_attribute 'html' %}
-            <div style="text-align: center;">
-              <h2 style="color: #fff;">Easy and Simple to Use for All Levels.</h2>
-              <p style="color: #fff;">Leverage the intuitive super awesome software that saves you time and will help grow your business.</p>
-            </div>
-          {% end_module_attribute %}
-          {% end_dnd_module %}
-        {% end_dnd_row %}
-        {% dnd_row %}
-          {% dnd_module
-            path='../modules/button',
-            button_link='#',
-            button_text='Free Trial',
-            horizontal_alignment='CENTER'
-          %}
+            {% module_attribute 'form_id' %}
+              {# ddg:info_form_id #}
+            {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
+
 
   {% end_dnd_area %}
 </main>

@@ -1,35 +1,44 @@
-[
-  {
-    "label": "Image",
-    "name": "team_member_image",
-    "type": "image",
-    "resizable": true,
-    "responsive": true,
-    "required": true,
-    "default": {
-      "src": "",
-      "alt": ""
-    }
-  },
-  {
-    "label": "Name",
-    "name": "team_member_name",
-    "type": "text",
-    "required": true,
-    "default": "Joshua Beck"
-  },
-  {
-    "label": "Position",
-    "name": "team_member_position",
-    "type": "text",
-    "required": true,
-    "default": "CEO, Co-Founder"
-  },
-  {
-    "label": "Bio",
-    "name": "team_member_bio",
-    "type": "richtext",
-    "required": true,
-    "default": "<p>Joshua has over 20 years of experience in the tech industry. He helped start this company in 2015 with the mission of helping people grow. In his spare time he loves hanging out with his kids, going to the beach, and cooking.</p>"
+[ {
+  "id" : "team_member_image",
+  "name" : "team_member_image",
+  "label" : "Image",
+  "required" : true,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "type" : "image",
+  "default" : {
+    "src" : "",
+    "alt" : ""
   }
-]
+}, {
+  "id" : "team_member_name",
+  "name" : "team_member_name",
+  "label" : "Name",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Joshua Beck"
+}, {
+  "id" : "team_member_position",
+  "name" : "team_member_position",
+  "label" : "Position",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "CEO, Co-Founder"
+}, {
+  "id" : "team_member_bio",
+  "name" : "team_member_bio",
+  "label" : "Bio",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Joshua has over 20 years of experience in the tech industry. He helped start this company in 2015 with the mission of helping people grow. In his spare time he loves hanging out with his kids, going to the beach, and cooking.</p>"
+} ]

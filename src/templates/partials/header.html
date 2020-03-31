@@ -8,15 +8,15 @@
     {# Logo #}
     <div class="header__logo">
       {% set link = request.scheme ~ "://" ~ request.domain ~ "/biglytics-home" %}
-      {% module 'header_logo'
-        path='@hubspot/logo',
+      {% module "header_logo"
+        path="@hubspot/logo",
         link={{ link }},
         img={
-          'alt': 'Biglytics',
-          'height': '82',
-          'override_inherited_src': true,
-          'src': get_asset_url('../../images/biglytics-logo.png'),
-          'width': '205'
+          "override_inherited_src": true,
+          "src": get_asset_url("../../images/biglytics-logo.png"),
+          "alt": "Biglytics",
+          "width": 205,
+          "height": 82
         }
       %}
     </div>

@@ -1,59 +1,75 @@
-[
-  {
-    "label": "Accordion header",
-    "name": "accordion_header",
-    "type": "text",
-    "required": true,
-    "default": "How do I make an awesome template?"
+[ {
+  "id" : "accordion_header",
+  "name" : "accordion_header",
+  "label" : "Accordion header",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "How do I make an awesome template?"
+}, {
+  "id" : "accordion_content",
+  "name" : "accordion_content",
+  "label" : "Accordion content",
+  "required" : true,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "Leverage the intuitive super awesome software that saves you time and will help grow your business."
+}, {
+  "id" : "expanded",
+  "name" : "expanded",
+  "label" : "Expanded by default",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "override_default_style",
+  "name" : "override_default_style",
+  "label" : "Override default style",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "override_default_style",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
   },
-  {
-    "label": "Accordion content",
-    "name": "accordion_content",
-    "type": "richtext",
-    "required": true,
-    "default": "Leverage the intuitive super awesome software that saves you time and will help grow your business."
-  },
-  {
-    "label": "Expanded by default",
-    "name": "expanded",
-    "type": "boolean",
-    "default": false
-  },
-  {
-    "id": "override_default_style",
-    "name": "override_default_style",
-    "label": "Override default style",
-    "type": "boolean",
-    "default": false
-  },
-  {
-    "label": "Style options",
-    "name": "style",
-    "type": "group",
-    "visibility": {
-      "controlling_field": "override_default_style",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    },
-    "children": [
-      {
-        "label": "Header color",
-        "name": "accordion_color",
-        "type": "color",
-        "default": {
-          "color": "#c168c2",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Icon color",
-        "name": "accordion_icon_color",
-        "type": "color",
-        "default": {
-          "color": "#ffffff",
-          "opacity": 100
-        }
-      }
-    ]
-  }
-]
+  "children" : [ {
+    "id" : "style.accordion_color",
+    "name" : "accordion_color",
+    "label" : "Header color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#c168c2",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.accordion_icon_color",
+    "name" : "accordion_icon_color",
+    "label" : "Icon color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : null
+} ]

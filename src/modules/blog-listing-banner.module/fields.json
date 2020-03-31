@@ -1,68 +1,91 @@
-[
-  {
-    "label": "Banner image",
-    "name": "banner_image",
-    "type": "image",
-    "resizable": true,
-    "responsive": true,
-    "required": true,
-    "default": {
-      "size_type": "auto",
-      "src": "",
-      "alt": ""
-    }
-  },
-  {
-    "label": "Title",
-    "name": "title",
-    "type": "text"
-  },
-  {
-    "label": "Subtitle",
-    "name": "subtitle",
-    "type": "text"
-  },
-  {
-    "label": "Override default style",
-    "name": "override_default_style",
-    "id": "override_default_style",
-    "type": "boolean",
-    "default": false
-  },
-  {
-    "id": "style",
-    "name": "style",
-    "label": "Style options",
-    "type": "group",
-    "children": [
-      {
-        "label": "Title color",
-        "name": "title_color",
-        "visibility": {
-          "controlling_field": "override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL"
-        },
-        "type": "color",
-        "default": {
-          "color": "#ffffff",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Subtitle color",
-        "name": "subtitle_color",
-        "visibility": {
-          "controlling_field": "override_default_style",
-          "controlling_value_regex": "true",
-          "operator": "EQUAL"
-        },
-        "type": "color",
-        "default": {
-          "color": "#ffffff",
-          "opacity": 100
-        }
-      }
-    ]
+[ {
+  "id" : "banner_image",
+  "name" : "banner_image",
+  "label" : "Banner image",
+  "required" : true,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : ""
   }
-]
+}, {
+  "id" : "title",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : null
+}, {
+  "id" : "subtitle",
+  "name" : "subtitle",
+  "label" : "Subtitle",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : null
+}, {
+  "id" : "override_default_style",
+  "name" : "override_default_style",
+  "label" : "Override default style",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "style.title_color",
+    "name" : "title_color",
+    "label" : "Title color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "override_default_style",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.subtitle_color",
+    "name" : "subtitle_color",
+    "label" : "Subtitle color",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "override_default_style",
+      "controlling_value_regex" : "true",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : null
+} ]

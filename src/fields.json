@@ -1,2182 +1,2379 @@
-[
-  {
-    "label": "Color",
-    "name": "color",
-    "type": "group",
-    "children": [
-      {
-        "label": "Body Background Color",
-        "name": "body",
-        "type": "color",
-        "default": {
-          "color": "#FFFFFF",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Body Background Secondary Color",
-        "name": "body_secondary",
-        "type": "color",
-        "default": {
-          "color": "#4e4e4e",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Primary",
-        "name": "primary",
-        "type": "color",
-        "default": {
-          "color": "#C168C2",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Secondary",
-        "name": "secondary",
-        "type": "color",
-        "default": {
-          "color": "#618ebe",
-          "opacity": 100
-        }
+[ {
+  "children" : [ {
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Body Background Color",
+    "locked" : false,
+    "name" : "body",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#4e4e4e",
+      "opacity" : 100
+    },
+    "label" : "Body Background Secondary Color",
+    "locked" : false,
+    "name" : "body_secondary",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#C168C2",
+      "opacity" : 100
+    },
+    "label" : "Primary",
+    "locked" : false,
+    "name" : "primary",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#34B5E5",
+      "opacity" : 100
+    },
+    "label" : "Secondary",
+    "locked" : false,
+    "name" : "secondary",
+    "required" : false,
+    "type" : "color"
+  } ],
+  "label" : "Color",
+  "locked" : false,
+  "name" : "color",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : {
+      "color" : "#4a4a4a",
+      "font" : "Montserrat",
+      "fallback" : "sans-serif",
+      "variant" : "regular",
+      "font_set" : "GOOGLE",
+      "styles" : {
+        "text-decoration" : "none"
       }
-    ]
-  },
-  {
-    "label": "Typography",
-    "name": "typography",
-    "type": "group",
-    "children": [
-      {
-        "label": "Primary",
-        "name": "primary",
-        "type": "font",
-        "load_external_fonts": true,
-        "visibility": {
-          "hidden_subfields": {
-            "size": true
+    },
+    "label" : "Primary",
+    "load_external_fonts" : true,
+    "locked" : false,
+    "name" : "primary",
+    "required" : false,
+    "type" : "font",
+    "visibility" : {
+      "hidden_subfields" : {
+        "size" : true
+      }
+    }
+  }, {
+    "default" : {
+      "color" : "#4a4a4a",
+      "font" : "Montserrat",
+      "fallback" : "sans-serif",
+      "font_set" : "GOOGLE",
+      "styles" : {
+        "text-decoration" : "none"
+      }
+    },
+    "label" : "Secondary",
+    "load_external_fonts" : true,
+    "locked" : false,
+    "name" : "secondary",
+    "required" : false,
+    "type" : "font",
+    "visibility" : {
+      "hidden_subfields" : {
+        "size" : true
+      }
+    }
+  } ],
+  "label" : "Typography",
+  "locked" : false,
+  "name" : "typography",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : {
+      "color" : "#D0D0D0",
+      "opacity" : 100
+    },
+    "label" : "Color",
+    "locked" : false,
+    "name" : "color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : 1,
+    "display" : "text",
+    "label" : "Width",
+    "locked" : false,
+    "name" : "width",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  }, {
+    "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+    "default" : "solid",
+    "display" : "select",
+    "label" : "Style",
+    "locked" : false,
+    "name" : "style",
+    "required" : false,
+    "type" : "choice"
+  } ],
+  "help_text" : "Default border settings for all elements",
+  "label" : "Border",
+  "locked" : false,
+  "name" : "border",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "default" : 4,
+  "display" : "slider",
+  "label" : "Corner Radius",
+  "locked" : false,
+  "max" : 50,
+  "min" : 0,
+  "name" : "corner_radius",
+  "required" : false,
+  "step" : 1,
+  "type" : "number"
+}, {
+  "default" : 1340,
+  "display" : "slider",
+  "label" : "Maximum Content Width",
+  "locked" : false,
+  "max" : 1400,
+  "min" : 700,
+  "name" : "content_width",
+  "required" : false,
+  "step" : 100,
+  "type" : "number"
+}, {
+  "default" : 80,
+  "display" : "slider",
+  "label" : "Vertical Spacing",
+  "locked" : false,
+  "max" : 200,
+  "min" : 20,
+  "name" : "vertical_spacing",
+  "required" : false,
+  "step" : 10,
+  "type" : "number"
+}, {
+  "children" : [ {
+    "children" : [ {
+      "default" : {
+        "size" : 16,
+        "size_unit" : "px"
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.typography.primary.color",
+          "fallback" : "theme.typography.primary.fallback",
+          "font" : "theme.typography.primary.font",
+          "font_set" : "theme.typography.primary.font_set",
+          "styles" : "theme.typography.primary.styles",
+          "variant" : "theme.typography.primary.variant"
+        }
+      },
+      "label" : "Body",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "body",
+      "required" : false,
+      "type" : "font"
+    }, {
+      "children" : [ {
+        "default" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : { },
+          "size" : 12,
+          "size_unit" : "px",
+          "color" : "#000",
+          "variant" : null,
+          "fallback" : null,
+          "style" : ""
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.color.primary.color",
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font_set" : "theme.typography.primary.font_set",
+            "size" : "theme.global.typography.body.size",
+            "size_unit" : "theme.global.typography.body.size_unit",
+            "styles" : "theme.typography.primary.styles",
+            "variant" : "theme.typography.primary.variant"
           }
         },
-        "default": {
-          "color": "#4a4a4a",
-          "font": "Montserrat",
-          "fallback": "sans-serif",
-          "variant": "regular",
-          "font_set": "GOOGLE",
-          "styles": {
-            "text-decoration": "none"
+        "label" : "",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font",
+        "visibility" : {
+          "hidden_subfields" : {
+            "size" : true
           }
         }
-      },
-      {
-        "label": "Secondary",
-        "name": "secondary",
-        "type": "font",
-        "load_external_fonts": true,
-        "visibility": {
-          "hidden_subfields": {
-            "size": true
+      }, {
+        "default" : {
+          "color" : "#99409a",
+          "styles" : {
+            "text-decoration" : "underline"
           }
         },
-        "default": {
-          "color": "#4a4a4a",
-          "font": "Montserrat",
-          "fallback": "sans-serif",
-          "font_set": "GOOGLE",
-          "styles": {
-            "text-decoration": "none"
+        "inherited_value" : {
+          "property_value_paths" : {
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font-style" : "theme.typography.primary.styles.font-style",
+            "font-weight" : "theme.typography.primary.styles.font-weight",
+            "font_set" : "theme.typography.primary.font_set",
+            "size" : "theme.global.typography.body.size",
+            "size_unit" : "theme.global.typography.body.size_unit",
+            "variant" : "theme.typography.primary.variant"
+          }
+        },
+        "label" : "Hover",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "hover",
+        "required" : false,
+        "type" : "font",
+        "visibility" : {
+          "hidden_subfields" : {
+            "size" : true
           }
         }
+      } ],
+      "label" : "Links",
+      "locked" : false,
+      "name" : "links",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : false,
+        "id" : "heading_toggle",
+        "label" : "Show Controls For Each Heading Level",
+        "locked" : false,
+        "name" : "heading_toggle",
+        "required" : false,
+        "type" : "boolean"
+      }, {
+        "default" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : { },
+          "size" : 12,
+          "size_unit" : "px",
+          "color" : "#000",
+          "variant" : null,
+          "fallback" : null,
+          "style" : ""
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.secondary.fallback",
+            "font" : "theme.typography.secondary.font",
+            "font_set" : "theme.typography.secondary.font_set",
+            "styles" : "theme.typography.secondary.styles",
+            "variant" : "theme.typography.secondary.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font",
+        "visibility" : {
+          "controlling_field" : "heading_toggle",
+          "controlling_value_regex" : "false",
+          "hidden_subfields" : {
+            "size" : true
+          }
+        }
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice",
+        "visibility" : {
+          "controlling_field" : "heading_toggle",
+          "controlling_value_regex" : "false"
+        }
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number",
+        "visibility" : {
+          "controlling_field" : "heading_toggle",
+          "controlling_value_regex" : "false"
+        }
+      } ],
+      "label" : "Headings",
+      "locked" : false,
+      "name" : "headings",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "size" : 40,
+          "size_unit" : "px"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.secondary.fallback",
+            "font" : "theme.typography.secondary.font",
+            "font_set" : "theme.typography.secondary.font_set",
+            "styles" : "theme.typography.secondary.styles",
+            "variant" : "theme.typography.secondary.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Heading One (H1)",
+      "locked" : false,
+      "name" : "h1",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group",
+      "visibility" : {
+        "controlling_field" : "heading_toggle",
+        "controlling_value_regex" : "true"
       }
-    ]
-  },
-  {
-    "label": "Border",
-    "name": "border",
-    "type": "group",
-    "help_text": "Default border settings for all elements",
-    "children": [
-      {
-        "label": "Color",
-        "name": "color",
-        "type": "color",
-        "default": {
-          "color": "#D0D0D0",
-          "opacity": 100
+    }, {
+      "children" : [ {
+        "default" : {
+          "size" : 30,
+          "size_unit" : "px",
+          "variant" : "regular"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.secondary.fallback",
+            "font" : "theme.typography.secondary.font",
+            "font_set" : "theme.typography.secondary.font_set",
+            "styles" : "theme.typography.secondary.styles"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Heading Two (H2)",
+      "locked" : false,
+      "name" : "h2",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group",
+      "visibility" : {
+        "controlling_field" : "heading_toggle",
+        "controlling_value_regex" : "true"
+      }
+    }, {
+      "children" : [ {
+        "default" : {
+          "size" : 24,
+          "size_unit" : "px"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font_set" : "theme.typography.primary.font_set",
+            "styles" : "theme.typography.primary.styles",
+            "variant" : "theme.typography.primary.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Heading Three (H3)",
+      "locked" : false,
+      "name" : "h3",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group",
+      "visibility" : {
+        "controlling_field" : "heading_toggle",
+        "controlling_value_regex" : "true"
+      }
+    }, {
+      "children" : [ {
+        "default" : {
+          "size" : 20,
+          "size_unit" : "px",
+          "variant" : "400"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font_set" : "theme.typography.primary.font_set",
+            "styles" : "theme.typography.primary.styles",
+            "variant" : "theme.typography.primary.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Heading Four (H4)",
+      "locked" : false,
+      "name" : "h4",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group",
+      "visibility" : {
+        "controlling_field" : "heading_toggle",
+        "controlling_value_regex" : "true"
+      }
+    }, {
+      "children" : [ {
+        "default" : {
+          "size" : 18,
+          "size_unit" : "px"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font_set" : "theme.typography.primary.font_set",
+            "styles" : "theme.typography.primary.styles",
+            "variant" : "theme.typography.primary.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Heading Five (H5)",
+      "locked" : false,
+      "name" : "h5",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group",
+      "visibility" : {
+        "controlling_field" : "heading_toggle",
+        "controlling_value_regex" : "true"
+      }
+    }, {
+      "children" : [ {
+        "default" : {
+          "size" : 15,
+          "size_unit" : "px"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.secondary.color",
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font_set" : "theme.typography.primary.font_set",
+            "styles" : "theme.typography.primary.styles"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "capitalize", "Capitalize" ], [ "uppercase", "Uppercase" ], [ "lowercase", "Lowercase" ] ],
+        "default" : "none",
+        "display" : "select",
+        "label" : "Text Transform",
+        "locked" : false,
+        "name" : "text_transform",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : 0.8,
+        "display" : "slider",
+        "help_text" : "Values are in pixels",
+        "label" : "Letter Spacing",
+        "locked" : false,
+        "name" : "letter_spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Heading Six (H6)",
+      "locked" : false,
+      "name" : "h6",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group",
+      "visibility" : {
+        "controlling_field" : "heading_toggle",
+        "controlling_value_regex" : "true"
+      }
+    }, {
+      "children" : [ {
+        "default" : {
+          "src" : "",
+          "alt" : ""
+        },
+        "help_text" : "You may choose/upload an image you would like to use instead of the standard bullets in lists",
+        "label" : "Bullets",
+        "locked" : false,
+        "name" : "bullets",
+        "required" : false,
+        "resizable" : true,
+        "responsive" : false,
+        "type" : "image"
+      } ],
+      "label" : "Lists",
+      "locked" : false,
+      "name" : "lists",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    } ],
+    "label" : "Typography",
+    "locked" : false,
+    "name" : "typography",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "children" : [ {
+        "children" : [ {
+          "default" : 14,
+          "display" : "slider",
+          "help_text" : "Font size in pixels",
+          "label" : "Font Size",
+          "locked" : false,
+          "name" : "font_size",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 13,
+          "display" : "slider",
+          "label" : "Vertical Spacing",
+          "locked" : false,
+          "max" : 200,
+          "min" : 0,
+          "name" : "vertical_spacing",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 13,
+          "display" : "slider",
+          "label" : "Horizontal Spacing",
+          "locked" : false,
+          "max" : 200,
+          "min" : 0,
+          "name" : "horizontal_spacing",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Small",
+        "locked" : false,
+        "name" : "small",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "display" : "slider",
+          "help_text" : "Font size in pixels",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.typography.body.size"
+          },
+          "label" : "Font Size",
+          "locked" : false,
+          "name" : "font_size",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 13,
+          "display" : "slider",
+          "label" : "Vertical Spacing",
+          "locked" : false,
+          "max" : 200,
+          "min" : 0,
+          "name" : "vertical_spacing",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 13,
+          "display" : "slider",
+          "label" : "Horizontal Spacing",
+          "locked" : false,
+          "max" : 200,
+          "min" : 0,
+          "name" : "horizontal_spacing",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Regular",
+        "locked" : false,
+        "name" : "regular",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "default" : 18,
+          "display" : "slider",
+          "help_text" : "Font size in pixels",
+          "label" : "Font Size",
+          "locked" : false,
+          "name" : "font_size",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 13,
+          "display" : "slider",
+          "label" : "Vertical Spacing",
+          "locked" : false,
+          "max" : 200,
+          "min" : 0,
+          "name" : "vertical_spacing",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 13,
+          "display" : "slider",
+          "label" : "Horizontal Spacing",
+          "locked" : false,
+          "max" : 200,
+          "min" : 0,
+          "name" : "horizontal_spacing",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Large",
+        "locked" : false,
+        "name" : "large",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Size",
+      "locked" : false,
+      "name" : "size",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#FFFFFF",
+          "size_unit" : "px",
+          "variant" : "600"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "fallback" : "theme.typography.secondary.fallback",
+            "font" : "theme.typography.secondary.font",
+            "font_set" : "theme.typography.secondary.font_set",
+            "size" : "theme.global.buttons.size.regular.font_size",
+            "styles" : "theme.typography.secondary.styles"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font",
+        "visibility" : {
+          "hidden_subfields" : {
+            "size" : true
+          }
+        }
+      }, {
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.color.primary.color",
+            "opacity" : "theme.color.primary.opacity"
+          }
+        },
+        "label" : "Background Color",
+        "locked" : false,
+        "name" : "bg_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "children" : [ {
+          "default" : 1,
+          "display" : "slider",
+          "label" : "Width",
+          "locked" : false,
+          "name" : "width",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+          "default" : "solid",
+          "display" : "select",
+          "label" : "Style",
+          "locked" : false,
+          "name" : "style",
+          "required" : false,
+          "type" : "choice"
+        }, {
+          "default" : {
+            "color" : "#ffffff",
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.global.buttons.primary.bg_color.color",
+              "opacity" : "theme.global.buttons.primary.bg_color.opacity"
+            }
+          },
+          "label" : "Color",
+          "locked" : false,
+          "name" : "color",
+          "required" : false,
+          "type" : "color"
+        } ],
+        "label" : "Border",
+        "locked" : false,
+        "name" : "border",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "display" : "slider",
+        "inherited_value" : {
+          "default_value_path" : "theme.corner_radius"
+        },
+        "label" : "Corner Radius",
+        "locked" : false,
+        "max" : 50,
+        "min" : 0,
+        "name" : "corner_radius",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "children" : [ {
+          "default" : {
+            "size_unit" : "px"
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.global.buttons.primary.font.color",
+              "fallback" : "theme.global.buttons.primary.font.fallback",
+              "font" : "theme.global.buttons.primary.font.font",
+              "font_set" : "theme.global.buttons.primary.font.font_set",
+              "size" : "theme.global.buttons.primary.font.size",
+              "styles" : "theme.global.buttons.primary.font.styles",
+              "variant" : "theme.global.buttons.primary.font.variant"
+            }
+          },
+          "label" : "Font",
+          "load_external_fonts" : true,
+          "locked" : false,
+          "name" : "font",
+          "required" : false,
+          "type" : "font",
+          "visibility" : {
+            "hidden_subfields" : {
+              "size" : true
+            }
+          }
+        }, {
+          "default" : {
+            "color" : "#99409a",
+            "opacity" : 100
+          },
+          "label" : "Background Color",
+          "locked" : false,
+          "name" : "bg_color",
+          "required" : false,
+          "type" : "color"
+        }, {
+          "children" : [ {
+            "display" : "slider",
+            "inherited_value" : {
+              "default_value_path" : "theme.global.buttons.primary.border.width"
+            },
+            "label" : "Width",
+            "locked" : false,
+            "name" : "width",
+            "required" : false,
+            "step" : 1,
+            "type" : "number"
+          }, {
+            "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+            "display" : "select",
+            "inherited_value" : {
+              "default_value_path" : "theme.global.buttons.primary.border.style"
+            },
+            "label" : "Style",
+            "locked" : false,
+            "name" : "style",
+            "required" : false,
+            "type" : "choice"
+          }, {
+            "default" : {
+              "color" : "#ffffff",
+              "opacity" : 100
+            },
+            "inherited_value" : {
+              "property_value_paths" : {
+                "color" : "theme.global.buttons.primary.hover.bg_color.color",
+                "opacity" : "theme.global.buttons.primary.hover.bg_color.opacity"
+              }
+            },
+            "label" : "Color",
+            "locked" : false,
+            "name" : "color",
+            "required" : false,
+            "type" : "color"
+          } ],
+          "label" : "Border",
+          "locked" : false,
+          "name" : "border",
+          "required" : false,
+          "tab" : "CONTENT",
+          "type" : "group"
+        } ],
+        "label" : "Hover",
+        "locked" : false,
+        "name" : "hover",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Primary",
+      "locked" : false,
+      "name" : "primary",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "size_unit" : "px"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.color.primary.color",
+            "fallback" : "theme.typography.secondary.fallback",
+            "font" : "theme.typography.secondary.font",
+            "font_set" : "theme.typography.secondary.font_set",
+            "size" : "theme.global.buttons.size.regular.font_size",
+            "styles" : "theme.typography.secondary.styles"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font",
+        "visibility" : {
+          "hidden_subfields" : {
+            "size" : true
+          }
+        }
+      }, {
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 0
+        },
+        "label" : "Background Color",
+        "locked" : false,
+        "name" : "bg_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "children" : [ {
+          "default" : 1,
+          "display" : "slider",
+          "label" : "Width",
+          "locked" : false,
+          "name" : "width",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+          "default" : "solid",
+          "display" : "select",
+          "label" : "Style",
+          "locked" : false,
+          "name" : "style",
+          "required" : false,
+          "type" : "choice"
+        }, {
+          "default" : {
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.color.primary.color"
+            }
+          },
+          "label" : "Color",
+          "locked" : false,
+          "name" : "color",
+          "required" : false,
+          "type" : "color"
+        } ],
+        "label" : "Border",
+        "locked" : false,
+        "name" : "border",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "display" : "slider",
+        "inherited_value" : {
+          "default_value_path" : "theme.corner_radius"
+        },
+        "label" : "Corner Radius",
+        "locked" : false,
+        "max" : 50,
+        "min" : 0,
+        "name" : "corner_radius",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "children" : [ {
+          "default" : {
+            "color" : "#99409a",
+            "size_unit" : "px"
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "fallback" : "theme.global.buttons.secondary.font.fallback",
+              "font" : "theme.global.buttons.secondary.font.font",
+              "font_set" : "theme.global.buttons.secondary.font.font_set",
+              "size" : "theme.global.buttons.secondary.font.size",
+              "styles" : "theme.global.buttons.secondary.font.styles",
+              "variant" : "theme.global.buttons.secondary.font.variant"
+            }
+          },
+          "label" : "Font",
+          "load_external_fonts" : true,
+          "locked" : false,
+          "name" : "font",
+          "required" : false,
+          "type" : "font",
+          "visibility" : {
+            "hidden_subfields" : {
+              "size" : true
+            }
+          }
+        }, {
+          "default" : {
+            "color" : "#ffffff",
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "#FFFFFF",
+              "opacity" : "0"
+            }
+          },
+          "label" : "Background Color",
+          "locked" : false,
+          "name" : "bg_color",
+          "required" : false,
+          "type" : "color"
+        }, {
+          "children" : [ {
+            "display" : "slider",
+            "inherited_value" : {
+              "default_value_path" : "theme.global.buttons.secondary.border.width"
+            },
+            "label" : "Width",
+            "locked" : false,
+            "name" : "width",
+            "required" : false,
+            "step" : 1,
+            "type" : "number"
+          }, {
+            "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+            "display" : "select",
+            "inherited_value" : {
+              "default_value_path" : "theme.global.buttons.secondary.border.style"
+            },
+            "label" : "Style",
+            "locked" : false,
+            "name" : "style",
+            "required" : false,
+            "type" : "choice"
+          }, {
+            "default" : {
+              "color" : "#99409a",
+              "opacity" : 100
+            },
+            "label" : "Color",
+            "locked" : false,
+            "name" : "color",
+            "required" : false,
+            "type" : "color"
+          } ],
+          "label" : "Border",
+          "locked" : false,
+          "name" : "border",
+          "required" : false,
+          "tab" : "CONTENT",
+          "type" : "group"
+        } ],
+        "label" : "Hover",
+        "locked" : false,
+        "name" : "hover",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Secondary",
+      "locked" : false,
+      "name" : "secondary",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    } ],
+    "label" : "Buttons",
+    "locked" : false,
+    "name" : "buttons",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "default" : {
+        "color" : "#aaaaaa",
+        "opacity" : 100
+      },
+      "label" : "Background Color",
+      "locked" : false,
+      "name" : "bg_color",
+      "required" : false,
+      "type" : "color"
+    }, {
+      "children" : [ {
+        "children" : [ {
+          "default" : 44,
+          "display" : "text",
+          "label" : "Top/Bottom",
+          "locked" : false,
+          "name" : "vertical",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 44,
+          "display" : "text",
+          "label" : "Left/Right",
+          "locked" : false,
+          "name" : "horizontal",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "help_text" : "Values are in pixels",
+        "label" : "Padding",
+        "locked" : false,
+        "name" : "padding",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "default" : 22,
+        "display" : "text",
+        "help_text" : "The pixel spacing between fields in a form",
+        "label" : "Field Spacing",
+        "locked" : false,
+        "name" : "spacing",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Spacing",
+      "locked" : false,
+      "name" : "spacing",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "display" : "text",
+        "inherited_value" : {
+          "default_value_path" : "theme.border.width"
+        },
+        "label" : "Width",
+        "locked" : false,
+        "name" : "width",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+        "display" : "select",
+        "inherited_value" : {
+          "default_value_path" : "theme.border.style"
+        },
+        "label" : "Style",
+        "locked" : false,
+        "name" : "style",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.border.color.color",
+            "opacity" : "theme.border.color.opacity"
+          }
+        },
+        "label" : "Color",
+        "locked" : false,
+        "name" : "color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "display" : "slider",
+        "inherited_value" : {
+          "default_value_path" : "theme.corner_radius"
+        },
+        "label" : "Corner Radius",
+        "locked" : false,
+        "name" : "corner_radius",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Border",
+      "locked" : false,
+      "name" : "border",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#1E2B33",
+          "variant" : "400"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "fallback" : "theme.typography.secondary.fallback",
+            "font" : "theme.typography.secondary.font",
+            "font_set" : "theme.typography.secondary.font_set",
+            "size" : "theme.global.typography.body.size",
+            "size_unit" : "theme.global.typography.body.size_unit",
+            "styles" : "theme.typography.secondary.styles"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "children" : [ {
+          "default" : 6,
+          "display" : "text",
+          "label" : "Top/Bottom",
+          "locked" : false,
+          "name" : "vertical",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 0,
+          "display" : "text",
+          "label" : "Left/Right",
+          "locked" : false,
+          "name" : "horizontal",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "help_text" : "Values are in pixels",
+        "label" : "Padding",
+        "locked" : false,
+        "name" : "padding",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Labels",
+      "locked" : false,
+      "name" : "labels",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#aaaaaa",
+          "opacity" : 100
+        },
+        "label" : "Background Color",
+        "locked" : false,
+        "name" : "bg_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "default" : {
+          "color" : "#FFFFFF"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "fallback" : "theme.global.typography.h3.font.fallback",
+            "font" : "theme.global.typography.h3.font.font",
+            "font_set" : "theme.global.typography.h3.font.font_set",
+            "size" : "theme.global.typography.h3.font.size",
+            "size_unit" : "theme.global.typography.h3.font.size_unit",
+            "styles" : "theme.global.typography.h3.font.styles",
+            "variant" : "theme.global.typography.h3.font.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "children" : [ {
+          "default" : 44,
+          "display" : "text",
+          "label" : "Top/Bottom",
+          "locked" : false,
+          "name" : "vertical",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 22,
+          "display" : "text",
+          "label" : "Left/Right",
+          "locked" : false,
+          "name" : "horizontal",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "help_text" : "Values are in pixels",
+        "label" : "Padding",
+        "locked" : false,
+        "name" : "padding",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "default" : 0,
+          "display" : "text",
+          "label" : "Width",
+          "locked" : false,
+          "name" : "width",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+          "display" : "select",
+          "inherited_value" : {
+            "default_value_path" : "theme.border.style"
+          },
+          "label" : "Style",
+          "locked" : false,
+          "name" : "style",
+          "required" : false,
+          "type" : "choice"
+        }, {
+          "default" : {
+            "color" : "#ffffff",
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.border.color.color",
+              "opacity" : "theme.border.color.opacity"
+            }
+          },
+          "label" : "Color",
+          "locked" : false,
+          "name" : "color",
+          "required" : false,
+          "type" : "color"
+        }, {
+          "display" : "slider",
+          "inherited_value" : {
+            "default_value_path" : "theme.corner_radius"
+          },
+          "label" : "Corner Radius",
+          "locked" : false,
+          "name" : "corner_radius",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Border",
+        "locked" : false,
+        "name" : "border",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Title",
+      "locked" : false,
+      "name" : "title",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Background Color",
+        "locked" : false,
+        "name" : "bg_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "default" : {
+          "color" : "#D0D0D0",
+          "opacity" : 100
+        },
+        "label" : "Placeholder Color",
+        "locked" : false,
+        "name" : "placeholder_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "default" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : { },
+          "size" : 12,
+          "size_unit" : "px",
+          "color" : "#000",
+          "variant" : null,
+          "fallback" : null,
+          "style" : ""
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.typography.primary.color",
+            "fallback" : "theme.typography.primary.fallback",
+            "font" : "theme.typography.primary.font",
+            "font_set" : "theme.typography.primary.font_set",
+            "size" : "theme.typography.primary.size",
+            "size_unit" : "theme.typography.primary.size_unit",
+            "styles" : "theme.typography.primary.styles",
+            "variant" : "theme.typography.primary.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "children" : [ {
+          "default" : 12,
+          "display" : "text",
+          "label" : "Top/Bottom",
+          "locked" : false,
+          "name" : "vertical",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "default" : 12,
+          "display" : "text",
+          "label" : "Left/Right",
+          "locked" : false,
+          "name" : "horizontal",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "help_text" : "Values are in pixels",
+        "label" : "Padding",
+        "locked" : false,
+        "name" : "padding",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "display" : "text",
+          "inherited_value" : {
+            "default_value_path" : "theme.border.width"
+          },
+          "label" : "Width",
+          "locked" : false,
+          "name" : "width",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+          "display" : "select",
+          "inherited_value" : {
+            "default_value_path" : "theme.border.style"
+          },
+          "label" : "Style",
+          "locked" : false,
+          "name" : "style",
+          "required" : false,
+          "type" : "choice"
+        }, {
+          "default" : {
+            "color" : "#ffffff",
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.border.color.color",
+              "opacity" : "theme.border.color.opacity"
+            }
+          },
+          "label" : "Color",
+          "locked" : false,
+          "name" : "color",
+          "required" : false,
+          "type" : "color"
+        }, {
+          "display" : "slider",
+          "inherited_value" : {
+            "default_value_path" : "theme.corner_radius"
+          },
+          "label" : "Corner Radius",
+          "locked" : false,
+          "name" : "corner_radius",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Border",
+        "locked" : false,
+        "name" : "border",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Inputs",
+      "locked" : false,
+      "name" : "inputs",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "default" : {
+        "size" : 14,
+        "size_unit" : "px"
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global.typography.body.color",
+          "fallback" : "theme.typography.primary.fallback",
+          "font" : "theme.typography.primary.font",
+          "font_set" : "theme.typography.primary.font_set",
+          "styles" : "theme.typography.primary.styles",
+          "variant" : "theme.typography.primary.variant"
         }
       },
-      {
-        "label": "Width",
-        "name": "width",
-        "type": "number",
-        "default": 1
-      },
-      {
-        "label": "Style",
-        "name": "style",
-        "type": "choice",
-        "sortable": false,
-        "display": "select",
-        "choices": [
-          [ "none", "None" ],
-          [ "solid", "Solid" ],
-          [ "dotted", "Dotted" ],
-          [ "dashed", "Dashed" ],
-          [ "double", "Double" ],
-          [ "groove", "Groove" ],
-          [ "ridge", "Ridge" ],
-          [ "inset", "Inset" ],
-          [ "outset", "Outset" ]
-        ],
-        "default": "solid"
-      }
-    ]
-  },
-  {
-    "label": "Corner Radius",
-    "name": "corner_radius",
-    "type": "number",
-    "display": "slider",
-    "min": 0,
-    "max": 50,
-    "default": 4
-  },
-  {
-    "label": "Maximum Content Width",
-    "name": "content_width",
-    "type": "number",
-    "display": "slider",
-    "min": 700,
-    "max": 1400,
-    "step": 100,
-    "default": 1340
-  },
-  {
-    "label": "Vertical Spacing",
-    "name": "vertical_spacing",
-    "type": "number",
-    "display": "slider",
-    "min": 20,
-    "max": 200,
-    "step": 10,
-    "default": 80
-  },
-  {
-    "label": "Global Settings",
-    "name": "global",
-    "type": "group",
-    "children": [
-      {
-        "label": "Typography",
-        "name": "typography",
-        "type": "group",
-        "children": [
-          {
-            "label": "Body",
-            "name": "body",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.typography.primary.color",
-                "font": "theme.typography.primary.font",
-                "fallback": "theme.typography.primary.fallback",
-                "variant": "theme.typography.primary.variant",
-                "font_set": "theme.typography.primary.font_set",
-                "styles": "theme.typography.primary.styles"
-              }
-            },
-            "default": {
-              "size": 16,
-              "size_unit": "px"
-            }
-          },
-          {
-            "label": "Links",
-            "name": "links",
-            "type": "group",
-            "children": [
-              {
-                "label": "",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "variant": "theme.typography.primary.variant",
-                    "font_set": "theme.typography.primary.font_set",
-                    "color": "theme.color.primary.color",
-                    "size": "theme.global.typography.body.size",
-                    "size_unit": "theme.global.typography.body.size_unit",
-                    "styles": "theme.typography.primary.styles"
-                  }
-                },
-                "visibility": {
-                  "hidden_subfields": {
-                    "size": true
-                  }
-                }
-              },
-              {
-                "label": "Hover",
-                "name": "hover",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "variant": "theme.typography.primary.variant",
-                    "font_set": "theme.typography.primary.font_set",
-                    "font-weight": "theme.typography.primary.styles.font-weight",
-                    "font-style": "theme.typography.primary.styles.font-style",
-                    "size": "theme.global.typography.body.size",
-                    "size_unit": "theme.global.typography.body.size_unit"
-                  }
-                },
-                "visibility": {
-                  "hidden_subfields": {
-                    "size": true
-                  }
-                },
-                "default": {
-                  "color": "#99409a",
-                  "styles": {
-                    "text-decoration": "underline"
-                  }
-                }
-              }
-            ]
-          },
-          {
-            "label": "Headings",
-            "name": "headings",
-            "type": "group",
-            "children": [
-              {
-                "label": "Show Controls For Each Heading Level",
-                "name": "heading_toggle",
-                "id": "heading_toggle",
-                "type": "boolean",
-                "default": false
-              },
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "visibility": {
-                  "controlling_field": "heading_toggle",
-                  "controlling_value_regex": false,
-                  "hidden_subfields": {
-                    "size": true
-                  }
-                },
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.secondary.font",
-                    "fallback": "theme.typography.secondary.fallback",
-                    "variant": "theme.typography.secondary.variant",
-                    "font_set": "theme.typography.secondary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.secondary.styles"
-                  }
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "visibility": {
-                  "controlling_field": "heading_toggle",
-                  "controlling_value_regex": false
-                },
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "uppercase"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "visibility": {
-                  "controlling_field": "heading_toggle",
-                  "controlling_value_regex": false
-                },
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Heading One (H1)",
-            "name": "h1",
-            "type": "group",
-            "visibility": {
-              "controlling_field": "heading_toggle",
-              "controlling_value_regex": true
-            },
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.secondary.font",
-                    "fallback": "theme.typography.secondary.fallback",
-                    "variant": "theme.typography.secondary.variant",
-                    "font_set": "theme.typography.secondary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.secondary.styles"
-                  }
-                },
-                "default": {
-                  "size": 40,
-                  "size_unit": "px"
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "uppercase"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Heading Two (H2)",
-            "name": "h2",
-            "type": "group",
-            "visibility": {
-              "controlling_field": "heading_toggle",
-              "controlling_value_regex": true
-            },
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.secondary.font",
-                    "fallback": "theme.typography.secondary.fallback",
-                    "font_set": "theme.typography.secondary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.secondary.styles"
-                  }
-                },
-                "default": {
-                  "size": 30,
-                  "size_unit": "px",
-                  "variant": "regular"
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "uppercase"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Heading Three (H3)",
-            "name": "h3",
-            "type": "group",
-            "visibility": {
-              "controlling_field": "heading_toggle",
-              "controlling_value_regex": true
-            },
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "variant": "theme.typography.primary.variant",
-                    "font_set": "theme.typography.primary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.primary.styles"
-                  }
-                },
-                "default": {
-                  "size": 24,
-                  "size_unit": "px"
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "none"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Heading Four (H4)",
-            "name": "h4",
-            "type": "group",
-            "visibility": {
-              "controlling_field": "heading_toggle",
-              "controlling_value_regex": true
-            },
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "variant": "theme.typography.primary.variant",
-                    "font_set": "theme.typography.primary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.primary.styles"
-                  }
-                },
-                "default": {
-                  "size": 20,
-                  "size_unit": "px",
-                  "variant": "400"
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "uppercase"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Heading Five (H5)",
-            "name": "h5",
-            "type": "group",
-            "visibility": {
-              "controlling_field": "heading_toggle",
-              "controlling_value_regex": true
-            },
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "variant": "theme.typography.primary.variant",
-                    "font_set": "theme.typography.primary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.primary.styles"
-                  }
-                },
-                "default": {
-                  "size": 18,
-                  "size_unit": "px"
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "uppercase"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Heading Six (H6)",
-            "name": "h6",
-            "type": "group",
-            "visibility": {
-              "controlling_field": "heading_toggle",
-              "controlling_value_regex": true
-            },
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "font_set": "theme.typography.primary.font_set",
-                    "color": "theme.typography.secondary.color",
-                    "styles": "theme.typography.primary.styles"
-                  }
-                },
-                "default": {
-                  "size": 15,
-                  "size_unit": "px"
-                }
-              },
-              {
-                "label": "Text Transform",
-                "name": "text_transform",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "capitalize", "Capitalize" ],
-                  [ "uppercase", "Uppercase" ],
-                  [ "lowercase", "Lowercase" ]
-                ],
-                "default": "none"
-              },
-              {
-                "label": "Letter Spacing",
-                "name": "letter_spacing",
-                "help_text": "Values are in pixels",
-                "type": "number",
-                "display": "slider",
-                "default": 0.8
-              }
-            ]
-          },
-          {
-            "label": "Lists",
-            "name": "lists",
-            "type": "group",
-            "children": [
-              {
-                "label": "Bullets",
-                "name": "bullets",
-                "type": "image",
-                "help_text": "You may choose/upload an image you would like to use instead of the standard bullets in lists",
-                "responsive": false,
-                "resizable": true,
-                "default": {
-                  "src": "",
-                  "alt": ""
-                }
-              }
-            ]
+      "label" : "Help Text",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "help_text",
+      "required" : false,
+      "type" : "font"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.global.buttons.primary.bg_color.color",
+            "opacity" : "theme.global.buttons.primary.bg_color.opacity"
           }
-        ]
-      },
-      {
-        "label": "Buttons",
-        "name": "buttons",
-        "type": "group",
-        "children": [
-          {
-            "label": "Size",
-            "name": "size",
-            "type": "group",
-            "children": [
-              {
-                "label": "Small",
-                "name": "small",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font Size",
-                    "name": "font_size",
-                    "help_text": "Font size in pixels",
-                    "display": "slider",
-                    "type": "number",
-                    "default": 14
-                  },
-                  {
-                    "label": "Vertical Spacing",
-                    "name": "vertical_spacing",
-                    "type": "number",
-                    "display": "slider",
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "default": 13
-                  },
-                  {
-                    "label": "Horizontal Spacing",
-                    "name": "horizontal_spacing",
-                    "type": "number",
-                    "display": "slider",
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "default": 13
-                  }
-                ]
-              },
-              {
-                "label": "Regular",
-                "name": "regular",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font Size",
-                    "name": "font_size",
-                    "help_text": "Font size in pixels",
-                    "display": "slider",
-                    "type": "number",
-                    "inherited_value": {
-                      "default_value_path": "theme.global.typography.body.size"
-                    }
-                  },
-                  {
-                    "label": "Vertical Spacing",
-                    "name": "vertical_spacing",
-                    "type": "number",
-                    "display": "slider",
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "default": 13
-                  },
-                  {
-                    "label": "Horizontal Spacing",
-                    "name": "horizontal_spacing",
-                    "type": "number",
-                    "display": "slider",
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "default": 13
-                  }
-                ]
-              },
-              {
-                "label": "Large",
-                "name": "large",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font Size",
-                    "name": "font_size",
-                    "help_text": "Font size in pixels",
-                    "display": "slider",
-                    "type": "number",
-                    "default": 18
-                  },
-                  {
-                    "label": "Vertical Spacing",
-                    "name": "vertical_spacing",
-                    "type": "number",
-                    "display": "slider",
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "default": 13
-                  },
-                  {
-                    "label": "Horizontal Spacing",
-                    "name": "horizontal_spacing",
-                    "type": "number",
-                    "display": "slider",
-                    "min": 0,
-                    "max": 200,
-                    "step": 1,
-                    "default": 13
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Primary",
-            "name": "primary",
-            "type": "group",
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.secondary.font",
-                    "fallback": "theme.typography.secondary.fallback",
-                    "font_set": "theme.typography.secondary.font_set",
-                    "size": "theme.global.buttons.size.regular.font_size",
-                    "styles": "theme.typography.secondary.styles"
-                  }
-                },
-                "visibility": {
-                  "hidden_subfields": {
-                    "size": true
-                  }
-                },
-                "default": {
-                  "color": "#FFFFFF",
-                  "size_unit": "px",
-                  "variant": "600"
-                }
-              },
-              {
-                "label": "Background Color",
-                "name": "bg_color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.color.primary.color",
-                    "opacity": "theme.color.primary.opacity"
-                  }
-                }
-              },
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Width",
-                    "name": "width",
-                    "type": "number",
-                    "display": "slider",
-                    "default": 1
-                  },
-                  {
-                    "label": "Style",
-                    "name": "style",
-                    "type": "choice",
-                    "display": "select",
-                    "choices": [
-                      [ "none", "None" ],
-                      [ "solid", "Solid" ],
-                      [ "dotted", "Dotted" ],
-                      [ "dashed", "Dashed" ],
-                      [ "double", "Double" ],
-                      [ "groove", "Groove" ],
-                      [ "ridge", "Ridge" ],
-                      [ "inset", "Inset" ],
-                      [ "outset", "Outset" ]
-                    ],
-                    "default": "solid"
-                  },
-                  {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.global.buttons.primary.bg_color.color",
-                        "opacity": "theme.global.buttons.primary.bg_color.opacity"
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "label": "Corner Radius",
-                "name": "corner_radius",
-                "type": "number",
-                "display": "slider",
-                "min": 0,
-                "max": 50,
-                "inherited_value": {
-                  "default_value_path": "theme.corner_radius"
-                }
-              },
-              {
-                "label": "Hover",
-                "name": "hover",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font",
-                    "name": "font",
-                    "type": "font",
-                    "load_external_fonts": true,
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "font": "theme.global.buttons.primary.font.font",
-                        "fallback": "theme.global.buttons.primary.font.fallback",
-                        "variant": "theme.global.buttons.primary.font.variant",
-                        "font_set": "theme.global.buttons.primary.font.font_set",
-                        "size": "theme.global.buttons.primary.font.size",
-                        "styles": "theme.global.buttons.primary.font.styles",
-                        "color": "theme.global.buttons.primary.font.color"
-                      }
-                    },
-                    "visibility": {
-                      "hidden_subfields": {
-                        "size": true
-                      }
-                    },
-                    "default": {
-                      "size_unit": "px"
-                    }
-                  },
-                  {
-                    "label": "Background Color",
-                    "name": "bg_color",
-                    "type": "color",
-                    "default": {
-                      "color": "#99409a",
-                      "opacity": 100
-                    }
-                  },
-                  {
-                    "label": "Border",
-                    "name": "border",
-                    "type": "group",
-                    "children": [
-                      {
-                        "label": "Width",
-                        "name": "width",
-                        "type": "number",
-                        "display": "slider",
-                        "inherited_value": {
-                          "default_value_path": "theme.global.buttons.primary.border.width"
-                        }
-                      },
-                      {
-                        "label": "Style",
-                        "name": "style",
-                        "type": "choice",
-                        "display": "select",
-                        "choices": [
-                          [ "none", "None" ],
-                          [ "solid", "Solid" ],
-                          [ "dotted", "Dotted" ],
-                          [ "dashed", "Dashed" ],
-                          [ "double", "Double" ],
-                          [ "groove", "Groove" ],
-                          [ "ridge", "Ridge" ],
-                          [ "inset", "Inset" ],
-                          [ "outset", "Outset" ]
-                        ],
-                        "inherited_value": {
-                          "default_value_path": "theme.global.buttons.primary.border.style"
-                        }
-                      },
-                      {
-                        "label": "Color",
-                        "name": "color",
-                        "type": "color",
-                        "inherited_value": {
-                          "property_value_paths": {
-                            "color": "theme.global.buttons.primary.hover.bg_color.color",
-                            "opacity": "theme.global.buttons.primary.hover.bg_color.opacity"
-                          }
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Secondary",
-            "name": "secondary",
-            "type": "group",
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.secondary.font",
-                    "fallback": "theme.typography.secondary.fallback",
-                    "font_set": "theme.typography.secondary.font_set",
-                    "size": "theme.global.buttons.size.regular.font_size",
-                    "styles": "theme.typography.secondary.styles",
-                    "color": "theme.color.primary.color"
-                  }
-                },
-                "visibility": {
-                  "hidden_subfields": {
-                    "size": true
-                  }
-                },
-                "default": {
-                  "size_unit": "px"
-                }
-              },
-              {
-                "label": "Background Color",
-                "name": "bg_color",
-                "type": "color",
-                "default": {
-                  "color": "#FFFFFF",
-                  "opacity": 0
-                }
-              },
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Width",
-                    "name": "width",
-                    "type": "number",
-                    "display": "slider",
-                    "default": 1
-                  },
-                  {
-                    "label": "Style",
-                    "name": "style",
-                    "type": "choice",
-                    "display": "select",
-                    "choices": [
-                      [ "none", "None" ],
-                      [ "solid", "Solid" ],
-                      [ "dotted", "Dotted" ],
-                      [ "dashed", "Dashed" ],
-                      [ "double", "Double" ],
-                      [ "groove", "Groove" ],
-                      [ "ridge", "Ridge" ],
-                      [ "inset", "Inset" ],
-                      [ "outset", "Outset" ]
-                    ],
-                    "default": "solid"
-                  },
-                  {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.color.primary.color"
-                      }
-                    },
-                    "default": {
-                      "opacity": 100
-                    }
-                  }
-                ]
-              },
-              {
-                "label": "Corner Radius",
-                "name": "corner_radius",
-                "type": "number",
-                "display": "slider",
-                "min": 0,
-                "max": 50,
-                "inherited_value": {
-                  "default_value_path": "theme.corner_radius"
-                }
-              },
-              {
-                "label": "Hover",
-                "name": "hover",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font",
-                    "name": "font",
-                    "type": "font",
-                    "load_external_fonts": true,
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "font": "theme.global.buttons.secondary.font.font",
-                        "fallback": "theme.global.buttons.secondary.font.fallback",
-                        "variant": "theme.global.buttons.secondary.font.variant",
-                        "font_set": "theme.global.buttons.secondary.font.font_set",
-                        "size": "theme.global.buttons.secondary.font.size",
-                        "styles": "theme.global.buttons.secondary.font.styles"
-                      }
-                    },
-                    "visibility": {
-                      "hidden_subfields": {
-                        "size": true
-                      }
-                    },
-                    "default": {
-                      "color": "#99409a",
-                      "size_unit": "px"
-                    }
-                  },
-                  {
-                    "label": "Background Color",
-                    "name": "bg_color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "#FFFFFF",
-                        "opacity": 0
-                      }
-                    }
-                  },
-                  {
-                    "label": "Border",
-                    "name": "border",
-                    "type": "group",
-                    "children": [
-                      {
-                        "label": "Width",
-                        "name": "width",
-                        "type": "number",
-                        "display": "slider",
-                        "inherited_value": {
-                          "default_value_path": "theme.global.buttons.secondary.border.width"
-                        }
-                      },
-                      {
-                        "label": "Style",
-                        "name": "style",
-                        "type": "choice",
-                        "display": "select",
-                        "choices": [
-                          [ "none", "None" ],
-                          [ "solid", "Solid" ],
-                          [ "dotted", "Dotted" ],
-                          [ "dashed", "Dashed" ],
-                          [ "double", "Double" ],
-                          [ "groove", "Groove" ],
-                          [ "ridge", "Ridge" ],
-                          [ "inset", "Inset" ],
-                          [ "outset", "Outset" ]
-                        ],
-                        "inherited_value": {
-                          "default_value_path": "theme.global.buttons.secondary.border.style"
-                        }
-                      },
-                      {
-                        "label": "Color",
-                        "name": "color",
-                        "type": "color",
-                        "default": {
-                          "color": "#99409a",
-                          "opacity": 100
-                        }
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
+        },
+        "label" : "Background Color",
+        "locked" : false,
+        "name" : "bg_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "default" : {
+          "font" : null,
+          "font_set" : "DEFAULT",
+          "styles" : { },
+          "size" : 12,
+          "size_unit" : "px",
+          "color" : "#000",
+          "variant" : null,
+          "fallback" : null,
+          "style" : ""
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.global.buttons.primary.font.color",
+            "fallback" : "theme.global.buttons.primary.font.fallback",
+            "font" : "theme.global.buttons.primary.font.font",
+            "font_set" : "theme.global.buttons.primary.font.font_set",
+            "size" : "theme.global.buttons.primary.font.size",
+            "size_unit" : "theme.global.buttons.primary.font.size_unit",
+            "styles" : "theme.global.buttons.primary.font.styles",
+            "variant" : "theme.global.buttons.primary.font.variant"
           }
-        ]
-      },
-      {
-        "label": "Forms",
-        "name": "forms",
-        "type": "group",
-        "children": [
-          {
-            "label": "Background Color",
-            "name": "bg_color",
-            "type": "color",
-            "default": {
-              "color": "#aaaaaa",
-              "opacity": 100
-            }
-          },
-          {
-            "label": "Spacing",
-            "name": "spacing",
-            "type": "group",
-            "children": [
-              {
-                "label": "Padding",
-                "name": "padding",
-                "help_text": "Values are in pixels",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Top/Bottom",
-                    "name": "vertical",
-                    "type": "number",
-                    "default": 44
-                  },
-                  {
-                    "label": "Left/Right",
-                    "name": "horizontal",
-                    "type": "number",
-                    "default": 44
-                  }
-                ]
-              },
-              {
-                "label": "Field Spacing",
-                "name": "spacing",
-                "help_text": "The pixel spacing between fields in a form",
-                "type": "number",
-                "default": 22
-              }
-            ]
-          },
-          {
-            "label": "Border",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label": "Width",
-                "name": "width",
-                "type": "number",
-                "inherited_value": {
-                  "default_value_path": "theme.border.width"
-                }
-              },
-              {
-                "label": "Style",
-                "name": "style",
-                "type": "choice",
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "solid", "Solid" ],
-                  [ "dotted", "Dotted" ],
-                  [ "dashed", "Dashed" ],
-                  [ "double", "Double" ],
-                  [ "groove", "Groove" ],
-                  [ "ridge", "Ridge" ],
-                  [ "inset", "Inset" ],
-                  [ "outset", "Outset" ]
-                ],
-                "inherited_value": {
-                  "default_value_path": "theme.border.style"
-                }
-              },
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.border.color.color",
-                    "opacity": "theme.border.color.opacity"
-                  }
-                }
-              },
-              {
-                "label": "Corner Radius",
-                "name": "corner_radius",
-                "type": "number",
-                "display": "slider",
-                "inherited_value": {
-                  "default_value_path": "theme.corner_radius"
-                }
-              }
-            ]
-          },
-          {
-            "label": "Labels",
-            "name": "labels",
-            "type": "group",
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.secondary.font",
-                    "fallback": "theme.typography.secondary.fallback",
-                    "font_set": "theme.typography.secondary.font_set",
-                    "styles": "theme.typography.secondary.styles",
-                    "size": "theme.global.typography.body.size",
-                    "size_unit": "theme.global.typography.body.size_unit"
-                  }
-                },
-                "default": {
-                  "color": "#1E2B33",
-                  "variant": "400"
-                }
-              },
-              {
-                "label": "Padding",
-                "name": "padding",
-                "help_text": "Values are in pixels",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Top/Bottom",
-                    "name": "vertical",
-                    "type": "number",
-                    "default": 6
-                  },
-                  {
-                    "label": "Left/Right",
-                    "name": "horizontal",
-                    "type": "number",
-                    "default": 0
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Title",
-            "name": "title",
-            "type": "group",
-            "children": [
-              {
-                "label": "Background Color",
-                "name": "bg_color",
-                "type": "color",
-                "default": {
-                  "color": "#aaaaaa",
-                  "opacity": 100
-                }
-              },
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.global.typography.h3.font.font",
-                    "fallback": "theme.global.typography.h3.font.fallback",
-                    "variant": "theme.global.typography.h3.font.variant",
-                    "font_set": "theme.global.typography.h3.font.font_set",
-                    "styles": "theme.global.typography.h3.font.styles",
-                    "size": "theme.global.typography.h3.font.size",
-                    "size_unit": "theme.global.typography.h3.font.size_unit"
-                  }
-                },
-                "default": {
-                  "color": "#FFFFFF"
-                }
-              },
-              {
-                "label": "Padding",
-                "name": "padding",
-                "help_text": "Values are in pixels",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Top/Bottom",
-                    "name": "vertical",
-                    "type": "number",
-                    "default": 44
-                  },
-                  {
-                    "label": "Left/Right",
-                    "name": "horizontal",
-                    "type": "number",
-                    "default": 22
-                  }
-                ]
-              },
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Width",
-                    "name": "width",
-                    "type": "number",
-                    "default": 0
-                  },
-                  {
-                    "label": "Style",
-                    "name": "style",
-                    "type": "choice",
-                    "display": "select",
-                    "choices": [
-                      [ "none", "None" ],
-                      [ "solid", "Solid" ],
-                      [ "dotted", "Dotted" ],
-                      [ "dashed", "Dashed" ],
-                      [ "double", "Double" ],
-                      [ "groove", "Groove" ],
-                      [ "ridge", "Ridge" ],
-                      [ "inset", "Inset" ],
-                      [ "outset", "Outset" ]
-                    ],
-                    "inherited_value": {
-                      "default_value_path": "theme.border.style"
-                    }
-                  },
-                  {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.border.color.color",
-                        "opacity": "theme.border.color.opacity"
-                      }
-                    }
-                  },
-                  {
-                    "label": "Corner Radius",
-                    "name": "corner_radius",
-                    "type": "number",
-                    "display": "slider",
-                    "inherited_value": {
-                      "default_value_path": "theme.corner_radius"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Inputs",
-            "name": "inputs",
-            "type": "group",
-            "children": [
-              {
-                "label": "Background Color",
-                "name": "bg_color",
-                "type": "color",
-                "default": {
-                  "color": "#FFFFFF",
-                  "opacity": 100
-                }
-              },
-              {
-                "label": "Placeholder Color",
-                "name": "placeholder_color",
-                "type": "color",
-                "default": {
-                  "color": "#D0D0D0",
-                  "opacity": 100
-                }
-              },
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.typography.primary.font",
-                    "fallback": "theme.typography.primary.fallback",
-                    "variant": "theme.typography.primary.variant",
-                    "font_set": "theme.typography.primary.font_set",
-                    "styles": "theme.typography.primary.styles",
-                    "size": "theme.typography.primary.size",
-                    "size_unit": "theme.typography.primary.size_unit",
-                    "color": "theme.typography.primary.color"
-                  }
-                }
-              },
-              {
-                "label": "Padding",
-                "name": "padding",
-                "help_text": "Values are in pixels",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Top/Bottom",
-                    "name": "vertical",
-                    "type": "number",
-                    "default": 12
-                  },
-                  {
-                    "label": "Left/Right",
-                    "name": "horizontal",
-                    "type": "number",
-                    "default": 12
-                  }
-                ]
-              },
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Width",
-                    "name": "width",
-                    "type": "number",
-                    "inherited_value": {
-                      "default_value_path": "theme.border.width"
-                    }
-                  },
-                  {
-                    "label": "Style",
-                    "name": "style",
-                    "type": "choice",
-                    "display": "select",
-                    "choices": [
-                      [ "none", "None" ],
-                      [ "solid", "Solid" ],
-                      [ "dotted", "Dotted" ],
-                      [ "dashed", "Dashed" ],
-                      [ "double", "Double" ],
-                      [ "groove", "Groove" ],
-                      [ "ridge", "Ridge" ],
-                      [ "inset", "Inset" ],
-                      [ "outset", "Outset" ]
-                    ],
-                    "inherited_value": {
-                      "default_value_path": "theme.border.style"
-                    }
-                  },
-                  {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.border.color.color",
-                        "opacity": "theme.border.color.opacity"
-                      }
-                    }
-                  },
-                  {
-                    "label": "Corner Radius",
-                    "name": "corner_radius",
-                    "type": "number",
-                    "display": "slider",
-                    "inherited_value": {
-                      "default_value_path": "theme.corner_radius"
-                    }
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "label": "Help Text",
-            "name": "help_text",
-            "type": "font",
-            "load_external_fonts": true,
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.global.typography.body.color",
-                "font": "theme.typography.primary.font",
-                "fallback": "theme.typography.primary.fallback",
-                "variant": "theme.typography.primary.variant",
-                "font_set": "theme.typography.primary.font_set",
-                "styles": "theme.typography.primary.styles"
-              }
-            },
-            "default": {
-              "size": 14,
-              "size_unit": "px"
-            }
-          },
-          {
-            "label": "Submit",
-            "name": "submit",
-            "type": "group",
-            "children": [
-              {
-                "label": "Background Color",
-                "name": "bg_color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global.buttons.primary.bg_color.color",
-                    "opacity": "theme.global.buttons.primary.bg_color.opacity"
-                  }
-                }
-              },
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "load_external_fonts": true,
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.global.buttons.primary.font.font",
-                    "fallback": "theme.global.buttons.primary.font.fallback",
-                    "variant": "theme.global.buttons.primary.font.variant",
-                    "font_set": "theme.global.buttons.primary.font.font_set",
-                    "size": "theme.global.buttons.primary.font.size",
-                    "size_unit": "theme.global.buttons.primary.font.size_unit",
-                    "styles": "theme.global.buttons.primary.font.styles",
-                    "color": "theme.global.buttons.primary.font.color"
-                  }
-                },
-                "visibility": {
-                  "hidden_subfields": {
-                    "size": true
-                  }
-                }
-              },
-              {
-                "label": "Padding",
-                "name": "padding",
-                "help_text": "Values are in pixels",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Top/Bottom",
-                    "name": "vertical",
-                    "type": "number",
-                    "inherited_value": {
-                      "default_value_path": "theme.global.buttons.size.regular.vertical_spacing"
-                    }
-                  },
-                  {
-                    "label": "Left/Right",
-                    "name": "horizontal",
-                    "type": "number",
-                    "inherited_value": {
-                      "default_value_path": "theme.global.buttons.size.regular.horizontal_spacing"
-                    }
-                  }
-                ]
-              },
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Width",
-                    "name": "width",
-                    "type": "number",
-                    "inherited_value": {
-                      "default_value_path": "theme.global.buttons.primary.border.width"
-                    }
-                  },
-                  {
-                    "label": "Style",
-                    "name": "style",
-                    "type": "choice",
-                    "display": "select",
-                    "choices": [
-                      [ "none", "None" ],
-                      [ "solid", "Solid" ],
-                      [ "dotted", "Dotted" ],
-                      [ "dashed", "Dashed" ],
-                      [ "double", "Double" ],
-                      [ "groove", "Groove" ],
-                      [ "ridge", "Ridge" ],
-                      [ "inset", "Inset" ],
-                      [ "outset", "Outset" ]
-                    ],
-                    "inherited_value": {
-                      "default_value_path": "theme.global.buttons.primary.border.style"
-                    }
-                  },
-                  {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.global.buttons.primary.border.color.color",
-                        "opacity": "theme.global.buttons.primary.border.color.opacity"
-                      }
-                    }
-                  },
-                  {
-                    "label": "Corner Radius",
-                    "name": "corner_radius",
-                    "type": "number",
-                    "display": "slider",
-                    "inherited_value": {
-                      "default_value_path": "theme.global.buttons.primary.corner_radius"
-                    }
-                  }
-                ]
-              }
-            ]
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font",
+        "visibility" : {
+          "hidden_subfields" : {
+            "size" : true
           }
-        ]
+        }
+      }, {
+        "children" : [ {
+          "display" : "text",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.buttons.size.regular.vertical_spacing"
+          },
+          "label" : "Top/Bottom",
+          "locked" : false,
+          "name" : "vertical",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "display" : "text",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.buttons.size.regular.horizontal_spacing"
+          },
+          "label" : "Left/Right",
+          "locked" : false,
+          "name" : "horizontal",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "help_text" : "Values are in pixels",
+        "label" : "Padding",
+        "locked" : false,
+        "name" : "padding",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "display" : "text",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.buttons.primary.border.width"
+          },
+          "label" : "Width",
+          "locked" : false,
+          "name" : "width",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+          "display" : "select",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.buttons.primary.border.style"
+          },
+          "label" : "Style",
+          "locked" : false,
+          "name" : "style",
+          "required" : false,
+          "type" : "choice"
+        }, {
+          "default" : {
+            "color" : "#ffffff",
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.global.buttons.primary.border.color.color",
+              "opacity" : "theme.global.buttons.primary.border.color.opacity"
+            }
+          },
+          "label" : "Color",
+          "locked" : false,
+          "name" : "color",
+          "required" : false,
+          "type" : "color"
+        }, {
+          "display" : "slider",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.buttons.primary.corner_radius"
+          },
+          "label" : "Corner Radius",
+          "locked" : false,
+          "name" : "corner_radius",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Border",
+        "locked" : false,
+        "name" : "border",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Submit",
+      "locked" : false,
+      "name" : "submit",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    } ],
+    "label" : "Forms",
+    "locked" : false,
+    "name" : "forms",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
       },
-      {
-        "label": "Tables",
-        "name": "tables",
-        "type": "group",
-        "children": [
-          {
-            "label": "Background Color",
-            "name": "bg_color",
-            "type": "color",
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.color.body.color",
-                "opacity": "theme.color.body.opacity"
-              }
-            }
-          },
-          {
-            "label": "Border",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label": "Width",
-                "name": "width",
-                "type": "number",
-                "inherited_value": {
-                  "default_value_path": "theme.border.width"
-                }
-              },
-              {
-                "label": "Style",
-                "name": "style",
-                "type": "choice",
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "solid", "Solid" ],
-                  [ "dotted", "Dotted" ],
-                  [ "dashed", "Dashed" ],
-                  [ "double", "Double" ],
-                  [ "groove", "Groove" ],
-                  [ "ridge", "Ridge" ],
-                  [ "inset", "Inset" ],
-                  [ "outset", "Outset" ]
-                ],
-                "inherited_value": {
-                  "default_value_path": "theme.border.style"
-                }
-              },
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.border.color.color",
-                    "opacity": "theme.border.color.opacity"
-                  }
-                }
-              },
-              {
-                "label": "Corner Radius",
-                "name": "corner_radius",
-                "type": "number",
-                "display": "slider",
-                "inherited_value": {
-                  "default_value_path": "theme.corner_radius"
-                }
-              }
-            ]
-          },
-          {
-            "label": "Padding",
-            "name": "padding",
-            "help_text": "Values are in pixels",
-            "type": "group",
-            "children": [
-              {
-                "label": "Top/Bottom",
-                "name": "vertical",
-                "type": "number",
-                "default": 10
-              },
-              {
-                "label": "Left/Right",
-                "name": "horizontal",
-                "type": "number",
-                "default": 10
-              }
-            ]
-          },
-          {
-            "label": "Font Color",
-            "name": "font_color",
-            "type": "color",
-            "inherited_value": {
-              "property_value_paths": {
-                "color": "theme.global.typography.body.color",
-                "opacity": "theme.global.typography.body.opacity"
-              }
-            }
-          },
-          {
-            "label": "Table Head",
-            "name": "head",
-            "type": "group",
-            "children": [
-              {
-                "label": "Background Color",
-                "name": "bg_color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.color.secondary.color",
-                    "opacity": "theme.color.secondary.opacity"
-                  }
-                }
-              },
-              {
-                "label": "Font Color",
-                "name": "font_color",
-                "type": "color",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "color": "theme.global.tables.font_color.color",
-                    "opacity": "theme.global.tables.font_color.opacity"
-                  }
-                }
-              },
-              {
-                "label": "Border",
-                "name": "border",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Width",
-                    "name": "width",
-                    "type": "number",
-                    "default": 2
-                  },
-                  {
-                    "label": "Style",
-                    "name": "style",
-                    "type": "choice",
-                    "display": "select",
-                    "choices": [
-                      [ "none", "None" ],
-                      [ "solid", "Solid" ],
-                      [ "dotted", "Dotted" ],
-                      [ "dashed", "Dashed" ],
-                      [ "double", "Double" ],
-                      [ "groove", "Groove" ],
-                      [ "ridge", "Ridge" ],
-                      [ "inset", "Inset" ],
-                      [ "outset", "Outset" ]
-                    ],
-                    "inherited_value": {
-                      "default_value_path": "theme.global.tables.border.style"
-                    }
-                  },
-                  {
-                    "label": "Color",
-                    "name": "color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.global.tables.border.color.color",
-                        "opacity": "theme.global.tables.border.color.opacity"
-                      }
-                    }
-                  },
-                  {
-                    "label": "Corner Radius",
-                    "name": "corner_radius",
-                    "type": "number",
-                    "display": "slider",
-                    "inherited_value": {
-                      "default_value_path": "theme.global.tables.corner_radius"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        ]
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.color.body.color",
+          "opacity" : "theme.color.body.opacity"
+        }
       },
-      {
-        "label": "Website Header",
-        "name": "header",
-        "type": "group",
-        "children": [
-          {
-            "label": "Background Color",
-            "name": "bg_color",
-            "type": "color",
-            "default": {
-              "color": "#000000",
-              "opacity": 20
-            }
-          },
-          {
-            "label": "Bottom Border",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label": "Width",
-                "name": "width",
-                "type": "number",
-                "default": 0
-              },
-              {
-                "label": "Style",
-                "name": "style",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "solid", "Solid" ],
-                  [ "dotted", "Dotted" ],
-                  [ "dashed", "Dashed" ],
-                  [ "double", "Double" ],
-                  [ "groove", "Groove" ],
-                  [ "ridge", "Ridge" ],
-                  [ "inset", "Inset" ],
-                  [ "outset", "Outset" ]
-                ],
-                "inherited_value": {
-                  "default_value_path": "theme.border.style"
-                }
-              },
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "default": {
-                  "color": "#FFFFFF",
-                  "opacity": 0
-                }
-              }
-            ]
-          },
-          {
-            "label": "Menu",
-            "name": "menu",
-            "type": "group",
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.global.typography.body.font",
-                    "fallback": "theme.global.typography.body.fallback",
-                    "variant": "theme.global.typography.body.variant",
-                    "font_set": "theme.global.typography.body.font_set",
-                    "size": "theme.global.typography.body.size",
-                    "size_unit": "theme.global.typography.body.size_unit",
-                    "styles": "theme.global.typography.body.styles"
-                  }
-                },
-                "default": {
-                  "color": "#FFFFFF"
-                }
-              },
-              {
-                "label": "Hover",
-                "name": "hover",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font",
-                    "name": "font",
-                    "type": "font",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "font": "theme.global.header.menu.primary.font.font",
-                        "fallback": "theme.global.header.menu.primary.font.fallback",
-                        "variant": "theme.global.header.menu.primary.font.variant",
-                        "font_set": "theme.global.header.menu.primary.font.font_set",
-                        "styles": "theme.global.header.menu.primary.font.styles",
-                        "size": "theme.global.header.menu.primary.font.size",
-                        "size_unit": "theme.global.header.menu.primary.font.size_unit"
-                      }
-                    },
-                    "default": {
-                      "color": "#FFFFFF"
-                    }
-                  },
-                  {
-                    "label": "Background Color",
-                    "name": "bg_color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.color.secondary.color"
-                      }
-                    },
-                    "default": {
-                      "opacity": 100
-                    }
-                  }
-                ]
-              },
-              {
-                "label": "Active",
-                "name": "active",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font",
-                    "name": "font",
-                    "type": "font",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "font": "theme.global.header.menu.primary.font.font",
-                        "fallback": "theme.global.header.menu.primary.font.fallback",
-                        "font_set": "theme.global.header.menu.primary.font.font_set",
-                        "styles": "theme.global.header.menu.primary.font.styles",
-                        "size": "theme.global.header.menu.primary.font.size",
-                        "size_unit": "theme.global.header.menu.primary.font.size_unit"
-                      }
-                    },
-                    "default": {
-                      "color": "#FFFFFF",
-                      "variant": "600"
-                    }
-                  },
-                  {
-                    "label": "Background Color",
-                    "name": "bg_color",
-                    "type": "color",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "color": "theme.color.secondary.color"
-                      }
-                    },
-                    "default": {
-                      "opacity": 100
-                    }
-                  }
-                ]
-              }
-            ]
+      "label" : "Background Color",
+      "locked" : false,
+      "name" : "bg_color",
+      "required" : false,
+      "type" : "color"
+    }, {
+      "children" : [ {
+        "display" : "text",
+        "inherited_value" : {
+          "default_value_path" : "theme.border.width"
+        },
+        "label" : "Width",
+        "locked" : false,
+        "name" : "width",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+        "display" : "select",
+        "inherited_value" : {
+          "default_value_path" : "theme.border.style"
+        },
+        "label" : "Style",
+        "locked" : false,
+        "name" : "style",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.border.color.color",
+            "opacity" : "theme.border.color.opacity"
           }
-        ]
+        },
+        "label" : "Color",
+        "locked" : false,
+        "name" : "color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "display" : "slider",
+        "inherited_value" : {
+          "default_value_path" : "theme.corner_radius"
+        },
+        "label" : "Corner Radius",
+        "locked" : false,
+        "name" : "corner_radius",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "label" : "Border",
+      "locked" : false,
+      "name" : "border",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : 10,
+        "display" : "text",
+        "label" : "Top/Bottom",
+        "locked" : false,
+        "name" : "vertical",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "default" : 10,
+        "display" : "text",
+        "label" : "Left/Right",
+        "locked" : false,
+        "name" : "horizontal",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      } ],
+      "help_text" : "Values are in pixels",
+      "label" : "Padding",
+      "locked" : false,
+      "name" : "padding",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
       },
-      {
-        "label": "Footer",
-        "name": "footer",
-        "type": "group",
-        "children": [
-          {
-            "label": "Background Color",
-            "name": "bg_color",
-            "type": "color",
-            "default": {
-              "color": "#1E2B33",
-              "opacity": 100
-            }
-          },
-          {
-            "label": "Border Top",
-            "name": "border",
-            "type": "group",
-            "children": [
-              {
-                "label": "Width",
-                "name": "width",
-                "type": "number",
-                "default": 0
-              },
-              {
-                "label": "Style",
-                "name": "style",
-                "type": "choice",
-                "sortable": false,
-                "display": "select",
-                "choices": [
-                  [ "none", "None" ],
-                  [ "solid", "Solid" ],
-                  [ "dotted", "Dotted" ],
-                  [ "dashed", "Dashed" ],
-                  [ "double", "Double" ],
-                  [ "groove", "Groove" ],
-                  [ "ridge", "Ridge" ],
-                  [ "inset", "Inset" ],
-                  [ "outset", "Outset" ]
-                ],
-                "inherited_value": {
-                  "default_value_path": "theme.border.style"
-                }
-              },
-              {
-                "label": "Color",
-                "name": "color",
-                "type": "color",
-                "default": {
-                  "color": "#1E2B33",
-                  "opacity": 100
-                }
-              }
-            ]
-          },
-          {
-            "label": "Content Color",
-            "name": "content_color",
-            "type": "color",
-            "default": {
-              "color": "#ffffff",
-              "opacity": 100
-            }
-          },
-          {
-            "label": "Menu",
-            "name": "menu",
-            "type": "group",
-            "children": [
-              {
-                "label": "Font",
-                "name": "font",
-                "type": "font",
-                "inherited_value": {
-                  "property_value_paths": {
-                    "font": "theme.global.typography.body.font",
-                    "fallback": "theme.global.typography.body.fallback",
-                    "font_set": "theme.global.typography.body.font_set",
-                    "styles": "theme.global.typography.body.styles",
-                    "size": "theme.global.typography.body.size",
-                    "size_unit": "theme.global.typography.body.size_unit"
-                  }
-                },
-                "default": {
-                  "color": "#FFFFFF"
-                }
-              },
-              {
-                "label": "Hover",
-                "name": "hover",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font",
-                    "name": "font",
-                    "type": "font",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "font": "theme.global.footer.menu.primary.font.font",
-                        "fallback": "theme.global.footer.menu.primary.font.fallback",
-                        "variant": "theme.global.footer.menu.primary.font.variant",
-                        "font_set": "theme.global.footer.menu.primary.font.font_set",
-                        "styles": "theme.global.footer.menu.primary.font.styles",
-                        "size": "theme.global.footer.menu.primary.font.size",
-                        "size_unit": "theme.global.footer.menu.primary.font.size_unit"
-                      }
-                    },
-                    "default": {
-                      "color": "#FFFFFF"
-                    }
-                  },
-                  {
-                    "label": "Background Color",
-                    "name": "bg_color",
-                    "type": "color",
-                    "default": {
-                      "color": "#1E2B33",
-                      "opacity": 100
-                    }
-                  }
-                ]
-              },
-              {
-                "label": "Active",
-                "name": "active",
-                "type": "group",
-                "children": [
-                  {
-                    "label": "Font",
-                    "name": "font",
-                    "type": "font",
-                    "inherited_value": {
-                      "property_value_paths": {
-                        "font": "theme.global.footer.menu.primary.font.font",
-                        "fallback": "theme.global.footer.menu.primary.font.fallback",
-                        "variant": "theme.global.footer.menu.primary.font.variant",
-                        "font_set": "theme.global.footer.menu.primary.font.font_set",
-                        "styles": "theme.global.footer.menu.primary.font.styles",
-                        "size": "theme.global.footer.menu.primary.font.size",
-                        "size_unit": "theme.global.footer.menu.primary.font.size_unit"
-                      }
-                    },
-                    "default": {
-                      "color": "#FFFFFF"
-                    }
-                  },
-                  {
-                    "label": "Background Color",
-                    "name": "bg_color",
-                    "type": "color",
-                    "default": {
-                      "color": "#1E2B33",
-                      "opacity": 100
-                    }
-                  }
-                ]
-              }
-            ]
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global.typography.body.color",
+          "opacity" : "theme.global.typography.body.opacity"
+        }
+      },
+      "label" : "Font Color",
+      "locked" : false,
+      "name" : "font_color",
+      "required" : false,
+      "type" : "color"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.color.secondary.color",
+            "opacity" : "theme.color.secondary.opacity"
           }
-        ]
-      }
-    ]
-  }
-]
+        },
+        "label" : "Background Color",
+        "locked" : false,
+        "name" : "bg_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "default" : {
+          "color" : "#ffffff",
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.global.tables.font_color.color",
+            "opacity" : "theme.global.tables.font_color.opacity"
+          }
+        },
+        "label" : "Font Color",
+        "locked" : false,
+        "name" : "font_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "children" : [ {
+          "default" : 2,
+          "display" : "text",
+          "label" : "Width",
+          "locked" : false,
+          "name" : "width",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        }, {
+          "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+          "display" : "select",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.tables.border.style"
+          },
+          "label" : "Style",
+          "locked" : false,
+          "name" : "style",
+          "required" : false,
+          "type" : "choice"
+        }, {
+          "default" : {
+            "color" : "#ffffff",
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.global.tables.border.color.color",
+              "opacity" : "theme.global.tables.border.color.opacity"
+            }
+          },
+          "label" : "Color",
+          "locked" : false,
+          "name" : "color",
+          "required" : false,
+          "type" : "color"
+        }, {
+          "display" : "slider",
+          "inherited_value" : {
+            "default_value_path" : "theme.global.tables.corner_radius"
+          },
+          "label" : "Corner Radius",
+          "locked" : false,
+          "name" : "corner_radius",
+          "required" : false,
+          "step" : 1,
+          "type" : "number"
+        } ],
+        "label" : "Border",
+        "locked" : false,
+        "name" : "border",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Table Head",
+      "locked" : false,
+      "name" : "head",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    } ],
+    "label" : "Tables",
+    "locked" : false,
+    "name" : "tables",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "default" : {
+        "color" : "#000000",
+        "opacity" : 20
+      },
+      "label" : "Background Color",
+      "locked" : false,
+      "name" : "bg_color",
+      "required" : false,
+      "type" : "color"
+    }, {
+      "children" : [ {
+        "default" : 0,
+        "display" : "text",
+        "label" : "Width",
+        "locked" : false,
+        "name" : "width",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+        "display" : "select",
+        "inherited_value" : {
+          "default_value_path" : "theme.border.style"
+        },
+        "label" : "Style",
+        "locked" : false,
+        "name" : "style",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 0
+        },
+        "label" : "Color",
+        "locked" : false,
+        "name" : "color",
+        "required" : false,
+        "type" : "color"
+      } ],
+      "label" : "Bottom Border",
+      "locked" : false,
+      "name" : "border",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#FFFFFF"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "fallback" : "theme.global.typography.body.fallback",
+            "font" : "theme.global.typography.body.font",
+            "font_set" : "theme.global.typography.body.font_set",
+            "size" : "theme.global.typography.body.size",
+            "size_unit" : "theme.global.typography.body.size_unit",
+            "styles" : "theme.global.typography.body.styles",
+            "variant" : "theme.global.typography.body.variant"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "children" : [ {
+          "default" : {
+            "color" : "#FFFFFF"
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "fallback" : "theme.global.header.menu.primary.font.fallback",
+              "font" : "theme.global.header.menu.primary.font.font",
+              "font_set" : "theme.global.header.menu.primary.font.font_set",
+              "size" : "theme.global.header.menu.primary.font.size",
+              "size_unit" : "theme.global.header.menu.primary.font.size_unit",
+              "styles" : "theme.global.header.menu.primary.font.styles",
+              "variant" : "theme.global.header.menu.primary.font.variant"
+            }
+          },
+          "label" : "Font",
+          "load_external_fonts" : true,
+          "locked" : false,
+          "name" : "font",
+          "required" : false,
+          "type" : "font"
+        }, {
+          "default" : {
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.color.secondary.color"
+            }
+          },
+          "label" : "Background Color",
+          "locked" : false,
+          "name" : "bg_color",
+          "required" : false,
+          "type" : "color"
+        } ],
+        "label" : "Hover",
+        "locked" : false,
+        "name" : "hover",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "default" : {
+            "color" : "#FFFFFF",
+            "variant" : "600"
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "fallback" : "theme.global.header.menu.primary.font.fallback",
+              "font" : "theme.global.header.menu.primary.font.font",
+              "font_set" : "theme.global.header.menu.primary.font.font_set",
+              "size" : "theme.global.header.menu.primary.font.size",
+              "size_unit" : "theme.global.header.menu.primary.font.size_unit",
+              "styles" : "theme.global.header.menu.primary.font.styles"
+            }
+          },
+          "label" : "Font",
+          "load_external_fonts" : true,
+          "locked" : false,
+          "name" : "font",
+          "required" : false,
+          "type" : "font"
+        }, {
+          "default" : {
+            "opacity" : 100
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "color" : "theme.color.secondary.color"
+            }
+          },
+          "label" : "Background Color",
+          "locked" : false,
+          "name" : "bg_color",
+          "required" : false,
+          "type" : "color"
+        } ],
+        "label" : "Active",
+        "locked" : false,
+        "name" : "active",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Menu",
+      "locked" : false,
+      "name" : "menu",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    } ],
+    "label" : "Website Header",
+    "locked" : false,
+    "name" : "header",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "default" : {
+        "color" : "#1E2B33",
+        "opacity" : 100
+      },
+      "label" : "Background Color",
+      "locked" : false,
+      "name" : "bg_color",
+      "required" : false,
+      "type" : "color"
+    }, {
+      "children" : [ {
+        "default" : 0,
+        "display" : "text",
+        "label" : "Width",
+        "locked" : false,
+        "name" : "width",
+        "required" : false,
+        "step" : 1,
+        "type" : "number"
+      }, {
+        "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
+        "display" : "select",
+        "inherited_value" : {
+          "default_value_path" : "theme.border.style"
+        },
+        "label" : "Style",
+        "locked" : false,
+        "name" : "style",
+        "required" : false,
+        "type" : "choice"
+      }, {
+        "default" : {
+          "color" : "#1E2B33",
+          "opacity" : 100
+        },
+        "label" : "Color",
+        "locked" : false,
+        "name" : "color",
+        "required" : false,
+        "type" : "color"
+      } ],
+      "label" : "Border Top",
+      "locked" : false,
+      "name" : "border",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "Content Color",
+      "locked" : false,
+      "name" : "content_color",
+      "required" : false,
+      "type" : "color"
+    }, {
+      "children" : [ {
+        "default" : {
+          "color" : "#FFFFFF"
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "fallback" : "theme.global.typography.body.fallback",
+            "font" : "theme.global.typography.body.font",
+            "font_set" : "theme.global.typography.body.font_set",
+            "size" : "theme.global.typography.body.size",
+            "size_unit" : "theme.global.typography.body.size_unit",
+            "styles" : "theme.global.typography.body.styles"
+          }
+        },
+        "label" : "Font",
+        "load_external_fonts" : true,
+        "locked" : false,
+        "name" : "font",
+        "required" : false,
+        "type" : "font"
+      }, {
+        "children" : [ {
+          "default" : {
+            "color" : "#FFFFFF"
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "fallback" : "theme.global.footer.menu.primary.font.fallback",
+              "font" : "theme.global.footer.menu.primary.font.font",
+              "font_set" : "theme.global.footer.menu.primary.font.font_set",
+              "size" : "theme.global.footer.menu.primary.font.size",
+              "size_unit" : "theme.global.footer.menu.primary.font.size_unit",
+              "styles" : "theme.global.footer.menu.primary.font.styles",
+              "variant" : "theme.global.footer.menu.primary.font.variant"
+            }
+          },
+          "label" : "Font",
+          "load_external_fonts" : true,
+          "locked" : false,
+          "name" : "font",
+          "required" : false,
+          "type" : "font"
+        }, {
+          "default" : {
+            "color" : "#1E2B33",
+            "opacity" : 100
+          },
+          "label" : "Background Color",
+          "locked" : false,
+          "name" : "bg_color",
+          "required" : false,
+          "type" : "color"
+        } ],
+        "label" : "Hover",
+        "locked" : false,
+        "name" : "hover",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      }, {
+        "children" : [ {
+          "default" : {
+            "color" : "#FFFFFF"
+          },
+          "inherited_value" : {
+            "property_value_paths" : {
+              "fallback" : "theme.global.footer.menu.primary.font.fallback",
+              "font" : "theme.global.footer.menu.primary.font.font",
+              "font_set" : "theme.global.footer.menu.primary.font.font_set",
+              "size" : "theme.global.footer.menu.primary.font.size",
+              "size_unit" : "theme.global.footer.menu.primary.font.size_unit",
+              "styles" : "theme.global.footer.menu.primary.font.styles",
+              "variant" : "theme.global.footer.menu.primary.font.variant"
+            }
+          },
+          "label" : "Font",
+          "load_external_fonts" : true,
+          "locked" : false,
+          "name" : "font",
+          "required" : false,
+          "type" : "font"
+        }, {
+          "default" : {
+            "color" : "#1E2B33",
+            "opacity" : 100
+          },
+          "label" : "Background Color",
+          "locked" : false,
+          "name" : "bg_color",
+          "required" : false,
+          "type" : "color"
+        } ],
+        "label" : "Active",
+        "locked" : false,
+        "name" : "active",
+        "required" : false,
+        "tab" : "CONTENT",
+        "type" : "group"
+      } ],
+      "label" : "Menu",
+      "locked" : false,
+      "name" : "menu",
+      "required" : false,
+      "tab" : "CONTENT",
+      "type" : "group"
+    } ],
+    "label" : "Footer",
+    "locked" : false,
+    "name" : "footer",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  } ],
+  "label" : "Global Settings",
+  "locked" : false,
+  "name" : "global",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+} ]

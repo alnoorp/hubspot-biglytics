@@ -1,38 +1,48 @@
-[
-  {
-    "label" : "Pillar menu title",
-    "name" : "pillar_menu_title",
-    "type" : "text",
-    "required" : true,
-    "default" : "Table of Contents"
+[ {
+  "id" : "pillar_menu_title",
+  "name" : "pillar_menu_title",
+  "label" : "Pillar menu title",
+  "required" : true,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Table of Contents"
+}, {
+  "id" : "override_default_style",
+  "name" : "override_default_style",
+  "label" : "Override default style",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "override_default_style",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
   },
-  {
-    "label" : "Override default style",
-    "name" : "override_default_style",
-    "id" : "override_default_style",
-    "type" : "boolean",
-    "default" : false
-  },
-  {
-    "label" : "Style options",
-    "name" : "style",
-    "id" : "style",
-    "type" : "group",
-    "visibility": {
-      "controlling_field": "override_default_style",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    },
-    "children" : [
-      {
-        "label" : "Menu item border color",
-        "name" : "menu_item_border_color",
-        "type" : "color",
-        "default" : {
-          "color" : "#d0d0d0",
-          "opacity" : 100
-        }
-      }
-    ]
-  }
-]
+  "children" : [ {
+    "id" : "style.menu_item_border_color",
+    "name" : "menu_item_border_color",
+    "label" : "Menu item border color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#d0d0d0",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : null
+} ]

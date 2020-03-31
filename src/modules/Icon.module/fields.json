@@ -1,87 +1,109 @@
-[
-  {
-    "label": "Icon",
-    "name": "icon",
-    "type": "icon",
-    "required": true,
-    "default": {
-      "name": "clock",
-      "unicode": "f017",
-      "type": "REGULAR"
-    }
-  },
-  {
-    "label": "Accessibility options",
-    "name": "accessibility",
-    "type": "group",
-    "children": [
-      {
-        "label": "Purpose",
-        "name": "purpose",
-        "id": "purpose",
-        "type": "choice",
-        "choices" : [ [ "decorative", "Ignored by screen reader" ], [ "semantic", "Read by screen reader" ] ],
-        "required" : true,
-        "default" : "decorative"
-      },
-      {
-        "label": "Title",
-        "name": "title",
-        "type": "text",
-        "visibility": {
-          "controlling_field": "purpose",
-          "controlling_value_regex": "semantic",
-          "operator": "EQUAL"
-        },
-        "required" : true,
-        "default": "Icon title"
-      }
-    ]
-  },
-  {
-    "label": "Override default style",
-    "name": "override_default_style",
-    "id": "override_default_style",
-    "type": "boolean",
-    "default": false
-  },
-  {
-    "label": "Style options",
-    "name": "style",
-    "type": "group",
-    "visibility": {
-      "controlling_field": "override_default_style",
-      "controlling_value_regex": "true",
-      "operator": "EQUAL"
-    },
-    "children": [
-      {
-        "label": "Color",
-        "name": "color",
-        "type": "color",
-        "default": {
-          "color": "#34b5e5",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Background color",
-        "name": "bg_color",
-        "type": "color",
-        "default": {
-          "color": "#ffffff",
-          "opacity": 100
-        }
-      },
-      {
-        "label": "Border color",
-        "name": "border_color",
-        "type": "color",
-        "default": {
-          "color": "#d0d0d0",
-          "opacity": 100
-        }
-      }
-    ]
+[ {
+  "id" : "icon",
+  "name" : "icon",
+  "label" : "Icon",
+  "required" : true,
+  "locked" : false,
+  "type" : "icon",
+  "default" : {
+    "name" : "clock",
+    "unicode" : "f017",
+    "type" : "REGULAR"
   }
-]
+}, {
+  "id" : "accessibility",
+  "name" : "accessibility",
+  "label" : "Accessibility options",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "purpose",
+    "name" : "purpose",
+    "label" : "Purpose",
+    "required" : true,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "decorative", "Ignored by screen reader" ], [ "semantic", "Read by screen reader" ] ],
+    "type" : "choice",
+    "default" : "decorative"
+  }, {
+    "id" : "accessibility.title",
+    "name" : "title",
+    "label" : "Title",
+    "required" : true,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "purpose",
+      "controlling_value_regex" : "semantic",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Icon title"
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : null
+}, {
+  "id" : "override_default_style",
+  "name" : "override_default_style",
+  "label" : "Override default style",
+  "required" : false,
+  "locked" : false,
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "style",
+  "name" : "style",
+  "label" : "Style options",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "override_default_style",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "style.color",
+    "name" : "color",
+    "label" : "Color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#34b5e5",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.bg_color",
+    "name" : "bg_color",
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "style.border_color",
+    "name" : "border_color",
+    "label" : "Border color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#d0d0d0",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "CONTENT",
+  "type" : "group",
+  "default" : null
+} ]
