@@ -150,8 +150,14 @@
             horizontal_alignment='CENTER',
             title='Download our FREE eBook to get started with Big Data decisions today!'
           %}
-            {% module_attribute 'form_id' %}
-              {# ddg:info_form_id #}
+            {% module_attribute "form" is_json=True %}
+              {
+                "form_id": "{# ddg:info_form_id #}",
+                "response_type": "inline",
+                "message": "Thanks!",
+                "form_type": "HUBSPOT",
+                "gotowebinar_webinar_key": null
+              }
             {% end_module_attribute %}
           {% end_dnd_module %}
         {% end_dnd_row %}
