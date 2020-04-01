@@ -131,22 +131,25 @@
 
     {# Whitepaper Section #}
     {% dnd_section
-      full_width=true,
+      full_width=false,
+      max_width=1000,
       padding={
+        'top': 50,
         'right': 0,
-        'bottom': 0,
+        'bottom': 50,
         'left': 0
       },
-      margin={
-        'left': 0
-      },
+      vertical_alignment='MIDDLE',
       background_image={
         'backgroundPosition': 'TOP_CENTER',
         'backgroundSize': 'cover',
         'imageUrl': get_asset_url('../images/ebook-background.jpg')
       }
     %}
-      {% dnd_column %}
+      {% dnd_column
+        offset=0,
+        width=4
+       %}
         {% dnd_row
           padding={
             'top': 0,
@@ -163,15 +166,45 @@
             horizontal_alignment='LEFT',
             offset=0,
             img={
-              'src': get_asset_url('../images/whitepaper.png'),
-              'size_type': 'auto'
+              'src': get_asset_url('../images/biglytics-ebook-competitive-analysis.png'),
+              'width': '400',
+              'height': '500'
             }
           %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+      {% dnd_column
+        offset=4,
+        width=8
+       %}
+        {% dnd_row
+          padding={
+            'top': 0,
+            'right': 0,
+            'bottom': 0,
+            'left': 0
+          },
+          margin={
+            'left': 0
+          },
+        %}
+          {% dnd_module
+            path='@hubspot/rich_text'
+          %}
             {% module_attribute 'html' %}
-              <div style="text-align: center;">
-                <h2 style="color: #fff;">What People Are Saying</h2>
-              </div>
+              <h3 style="font-weight: bold; color: #f8ac1c;">FREE EBOOK DOWNLOAD</h3>
+              <p style="color: #ffffff;">How to Gain a Competitive Advantage Using Market Analysis</p>
+              <p style="color: #ffffff;">Download our eBook to gain insight into how to make business decisions based on data science.</p>
             {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/cta',
+            horizontal_alignment='LEFT'
+          %}
           {% end_dnd_module %}
         {% end_dnd_row %}
       {% end_dnd_column %}
@@ -183,79 +216,107 @@
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=1,
+        offset=0,
+        width=2,
         img={
-          'alt': 'Sample logo',
+          'alt': 'Aiming Technologies logo',
           'size_type': 'auto',
           'src': get_asset_url('../images/logos/aiming-technologies.png'),
-          'width': '151'
-        },
-        width=2
+          'width': '150'
+        }
       %}
       {% end_dnd_module %}
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=3,
+        offset=2,
+        width=2,
         img={
-          'alt': 'Sample logo',
+          'alt': 'Cross logo',
           'size_type': 'auto',
           'src': get_asset_url('../images/logos/cross.png'),
-          'width': '151'
-        },
-        width=2
+          'width': '150'
+        }
       %}
       {% end_dnd_module %}
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=5,
+        offset=4,
+        width=2,
         img={
-          'alt': 'Sample logo',
+          'alt': 'Infiniteflame logo',
           'size_type': 'auto',
           'src': get_asset_url('../images/logos/infiniteflame.png'),
-          'width': '151'
-        },
-        width=2
+          'width': '150'
+        }
       %}
       {% end_dnd_module %}
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=7,
+        offset=6,
+        width=2,
         img={
-          'alt': 'Sample logo',
+          'alt': 'Magento logo',
           'size_type': 'auto',
           'src': get_asset_url('../images/logos/magento.png'),
-          'width': '151'
-        },
-        width=2
+          'width': '150'
+        }
       %}
       {% end_dnd_module %}
       {% dnd_module
         path='@hubspot/linked_image',
         horizontal_alignment='CENTER',
-        offset=9,
+        offset=8,
+        width=2,
         img={
-          'alt': 'Sample logo',
+          'alt': 'Setra logo',
           'size_type': 'auto',
           'src': get_asset_url('../images/logos/setra.png'),
-          'width': '151'
-        },
-        width=2
+          'width': '150'
+        }
+      %}
+      {% end_dnd_module %}
+      {% dnd_module
+        path='@hubspot/linked_image',
+        horizontal_alignment='CENTER',
+        offset=10,
+        width=2,
+        img={
+          'alt': 'Diamond Bank logo',
+          'size_type': 'auto',
+          'src': get_asset_url('../images/logos/diamond-bank.png'),
+          'width': '150'
+        }
       %}
       {% end_dnd_module %}
     {% end_dnd_section %}
     {# End Logo Section #}
 
     {# Form section #}
-    {% dnd_section %}
+    {% dnd_section
+      full_width=false,
+      max_width=500,
+      padding={
+        'top': 50,
+        'right': 0,
+        'bottom': 20,
+        'left': 0
+      },
+      background_image={
+        'backgroundPosition': 'TOP_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': get_asset_url('../images/people-on-phone-dark.png')
+      }
+     %}
       {% dnd_column %}
         {% dnd_row %}
           {% dnd_module
             path='@hubspot/form',
             horizontal_alignment='CENTER',
-            title='Download our FREE eBook to get started with Big Data decisions today!'
+            title='Download our FREE eBook to get started with Big Data decisions today!',
+            background_color='#618EBE',
           %}
             {% module_attribute "form" is_json=True %}
               {

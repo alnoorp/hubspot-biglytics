@@ -1,6 +1,6 @@
 {
   "enable_domain_stylesheets" : false,
-  "label" : "Biglytics Dev",
+  "label" : "Biglytics",
   "preview_path" : "./templates/home-page.html",
-  "screenshot_path" : "./images/template-previews/home-page.png"
+  "screenshot_path" : "./images/template-previews/biglytics-theme.png"
 }

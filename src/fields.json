@@ -21,7 +21,7 @@
     "type" : "color"
   }, {
     "default" : {
-      "color" : "#C168C2",
+      "color" : "#F8AC1C",
       "opacity" : 100
     },
     "label" : "Primary",
@@ -100,7 +100,7 @@
 }, {
   "children" : [ {
     "default" : {
-      "color" : "#D0D0D0",
+      "color" : "#618EBE",
       "opacity" : 100
     },
     "label" : "Color",
@@ -119,7 +119,7 @@
     "type" : "number"
   }, {
     "choices" : [ [ "none", "None" ], [ "solid", "Solid" ], [ "dotted", "Dotted" ], [ "dashed", "Dashed" ], [ "double", "Double" ], [ "groove", "Groove" ], [ "ridge", "Ridge" ], [ "inset", "Inset" ], [ "outset", "Outset" ] ],
-    "default" : "solid",
+    "default" : "none",
     "display" : "select",
     "label" : "Style",
     "locked" : false,
@@ -228,7 +228,7 @@
         }
       }, {
         "default" : {
-          "color" : "#99409a",
+          "color" : "#F8AC1C",
           "styles" : {
             "text-decoration" : "underline"
           }
@@ -939,7 +939,7 @@
           }
         }, {
           "default" : {
-            "color" : "#99409a",
+            "color" : "#F8AC1C",
             "opacity" : 100
           },
           "label" : "Background Color",
@@ -1099,7 +1099,7 @@
       }, {
         "children" : [ {
           "default" : {
-            "color" : "#99409a",
+            "color" : "#F8AC1C",
             "size_unit" : "px"
           },
           "inherited_value" : {
@@ -1164,7 +1164,7 @@
             "type" : "choice"
           }, {
             "default" : {
-              "color" : "#99409a",
+              "color" : "#F8AC1C",
               "opacity" : 100
             },
             "label" : "Color",
@@ -1316,7 +1316,7 @@
     }, {
       "children" : [ {
         "default" : {
-          "color" : "#1E2B33",
+          "color" : "#1E1E1E",
           "variant" : "400"
         },
         "inherited_value" : {
@@ -1503,7 +1503,7 @@
         "type" : "color"
       }, {
         "default" : {
-          "color" : "#D0D0D0",
+          "color" : "#618EBE",
           "opacity" : 100
         },
         "label" : "Placeholder Color",
@@ -2200,7 +2200,7 @@
   }, {
     "children" : [ {
       "default" : {
-        "color" : "#1E2B33",
+        "color" : "#1E1E1E",
         "opacity" : 100
       },
       "label" : "Background Color",
@@ -2231,7 +2231,7 @@
         "type" : "choice"
       }, {
         "default" : {
-          "color" : "#1E2B33",
+          "color" : "#1E1E1E",
           "opacity" : 100
         },
         "label" : "Color",
@@ -2301,7 +2301,7 @@
           "type" : "font"
         }, {
           "default" : {
-            "color" : "#1E2B33",
+            "color" : "#1E1E1E",
             "opacity" : 100
           },
           "label" : "Background Color",
@@ -2340,7 +2340,7 @@
           "type" : "font"
         }, {
           "default" : {
-            "color" : "#1E2B33",
+            "color" : "#1E1E1E",
             "opacity" : 100
           },
           "label" : "Background Color",
