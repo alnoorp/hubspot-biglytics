@@ -31,7 +31,7 @@
     "type" : "color"
   }, {
     "default" : {
-      "color" : "#34B5E5",
+      "color" : "#618ebe",
       "opacity" : 100
     },
     "label" : "Secondary",
