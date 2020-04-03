@@ -1,12 +1,13 @@
 <!--
   templateType: error_page
   isAvailableForNewContent: true
-  label: Sprout - 500 error
+  label: Biglytics - 500 Error
 -->
 {% extends '../layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
+	<div style="background-image: url('{{ get_asset_url('../../images/hero-bg-desktop.png') }}'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 150px; padding-bottom: 80px;"></div>
   <section class="content-wrapper">
     <div class="error-page" data-error="500">
       <h1 class="error-page__heading">Something isn't quite right</h1>

@@ -1,12 +1,13 @@
 <!--
   templateType: email_backup_unsubscribe_page
   isAvailableForNewContent: true
-  label: Sprout - email backup unsubscribe
+  label: Biglytics - Email Backup Unsubscribe
 -->
 {% extends '../layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
+  <div style="background-image: url('{{ get_asset_url('../../images/hero-bg-desktop.png') }}'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 150px; padding-bottom: 80px;"></div>
   <section class="content-wrapper">
     <div class="systems-page">
       {% module 'backup_unsubscribe'

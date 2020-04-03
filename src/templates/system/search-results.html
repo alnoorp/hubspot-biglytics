@@ -1,12 +1,13 @@
 <!--
   templateType: search_results_page
   isAvailableForNewContent: true
-  label: Sprout - search results
+  label: Biglytics - Search Results
 -->
 {% extends '../layouts/base.html' %}
 
 {% block body %}
 <main class="body-container-wrapper">
+  <div style="background-image: url('{{ get_asset_url('../../images/hero-bg-desktop.png') }}'); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; height: 150px; padding-bottom: 80px;"></div>
   <section class="content-wrapper">
     <div class="systems-page">
       <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
