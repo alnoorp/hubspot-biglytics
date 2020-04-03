@@ -185,6 +185,44 @@
     {% end_dnd_section %}
     {# End Learn Section #}
 
+    {# Form section #}
+    {% dnd_section
+      full_width=false,
+      max_width=500,
+      padding={
+        'top': 50,
+        'right': 0,
+        'bottom': 20,
+        'left': 0
+      },
+      background_image={
+        'backgroundPosition': 'TOP_CENTER',
+        'backgroundSize': 'cover',
+        'imageUrl': get_asset_url('../images/people-on-phone-dark.png')
+      }
+     %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/form',
+            horizontal_alignment='CENTER',
+            title='Download our FREE eBook to get started with Big Data decisions today!',
+            background_color='#618EBE',
+          %}
+            {% module_attribute "form" is_json=True %}
+              {
+                "form_id": "{# ddg:info_form_id #}",
+                "response_type": "inline",
+                "message": "Thanks!",
+                "form_type": "HUBSPOT",
+                "gotowebinar_webinar_key": null
+              }
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
   {% end_dnd_area %}
 </main>
 {% endblock body %}
