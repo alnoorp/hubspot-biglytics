@@ -110,3 +110,9 @@
   height: auto !important;
   margin-bottom: 1.4rem;
 }
+
+/* Odd system page header that's not a header */
+.systems-page .header {
+  position: static;
+  padding: 1rem 0;
+}
