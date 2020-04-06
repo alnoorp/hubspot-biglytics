@@ -98,7 +98,7 @@
     {% end_dnd_section %}
     {# End Two Column With Image Left Section #}
 
-    {# Three Column Feature Section #}
+    {# Make the Right Decision Section #}
     {% dnd_section
       max_width=1024
     %}
@@ -107,7 +107,7 @@
           padding={
             'top': 0,
             'right': 0,
-            'bottom': 45,
+            'bottom': 0,
             'left': 0
           }
         %}
@@ -125,8 +125,29 @@
         {% end_dnd_row %}
       {% end_dnd_column %}
     {% end_dnd_section %}
-    {# End Three Column Feature Section #}
+    {# End Make the Right Decision Section #}
 
+    {# Animation section #}
+    {% dnd_section
+      full_width=false,
+      padding={
+        'top': 0,
+        'right': 0,
+        'bottom': 0,
+        'left': 0
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module
+            path='../modules/biglytics-animation',
+            horizontal_alignment='CENTER'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+    {# end Animation section #}
 
     {# Whitepaper Section #}
     {% dnd_section
