@@ -765,6 +765,10 @@ tbody + tbody {
   color: {{ footer_content_color }};
 }
 
+.footer a {
+  color: {{ primary_color }};
+}
+
 {% if custom_heading_styles %}
 
   .footer h4 {
@@ -1004,4 +1008,10 @@ body .social-links__icon:hover {
 
 .statistic__info {
   color: {{ body_font.color }};
+}
+
+/* Pricing Page */
+
+.price-block__header {
+  background-color: {{ secondary_color }} !important;
 }

@@ -14,7 +14,11 @@
   {% dnd_area 'dnd_area' class='body-container body-container--landing-page', label='Main section' %}
 
     {% dnd_section
-      background_color={{ theme.color.body_secondary.color }}
+      background_color={{ theme.color.body_secondary.color }},
+      padding={
+        'top': 30,
+        'bottom': 30
+      }
     %}
       {% dnd_column %}
         {% dnd_row %}
@@ -36,6 +40,10 @@
 
     {% dnd_section
       background_color={{ theme.color.body_secondary.color }}
+      padding={
+        'top': 30,
+        'bottom': 30
+      }
     %}
 
       {% dnd_column
@@ -153,7 +161,7 @@
               {
                 "form_id": "{# ddg:info_form_id #}",
                 "response_type": "inline",
-                "message": "Thanks!",
+                "message": "<a href="#">Here is your free Ebook</a> We will send you an email with the link as well.",
                 "form_type": "HUBSPOT",
                 "gotowebinar_webinar_key": null
               }
