@@ -35,7 +35,7 @@
 /* System Pages */
 
 .systems-page {
-  padding: 3rem 20px;
+  padding: 80px 20px !important;
 }
 
 .systems-page .success {
@@ -102,4 +102,11 @@
 
 .hs-search-results__pagination a {
   color: #1E2B33;
+}
+
+/* Password Prompt */
+
+.password-prompt input[type=password] {
+  height: auto !important;
+  margin-bottom: 1.4rem;
 }

@@ -907,6 +907,11 @@ tbody + tbody {
   {{ headings_font.style }};
 }
 
+.systems-page {
+  max-width: 600px;
+  margin: 0 auto !important;
+}
+
 /* Forms in System Pages */
 
 #email-prefs-form h3 {
