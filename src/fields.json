@@ -6,7 +6,7 @@
     },
     "label" : "Body Background Color",
     "locked" : false,
-    "name" : "body",
+    "name" : "body_bg",
     "required" : false,
     "type" : "color"
   }, {
@@ -187,7 +187,7 @@
       "label" : "Body",
       "load_external_fonts" : true,
       "locked" : false,
-      "name" : "body",
+      "name" : "body_font",
       "required" : false,
       "type" : "font"
     }, {
@@ -209,8 +209,8 @@
             "fallback" : "theme.typography.primary.fallback",
             "font" : "theme.typography.primary.font",
             "font_set" : "theme.typography.primary.font_set",
-            "size" : "theme.global.typography.body.size",
-            "size_unit" : "theme.global.typography.body.size_unit",
+            "size" : "theme.global.typography.body_font.size",
+            "size_unit" : "theme.global.typography.body_font.size_unit",
             "styles" : "theme.typography.primary.styles",
             "variant" : "theme.typography.primary.variant"
           }
@@ -240,8 +240,8 @@
             "font-style" : "theme.typography.primary.styles.font-style",
             "font-weight" : "theme.typography.primary.styles.font-weight",
             "font_set" : "theme.typography.primary.font_set",
-            "size" : "theme.global.typography.body.size",
-            "size_unit" : "theme.global.typography.body.size_unit",
+            "size" : "theme.global.typography.body_font.size",
+            "size_unit" : "theme.global.typography.body_font.size_unit",
             "variant" : "theme.typography.primary.variant"
           }
         },
@@ -727,9 +727,7 @@
         "children" : [ {
           "display" : "slider",
           "help_text" : "Font size in pixels",
-          "inherited_value" : {
-            "default_value_path" : "theme.global.typography.body.size"
-          },
+          "default": 16,
           "label" : "Font Size",
           "locked" : false,
           "name" : "font_size",
@@ -824,7 +822,6 @@
             "fallback" : "theme.typography.secondary.fallback",
             "font" : "theme.typography.secondary.font",
             "font_set" : "theme.typography.secondary.font_set",
-            "size" : "theme.global.buttons.size.regular.font_size",
             "styles" : "theme.typography.secondary.styles"
           }
         },
@@ -1018,7 +1015,6 @@
             "fallback" : "theme.typography.secondary.fallback",
             "font" : "theme.typography.secondary.font",
             "font_set" : "theme.typography.secondary.font_set",
-            "size" : "theme.global.buttons.size.regular.font_size",
             "styles" : "theme.typography.secondary.styles"
           }
         },
@@ -1127,12 +1123,6 @@
           "default" : {
             "color" : "#ffffff",
             "opacity" : 100
-          },
-          "inherited_value" : {
-            "property_value_paths" : {
-              "color" : "#FFFFFF",
-              "opacity" : "0"
-            }
           },
           "label" : "Background Color",
           "locked" : false,
@@ -1324,8 +1314,8 @@
             "fallback" : "theme.typography.secondary.fallback",
             "font" : "theme.typography.secondary.font",
             "font_set" : "theme.typography.secondary.font_set",
-            "size" : "theme.global.typography.body.size",
-            "size_unit" : "theme.global.typography.body.size_unit",
+            "size" : "theme.global.typography.body_font.size",
+            "size_unit" : "theme.global.typography.body_font.size_unit",
             "styles" : "theme.typography.secondary.styles"
           }
         },
@@ -1639,7 +1629,7 @@
       },
       "inherited_value" : {
         "property_value_paths" : {
-          "color" : "theme.global.typography.body.color",
+          "color" : "theme.global.typography.body_font.color",
           "fallback" : "theme.typography.primary.fallback",
           "font" : "theme.typography.primary.font",
           "font_set" : "theme.typography.primary.font_set",
@@ -1815,8 +1805,8 @@
       },
       "inherited_value" : {
         "property_value_paths" : {
-          "color" : "theme.color.body.color",
-          "opacity" : "theme.color.body.opacity"
+          "color" : "theme.color.body_bg.color",
+          "opacity" : "theme.color.body_bg.opacity"
         }
       },
       "label" : "Background Color",
@@ -1915,8 +1905,7 @@
       },
       "inherited_value" : {
         "property_value_paths" : {
-          "color" : "theme.global.typography.body.color",
-          "opacity" : "theme.global.typography.body.opacity"
+          "color" : "theme.global.typography.body_font.color"
         }
       },
       "label" : "Font Color",
@@ -1948,8 +1937,7 @@
         },
         "inherited_value" : {
           "property_value_paths" : {
-            "color" : "theme.global.tables.font_color.color",
-            "opacity" : "theme.global.tables.font_color.opacity"
+            "color" : "theme.global.tables.font_color.color"
           }
         },
         "label" : "Font Color",
@@ -1997,7 +1985,7 @@
         }, {
           "display" : "slider",
           "inherited_value" : {
-            "default_value_path" : "theme.global.tables.corner_radius"
+            "default_value_path" : "theme.corner_radius"
           },
           "label" : "Corner Radius",
           "locked" : false,
@@ -2082,13 +2070,13 @@
         },
         "inherited_value" : {
           "property_value_paths" : {
-            "fallback" : "theme.global.typography.body.fallback",
-            "font" : "theme.global.typography.body.font",
-            "font_set" : "theme.global.typography.body.font_set",
-            "size" : "theme.global.typography.body.size",
-            "size_unit" : "theme.global.typography.body.size_unit",
-            "styles" : "theme.global.typography.body.styles",
-            "variant" : "theme.global.typography.body.variant"
+            "fallback" : "theme.global.typography.body_font.fallback",
+            "font" : "theme.global.typography.body_font.font",
+            "font_set" : "theme.global.typography.body_font.font_set",
+            "size" : "theme.global.typography.body_font.size",
+            "size_unit" : "theme.global.typography.body_font.size_unit",
+            "styles" : "theme.global.typography.body_font.styles",
+            "variant" : "theme.global.typography.body_font.variant"
           }
         },
         "label" : "Font",
@@ -2104,13 +2092,13 @@
           },
           "inherited_value" : {
             "property_value_paths" : {
-              "fallback" : "theme.global.header.menu.primary.font.fallback",
-              "font" : "theme.global.header.menu.primary.font.font",
-              "font_set" : "theme.global.header.menu.primary.font.font_set",
-              "size" : "theme.global.header.menu.primary.font.size",
-              "size_unit" : "theme.global.header.menu.primary.font.size_unit",
-              "styles" : "theme.global.header.menu.primary.font.styles",
-              "variant" : "theme.global.header.menu.primary.font.variant"
+              "fallback" : "theme.global.header.menu.font.fallback",
+              "font" : "theme.global.header.menu.font.font",
+              "font_set" : "theme.global.header.menu.font.font_set",
+              "size" : "theme.global.header.menu.font.size",
+              "size_unit" : "theme.global.header.menu.font.size_unit",
+              "styles" : "theme.global.header.menu.font.styles",
+              "variant" : "theme.global.header.menu.font.variant"
             }
           },
           "label" : "Font",
@@ -2148,12 +2136,12 @@
           },
           "inherited_value" : {
             "property_value_paths" : {
-              "fallback" : "theme.global.header.menu.primary.font.fallback",
-              "font" : "theme.global.header.menu.primary.font.font",
-              "font_set" : "theme.global.header.menu.primary.font.font_set",
-              "size" : "theme.global.header.menu.primary.font.size",
-              "size_unit" : "theme.global.header.menu.primary.font.size_unit",
-              "styles" : "theme.global.header.menu.primary.font.styles"
+              "fallback" : "theme.global.header.menu.font.fallback",
+              "font" : "theme.global.header.menu.font.font",
+              "font_set" : "theme.global.header.menu.font.font_set",
+              "size" : "theme.global.header.menu.font.size",
+              "size_unit" : "theme.global.header.menu.font.size_unit",
+              "styles" : "theme.global.header.menu.font.styles"
             }
           },
           "label" : "Font",
@@ -2263,12 +2251,12 @@
         },
         "inherited_value" : {
           "property_value_paths" : {
-            "fallback" : "theme.global.typography.body.fallback",
-            "font" : "theme.global.typography.body.font",
-            "font_set" : "theme.global.typography.body.font_set",
-            "size" : "theme.global.typography.body.size",
-            "size_unit" : "theme.global.typography.body.size_unit",
-            "styles" : "theme.global.typography.body.styles"
+            "fallback" : "theme.global.typography.body_font.fallback",
+            "font" : "theme.global.typography.body_font.font",
+            "font_set" : "theme.global.typography.body_font.font_set",
+            "size" : "theme.global.typography.body_font.size",
+            "size_unit" : "theme.global.typography.body_font.size_unit",
+            "styles" : "theme.global.typography.body_font.styles"
           }
         },
         "label" : "Font",
@@ -2284,13 +2272,13 @@
           },
           "inherited_value" : {
             "property_value_paths" : {
-              "fallback" : "theme.global.footer.menu.primary.font.fallback",
-              "font" : "theme.global.footer.menu.primary.font.font",
-              "font_set" : "theme.global.footer.menu.primary.font.font_set",
-              "size" : "theme.global.footer.menu.primary.font.size",
-              "size_unit" : "theme.global.footer.menu.primary.font.size_unit",
-              "styles" : "theme.global.footer.menu.primary.font.styles",
-              "variant" : "theme.global.footer.menu.primary.font.variant"
+              "fallback" : "theme.global.footer.menu.font.fallback",
+              "font" : "theme.global.footer.menu.font.font",
+              "font_set" : "theme.global.footer.menu.font.font_set",
+              "size" : "theme.global.footer.menu.font.size",
+              "size_unit" : "theme.global.footer.menu.font.size_unit",
+              "styles" : "theme.global.footer.menu.font.styles",
+              "variant" : "theme.global.footer.menu.font.variant"
             }
           },
           "label" : "Font",
@@ -2323,13 +2311,13 @@
           },
           "inherited_value" : {
             "property_value_paths" : {
-              "fallback" : "theme.global.footer.menu.primary.font.fallback",
-              "font" : "theme.global.footer.menu.primary.font.font",
-              "font_set" : "theme.global.footer.menu.primary.font.font_set",
-              "size" : "theme.global.footer.menu.primary.font.size",
-              "size_unit" : "theme.global.footer.menu.primary.font.size_unit",
-              "styles" : "theme.global.footer.menu.primary.font.styles",
-              "variant" : "theme.global.footer.menu.primary.font.variant"
+              "fallback" : "theme.global.footer.menu.font.fallback",
+              "font" : "theme.global.footer.menu.font.font",
+              "font_set" : "theme.global.footer.menu.font.font_set",
+              "size" : "theme.global.footer.menu.font.size",
+              "size_unit" : "theme.global.footer.menu.font.size_unit",
+              "styles" : "theme.global.footer.menu.font.styles",
+              "variant" : "theme.global.footer.menu.font.variant"
             }
           },
           "label" : "Font",
