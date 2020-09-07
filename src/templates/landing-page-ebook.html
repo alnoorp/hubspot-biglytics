@@ -1,0 +1,188 @@
+
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing Page Ebook
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+<style>
+  header, form, footer {
+    background-color: {{ theme.color.secondary.color }} !important;
+  }
+  .header__logo {
+    margin: auto;
+  }
+  .header__container {
+    padding-top: 2.4rem;
+  }
+</style>
+
+  <header class="header header--no-navigation">
+    <div class="header__container">
+      {# Logo #}
+      <div class="header__logo">
+        {% module 'header_logo'
+          path='@hubspot/logo',
+            img={
+              'alt': 'Biglytics logo',
+              'height': '82',
+              'override_inherited_src': true,
+              'src': get_asset_url('../images/biglytics-logo.png'),
+              'width': '205'
+            }
+         %}
+      </div>
+      {# End Logo #}
+    </div>
+  </header>
+{% endblock header %}
+
+{% block body %}
+<style>
+  h1, h2, p, ul {
+    font-family: 'Proxima Nova',sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  h2 {
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+  p, ul {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+  p {
+    font-weight: 800;
+  }
+  label {
+    color: #fff !important;
+  }
+</style>
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--landing-page', label='Main section' %}
+
+    {% dnd_section
+      background_color={{ theme.color.secondary.color }},
+      padding={
+        'top': 30,
+        'bottom': 30
+      }
+    %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            offset=0,
+            width=12
+          %}
+            {% module_attribute 'html' %}
+              <div style="text-align: center;">
+                <h1>What is Big Data?</h1>
+                <h2>An Introduction to Simplifying, Storing and Gaining Value from Big Data</h2>
+              </div>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {% dnd_section
+      background_color={{ theme.color.secondary.color }}
+      padding={
+        'top': 30,
+        'bottom': 30
+      }
+    %}
+
+      {% dnd_column
+        offset=0,
+        width=6
+      %}
+
+        {# Image #}
+        {% dnd_row
+          margin={
+            'bottom': 60
+          }
+        %}
+          {% dnd_module
+            offset=0,
+            width=12,
+            path='@hubspot/linked_image',
+            horizontal_alignment='CENTER',
+            img={
+              'src': 'https://f.hubspotusercontent00.net/hubfs/7235158/big-data-graphic.png',
+              'alt': 'Data',
+              'size_type': 'auto'
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+
+      {% end_dnd_column %}
+
+      {# Form section #}
+      {% dnd_column
+        offset=6,
+        width=6
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <p>In this ebook you will learn how to:</p>
+              <ul>
+                <li>Store data more intelligently to save time</li>
+                <li>Simplify Big Data for your sales team</li>
+                <li>Gain value from big data & advanced analytics</li>
+              </ul>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/form',
+            horizontal_alignment='LEFT',
+            width=12
+          %}
+            {% module_attribute "form" is_json=True %}
+              {
+                "form_id": "15b6b8db-c699-4f51-9842-063e30af77b6",
+                "response_type": "inline",
+                "message": "<a href=\"#\">Here is your free Ebook</a> We will send you an email with the link as well.",
+                "form_type": "HUBSPOT",
+                "gotowebinar_webinar_key": null
+              }
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
+
+{% block footer %}
+  <footer class="footer footer--no-navigation"  style="padding-bottom: 50px; background-color: {{ theme.color.body_secondary.color }}">
+    <div class="footer__container">
+
+      <div>
+        Biglytics is a fictional company used for demo and training purposes by <a href="https://www.hubspot.com/">HubSpot</a>.
+        <br />
+        You shouldn't rely on the information on this site.
+        Use of this site is subject to HubSpot's <a href="https://legal.hubspot.com/website-terms-of-use">Terms of Use</a> and <a href="https://legal.hubspot.com/privacy-policy">Privacy Policy</a>.
+      </div>
+
+    </div>
+  </footer>
+{% endblock footer %}
