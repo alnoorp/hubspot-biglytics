@@ -1,0 +1,38 @@
+[ {
+  "picker" : "image",
+  "id" : "70d2986a-04fa-13a6-61d3-abcb6f9044e2",
+  "name" : "image",
+  "label" : "Image",
+  "required" : true,
+  "locked" : false,
+  "type" : "file",
+  "default" : "https://f.hubspotusercontent00.net/hubfs/7235158/Demo%20Images/compass-notebook.jpg"
+}, {
+  "id" : "8d064d54-b351-9d3b-9bd4-43c514cda01e",
+  "name" : "top_color",
+  "label" : "Top Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#000000",
+    "opacity" : 50
+  }
+}, {
+  "id" : "ee76f6f7-0fcd-318b-8afe-f238ee477fe3",
+  "name" : "intensity",
+  "label" : "Intensity",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "8d064d54-b351-9d3b-9bd4-43c514cda01e",
+    "controlling_value_regex" : null,
+    "operator" : "NOT_EMPTY",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "display" : "select",
+  "choices" : [ [ "20", "20%" ], [ "40", "40%" ], [ "60", "60%" ] ],
+  "type" : "choice",
+  "default" : "20"
+} ]

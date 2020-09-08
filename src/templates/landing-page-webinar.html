@@ -1,0 +1,142 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing Page Consultation
+-->
+{% extends './layouts/base.html' %}
+
+{% block header %}
+{% endblock header %}
+
+{% block body %}
+<style>
+  body {
+    text-align: center;
+  }
+  .header__logo {
+    margin: auto;
+  }
+  .dnd-section {
+    padding-top: initial;
+  }
+  h1, h2, p {
+    font-family: 'Proxima Nova',sans-serif;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  h1 {
+    font-weight: 600;
+  }
+  h2 {
+    font-weight: 200;
+  }
+  p {
+    font-size: 1.5em;
+    line-height: 1em;
+  }
+  form {
+    background-color: rgba(0,60,150,0.4);
+    margin-top: 2em;
+  }
+  label {
+    color: #fff !important;
+  }
+  footer {
+    margin-top: 10em;
+    background-color: transparent !important;
+  }
+</style>
+<main class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--landing-page', label='Main section' %}
+    {% dnd_section %}
+      {% dnd_column %}
+        {% dnd_row %}
+          {% dnd_module
+            path='../modules/background-image'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            offset=0,
+            width=12
+          %}
+            {% module_attribute 'html' %}
+              <div class="header__container">
+                {# Logo #}
+                <div class="header__logo">
+                  {% module 'header_logo'
+                    path='@hubspot/logo',
+                    horizontal_alignment='CENTER',
+                      img={
+                        'alt': 'Biglytics logo',
+                        'height': '82',
+                        'override_inherited_src': true,
+                        'src': get_asset_url('../images/biglytics-logo.png'),
+                        'width': '300'
+                      }
+                   %}
+                </div>
+                {# End Logo #}
+              </div>
+              <div>
+                <h2>On-Demand Webinar Series</h2>
+                <h1>Getting Started with Big Data</h1>
+              </div>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text',
+            horizontal_alignment='CENTER'
+          %}
+            {% module_attribute 'html' %}
+              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/form',
+            horizontal_alignment='CENTER',
+            width=12
+          %}
+            {% module_attribute "form" is_json=True %}
+              {
+                "form_id": "{# ddg:webinar_form_id #}",
+                "response_type": "inline",
+                "message": "<a href=\"#\">Here is your free Ebook</a> We will send you an email with the link as well.",
+                "form_type": "HUBSPOT",
+                "gotowebinar_webinar_key": null
+              }
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+        {% dnd_row %}
+          {% dnd_module
+            path='@hubspot/rich_text'
+          %}
+            {% module_attribute 'html' %}
+              <footer class="footer footer--no-navigation">
+                <div class="footer__container">
+                  <div>
+                    Biglytics is a fictional company used for demo and training purposes by <a href="https://www.hubspot.com/">HubSpot</a>.
+                    <br />
+                    You shouldn't rely on the information on this site.
+                    Use of this site is subject to HubSpot's <a href="https://legal.hubspot.com/website-terms-of-use">Terms of Use</a> and <a href="https://legal.hubspot.com/privacy-policy">Privacy Policy</a>.
+                  </div>
+                </div>
+              </footer>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
+
+{% block footer %}
+{% endblock footer %}
