@@ -1,0 +1,99 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Landing Page Consultation (Video, Meetings)
+-->
+{% extends "./layouts/base.html" %}
+
+{% block header %}
+  {% global_partial path="./partials/header-no-navigation.html" %}
+{% endblock header %}
+
+{% block body %}
+<main class="body-container-wrapper">
+  {% dnd_area "landing_page" label='Main section' class="landing-page" %}
+    {# Landing Page Video Hero #}
+    {% dnd_section 
+      background_linear_gradient = {
+        'direction': 'to bottom',
+        'colors': [
+          theme.color.body_secondary.color,
+          '#00bda5'
+        ]
+      },
+      padding={
+        'top': 100,
+        'left': 25,
+        'right': 25
+      }
+    %}
+      {% dnd_column width=5, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module
+            label='Video',
+            path='@hubspot/video'
+            video_type='embed',
+            embed_field={
+              'source_type':'oembed',
+              'oembed_url':'https://youtu.be/SP1kJamR9CE',
+              'size_type':'auto'
+            }
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column width=6, offset=6 %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+            {% module_attribute "html"%}
+              <p style="color: white;" class="lead">Free Consultation Offer</p>
+              <h1 style="color: white; font-weight: bold;">Power Decision Making with Big Data</h1>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+    {# Landing Page Two Column Section #}
+    {% dnd_section %}
+      {% dnd_column width=5, offset=0 %}
+        {% dnd_row %}
+          {% dnd_module path='@hubspot/rich_text' %}
+            {% module_attribute "html"%}
+              <h2>Sharpen your focus with just one conversation.</h2>
+              <p>Bring to the table win-win survival strategies to ensure proactive domination. 
+                At the end of the day, going forward, a new normal that has evolved from generation X 
+                is on the runway heading towards a streamlined cloud solution. User generated content in 
+                real-time will have multiple touchpoints for offshoring.</p>
+
+              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. 
+                Override the digital divide with additional clickthroughs from DevOps. Nanotechnology 
+                immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+               
+              <ul>
+                <li>Podcasting operational change management inside of workflows to establish a framework</li>
+                <li>Collaboratively administrate empowered markets via plug-and-play networks</li>
+                <li>Leverage agile frameworks to provide a robust synopsis for high level overviews</li>
+              </ul>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+      {% dnd_column width=6, offset=6 %}
+        {% dnd_row padding={'left': 50 } %}
+          {% dnd_module
+            label='Meeting',
+            path='@hubspot/meetings'
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}
+
+{% block footer %}
+  {% global_partial path="./partials/footer-no-navigation.html" %}
+{% endblock footer %}
