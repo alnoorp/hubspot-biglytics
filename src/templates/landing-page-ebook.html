@@ -172,16 +172,5 @@
 {% endblock body %}
 
 {% block footer %}
-  <footer class="footer footer--no-navigation"  style="padding-bottom: 50px; background-color: {{ theme.color.body_secondary.color }}">
-    <div class="footer__container">
-
-      <div>
-        Biglytics is a fictional company used for demo and training purposes by <a href="https://www.hubspot.com/">HubSpot</a>.
-        <br />
-        You shouldn't rely on the information on this site.
-        Use of this site is subject to HubSpot's <a href="https://legal.hubspot.com/website-terms-of-use">Terms of Use</a> and <a href="https://legal.hubspot.com/privacy-policy">Privacy Policy</a>.
-      </div>
-
-    </div>
-  </footer>
+  {% global_partial path='./partials/footer-no-navigation.html' %}
 {% endblock footer %}
