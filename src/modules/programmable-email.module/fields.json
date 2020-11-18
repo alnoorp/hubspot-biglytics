@@ -1,0 +1,10 @@
+[
+  {
+    "id": "hubdb_table",
+    "name": "hubdb_table",
+    "label": "HubDB Table",
+    "required": true,
+    "locked": false,
+    "type": "hubdbtable"
+  }
+]

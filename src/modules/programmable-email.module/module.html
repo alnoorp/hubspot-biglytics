@@ -1,0 +1,8 @@
+{% set event_listings = hubdb_table_rows(module.hubdb_table) %}
+
+{% for event in event_listings %}
+  <a href="http://hs-demo-7235158.hs-sites.com/biglytics-events/{{ event.hs_path }}" style="padding-bottom: 4px">{{ event.name }}</a>
+  <img src="{{ event.feature_image.url }}" alt="event image" width="{{ module.image_width }}" align="right" hspace="10" />
+  {{ event.event_description }}
+<hr>
+{% endfor %}
