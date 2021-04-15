@@ -83,7 +83,8 @@
         {% dnd_row padding={'left': 50 } %}
           {% dnd_module
             label='Meeting',
-            path='@hubspot/meetings'
+            path='@hubspot/meetings',
+            meeting='{{ ddg.meeting_link }}'
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
