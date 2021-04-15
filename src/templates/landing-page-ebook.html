@@ -154,7 +154,7 @@
           %}
             {% module_attribute "form" is_json=True %}
               {
-                "form_id": "{# ddg:info_form_id #}",
+                "form_id": "{{ ddg.info_form_id }}",
                 "response_type": "inline",
                 "message": "<a href=\"#\">Here is your free Ebook</a> We will send you an email with the link as well.",
                 "form_type": "HUBSPOT",

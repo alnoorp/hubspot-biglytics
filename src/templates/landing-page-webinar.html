@@ -105,7 +105,7 @@
           %}
             {% module_attribute "form" is_json=True %}
               {
-                "form_id": "{# ddg:webinar_form_id #}",
+                "form_id": "{{ ddg.webinar_form_id }}",
                 "response_type": "inline",
                 "message": "<a href=\"#\">Click here</a> for your free on-demand webinar. We will send you an email with the link as well.",
                 "form_type": "HUBSPOT",
