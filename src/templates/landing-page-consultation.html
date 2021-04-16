@@ -32,12 +32,8 @@
           {% dnd_module
             label='Video',
             path='@hubspot/video'
-            video_type='embed',
-            embed_field={
-              'source_type':'oembed',
-              'oembed_url':'https://youtu.be/SP1kJamR9CE',
-              'size_type':'auto'
-            }
+            video_type='hubspot_video',
+            hubspot_video='{{ ddg.player_id }}'
           %}
           {% end_dnd_module %}
         {% end_dnd_row %}
