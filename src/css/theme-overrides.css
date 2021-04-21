@@ -697,7 +697,7 @@ tbody + tbody {
 
 @media (max-width: {{ bp_small }}) {
   .header__navigation {
-    background-color: {{ header_bg_color }};
+    background-color: {{ secondary_color }};
   }
 
   .header__mobile-menu-icon,
